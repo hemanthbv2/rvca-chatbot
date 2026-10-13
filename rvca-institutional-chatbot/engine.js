@@ -248,6 +248,38 @@
       chips: ["Research Publications", "Faculty Guides", "B.Arch Program"]
     },
     {
+      id: "research_overview",
+      priority: 0.98,
+      keywords: ["research", "research in rvca", "research activities", "research projects", "research work", "innovation at rvca", "research thrust areas", "research papers", "funded research", "academic research"],
+      title: "Research & Innovation at RVCA",
+      response: `**Research & Innovation at RV College of Architecture (RVCA)**\n\nRVCA fosters a vibrant research culture bridging architectural theory, urban informatics, and sustainable building technologies:\n\n🏛️ **VTU Recognized Research Centre**:\n• Official Ph.D. Research Centre affiliated to Visvesvaraya Technological University (VTU), Belagavi.\n• Doctoral research streams: Sustainable Architecture, Building Energy Simulation, Urban Resilience, C&D Waste Recycling, and Cultural Heritage.\n\n🏙️ **Smart City Projects — MoHUA & NIUA SAAR Initiative**:\n• RVCA is selected as **1 of only 15 Premier Institutes of Academic Excellence nationwide** by the Ministry of Housing and Urban Affairs (MoHUA) and National Institute of Urban Affairs (NIUA).\n• **SAAR 1.0**: Documented landmark smart city initiatives across Bengaluru, Davanagere, and Belagavi.\n• **SAAR 2.0**: Ongoing smart city projects collaborating with Shivamogga & Bengaluru Smart City Limited.\n\n📐 **Urban Design Research & Consultancy Cell (UDRCC)**:\n• Hands-on municipal consultancy cell engaging Master of Architecture (M.Arch) scholars directly with public sector urban transformation projects.\n\n🌍 **Global Research Collaborations**:\n• **Bochum University, Germany**: Joint digital participatory place analysis using the "Photovoice" methodology (published in *Cities & Health*, Routledge).\n• **University of Florida, Gainesville (USA) & KRVIA**: International dialogues on climate justice and tropical architecture resilience.\n\n🏆 **DAIDA Global Awards Finalist (2023)**:\n• "Cities for All" — M.Arch thesis on closed-loop wastescape regeneration in Nayandahalli, Bengaluru shortlisted among 8 international finalists.\n\n📚 **Peer-Reviewed Publications**:\n• **KALPA** Annual Magazine (ISSN 2583-696X) and **sub:version** International Journal.\n• High-impact faculty publications indexed in Scopus, Springer Nature, and Taylor & Francis.\n\n🌐 **Official Research Portal**: [RVCA Research & Innovation (rvca.edu.in/research/)](https://rvca.edu.in/research/)`,
+      chips: ["Smart City (SAAR)", "Research Guides", "Publications", "Ph.D. Program", "Faculty Directory"]
+    },
+    {
+      id: "smart_city_research",
+      priority: 0.98,
+      keywords: ["smart city", "smart city projects", "saar", "saar 1.0", "saar 2.0", "mohua", "niua", "udrcc", "smart cities", "urban consultancy", "shivamogga smart city", "bengaluru smart city", "davanagere smart city", "belagavi smart city"],
+      title: "Smart City Research & SAAR Initiative",
+      response: `**RVCA Smart City Projects & SAAR Initiative**\n\nRV College of Architecture is at the forefront of national urban development initiatives:\n\n🇮🇳 **MoHUA & NIUA SAAR Recognition**:\n• Selected among the **Top 15 Premier Institutes of Academic Excellence in India** by the Ministry of Housing and Urban Affairs (MoHUA) and National Institute of Urban Affairs (NIUA).\n• **SAAR 1.0 (Smart Cities and Academia Towards Action & Research)**: Documented field outcomes, live challenges, and learnings of landmark urban projects in **Bengaluru**, **Davanagere**, and **Belagavi** Smart Cities.\n• **SAAR 2.0**: Formulating academic research and ground evaluation with **Shivamogga Smart City Limited** and **Bengaluru Smart City Limited**.\n\n🏢 **UDRCC (Urban Design Research & Consultancy Cell)**:\n• Specialized institutional cell at RVCA providing live research and consultancy for public sector urban interventions.\n• Directly embeds Master of Architecture (M.Arch in Urban Design) students into real-world master planning, public place transformation, and resilience strategies.\n\n📖 **Published Research Outcome**:\n• "Exploring role of public spaces in accommodating economic activities during Ashadh Wari in Pandharpur: case of Chowk, Galli and Ghat" published in *Future is Urban* (Routledge / Taylor & Francis).\n\n🌐 **Official Research Portal**: [Explore Smart City Research (rvca.edu.in/research/)](https://rvca.edu.in/research/)`,
+      chips: ["Research Overview", "M.Arch Urban Design", "Research Guides", "Faculty Directory"]
+    },
+    {
+      id: "research_guides",
+      priority: 0.98,
+      keywords: ["research guides", "phd guides", "doctoral guides", "supervisors", "phd supervisors", "research supervisors", "who are the research guides", "doctoral mentors", "vtu research guides", "guide list"],
+      title: "Ph.D. Research Guides & Doctoral Mentors",
+      response: `**VTU Approved Ph.D. Research Guides at RVCA**\n\nScholars pursuing Ph.D. in Architecture at the VTU-recognized RVCA Research Centre are mentored by distinguished doctoral guides:\n\n1. **Dr. Om Prakash Bawane** (Senior Professor / Former Principal):\n   • Qualifications: B.Arch. [NIT Bhopal], M.Arch. [IIT Roorkee], M.Sc. [SMU], Ph.D. [VMU]\n   • Research Thrust: Sustainable Development, Building Services, Architectural Pedagogy\n\n2. **Dr. Shikha Verma** (Associate Professor):\n   • Qualifications: B.Arch. [NIT Bhopal], M.Tech. & Ph.D. [MNNIT Allahabad]\n   • Research Thrust: Environmental Geotechnology, C&D Waste Recycling Systems, Mud Thermal Performance\n\n3. **Dr. Mahalakshmi Karnad** (Associate Professor):\n   • Qualifications: B.Arch. [Bangalore Univ], MLA [SPA New Delhi], Ph.D. [SPA New Delhi]\n   • Research Thrust: Landscape Architecture, Heritage Conservation, Traditional Settlements\n\n4. **Dr. Rakesh K. S.** (Principal):\n   • Qualifications: B.Arch., M.Arch., Ph.D. [SAP, Anna University Chennai]\n   • Research Thrust: Climatic & Passive Solar Design, Energy Efficiency, Sustainable Architecture\n\n5. **Dr. Chinnu S Kumar** (Associate Professor):\n   • Qualifications: B.Arch. [TKM Kollam], M.U.D. [SPA New Delhi], Ph.D. [MNIT Jaipur]\n   • Research Thrust: Urban Morphology, Spatial Modeling, Urban Resilience\n\n📝 **Admission Process**: Through VTU-ETR entrance examination followed by research proposal defense.\n\n🌐 **Official Portal**: [Ph.D. Research Centre Details (rvca.edu.in/programmes/phdprogramme/)](https://rvca.edu.in/programmes/phdprogramme/)`,
+      chips: ["Ph.D. Program", "Research Overview", "Publications", "Faculty Directory"]
+    },
+    {
+      id: "publications_deep",
+      priority: 0.98,
+      keywords: ["kalpa", "kalpa magazine", "subversion", "sub:version", "publications", "magazines", "journal", "academic journals", "research publications", "research papers", "faculty papers", "springer", "taylor and francis"],
+      title: "Institutional Publications — Kalpa & sub:version",
+      response: `**RVCA Institutional Publications & Journals**\n\nRV College of Architecture actively publishes peer-reviewed research and scholarly inquiries:\n\n📖 **KALPA (Annual Research Magazine — ISSN 2583-696X)**:\n• Annual flagship publication fostering architectural inquiry through real-time data analysis and critical case studies.\n• **Editorial Board**: Dr. Om Prakash Bawane (Editor-in-Chief), Prof. Hiranmayi Shankavaram, Prof. Ramya Krishna, Prof. Alisha Sinha, and Ar. Rashmi P. Subbanarasimha (IIITB).\n• **Volumes**: Vol. 1 (2020) through Vol. 5 (2024-25) published and archived online.\n• Themes: Green building materials, mud in composite climates, C&D waste recycling.\n\n🌐 **sub:version (Biennial International Journal)**:\n• In-house academic journal conceptualized as an online global publication exploring multidisciplinary spatial and urban theories.\n• **Editor-in-Chief**: Dr. Rakesh K. S. (Principal); **Guest Editor**: Dr. Anant Maringanti (Founder & Director, Hyderabad Urban Lab).\n• Features interdisciplinary articles, audio, and video formats examining "Subcultures".\n\n📚 **Recent International Faculty Publications (2024)**:\n• **Routledge / Taylor & Francis**: "Physical Activity in Public Space: insights applying Photovoice" in *Cities & Health* journal.\n• **Springer Nature**: "Mobility as a Response to Urban Floods" in *Climate Crisis, Social Responses and Sustainability*.\n• **Taylor & Francis Book Chapter**: "Exploring Role of Public Spaces during Ashadh Wari in Pandharpur".\n\n🌐 **Official Publications Portal**: [View RVCA Publications & Archives (rvca.edu.in/rvca_publications/)](https://rvca.edu.in/rvca_publications/)`,
+      chips: ["Research Overview", "Smart City (SAAR)", "Ph.D. Program", "Faculty Directory"]
+    },
+    {
       id: "barch_eligibility",
       priority: 0.75,
       keywords: ["barch eligibility", "b.arch eligibility", "barch criteria", "nata cutoff", "nata and jee", "nata", "cutoff", "cutoffs", "kea code", "code e-244", "jee paper 2", "10+2 marks", "eligibility", "criteria", "requirements"],
@@ -402,10 +434,50 @@
     {
       id: "faculty_directory",
       priority: 1.0,
-      keywords: ["faculty", "teachers", "professors", "lecturers", "staff", "hod", "who teaches", "faculty list"],
+      keywords: ["faculty", "teachers", "staff", "who teaches", "faculty list", "faculty members", "all faculty", "mentors"],
       title: "Complete Faculty Directory (63 Members)",
-      response: `**RVCA Faculty & Mentors Directory**\n\nRVCA boasts 63 highly experienced faculty members across B.Arch, M.Arch (Urban Design), and Administration:\n\n• **Principal**: Dr. Rakesh K. S.\n• **Dean**: Prof. Suresh K Murthy\n• **Design Chair**: Prof. Dinesh Rao\n• **Professors**: Prof. Phani Ram Pingali, Prof. Prasanna Rao (Assoc. Dean PG), Prof. K Sreedhar (Social Welfare Officer)\n• **Associate Professors**: Dr. M S Amarnath, Dr. H R Manjunath, Dr. Shikha Verma, Dr. Mahalakshmi Karnad, Bikramjit Chakraborty, Seema Maiya U, Dr. Saisanath, Anupriya Saxena, Archana Vittal, Nishant, Hiranmayi Shankavaram, Dr. Chinnu S Kumar, Girish Ramanathan, Dr. Om Prakash Bawane.\n• **Senior Asst. Professors**: Dharshini YG, Ramya Krishna, Pedaparthi Shweta, Vidya V, Mayank Singh.\n• **Assistant Professors**: Megala Gurumurthi, Nitin Bhardwaj, Pappu Harcharan, Ajinkya Kanitkar, Ishani Gogoi, Abhinandan K S, Dr. Asmita Yadav, Deepthi V, Akanksha Singh, Ujjayant Bhattacharyya, Lavanya Anbazhagan, Akanksha Ruchi Horo, Abhirami A, Kiranjee, Goutham K B, Sunain Dalwani, Raghavendra Kuppusamy, William George Kennedy, Archita Bandyopadhyay, Deepika Varadarajan, Prakruthi S Karadagi.\n\n*(Tip: Type any professor's name like "tell me about Shikha Verma" for their individual bio and qualifications!)*`,
-      chips: ["Principal Bio", "Dean Bio", "Associate Dean PG"]
+      response: `**RVCA Faculty & Mentors Directory (63 Distinguished Members)**\n\nRVCA boasts 63 highly experienced faculty members across B.Arch, M.Arch (Urban Design), and Administration:\n\n• **Principal**: Dr. Rakesh K. S. (Ph.D. SAP Chennai)\n• **Dean**: Prof. Suresh K Murthy (M.Tech IIT Delhi, MSU Baroda)\n• **Design Chair**: Prof. Dinesh Rao (36+ yrs practice, Monsoon Design)\n• **Professors**: Prof. Phani Ram Pingali, Prof. Prasanna Rao (Assoc. Dean PG), Dr. Om Prakash Bawane, Prof. K Sreedhar\n• **Associate Professors (14 Members)**: Dr. M S Amarnath, Dr. H R Manjunath, Dr. Shikha Verma, Dr. Mahalakshmi Karnad, Dr. Saisanath, Dr. Chinnu S Kumar, Bikramjit Chakraborty, Seema Maiya U, Anupriya Saxena, Archana Vittal, Nishant, Hiranmayi Shankavaram, Girish Ramanathan.\n• **Senior Asst. Professors**: Dharshini YG, Ramya Krishna, Pedaparthi Shweta, Vidya V, Mayank Singh.\n• **Assistant Professors (21 Members)**: Megala Gurumurthi, Nitin Bhardwaj, Pappu Harcharan, Ajinkya Kanitkar, Ishani Gogoi, Abhinandan K S, Dr. Asmita Yadav, Deepthi V, Akanksha Singh, Ujjayant Bhattacharyya, Lavanya Anbazhagan, Akanksha Ruchi Horo, Abhirami A, Kiranjee, Goutham K B, Sunain Dalwani, Raghavendra Kuppusamy, William George Kennedy, Archita Bandyopadhyay, Deepika Varadarajan, Prakruthi S Karadagi.\n\n🌐 **Official Faculty Portal**: [Explore Full Faculty Bios (rvca.edu.in/faculty/)](https://rvca.edu.in/faculty/)`,
+      chips: ["Professors", "Associate Professors", "Doctoral Mentors", "B.Arch Faculty", "M.Arch Faculty"]
+    },
+    {
+      id: "faculty_professors",
+      priority: 0.98,
+      keywords: ["professors", "who are the professors", "senior professors", "full professors", "senior faculty", "professors list", "chairperson", "design chair"],
+      title: "Senior Professors & Academic Leadership",
+      response: `**Professors & Academic Leadership at RVCA**\n\nThe senior academic council at RVCA comprises distinguished academicians and master practitioners:\n\n1. **Dr. Rakesh K. S.** — Principal & Senior Professor\n   • Qualifications: B.Arch., M.Arch., Ph.D. [SAP Chennai]\n   • Specialisation: Climatic Design, Sustainable Architecture\n\n2. **Prof. Suresh K Murthy** — Dean & Professor\n   • Qualifications: B.Arch. [MSU Baroda], M.Tech. (BS & CM) [IIT Delhi]\n   • Specialisation: Building Science & Construction Management, Environmental Responsive Design\n\n3. **Prof. Dinesh Rao** — Professor & Design Chair\n   • Experience: 36+ Years Practicing Architect; Principal Architect at Monsoon Design\n   • Specialisation: Architectural Planning, Studio Juries, Spatial Experience\n\n4. **Dr. Om Prakash Bawane** — Senior Professor / Former Principal\n   • Qualifications: B.Arch. [NIT Bhopal], M.Arch. [IIT Roorkee], Ph.D. [VMU]\n   • Specialisation: Sustainable Development, Building Services, Quality Assurance\n\n5. **Prof. Phani Ram Pingali** — Professor\n   • Qualifications: B.Arch. [JNTU], MS (Arch.) [Louisiana State University, USA]\n   • Specialisation: Architectural Pedagogy, Studio Practice\n\n6. **Prof. Prasanna Rao** — Professor & Associate Dean (PG Studies)\n   • Qualifications: B.Arch. [Mysore Univ], M.Arch. (Urban Design) [CEPT Ahmedabad]\n   • Specialisation: Urban Design & Morphological Transformation\n\n7. **Prof. K Sreedhar** — Professor & Social Welfare Officer\n   • Qualifications: B.Arch. [Bangalore University]\n   • Specialisation: Institutional Welfare, Professional Practice\n\n🌐 **Official Faculty Directory**: [Explore All 63 Faculty Members (rvca.edu.in/faculty/)](https://rvca.edu.in/faculty/)`,
+      chips: ["Associate Professors", "Doctoral Mentors", "B.Arch Faculty", "M.Arch Faculty", "Faculty Directory"]
+    },
+    {
+      id: "faculty_associate_professors",
+      priority: 0.98,
+      keywords: ["associate professors", "associate prof", "associate professors list", "associate faculty"],
+      title: "Associate Professors at RVCA",
+      response: `**Associate Professors at RV College of Architecture**\n\nRVCA has 14 Associate Professors leading advanced design studios, technical labs, and research cells:\n\n• **Dr. M S Amarnath** — Ph.D. Jain Univ | Associate Professor & Boys Hostel Warden\n• **Dr. H R Manjunath** — Ph.D. VTU | M.E. Structures | Structural Systems & Climatology\n• **Dr. Shikha Verma** — Ph.D. MNNIT Allahabad | Environmental Geotechnology & Waste Systems\n• **Dr. Mahalakshmi Karnad** — Ph.D. SPA New Delhi | Landscape Architecture & Traditional Design\n• **Dr. Saisanath** — Ph.D. NIT Trichy | Urban & Regional Planning\n• **Dr. Chinnu S Kumar** — Ph.D. MNIT Jaipur | Urban Design & Spatial Modeling\n• **Bikramjit Chakraborty** — M.Arch Jadavpur Univ | Architecture History & Theory\n• **Seema Maiya U** — M.Arch VTU | Studio & Architectural Graphics\n• **Anupriya Saxena** — M.BEM SPA New Delhi, Ph.D. Scholar NIT Trichy | Building Engineering Management\n• **Archana Vittal** — M.Arch | Pedestrian Systems & Urban Morphology\n• **Nishant** — M.Arch | Sustainable & Digital Drafting\n• **Hiranmayi Shankavaram** — M.Sc Erasmus Univ Netherlands | Urban Management & Public Spaces\n• **Girish Ramanathan** — M.Arch | Experiential Studio Instructor\n\n*(Tip: Type any professor's name, e.g., \"tell me about Shikha Verma\" for their complete bio and official profile link!)*`,
+      chips: ["Professors", "Assistant Professors", "Doctoral Mentors", "Faculty Directory"]
+    },
+    {
+      id: "faculty_assistant_professors",
+      priority: 0.98,
+      keywords: ["assistant professors", "assistant prof", "assistant professors list", "assistant faculty"],
+      title: "Assistant Professors & Studio Instructors",
+      response: `**Assistant Professors at RV College of Architecture**\n\nRVCA has an energetic cohort of 26 Assistant Professors & Senior Assistant Professors mentoring foundational to advanced studios:\n\n• **Senior Assistant Professors**: Dharshini YG, Ramya Krishna, Pedaparthi Shweta, Vidya V, Mayank Singh.\n• **Assistant Professors**: Megala Gurumurthi, Nitin Bhardwaj, Pappu Harcharan, Ajinkya Kanitkar, Ishani Gogoi, Abhinandan K S, Dr. Asmita Yadav, Deepthi V, Akanksha Singh, Ujjayant Bhattacharyya, Lavanya Anbazhagan, Akanksha Ruchi Horo, Abhirami A, Kiranjee, Goutham K B, Sunain Dalwani, Raghavendra Kuppusamy, William George Kennedy, Archita Bandyopadhyay, Deepika Varadarajan, Prakruthi S Karadagi.\n\n• **Studio Focus**: Architectural drawing, pottery & ceramics, climatology simulation, digital fabrication, 3D printing, structural modeling.\n\n🌐 **Official Faculty Directory**: [Explore All Faculty Profiles (rvca.edu.in/faculty/)](https://rvca.edu.in/faculty/)`,
+      chips: ["Professors", "Associate Professors", "Doctoral Mentors", "Faculty Directory"]
+    },
+    {
+      id: "faculty_phd_holders",
+      priority: 0.98,
+      keywords: ["phd faculty", "ph.d faculty", "doctorate faculty", "who has phd", "phd holders", "professors with phd", "faculty qualifications phd", "faculty phd", "doctoral faculty", "doctoral mentors"],
+      title: "Doctoral Degree Faculty (Ph.D. Mentors)",
+      response: `**Doctoral Degree (Ph.D.) Faculty at RVCA**\n\nRVCA features an outstanding concentration of doctoral-qualified faculty mentors from premier institutions across India:\n\n1. **Dr. Rakesh K. S.** (Principal) — Ph.D. from **School of Architecture & Planning (SAP), Anna University Chennai**\n2. **Dr. Om Prakash Bawane** (Senior Professor) — Ph.D. from **Vinayaka Missions University** & M.Arch from **IIT Roorkee**\n3. **Dr. Shikha Verma** (Associate Professor) — Ph.D. & M.Tech from **MNNIT Allahabad**\n4. **Dr. Mahalakshmi Karnad** (Associate Professor) — Ph.D. & MLA from **School of Planning and Architecture (SPA), New Delhi**\n5. **Dr. Saisanath** (Associate Professor) — Ph.D. from **National Institute of Technology (NIT), Tiruchirappalli**\n6. **Dr. Chinnu S Kumar** (Associate Professor) — Ph.D. from **Malaviya National Institute of Technology (MNIT), Jaipur**\n7. **Dr. H R Manjunath** (Associate Professor) — Ph.D. from **Visvesvaraya Technological University (VTU)**\n8. **Dr. M S Amarnath** (Associate Professor) — Ph.D. from **Jain University** & MFA from **MSU Baroda**\n9. **Anupriya Saxena** (Associate Professor) — Ph.D. Research Scholar at **NIT Tiruchirappalli**\n10. **Akanksha Singh** (Assistant Professor) — Ph.D. Research Scholar at **NIT Calicut**\n\nScholars are eligible for Ph.D. guidance under these approved VTU research mentors.\n\n🌐 **Official Research Centre**: [Ph.D. Programme Details (rvca.edu.in/programmes/phdprogramme/)](https://rvca.edu.in/programmes/phdprogramme/)`,
+      chips: ["Research Guides", "Research Overview", "Ph.D. Program", "Faculty Directory"]
+    },
+    {
+      id: "faculty_by_dept",
+      priority: 0.98,
+      keywords: ["m.arch faculty", "march faculty", "pg faculty", "b.arch faculty", "barch faculty", "ug faculty", "who teaches march", "who teaches barch", "urban design faculty"],
+      title: "Faculty by Academic Wing — B.Arch vs M.Arch",
+      response: `**RVCA Faculty by Academic Department**\n\nFaculty members at RVCA are specialized across Undergraduate and Postgraduate studios:\n\n🏛️ **Postgraduate Studies (M.Arch in Urban Design)**:\n• **Prof. Prasanna Rao** — Associate Dean (PG Studies) | B.Arch, M.Arch (Urban Design) [CEPT Ahmedabad]\n• **Dr. Chinnu S Kumar** — Associate Professor | M.U.D. [SPA New Delhi], Ph.D. [MNIT Jaipur]\n• **Prof. Hiranmayi Shankavaram** — Assistant Professor | M.Sc Urban Management [Erasmus University, Netherlands]\n• Supported by visiting international master planners and urban design jury members.\n\n📐 **Undergraduate Studies (B.Arch — 5 Years)**:\n• 44 full-time dedicated design studio professors, associate professors, and assistant professors.\n• Led by Principal Dr. Rakesh K. S., Dean Prof. Suresh K Murthy, Design Chair Prof. Dinesh Rao, and Senior Prof. Phani Ram Pingali.\n• Focus: Studio mentorship, pottery & ceramic arts, climatology simulation, structural drafting, digital fabrication.\n\n🌐 **Official Faculty Directory**: [View All 63 Faculty Members (rvca.edu.in/faculty/)](https://rvca.edu.in/faculty/)`,
+      chips: ["Professors", "Associate Professors", "M.Arch Urban Design", "B.Arch Program", "Faculty Directory"]
     },
     {
       id: "contact_directory",
@@ -536,9 +608,33 @@
     "campus tour": "campus_facilities",
     "student clubs": "clubs",
     "clubs": "clubs",
-    "publications": "publications",
+    "publications": "publications_deep",
+    "publications (kalpa)": "publications_deep",
+    "kalpa": "publications_deep",
+    "kalpa magazine": "publications_deep",
+    "subversion": "publications_deep",
+    "sub:version": "publications_deep",
     "achievements": "achievements",
     "faculty directory": "faculty_directory",
+    "all faculty": "faculty_directory",
+    "professors": "faculty_professors",
+    "senior professors": "faculty_professors",
+    "associate professors": "faculty_associate_professors",
+    "assistant professors": "faculty_assistant_professors",
+    "ph.d mentors": "faculty_phd_holders",
+    "phd mentors": "faculty_phd_holders",
+    "b.arch faculty": "faculty_by_dept",
+    "m.arch faculty": "faculty_by_dept",
+    "research": "research_overview",
+    "research overview": "research_overview",
+    "research & innovation": "research_overview",
+    "smart city": "smart_city_research",
+    "smart city projects": "smart_city_research",
+    "smart city (saar)": "smart_city_research",
+    "saar": "smart_city_research",
+    "udrcc": "smart_city_research",
+    "research guides": "research_guides",
+    "phd guides": "research_guides",
     "contact authorities": "contact_directory",
     "contact administration": "contact_directory",
     "management quota criteria": "management_quota",
@@ -551,19 +647,31 @@
     if (!FACULTY || !Array.isArray(FACULTY)) return null;
     const clean = queryText.toLowerCase().replace(/^(dr|prof|ar|mr|ms|mrs)\.?\s+/gi, '').trim();
 
+    // PASS 1: Check full name matches first
     for (const member of FACULTY) {
       const memName = member.name.toLowerCase().replace(/^(dr|prof|ar|mr|ms|mrs)\.?\s+/gi, '').trim();
-      const parts = memName.split(/\s+/).filter(p => p.length >= 3);
-
-      // Full name contains
-      if (clean.includes(memName) || memName.includes(clean)) {
+      if (clean === memName || clean.includes(memName) || memName.includes(clean)) {
         return member;
       }
+    }
 
-      // Check surname / distinctive given name
-      for (const part of parts) {
-        const regex = new RegExp('\\b' + part + '\\b', 'i');
-        if (regex.test(queryText)) {
+    // PASS 2: Check distinctive single tokens (length >= 4, ignoring general words and common surnames)
+    const ignoreWords = new Set([
+      'about', 'tell', 'who', 'the', 'is', 'dr', 'prof', 'mr', 'ms', 'mrs',
+      'faculty', 'professor', 'professors', 'teacher', 'teachers', 'warden',
+      'dean', 'principal', 'design', 'chair', 'associate', 'assistant',
+      'member', 'members', 'research', 'guide', 'guides', 'project', 'projects',
+      'phd', 'barch', 'march', 'college', 'architecture'
+    ]);
+    const queryTokens = clean.split(/[^a-z0-9]+/i).filter(w => w.length >= 4 && !ignoreWords.has(w));
+    const commonSurnames = new Set(['kumar', 'singh', 'rao', 'reddy', 'babu', 'sharma']);
+
+    for (const member of FACULTY) {
+      const memName = member.name.toLowerCase().replace(/^(dr|prof|ar|mr|ms|mrs)\.?\s+/gi, '').trim();
+      const parts = memName.split(/[^a-z0-9]+/i).filter(p => p.length >= 4 && !commonSurnames.has(p));
+
+      for (const token of queryTokens) {
+        if (parts.some(p => p === token)) {
           return member;
         }
       }
@@ -586,9 +694,24 @@
   // 6. COMPOSITE INTENT RESOLUTION MATRIX
   function resolveCompositeIntent(cleanQuery, tokens = []) {
     const combined = (cleanQuery + ' ' + tokens.join(' ')).toLowerCase();
+
+    // Specific Research & Publication triggers
+    if (/\b(smart city|saar|udrcc|shivamogga smart)\b/i.test(combined)) return "smart_city_research";
+    if (/\b(kalpa|sub:?version)\b/i.test(combined)) return "publications_deep";
+    if (/\b(research guides?|doctoral guides?|supervisors?)\b/i.test(combined)) return "research_guides";
+    if (/\b(publications?|research papers?|faculty papers?)\b/i.test(combined)) return "publications_deep";
+    if (/\b(research in rvca|research projects?|funded research|research work|research thrust)\b/i.test(combined)) return "research_overview";
+
+    // Specific Faculty ranks & wings triggers
+    if (/\b(associate professors?)\b/i.test(combined)) return "faculty_associate_professors";
+    if (/\b(assistant professors?)\b/i.test(combined)) return "faculty_assistant_professors";
+    if (/\b(phd faculty|doctorate faculty|doctoral faculty|faculty.*phd|phd mentors?|doctoral mentors?)\b/i.test(combined)) return "faculty_phd_holders";
+    if (/\b(m\.?arch faculty|b\.?arch faculty|faculty by dept|faculty by department|who teaches (march|m arch|urban design|barch|b arch))\b/i.test(combined)) return "faculty_by_dept";
+    if (/\b(professors?|senior professors?|design chair)\b/i.test(combined) && !/\b(associate|assistant)\b/i.test(combined)) return "faculty_professors";
+
     const hasBArch = /\b(barch|b arch|undergraduate|ug|bachelor)\b/i.test(combined);
     const hasMArch = /\b(march|m arch|postgraduate|pg|urban design|master)\b/i.test(combined);
-    const hasPhD = /\b(phd|ph\.d|doctoral|research)\b/i.test(combined);
+    const hasPhD = /\b(phd|ph\.d|doctoral)\b/i.test(combined);
 
     const hasFees = /\b(fee|fees|cost|tuition|charge|payment)\b/i.test(combined);
     const hasEligibility = /\b(eligibility|criteria|qualification|cutoff|cutoffs|marks|requirement|nata|jee)\b/i.test(combined);
@@ -675,6 +798,8 @@
           "M.Arch Urban Design",
           "Admissions",
           "Fee Structure",
+          "Research & Innovation",
+          "Faculty Directory",
           "Eligibility (NATA)",
           "Hostel Facilities",
           "Placements",

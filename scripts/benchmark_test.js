@@ -82,6 +82,21 @@ const TEST_CASES = [
   { query: "who is Hiranmayi Shankavaram", expectedIntent: "faculty_profile", category: "Faculty Detective" },
   { query: "who is Dr M S Amarnath", expectedIntent: "faculty_profile", category: "Faculty Detective" },
   { query: "tell me about Archita Bandyopadhyay", expectedIntent: "faculty_profile", category: "Faculty Detective" },
+  { query: "tell me about Prasanna Rao", expectedIntent: "faculty_profile", category: "Faculty Detective" },
+  { query: "who is Dr. Om Prakash Bawane", expectedIntent: "faculty_profile", category: "Faculty Detective" },
+
+  // 10. Research, Smart Cities & Publications
+  { query: "research in rvca", expectedIntent: "research_overview", category: "Research & Innovation" },
+  { query: "smart city projects", expectedIntent: "smart_city_research", category: "Research & Innovation" },
+  { query: "tell me about saar initiative", expectedIntent: "smart_city_research", category: "Research & Innovation" },
+  { query: "who are the research guides", expectedIntent: "research_guides", category: "Research & Innovation" },
+  { query: "kalpa magazine", expectedIntent: "publications_deep", category: "Research & Innovation" },
+  { query: "subversion journal", expectedIntent: "publications_deep", category: "Research & Innovation" },
+  { query: "who are the professors", expectedIntent: "faculty_professors", category: "Faculty Architecture" },
+  { query: "associate professors list", expectedIntent: "faculty_associate_professors", category: "Faculty Architecture" },
+  { query: "assistant professors list", expectedIntent: "faculty_assistant_professors", category: "Faculty Architecture" },
+  { query: "who are the phd mentors", expectedIntent: "faculty_phd_holders", category: "Faculty Architecture" },
+  { query: "who teaches march", expectedIntent: "faculty_by_dept", category: "Faculty Architecture" },
 
   // 10. Typo Tolerance via Levenshtein Dynamic Programming
   { query: "tell me about plsemnt", expectedIntent: "placements", category: "Typo Tolerance" },

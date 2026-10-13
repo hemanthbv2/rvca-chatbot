@@ -132,6 +132,8 @@
       <!-- Quick Question Tray -->
       <div class="rvca-quick-tray" id="rvca-quick-tray">
         <span class="rvca-tray-chip" data-query="About RVCA">About RVCA</span>
+        <span class="rvca-tray-chip" data-query="Research & Innovation">Research</span>
+        <span class="rvca-tray-chip" data-query="Faculty Directory">Faculty</span>
         <span class="rvca-tray-chip" data-query="B.Arch Program">B.Arch</span>
         <span class="rvca-tray-chip" data-query="M.Arch Urban Design">M.Arch</span>
         <span class="rvca-tray-chip" data-query="Admissions">Admissions</span>
@@ -366,6 +368,8 @@
           'M.Arch Urban Design',
           'Admissions',
           'Fee Structure',
+          'Research & Innovation',
+          'Faculty Directory',
           'Eligibility (NATA)',
           'Hostel Facilities',
           'Placements',
@@ -473,6 +477,15 @@
     clubs:                 { label: 'Student Clubs & Culture', url: 'https://rvca.edu.in/clubs/' },
     campus_life:           { label: 'Campus Life & Activities', url: 'https://rvca.edu.in/clubs/' },
     publications:          { label: 'Publications & Magazines', url: 'https://rvca.edu.in/rvca_publications/' },
+    publications_deep:     { label: 'Kalpa & sub:version Publications', url: 'https://rvca.edu.in/rvca_publications/' },
+    research_overview:     { label: 'RVCA Research & Innovation', url: 'https://rvca.edu.in/research/' },
+    smart_city_research:   { label: 'Smart City SAAR Projects', url: 'https://rvca.edu.in/research/' },
+    research_guides:       { label: 'Ph.D. Research Guides & Centre', url: 'https://rvca.edu.in/programmes/phdprogramme/' },
+    faculty_professors:    { label: 'Senior Academic Council & Leadership', url: 'https://rvca.edu.in/faculty/' },
+    faculty_associate_professors: { label: 'Associate Professors Directory', url: 'https://rvca.edu.in/faculty/' },
+    faculty_assistant_professors: { label: 'Assistant Professors & Instructors', url: 'https://rvca.edu.in/faculty/' },
+    faculty_phd_holders:   { label: 'Doctoral Faculty Mentors (Ph.D.)', url: 'https://rvca.edu.in/faculty/' },
+    faculty_by_dept:       { label: 'Faculty by Academic Wing', url: 'https://rvca.edu.in/faculty/' },
     achievements:          { label: 'Student Accolades & Awards', url: 'https://rvca.edu.in/achievements/' },
     antiragging:           { label: 'Anti-Ragging Committee', url: 'https://rvca.edu.in/statutory-compliance/' },
     committees:            { label: 'Statutory Committees', url: 'https://rvca.edu.in/statutory-compliance/' },
