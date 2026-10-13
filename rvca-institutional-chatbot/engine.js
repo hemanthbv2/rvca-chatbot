@@ -498,8 +498,13 @@
     "barch": "barch_program",
     "b.arch eligibility": "barch_eligibility",
     "barch eligibility": "barch_eligibility",
+    "eligibility": "barch_eligibility",
+    "eligibility (nata)": "barch_eligibility",
+    "eligibility & nata": "barch_eligibility",
     "m.arch program": "march_program",
     "march program": "march_program",
+    "m.arch urban design": "march_program",
+    "march urban design": "march_program",
     "m.arch": "march_program",
     "march": "march_program",
     "ph.d program": "phd_program",
@@ -664,7 +669,18 @@
         intentId: "greeting",
         title: "RVCA Virtual Assistant",
         response: `Hello! Welcome to **RV College of Architecture (RVCA)**. How may I assist you today? Please select an option below or type your question:`,
-        chips: ["About RVCA", "Courses", "Admissions", "Facilities", "Contact Us"],
+        chips: [
+          "About RVCA",
+          "B.Arch Program",
+          "M.Arch Urban Design",
+          "Admissions",
+          "Fee Structure",
+          "Eligibility (NATA)",
+          "Hostel Facilities",
+          "Placements",
+          "Facilities",
+          "Contact Us"
+        ],
         overflow: [],
         latencyMs: parseFloat((performance.now() - startTime).toFixed(2))
       };

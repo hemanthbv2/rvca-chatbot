@@ -132,8 +132,13 @@
       <!-- Quick Question Tray -->
       <div class="rvca-quick-tray" id="rvca-quick-tray">
         <span class="rvca-tray-chip" data-query="About RVCA">About RVCA</span>
-        <span class="rvca-tray-chip" data-query="Courses">Courses</span>
+        <span class="rvca-tray-chip" data-query="B.Arch Program">B.Arch</span>
+        <span class="rvca-tray-chip" data-query="M.Arch Urban Design">M.Arch</span>
         <span class="rvca-tray-chip" data-query="Admissions">Admissions</span>
+        <span class="rvca-tray-chip" data-query="Fee Structure">Fee Structure</span>
+        <span class="rvca-tray-chip" data-query="Eligibility (NATA)">Eligibility</span>
+        <span class="rvca-tray-chip" data-query="Hostel Facilities">Hostels</span>
+        <span class="rvca-tray-chip" data-query="Placements">Placements</span>
         <span class="rvca-tray-chip" data-query="Facilities">Facilities</span>
         <span class="rvca-tray-chip" data-query="Contact Us">Contact Us</span>
       </div>
@@ -354,8 +359,19 @@
       greeting = window.RVCAEngine.classify('');
     } else {
       greeting = {
-        response: "Greetings! Welcome to **RV College of Architecture (RVCA)**. How can I assist you with Admissions, Courses, or Campus Life today?",
-        chips: ['About RVCA', 'Courses', 'Admissions', 'Facilities', 'Contact Us'],
+        response: "Hello! Welcome to **RV College of Architecture (RVCA)**. How may I assist you today? Please select an option below or type your question:",
+        chips: [
+          'About RVCA',
+          'B.Arch Program',
+          'M.Arch Urban Design',
+          'Admissions',
+          'Fee Structure',
+          'Eligibility (NATA)',
+          'Hostel Facilities',
+          'Placements',
+          'Facilities',
+          'Contact Us'
+        ],
         overflow: []
       };
     }
