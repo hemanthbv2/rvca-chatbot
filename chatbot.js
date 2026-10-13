@@ -47,6 +47,8 @@
         trackMessageSent: () => {},
         trackScrollDepth: () => {},
         trackKeyStroke: () => {},
+        trackHoverStart: () => {},
+        trackHoverEnd: () => {},
         submitLead: async () => true
       };
     }
@@ -397,7 +399,7 @@
         title: result.title
       });
 
-      appendBotMessage(result.response, result.chips, result.overflow);
+      appendBotMessage(result.response, result.chips, result.overflow, getSourceLink(result));
     }, 280);
   }
 
@@ -420,11 +422,67 @@
     messagesEl.scrollTop = messagesEl.scrollHeight;
   }
 
-  function appendBotMessage(text, chips = [], overflow = []) {
+  // Official rvca.edu.in page shown below each answer
+  const SOURCE_LINKS = {
+    about_rvca:            { label: 'About Us', url: 'https://rvca.edu.in/about-rvca' },
+    why_rvca:              { label: 'About Us', url: 'https://rvca.edu.in/about-rvca' },
+    everything_overview:   { label: 'RVCA Official Website', url: 'https://rvca.edu.in/' },
+    board_of_management:   { label: 'Board of Management', url: 'https://rvca.edu.in/board-of-management/' },
+    principal:             { label: 'Principal Profile', url: 'https://rvca.edu.in/faculty/dr-rakesh-k-s/' },
+    dean:                  { label: 'Dean Profile', url: 'https://rvca.edu.in/faculty/suresh-k-murthy/' },
+    faculty_directory:     { label: 'Faculty', url: 'https://rvca.edu.in/faculty/' },
+    courses_overview:      { label: 'Programmes', url: 'https://rvca.edu.in/programmes/' },
+    barch_program:         { label: 'Programmes', url: 'https://rvca.edu.in/programmes/' },
+    march_program:         { label: 'Programmes', url: 'https://rvca.edu.in/programmes/' },
+    phd_program:           { label: 'Research', url: 'https://rvca.edu.in/research/' },
+    curriculum_and_syllabus: { label: 'Programmes', url: 'https://rvca.edu.in/programmes/' },
+    admissions_overview:   { label: 'Admissions', url: 'https://rvca.edu.in/admission/' },
+    barch_eligibility:     { label: 'Admissions', url: 'https://rvca.edu.in/admission/' },
+    management_quota:      { label: 'Admissions', url: 'https://rvca.edu.in/admission/' },
+    cutoffs_and_scores:    { label: 'Admissions', url: 'https://rvca.edu.in/admission/' },
+    fees:                  { label: 'Admissions', url: 'https://rvca.edu.in/admission/' },
+    scholarships_aid:      { label: 'Admissions', url: 'https://rvca.edu.in/admission/' },
+    placements:            { label: 'Placements', url: 'https://rvca.edu.in/placement/' },
+    internships:           { label: 'Placements', url: 'https://rvca.edu.in/placement/' },
+    globed:                { label: 'Placements', url: 'https://rvca.edu.in/placement/' },
+    campus_facilities:     { label: 'Infrastructure', url: 'https://rvca.edu.in/infrastructure/' },
+    experiential_studios:  { label: 'Experiential Learning Spaces', url: 'https://rvca.edu.in/infrastructure/experiential-learning-spaces/' },
+    hostels:               { label: 'Hostel', url: 'https://rvca.edu.in/infrastructure/hostel/' },
+    library:               { label: 'Library', url: 'https://rvca.edu.in/infrastructure/library/' },
+    skill_labs:            { label: 'Skill Labs', url: 'https://rvca.edu.in/infrastructure/SKILL%20LABS/' },
+    study_tours:           { label: 'Study Tours', url: 'https://rvca.edu.in/infrastructure/STUDY%20TOUR/' },
+    site_visits:           { label: 'Site Visits', url: 'https://rvca.edu.in/infrastructure/SITE%20VISITS/' },
+    canteen_and_dining:    { label: 'Canteen', url: 'https://rvca.edu.in/infrastructure/canteen/' },
+    sports_and_fitness:    { label: 'Physical Education', url: 'https://rvca.edu.in/infrastructure/physical-education/' },
+    clubs:                 { label: 'Clubs', url: 'https://rvca.edu.in/clubs/' },
+    campus_life:           { label: 'Clubs', url: 'https://rvca.edu.in/clubs/' },
+    publications:          { label: 'Publications', url: 'https://rvca.edu.in/rvca_publications/' },
+    achievements:          { label: 'Achievements', url: 'https://rvca.edu.in/achievements/' },
+    antiragging:           { label: 'Statutory Compliance', url: 'https://rvca.edu.in/statutory-compliance/' },
+    committees:            { label: 'Statutory Compliance', url: 'https://rvca.edu.in/statutory-compliance/' },
+    contact_directory:     { label: 'Contact Us', url: 'https://rvca.edu.in/contact-us/' },
+    how_to_reach_location: { label: 'Contact Us', url: 'https://rvca.edu.in/contact-us/' },
+    timings_and_schedule:  { label: 'Contact Us', url: 'https://rvca.edu.in/contact-us/' }
+  };
+
+  function getSourceLink(result) {
+    if (!result) return null;
+    if (result.sourceUrl) return { label: (result.title || 'Faculty') + ' Profile', url: result.sourceUrl };
+    return SOURCE_LINKS[result.intentId] || null;
+  }
+
+  function appendBotMessage(text, chips = [], overflow = [], source = null) {
     const msg = document.createElement('div');
     msg.className = 'rvca-msg rvca-msg-bot';
 
     const formattedText = renderMarkdown(text);
+
+    const sourceHtml = (source && source.url) ? `
+        <a class="rvca-source-link" href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7zm5 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/></svg>
+          <span>${escapeHtml(source.label)}</span>
+          <span class="rvca-source-domain">rvca.edu.in ↗</span>
+        </a>` : '';
 
     let chipsHtml = '';
     if (chips && chips.length > 0) {
@@ -452,6 +510,7 @@
       </div>
       <div class="rvca-msg-content" style="max-width: calc(100% - 38px);">
         <div class="rvca-bubble">${formattedText}</div>
+        ${sourceHtml}
         ${overflowHtml}
         ${chipsHtml}
         <span class="rvca-msg-time">${getTimeStr()}</span>

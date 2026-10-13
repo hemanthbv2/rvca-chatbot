@@ -188,8 +188,24 @@
       priority: 1.0,
       keywords: ["about rvca", "history", "established", "vision", "mission", "background", "institution"],
       title: "About RV College of Architecture",
-      response: `**About RV College of Architecture (RVCA)**\n\n• **Establishment**: Started in 1992 as the Department of Architecture in RV College of Engineering (RVCE).\n• **Autonomous Evolution**: Shifted to independent building in 1995, obtained autonomy in 2009 as RV School of Architecture, and relocated in 2014 to its dedicated modern campus in Banashankari 6th Stage, Bengaluru.\n• **Affiliation**: Visvesvaraya Technological University (VTU), Belagavi.\n• **Approvals**: Council of Architecture (COA), New Delhi.\n• **KEA College Code**: **E-244**\n• **Vision**: An architecture institute par excellence, nurturing academics, profession and research for a sustainable contemporary society.\n• **Rankings**: Ranked 13th in India & No. 1 in Karnataka (MDRA India Today 2025); 2nd in Super Excellence Category in India (GHRDC 2024).`,
+      response: `**Welcome to RV College of Architecture (RVCA)**\n\nEstablished in 1992 under the iconic **Rashtreeya Sikshana Samithi Trust (RSST)**, RV College of Architecture is Karnataka's premier school of architectural education:\n\n• **Institutional Legacy**: Started in 1992 as the Department of Architecture in RVCE, attained academic autonomy in 2009, and relocated in 2014 to its dedicated modern campus in Banashankari 6th Stage, Bengaluru.\n• **Accreditation & Affiliations**: Affiliated to Visvesvaraya Technological University (VTU), Belagavi, and approved by the Council of Architecture (COA), New Delhi.\n• **KEA College Code**: **E-244**\n• **Stellar Rankings**:\n  - **#1 in Karnataka & 13th in India** (MDRA India Today 2025)\n  - **2nd in Super Excellence Category in India** (GHRDC 2024)\n  - **14th Nationally** (THE WEEK 2025)\n• **Vision**: To be an architecture institute par excellence, nurturing academics, creative professional practice, and pioneering research for a sustainable contemporary society.`,
       chips: ["Courses", "Admissions", "Facilities", "Contact Us"]
+    },
+    {
+      id: "everything_overview",
+      priority: 0.85,
+      keywords: ["tell me everything", "tell me all about", "everything about rvca", "everything about the college", "everything about architecture", "give me complete details", "complete information", "all details", "overview of rvca", "what can you tell me", "what does rvca offer", "explore rvca", "complete guide", "full details", "all about the college", "all info"],
+      title: "Complete Institutional Guide — RV College of Architecture",
+      response: `**Welcome to RV College of Architecture (RVCA) — Complete Institutional Guide**\n\nRanked **#1 in Karnataka** and **13th in India** (MDRA India Today 2025), RVCA represents over 30 years of architectural pedigree under the Rashtreeya Sikshana Samithi Trust (RSST). Here is a complete overview:\n\n🏛️ **Academic Degrees Offered**:\n• **B.Arch (5 Years / 10 Semesters)**: VTU-affiliated & Council of Architecture (COA) approved degree featuring hands-on studio pedagogy and a mandatory 1-semester professional internship in active architectural practice.\n• **M.Arch in Urban Design (2 Years / 4 Semesters)**: 20 seats (16 PGCET + 4 Management) focused on urban morphology, spatial informatics, and city habitats.\n• **Ph.D. in Architecture**: Recognized VTU Research Centre with doctorate supervisors across sustainable and climatic design.\n\n🎯 **Admissions & Seat Quotas**:\n• **Direct Management Quota**: Direct application to RSST (rv@rvei.edu.in) based on 10+2 marks & NATA/JEE score. **Strict Zero-Broker Policy**.\n• **Government Quota (KEA KCET)**: Karnataka domicile merit counselling (**KEA Code: E-244**).\n• **All-India Quota (COMEDK UGET)**: Centralized merit counselling for national students.\n\n🎨 **Experiential Studios & Skill Workshops**:\n• Natural daylit 40-student drafting studios with individual workstations and personal lockers.\n• Hands-on **Model Making Workshop**, **Ceramic Clay & Pottery Studio** with kilns, **Digital Fabrication Lab (3D Printing)**, **Climate Simulation Lab**, and **GIS Analytical Lab**.\n\n🏡 **Campus Life, Hostels & Dining**:\n• Separate secure boys' and girls' hostels with an attached **pure vegetarian dining mess** (4 nutritious meals daily).\n• Hygienic multi-cuisine cafeteria, gymnasium, basketball court, indoor games, and 12 vibrant student clubs.\n• Curated annual **architectural study tours** and **live site visits** across India and abroad.\n\n💼 **Internships, Career Placements & GlobEd**:\n• 100% internship placement across premier architecture studios (Total Environment, Mindspace, Studio Whitescape, Betweenlines).\n• **GlobEd Cell**: Dedicated international advisory facilitating Masters admissions to prestigious universities across USA, UK, Europe, Australia, and Singapore.`,
+      chips: ["B.Arch Program", "Admissions Overview", "Fee Structure", "Experiential Studios", "Hostels"]
+    },
+    {
+      id: "why_rvca",
+      priority: 0.85,
+      keywords: ["why rvca", "why choose rvca", "why should i join", "why study at rvca", "what makes rvca unique", "benefits of rvca", "reasons to join rvca", "is rvca good", "how good is rvca", "why is rvca famous", "unique features", "reasons to choose"],
+      title: "Why Choose RVCA — Hallmarks & Excellence",
+      response: `**Why Study Architecture at RV College of Architecture?**\n\nChoosing the right architecture school shapes your design philosophy and career. Here is why aspiring architects choose RVCA:\n\n1. **#1 Architecture College in Karnataka**:\n   • Ranked **1st in Karnataka** and **13th across India** by MDRA India Today (2025).\n   • Ranked **2nd in India in Super Excellence** by GHRDC (2024).\n\n2. **Dedicated Standalone Architectural Campus**:\n   • Unlike departments housed inside engineering buildings, RVCA operates on its own dedicated, architecturally inspiring campus in Banashankari 6th Stage, Bengaluru, tailored specifically for studio culture, juries, and creative spatial exploration.\n\n3. **Distinguished Faculty Mentors (63 Members)**:\n   • Learn under renowned practicing architects and academicians with doctoral and postgraduate degrees from SAP Chennai, IIT Delhi, CEPT Ahmedabad, and MSU Baroda, headed by Dr. Rakesh K. S. and Prof. Suresh K Murthy.\n\n4. **Hands-On Experiential Learning**:\n   • Move beyond theoretical drafting with on-campus pottery wheels, ceramic kilns, digital fabrication (3D printers), climatology simulation, and structural testing labs.\n\n5. **Award-Winning Student Pedigree**:\n   • Our students consistently win national accolades, including the **COA National Thesis Awards** (Rs. 1 Lakh cash prize), **Solar Decathlon India**, **Saint-Gobain Transparence**, and the **Asia Young Designer Awards (AYDA)**.\n\n6. **Global Pathways & 100% Industry Exposure**:\n   • Mandatory 1-semester professional training in leading architectural studios and direct guidance from the **GlobEd Cell** for higher studies at top global universities (USC, RMIT, KU Leuven, NUS, etc.).`,
+      chips: ["Courses", "Experiential Studios", "Study Tours", "Admissions", "Contact Us"]
     },
     {
       id: "courses_overview",
@@ -336,6 +352,54 @@
       chips: ["About RVCA", "Placements", "Publications"]
     },
     {
+      id: "study_tours",
+      priority: 0.85,
+      keywords: ["study tour", "study tours", "architectural tour", "travel study", "documentation tour", "field trips", "travels"],
+      title: "Architectural Study Tours & Field Exploration",
+      response: `**Architectural Study Tours & Experiential Learning at RVCA**\n\nAt RV College of Architecture, study tours form an essential pillar of our experiential curriculum. We believe architecture is best understood by experiencing spaces firsthand:\n\n• **National & International Tours**: Every academic year, faculty guides curated documentation tours across India and international architectural capitals to study vernacular heritage, structural innovations, and contemporary masterpieces.\n• **Studio Integration**: Students document historical precincts, measure structures, sketch on-site, and engage directly with regional craftsmen and legendary architects.\n• **Travel Memoirs**: Student travelogues and field documentations are featured in our annual publications *KALPA* and *The Journey Shared*.\n• **Official Tour Portal**: [RVCA Study Tours](https://rvca.edu.in/infrastructure/STUDY%20TOUR/)`,
+      chips: ["Site Visits", "Student Clubs", "Campus Facilities", "B.Arch Program"]
+    },
+    {
+      id: "site_visits",
+      priority: 0.85,
+      keywords: ["site visit", "site visits", "construction visit", "live project", "site exposure", "construction site"],
+      title: "Site Visits & Practical Construction Exposure",
+      response: `**Live Site Visits & Practical Studio Exposure**\n\nRVCA places immense value on bridging theoretical studio drafting with real-world construction reality:\n\n• **Active Construction Exposure**: Students regularly visit active residential, commercial, and urban infrastructure sites across Bengaluru.\n• **Material Interaction**: Gain firsthand insights into structural steel erection, RCC casting, brick bonding, HVAC ducting, and sustainable building technologies.\n• **Expert Interactions**: Direct on-site dialogue with site engineers, project managers, and practicing architects.\n• **Official Site Visits Portal**: [RVCA Site Visits](https://rvca.edu.in/infrastructure/SITE%20VISITS/)`,
+      chips: ["Skill Labs", "Study Tours", "B.Arch Program", "Internships"]
+    },
+    {
+      id: "canteen_and_dining",
+      priority: 0.85,
+      keywords: ["canteen", "cafeteria", "food", "dining", "canteen food", "lunch", "snacks", "mess menu"],
+      title: "Campus Canteen & Dining Facilities",
+      response: `**Campus Canteen & Dining Experience at RVCA**\n\n• **Hygienic Multi-Cuisine Cafeteria**: Open from **09:00 AM to 05:00 PM**, serving fresh breakfast, lunch, and evening refreshments.\n• **Student Committee Curated Menu**: The mess menu is actively curated in consultation with the Student Welfare Committee to ensure balanced nutrition and diverse regional delicacies.\n• **Hostel Mess**: In addition to the canteen, hostel students enjoy an attached pure vegetarian dining hall serving 4 hygienic meals daily (breakfast, lunch, evening snacks, and dinner).\n• **Portal**: [RVCA Canteen](https://rvca.edu.in/infrastructure/canteen/)`,
+      chips: ["Hostel Facilities", "Campus Facilities", "Contact Us"]
+    },
+    {
+      id: "sports_and_fitness",
+      priority: 0.85,
+      keywords: ["sports", "gym", "fitness", "badminton", "basketball", "table tennis", "physical education", "gymnasium", "indoor games"],
+      title: "Sports, Gymnasium & Physical Education",
+      response: `**Sports & Physical Fitness at RVCA**\n\nRVCA encourages holistic student wellbeing with vibrant sports infrastructure:\n\n• **Facilities Available**: Dedicated basketball court, badminton court, gymnasium, indoor table tennis, chess, and carrom boards.\n• **Annual Sports Fest**: Inter-batch and inter-college sports tournaments organized every academic year.\n• **Physical Education Director**: Mr. Puneeth Kempegowda (Assistant Director of Physical Education, [puneethhk.rvca@rvei.edu.in](mailto:puneethhk.rvca@rvei.edu.in)).\n• **Official Portal**: [RVCA Physical Education](https://rvca.edu.in/infrastructure/physical-education/)`,
+      chips: ["Student Clubs", "Campus Facilities", "Hostels"]
+    },
+    {
+      id: "scholarships_aid",
+      priority: 0.85,
+      keywords: ["scholarship", "scholarships", "financial aid", "fee concession", "ssp", "nsp", "sc st scholarship", "fee discount"],
+      title: "Scholarships & Financial Assistance",
+      response: `**Scholarships & Financial Assistance at RVCA**\n\nWe believe financial constraints should never hinder a talented student's architectural ambitions:\n\n• **Government Scholarships**: Complete facilitation for State Scholarship Portal (SSP), National Scholarship Portal (NSP), Post-Matric SC/ST/OBC Scholarships, and Fee Concessions.\n• **RSST Trust Scholarships**: Merit-cum-means assistance provided by Rashtreeya Sikshana Samithi Trust for deserving candidates.\n• **Scholarship Coordinator**: Prof. Prasanna Rao | Phone: **080-35094920** / **080-35094924**.\n• **Social Welfare Officer**: Prof. K Sreedhar | Official desk assistance.`,
+      chips: ["Fee Structure", "Admissions", "Contact Us"]
+    },
+    {
+      id: "experiential_studios",
+      priority: 0.85,
+      keywords: ["studios", "design studios", "work desks", "drafting tables", "drafting boards", "learning spaces", "classrooms"],
+      title: "Experiential Design Studios & Workspaces",
+      response: `**Spacious Experiential Design Studios at RVCA**\n\n• **Individual Workstations**: Every student is allocated an individual drafting table, ergonomic seating, and locker storage within dedicated 40-student studio spaces.\n• **Natural Daylighting & Ventilation**: Acoustically designed, high-ceiling studios that maximize natural ambient light for sketching and technical drafting.\n• **Critique & Jury Areas**: Integrated pin-up boards and digital projection displays for studio juries and peer evaluations.\n• **Portal**: [RVCA Experiential Learning Spaces](https://rvca.edu.in/infrastructure/experiential-learning-spaces/)`,
+      chips: ["Skill Labs", "Campus Facilities", "B.Arch Program"]
+    },
+    {
       id: "faculty_directory",
       priority: 1.0,
       keywords: ["faculty", "teachers", "professors", "lecturers", "staff", "hod", "who teaches", "faculty list"],
@@ -350,6 +414,46 @@
       title: "Campus Location & Official Contact Directory",
       response: `**RV College of Architecture Contact Channels**\n\n• **Address**: CA Site No. 1, Banashankari 6th Stage, 4th Block, Chikegowadanapalya, Bengaluru - 560109, Karnataka, India\n• **Campus EPABX**: +91-80-35095000 / 5001 / 5002\n• **Google Maps**: [View Campus Location](https://maps.app.goo.gl/giLUPxmCUxKH9WdcA)\n\n**Key Department Desks**:\n• **Principal / Academics**: [principal.rvca@rvei.edu.in](mailto:principal.rvca@rvei.edu.in) | 080-35095001\n• **M.Arch (Urban Design)**: Prof. Prasanna Rao | 080-35094924\n• **VTU Affairs & Exams**: Dr. H R Manjunath | 080-35094929\n• **Accounts & Fees**: Harsha Deshpande | 080-35094942\n• **Boys Hostel**: Dr. M S Amarnath | 080-35092402\n• **Training & Placements**: Ar. Vidya V | 080-35094938\n• **Internship Cell**: Ar. Anupriya Saxena | 080-35094933\n• **HR & Admin**: Srinivas A M | 080-35095004`,
       chips: ["Admissions", "Fees", "Hostel Facilities"]
+    },
+    {
+      id: "campus_life",
+      priority: 0.85,
+      keywords: ["campus life", "student life", "life at rvca", "college life", "studio culture", "studio life", "atmosphere at rvca", "day in the life", "what is student life like", "campus vibe"],
+      title: "Student Life & Vibrant Studio Culture",
+      response: `**Student Life & Studio Culture at RVCA**\n\nLife at RVCA is creative, dynamic, and community-driven. Architecture is more than a degree here — it's an immersive lifestyle:\n\n• **Studio Culture**: The heart of RVCA beats in the design studios. Students collaborate, brainstorm, build physical scale models, and engage in constructive jury critiques in daylit, open workspaces.\n• **Study Tours & Site Visits**: Every academic year features curated travel across heritage cities (Hampi, Rajasthan, Kerala, Chandigarh) and international design capitals, alongside live construction site visits in Bengaluru.\n• **Vibrant Student Clubs**: From the Art Club, Heritage Club, and Drama Club to the Sustainability Club (Solar Decathlon) and Quiz Club, there are endless avenues for creative expression.\n• **Festivals & Events**: Annual Architecture Fests, inter-batch sports tournaments, exhibitions in the 180 sq. m Material Museum, and design symposiums.\n• **Dining & Social Spaces**: The campus cafeteria, open courtyards, and green landscaped pockets serve as bustling hubs for casual chats, coffee breaks, and group discussions.\n• **Wellbeing & Support**: Dedicated physical education directors, a gym, badminton/basketball courts, on-campus healthcare doctor, and student counselling committee.`,
+      chips: ["Experiential Studios", "Study Tours", "Student Clubs", "Hostels", "Sports & Fitness"]
+    },
+    {
+      id: "timings_and_schedule",
+      priority: 0.85,
+      keywords: ["timings", "college timings", "working hours", "working days", "classes timing", "office hours", "what time does college start", "daily schedule", "timing of college"],
+      title: "College Timings & Academic Working Hours",
+      response: `**RVCA College Timings & Office Hours**\n\n• **Academic Studio & Class Hours**:\n  - **Monday to Friday**: 09:00 AM – 04:30 PM\n  - **Saturday**: 09:00 AM – 01:30 PM (Design studios, workshops, and student club activities)\n• **Principal's Office & Administration**:\n  - **Monday to Friday**: 09:00 AM – 05:00 PM (Principal desk accessible till 07:00 PM on appointment)\n• **Resource Centre & Library**:\n  - **Monday to Friday**: 08:30 AM – 06:00 PM\n  - **Saturday**: 09:00 AM – 02:00 PM\n• **Campus Canteen**:\n  - 09:00 AM – 05:00 PM daily\n• **Hostel Dining Hours**:\n  - Breakfast: 07:30 AM – 09:00 AM\n  - Lunch: 12:30 PM – 02:00 PM\n  - Evening Tea: 04:30 PM – 05:30 PM\n  - Dinner: 07:30 PM – 09:30 PM`,
+      chips: ["Campus Facilities", "Experiential Studios", "Contact Directory"]
+    },
+    {
+      id: "curriculum_and_syllabus",
+      priority: 0.85,
+      keywords: ["curriculum", "syllabus", "subjects", "course structure", "what will i study", "learning scheme", "cbcs scheme", "barch subjects", "design studio syllabus"],
+      title: "Architecture Curriculum & Subjects (VTU CBCS Scheme)",
+      response: `**RVCA Architecture Curriculum & Subjects Overview**\n\nRVCA follows the approved Visvesvaraya Technological University (VTU) Choice Based Credit System (CBCS) curriculum, updated regularly to incorporate contemporary design technologies:\n\n1. **Core Architectural Design Studios**:\n   - Residential, Institutional, Commercial, Urban Habitat, and Thesis Design Studios.\n2. **Building Construction & Materials (MMBC)**:\n   - Brick, timber, RCC, steel construction, advanced building technologies, and joinery details.\n3. **Architectural Graphics & Drawing**:\n   - Freehand sketching, geometric perspective, descriptive geometry, and presentation techniques.\n4. **History & Theory of Architecture**:\n   - Ancient Indian, Vernacular, Western, Islamic, Modern, and Contemporary architectural history.\n5. **Climate Responsive Architecture & Environmental Science**:\n   - Passive cooling, solar shading, thermal comfort, acoustics, illumination, and building services.\n6. **Digital Tools & Spatial Analytics**:\n   - AutoCAD, Revit (BIM), SketchUp, Rhino, Photoshop, and GIS analytical mapping.\n7. **Structures & Materials Science**:\n   - Structural mechanics, RCC design, steel structures, and seismic-resistant design.\n8. **Professional Practice & Mandatory Internship**:\n   - Office management, Council of Architecture codes, tendering, and 1 full semester in practice.\n\n• **Official Downloads**: [Download VTU B.Arch 2021 Scheme & Syllabus PDF](https://rvca.edu.in/programmes/ugprogramme/ug_2021_scheme__syllabus/)`,
+      chips: ["B.Arch Program", "Experiential Studios", "Skill Labs", "Internships"]
+    },
+    {
+      id: "how_to_reach_location",
+      priority: 0.85,
+      keywords: ["how to reach", "nearest metro", "metro connectivity", "bus connectivity", "location details", "directions to campus", "how to visit campus", "nearest metro station", "location of rvca"],
+      title: "Location, Directions & Metro Transit Connectivity",
+      response: `**How to Reach RV College of Architecture**\n\n• **Campus Address**:\n  CA Site No. 1, Banashankari 6th Stage, 4th Block, Chikegowadanapalya, Bengaluru - 560109, Karnataka, India.\n• **Google Maps Navigation**: [Open RVCA on Google Maps](https://maps.app.goo.gl/giLUPxmCUxKH9WdcA)\n\n🚇 **Nearest Metro Connectivity**:\n• **Namma Metro Green Line**: The nearest metro stations are **Vajarahalli Metro Station** and **Silk Institute Metro Station** on Kanakapura Road (~10-12 mins by auto/cab).\n\n🚌 **BMTC Bus & Institutional Transport**:\n• **BMTC Bus Stops**: Chikegowadanapalya / Banashankari 6th Stage bus stops connecting to Banashankari TTMC and Majestic.\n• **College Bus Fleet**: RVCA operates dedicated bus routes connecting major residential hubs across Bengaluru. [Download Bus Routes & Transport Notification](https://rvca.edu.in/wp-content/uploads/2026/06/TRANSPORT-FEE-NOTIFICATION-AY-2026-27.pdf)\n\n🚗 **Landmarks**: Located off Kanakapura Road near NICE Road junction, providing seamless ring-road connectivity across Bengaluru.`,
+      chips: ["Campus Facilities", "Contact Us", "Hostel Facilities"]
+    },
+    {
+      id: "cutoffs_and_scores",
+      priority: 0.8,
+      keywords: ["admission cutoff", "admission cutoffs", "closing rank", "rank required", "minimum marks for admission", "kcet closing rank", "comedk closing rank"],
+      title: "Admission Cutoffs & Qualifying Score Benchmarks",
+      response: `**RVCA Admission Cutoffs & Score Benchmarks**\n\nAdmissions to RVCA are among the most sought-after in South India:\n\n• **KEA KCET (Karnataka Quota — Code E-244)**:\n  - Combined merit rank calculated using 50% 10+2 (PCM) marks + 50% NATA score.\n  - Typically closes within the top competitive ranks for architecture colleges in Karnataka.\n• **COMEDK UGET (All-India Merit Quota)**:\n  - Open to students nationwide; evaluated on 10+2 marks + NATA normalized scores.\n• **Direct Management Quota Minimum Eligibility Benchmarks**:\n  - 10th Standard: Minimum 70% in Science & Mathematics.\n  - Class 11: Minimum 65% in Mathematics & Physics individually.\n  - Class 12: Minimum 60% in Physics, Chemistry & Mathematics individually.\n  - Valid qualified NATA or JEE Main Paper II scorecard.`,
+      chips: ["B.Arch Eligibility", "Management Quota", "Admissions Overview"]
     }
   ];
 
@@ -368,6 +472,26 @@
     "infrastructure": "campus_facilities",
     "contact us": "contact_directory",
     "contact": "contact_directory",
+    "why rvca": "why_rvca",
+    "why choose rvca": "why_rvca",
+    "everything about rvca": "everything_overview",
+    "complete guide": "everything_overview",
+    "campus life": "campus_life",
+    "student life": "campus_life",
+    "timings": "timings_and_schedule",
+    "college timings": "timings_and_schedule",
+    "curriculum": "curriculum_and_syllabus",
+    "syllabus": "curriculum_and_syllabus",
+    "how to reach": "how_to_reach_location",
+    "directions": "how_to_reach_location",
+    "study tours": "study_tours",
+    "site visits": "site_visits",
+    "canteen": "canteen_and_dining",
+    "sports": "sports_and_fitness",
+    "sports & fitness": "sports_and_fitness",
+    "scholarships": "scholarships_aid",
+    "experiential studios": "experiential_studios",
+    "studios": "experiential_studios",
     "b.arch program": "barch_program",
     "barch program": "barch_program",
     "b.arch": "barch_program",
@@ -639,6 +763,7 @@
         response: formatFacultyResponse(facultyFound),
         chips: ["Faculty Directory", "Principal Bio", "Contact Directory"],
         overflow: [],
+        sourceUrl: facultyFound.profileUrl || null,
         latencyMs: parseFloat((performance.now() - startTime).toFixed(2))
       };
     }
@@ -698,7 +823,19 @@
       let matchIdx = -1;
 
       for (const kw of item.keywords) {
-        const idx = sanitized.indexOf(kw);
+        let idx = -1;
+        if (kw.length <= 4) {
+          // Word boundary check for short acronyms/words to avoid collision (e.g. 'nsp' in 'transport')
+          const escaped = kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          const regex = new RegExp(`(?:^|[^a-z0-9])${escaped}(?:[^a-z0-9]|$)`, 'i');
+          const m = sanitized.match(regex);
+          if (m) {
+            idx = sanitized.indexOf(kw, m.index);
+          }
+        } else {
+          idx = sanitized.indexOf(kw);
+        }
+
         if (idx !== -1) {
           // Check Negation Shield
           if (!hasNegation(sanitized, idx)) {
@@ -759,12 +896,96 @@
       };
     }
 
-    // Fallback Institutional Search & Guidance
+    // Conversational assistance check (e.g. 'can you help me', 'i have questions', 'who are you')
+    if (/^(help|assist|can\s+you\s+help|who\s+are\s+you|what\s+can\s+you\s+do|i\s+have\s+a\s+question|what\s+is\s+this)\b/i.test(sanitized)) {
+      return {
+        intentId: "greeting",
+        title: "RVCA Information Assistant",
+        response: `Hello and a very warm welcome! I am your official **RV College of Architecture** Institutional AI Assistant.\n\nI can provide comprehensive, verified guidance on our **B.Arch & M.Arch academic programs**, **direct management admissions & CET/COMEDK quotas**, **fee structures**, **experiential drafting studios**, **campus life & hostels**, and our **63 eminent faculty members**.\n\nHow may I help you today? Please choose an option below or ask me any question!`,
+        chips: ["About RVCA", "Courses", "Admissions", "Facilities", "Contact Us"],
+        overflow: [],
+        latencyMs: parseFloat((performance.now() - startTime).toFixed(2))
+      };
+    }
+
+    // 12. SMART HUMANIZED RELEVANCE SEARCH (Zero Hallucination Factual Matcher)
+    // Runs when exact keyword matching does not find an intent.
+    // Scores all INTENTS based on title, keywords, and knowledge content.
+    let bestIntent = null;
+    let highestScore = 0;
+    const secondaryMatches = [];
+
+    const queryTokens = cleanedTokens.filter(t => t.length >= 3 && !STOP_WORDS.has(t));
+
+    if (queryTokens.length > 0) {
+      for (const item of INTENTS) {
+        let score = 0;
+        const titleLower = item.title.toLowerCase();
+        const responseLower = item.response.toLowerCase();
+
+        for (const token of queryTokens) {
+          // Title match: high weight
+          if (titleLower.includes(token)) score += 8;
+
+          // Keyword match: high weight
+          for (const kw of item.keywords) {
+            if (kw === token) score += 10;
+            else if (kw.includes(token)) score += 5;
+          }
+
+          // Response body match: lower weight
+          if (responseLower.includes(token)) score += 1;
+        }
+
+        // Penalty for high priority numbers (slight bias toward specific topics)
+        score -= (item.priority * 1.5);
+
+        if (score > highestScore && score >= 4) {
+          highestScore = score;
+          bestIntent = item;
+        }
+      }
+
+      if (bestIntent) {
+        for (const item of INTENTS) {
+          if (item.id !== bestIntent.id) {
+            let s = 0;
+            for (const token of queryTokens) {
+              if (item.title.toLowerCase().includes(token) || item.keywords.some(k => k.includes(token))) {
+                s += 3;
+              }
+            }
+            if (s >= 3) {
+              secondaryMatches.push({
+                id: item.id,
+                label: item.title,
+                chipText: item.title
+              });
+            }
+          }
+        }
+      }
+    }
+
+    if (bestIntent && highestScore >= 4) {
+      session.update(bestIntent.id, raw);
+      const warmIntro = `I'd be delighted to assist you with that! Here is the relevant information regarding **${bestIntent.title}** at RV College of Architecture:\n\n`;
+      return {
+        intentId: bestIntent.id,
+        title: bestIntent.title,
+        response: warmIntro + bestIntent.response,
+        chips: bestIntent.chips,
+        overflow: secondaryMatches.slice(0, 3),
+        latencyMs: parseFloat((performance.now() - startTime).toFixed(2))
+      };
+    }
+
+    // Warm & Empathetic Institutional Counselor Fallback
     return {
       intentId: "fallback_guidance",
       title: "RVCA Information Assistance",
-      response: `I did not find an exact match for "${raw.slice(0, 50)}". As the official institutional assistant for **RV College of Architecture**, I can help you with:\n\n• **B.Arch & M.Arch Admissions & Eligibility**\n• **KCET, COMEDK & Management Quota Guidelines**\n• **Fee Structures & Hostel Accommodations**\n• **Placements, Internships & GlobEd Cell**\n• **Faculty Directory (63 members)**\n• **Statutory Committees (Anti-Ragging, ICC/POSH, Redressal)**\n\nPlease select one of the quick options below or contact the admissions desk at principal.rvca@rvei.edu.in.`,
-      chips: ["B.Arch Program", "Fee Structure", "Hostels", "Faculty Directory", "Contact Us"],
+      response: `Thank you for reaching out! I want to ensure you get complete, accurate guidance regarding **RV College of Architecture**.\n\nWhile I didn't find specific records matching "${raw.slice(0, 50)}", as your dedicated institutional assistant I can provide full details on:\n\n• **B.Arch & M.Arch Programs, CBCS Syllabus & Studio Work**\n• **Direct Management Quota (Strict Zero-Broker Policy), KEA (E-244) & COMEDK**\n• **Fee Structures, Concessions & State Scholarships**\n• **Hostel Accommodation, Pure-Veg Mess & Campus Dining**\n• **63 Faculty Members, 100% Mandatory Internship Training & GlobEd Abroad Guidance**\n\nWhat would you like to explore? Feel free to select any option below, or reach our admissions desk directly at principal.rvca@rvei.edu.in.`,
+      chips: ["About RVCA", "Courses", "Admissions", "Facilities", "Contact Us"],
       overflow: [],
       latencyMs: parseFloat((performance.now() - startTime).toFixed(2))
     };

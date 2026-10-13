@@ -1144,3 +1144,40 @@ body.rvca-theme-light .demo-footer {
   color: #7B878C !important;
 }
 
+
+/* Official source link under bot answers */
+.rvca-source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 6px 12px;
+  border-radius: var(--rvca-radius-full);
+  background: var(--rvca-accent-soft);
+  border: 1px solid var(--rvca-border-strong);
+  color: var(--rvca-accent-bright, #ADB61C);
+  font-family: var(--rvca-font-display);
+  font-size: 12.5px;
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  transition: var(--rvca-transition);
+  align-self: flex-start;
+}
+.rvca-source-link:hover {
+  background: var(--rvca-accent);
+  color: #0E1315;
+  transform: translateY(-1px);
+}
+.rvca-source-link .rvca-source-domain {
+  opacity: 0.7;
+  font-size: 11px;
+}
+#rvca-chatbot-root.rvca-theme-light .rvca-source-link {
+  color: #5A6006;
+  background: rgba(142, 150, 35, 0.12);
+  border-color: rgba(142, 150, 35, 0.4);
+}
+#rvca-chatbot-root.rvca-theme-light .rvca-source-link:hover {
+  background: #8E9623;
+  color: #FFFFFF;
+}

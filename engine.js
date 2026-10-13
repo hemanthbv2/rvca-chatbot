@@ -763,6 +763,7 @@
         response: formatFacultyResponse(facultyFound),
         chips: ["Faculty Directory", "Principal Bio", "Contact Directory"],
         overflow: [],
+        sourceUrl: facultyFound.profileUrl || null,
         latencyMs: parseFloat((performance.now() - startTime).toFixed(2))
       };
     }
