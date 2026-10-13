@@ -42,10 +42,14 @@
 
 /* Base Widget Container */
 #rvca-chatbot-root {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 999999;
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  z-index: 999999 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
   font-family: var(--rvca-font-body);
   color: var(--rvca-light);
   line-height: 1.5;
@@ -61,14 +65,17 @@
 
 /* Floating Action Button (FAB) */
 .rvca-fab {
-  width: 64px;
-  height: 64px;
-  border-radius: var(--rvca-radius-full);
+  width: 64px !important;
+  height: 64px !important;
+  border-radius: var(--rvca-radius-full) !important;
   background: linear-gradient(135deg, var(--rvca-accent), var(--rvca-accent-deep));
   border: 2px solid rgba(245, 238, 231, 0.25);
   color: var(--rvca-canvas-deep);
   cursor: pointer;
-  display: flex;
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
   align-items: center;
   justify-content: center;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 24px var(--rvca-accent-glow);
@@ -111,6 +118,37 @@
   height: 30px;
   fill: currentColor;
   transition: transform 0.3s ease;
+}
+
+.rvca-fab-icon-close {
+  display: none;
+}
+
+.rvca-fab.rvca-fab-active {
+  background: linear-gradient(135deg, var(--rvca-secondary), #A83827);
+  box-shadow: 0 10px 28px rgba(203, 92, 74, 0.45), 0 0 20px rgba(203, 92, 74, 0.3);
+  color: #FFFFFF;
+}
+
+.rvca-fab.rvca-fab-active::before {
+  border-color: var(--rvca-secondary);
+  animation: none;
+  opacity: 0.35;
+}
+
+.rvca-fab.rvca-fab-active .rvca-fab-icon-chat {
+  display: none !important;
+}
+
+.rvca-fab.rvca-fab-active .rvca-fab-icon-close {
+  display: block !important;
+  width: 26px;
+  height: 26px;
+  fill: #FFFFFF;
+}
+
+.rvca-fab.rvca-fab-active .rvca-fab-badge {
+  display: none !important;
 }
 
 .rvca-fab-badge {
@@ -850,3 +888,259 @@
     padding-top: max(14px, env(safe-area-inset-top));
   }
 }
+
+/* ==========================================================================
+   LIGHT THEME DESIGN SYSTEM (.rvca-theme-light)
+   High-contrast, elegant architectural aesthetic with RVCA brand accents
+   ========================================================================== */
+
+#rvca-chatbot-root.rvca-theme-light,
+.rvca-theme-light #rvca-chatbot-root,
+body.rvca-theme-light #rvca-chatbot-root {
+  --rvca-canvas: #FFFFFF;
+  --rvca-canvas-deep: #F4F6F8;
+  --rvca-canvas-surface: #FFFFFF;
+  --rvca-canvas-card: rgba(255, 255, 255, 0.98);
+
+  --rvca-accent: #8E9623;
+  --rvca-accent-bright: #6F760C;
+  --rvca-accent-deep: #5A6006;
+  --rvca-accent-glow: rgba(142, 150, 35, 0.22);
+  --rvca-accent-soft: rgba(142, 150, 35, 0.12);
+
+  --rvca-secondary: #BA4E3D;
+  --rvca-secondary-soft: rgba(186, 78, 61, 0.12);
+
+  --rvca-light: #192023;
+  --rvca-light-muted: #586368;
+  --rvca-border: rgba(25, 32, 35, 0.12);
+  --rvca-border-strong: rgba(142, 150, 35, 0.45);
+
+  --rvca-shadow-lg: 0 20px 48px -8px rgba(25, 32, 35, 0.15), 0 0 0 1px rgba(25, 32, 35, 0.08);
+}
+
+/* Light Mode Window */
+#rvca-chatbot-root.rvca-theme-light .rvca-window {
+  background: rgba(255, 255, 255, 0.97);
+  border-color: rgba(25, 32, 35, 0.14);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(25, 32, 35, 0.08);
+  color: #192023;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-header {
+  background: linear-gradient(180deg, #FFFFFF, #F8FAFB);
+  border-bottom: 1px solid rgba(25, 32, 35, 0.1);
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-header-title h3 {
+  color: #192023;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-header-subtitle {
+  color: #586368;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-avatar {
+  background: #F0F4F5;
+  border-color: #8E9623;
+  color: #6F760C;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-header-btn {
+  color: #586368;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-header-btn:hover {
+  background: rgba(25, 32, 35, 0.08);
+  color: #192023;
+  border-color: rgba(25, 32, 35, 0.15);
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-ticker {
+  background: rgba(186, 78, 61, 0.08);
+  border-bottom: 1px solid rgba(186, 78, 61, 0.2);
+  color: #BA4E3D;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-messages {
+  background: transparent;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-messages::-webkit-scrollbar-thumb {
+  background: rgba(25, 32, 35, 0.18);
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-msg-bot .rvca-bubble {
+  background: #F3F5F7;
+  border: 1px solid rgba(25, 32, 35, 0.12);
+  color: #192023;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-msg-bot .rvca-bubble strong {
+  color: #11181C;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-msg-bot .rvca-bubble a {
+  color: #6F760C;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-msg-bot .rvca-bubble a:hover {
+  color: #192023;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-msg-user .rvca-bubble {
+  background: linear-gradient(135deg, #192023, #2E383D);
+  color: #FFFFFF;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-msg-time {
+  color: #7B878C;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-quick-tray {
+  background: #F8FAFB;
+  border-top: 1px solid rgba(25, 32, 35, 0.08);
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-tray-chip {
+  background: #FFFFFF;
+  border-color: rgba(25, 32, 35, 0.15);
+  color: #434D52;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-tray-chip:hover {
+  background: rgba(142, 150, 35, 0.15);
+  color: #5A6006;
+  border-color: #8E9623;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-chip {
+  background: rgba(142, 150, 35, 0.1);
+  border-color: rgba(142, 150, 35, 0.35);
+  color: #2F3503;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-chip:hover {
+  background: #8E9623;
+  color: #FFFFFF;
+  border-color: #8E9623;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-overflow-chip {
+  background: rgba(186, 78, 61, 0.1);
+  border-color: rgba(186, 78, 61, 0.35);
+  color: #BA4E3D;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-overflow-chip:hover {
+  background: #BA4E3D;
+  color: #FFFFFF;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-footer {
+  background: #FFFFFF;
+  border-top: 1px solid rgba(25, 32, 35, 0.08);
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-input-bar {
+  background: #F4F6F8;
+  border-color: rgba(25, 32, 35, 0.15);
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-input {
+  color: #192023;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-input::placeholder {
+  color: #7B878C;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-status-bar {
+  color: #7B878C;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-lead-modal {
+  background: #FFFFFF;
+  color: #192023;
+  border-color: rgba(25, 32, 35, 0.15);
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-lead-title {
+  color: #192023;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-lead-desc {
+  color: #586368;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-form-label {
+  color: #333D41;
+}
+
+#rvca-chatbot-root.rvca-theme-light .rvca-form-control {
+  background: #F8FAFB;
+  border-color: rgba(25, 32, 35, 0.18);
+  color: #192023;
+}
+
+/* Light Theme Demo Page Body Styling */
+body.rvca-theme-light {
+  background-color: #F7F9FA !important;
+  color: #192023 !important;
+}
+
+body.rvca-theme-light header.demo-header {
+  background: #FFFFFF !important;
+  border-bottom: 1px solid rgba(25, 32, 35, 0.1) !important;
+}
+
+body.rvca-theme-light .demo-logo-text h1 {
+  color: #192023 !important;
+}
+
+body.rvca-theme-light .demo-logo-text p {
+  color: #586368 !important;
+}
+
+body.rvca-theme-light .demo-nav a {
+  color: #192023 !important;
+  border-color: rgba(25, 32, 35, 0.15) !important;
+  background: #F4F6F8 !important;
+}
+
+body.rvca-theme-light .hero-badge {
+  background: rgba(142, 150, 35, 0.12) !important;
+  color: #5A6006 !important;
+  border-color: rgba(142, 150, 35, 0.3) !important;
+}
+
+body.rvca-theme-light .hero h2 {
+  color: #192023 !important;
+}
+
+body.rvca-theme-light .hero p {
+  color: #586368 !important;
+}
+
+body.rvca-theme-light .feature-card {
+  background: #FFFFFF !important;
+  border-color: rgba(25, 32, 35, 0.1) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04) !important;
+}
+
+body.rvca-theme-light .feature-card h3 {
+  color: #192023 !important;
+}
+
+body.rvca-theme-light .feature-card p {
+  color: #586368 !important;
+}
+
+body.rvca-theme-light .demo-footer {
+  background: #FFFFFF !important;
+  border-top: 1px solid rgba(25, 32, 35, 0.1) !important;
+  color: #7B878C !important;
+}
+

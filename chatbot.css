@@ -42,10 +42,14 @@
 
 /* Base Widget Container */
 #rvca-chatbot-root {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 999999;
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  z-index: 999999 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
   font-family: var(--rvca-font-body);
   color: var(--rvca-light);
   line-height: 1.5;
@@ -61,14 +65,17 @@
 
 /* Floating Action Button (FAB) */
 .rvca-fab {
-  width: 64px;
-  height: 64px;
-  border-radius: var(--rvca-radius-full);
+  width: 64px !important;
+  height: 64px !important;
+  border-radius: var(--rvca-radius-full) !important;
   background: linear-gradient(135deg, var(--rvca-accent), var(--rvca-accent-deep));
   border: 2px solid rgba(245, 238, 231, 0.25);
   color: var(--rvca-canvas-deep);
   cursor: pointer;
-  display: flex;
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
   align-items: center;
   justify-content: center;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 24px var(--rvca-accent-glow);
@@ -111,6 +118,37 @@
   height: 30px;
   fill: currentColor;
   transition: transform 0.3s ease;
+}
+
+.rvca-fab-icon-close {
+  display: none;
+}
+
+.rvca-fab.rvca-fab-active {
+  background: linear-gradient(135deg, var(--rvca-secondary), #A83827);
+  box-shadow: 0 10px 28px rgba(203, 92, 74, 0.45), 0 0 20px rgba(203, 92, 74, 0.3);
+  color: #FFFFFF;
+}
+
+.rvca-fab.rvca-fab-active::before {
+  border-color: var(--rvca-secondary);
+  animation: none;
+  opacity: 0.35;
+}
+
+.rvca-fab.rvca-fab-active .rvca-fab-icon-chat {
+  display: none !important;
+}
+
+.rvca-fab.rvca-fab-active .rvca-fab-icon-close {
+  display: block !important;
+  width: 26px;
+  height: 26px;
+  fill: #FFFFFF;
+}
+
+.rvca-fab.rvca-fab-active .rvca-fab-badge {
+  display: none !important;
 }
 
 .rvca-fab-badge {

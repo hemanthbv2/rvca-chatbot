@@ -100,7 +100,7 @@ function authenticateToken(req, res, next) {
 }
 
 // 1. SETUP ENDPOINT (Seed and configure institute)
-app.all('/api/setup', (req, res) => {
+app.all(['/api/setup', '/setup'], (req, res) => {
   res.json({
     success: true,
     message: 'RVCA Database and API initialized successfully',
@@ -113,7 +113,7 @@ app.all('/api/setup', (req, res) => {
 });
 
 // 2. AUTHENTICATION ENDPOINT
-app.post('/api/auth/login', (req, res) => {
+app.post(['/api/auth/login', '/auth/login'], (req, res) => {
   const { username, password } = req.body;
   if (username === ADMIN_USER && password === ADMIN_PASS) {
     const token = jwt.sign({ username, role: 'admin', institution: 'RVCA' }, JWT_SECRET, { expiresIn: '12h' });
@@ -123,7 +123,7 @@ app.post('/api/auth/login', (req, res) => {
 });
 
 // 3. INGEST INTERACTIONS (Telemetry Dual-Write endpoint)
-app.post('/api/dashboard/interactions', (req, res) => {
+app.post(['/api/dashboard/interactions', '/dashboard/interactions'], (req, res) => {
   const { sessionId, events } = req.body;
   const receivedAt = new Date().toISOString();
 
@@ -155,7 +155,7 @@ app.post('/api/dashboard/interactions', (req, res) => {
 });
 
 // 4. GET INTERACTIONS (Normalized to timestamp and data)
-app.get('/api/dashboard/interactions', authenticateToken, (req, res) => {
+app.get(['/api/dashboard/interactions', '/dashboard/interactions'], authenticateToken, (req, res) => {
   const limit = parseInt(req.query.limit) || 100;
   const search = (req.query.search || '').toLowerCase();
 
@@ -174,7 +174,7 @@ app.get('/api/dashboard/interactions', authenticateToken, (req, res) => {
 });
 
 // 5. INGEST LEAD CAPTURE
-app.post('/send-lead', (req, res) => {
+app.post(['/send-lead', '/api/send-lead', '/api/dashboard/leads', '/dashboard/leads'], (req, res) => {
   const leadData = req.body.leadData || req.body;
   const leadRecord = {
     sessionId: req.body.sessionId || 'web_' + Date.now(),
@@ -187,7 +187,7 @@ app.post('/send-lead', (req, res) => {
 });
 
 // 6. GET LEADS (Normalized to timestamp and data)
-app.get('/api/dashboard/leads', authenticateToken, (req, res) => {
+app.get(['/api/dashboard/leads', '/dashboard/leads'], authenticateToken, (req, res) => {
   res.json({
     total: DB.leads.length,
     leads: DB.leads.slice().reverse()
@@ -195,7 +195,7 @@ app.get('/api/dashboard/leads', authenticateToken, (req, res) => {
 });
 
 // 7. GET STATS / KPIS
-app.get('/api/dashboard/stats', authenticateToken, (req, res) => {
+app.get(['/api/dashboard/stats', '/dashboard/stats'], authenticateToken, (req, res) => {
   const uniqueSessions = new Set(DB.interactions.map(i => i.sessionId)).size;
   const queries = DB.interactions.filter(i => i.type === 'message_query' || i.data.query);
 
@@ -225,7 +225,7 @@ app.get('/api/dashboard/stats', authenticateToken, (req, res) => {
 });
 
 // 8. GET DEEP ANALYTICS
-app.get('/api/dashboard/analytics', authenticateToken, (req, res) => {
+app.get(['/api/dashboard/analytics', '/dashboard/analytics'], authenticateToken, (req, res) => {
   const programCounts = { 'B.Arch': 0, 'M.Arch': 0, 'Ph.D.': 0, 'General': 0 };
   const sentimentCounts = { positive: 0, neutral: 0, negative: 0 };
   const hourlyTraffic = {};
@@ -264,8 +264,13 @@ app.get('*', (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`[RVCA Platform] Server running at http://localhost:${PORT}`);
-  console.log(`[RVCA Platform] Command Center available at http://localhost:${PORT}/dashboard/`);
-  console.log(`[RVCA Platform] Default Credentials: admin / rvca_admin_2026`);
-});
+// Standalone server execution guard
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`[RVCA Platform] Server running at http://localhost:${PORT}`);
+    console.log(`[RVCA Platform] Command Center available at http://localhost:${PORT}/dashboard/`);
+    console.log(`[RVCA Platform] Default Credentials: admin / rvca_admin_2026`);
+  });
+}
+
+module.exports = app;

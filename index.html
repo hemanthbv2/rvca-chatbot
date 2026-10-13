@@ -147,6 +147,69 @@
       border-color: var(--accent);
     }
 
+    /* Chatbot Toggle Button in Navbar */
+    #demo-chat-toggle-btn {
+      background: linear-gradient(135deg, rgba(163, 170, 55, 0.22), rgba(173, 182, 28, 0.08));
+      border: 1.5px solid var(--accent);
+      color: var(--accent-bright);
+      padding: 8px 16px;
+      border-radius: 9999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      box-shadow: 0 2px 12px rgba(163, 170, 55, 0.25);
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    #demo-chat-toggle-btn:hover {
+      background: linear-gradient(135deg, var(--accent), var(--accent-bright));
+      color: #0E1315;
+      box-shadow: 0 4px 18px rgba(163, 170, 55, 0.5);
+      transform: translateY(-1px);
+    }
+
+    #demo-chat-toggle-btn.active {
+      background: rgba(203, 92, 74, 0.22);
+      border-color: var(--terracotta);
+      color: #FF8F7E;
+      box-shadow: 0 2px 14px rgba(203, 92, 74, 0.35);
+    }
+
+    #demo-chat-toggle-btn.active:hover {
+      background: var(--terracotta);
+      color: #FFFFFF;
+      box-shadow: 0 4px 18px rgba(203, 92, 74, 0.5);
+    }
+
+    .chat-btn-pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #52C41A;
+      box-shadow: 0 0 8px #52C41A;
+      animation: chat-pulse-anim 1.8s infinite;
+      display: inline-block;
+    }
+
+    #demo-chat-toggle-btn.active .chat-btn-pulse {
+      background: var(--terracotta);
+      box-shadow: 0 0 8px var(--terracotta);
+      animation: none;
+    }
+
+    @keyframes chat-pulse-anim {
+      0% { transform: scale(0.9); opacity: 0.9; }
+      50% { transform: scale(1.3); opacity: 0.4; }
+      100% { transform: scale(0.9); opacity: 0.9; }
+    }
+
     /* Container */
     .content-container {
       max-width: 1200px;
@@ -638,6 +701,24 @@
       color: #192023;
       border-color: rgba(25, 32, 35, 0.15);
     }
+    body.rvca-theme-light #demo-chat-toggle-btn {
+      background: rgba(142, 150, 35, 0.12);
+      color: #5A6006;
+      border-color: #8E9623;
+    }
+    body.rvca-theme-light #demo-chat-toggle-btn:hover {
+      background: #8E9623;
+      color: #FFFFFF;
+    }
+    body.rvca-theme-light #demo-chat-toggle-btn.active {
+      background: rgba(203, 92, 74, 0.15);
+      color: #CB5C4A;
+      border-color: #CB5C4A;
+    }
+    body.rvca-theme-light #demo-chat-toggle-btn.active:hover {
+      background: #CB5C4A;
+      color: #FFFFFF;
+    }
 
     /* Official Institutional Links Directory (Footer Sitemap) */
     .links-directory {
@@ -770,6 +851,11 @@
       <a href="#studios" class="demo-nav-link">Studios</a>
       <a href="#campus" class="demo-nav-link">Campus Life</a>
       <a href="#faculty" class="demo-nav-link">Faculty</a>
+      <button id="demo-chat-toggle-btn" class="demo-chat-btn" title="Toggle RVCA AI Assistant Chatbot" aria-label="Toggle AI Assistant Chatbot">
+        <span class="chat-btn-pulse"></span>
+        <span id="demo-chat-toggle-icon">💬</span>
+        <span id="demo-chat-toggle-text">Chat Assistant</span>
+      </button>
       <button id="demo-theme-btn" title="Toggle Light / Dark Theme">
         <span id="demo-theme-icon">🌙</span> <span id="demo-theme-label">Theme</span>
       </button>
@@ -1350,21 +1436,61 @@
   <script src="telemetry.js"></script>
   <script src="chatbot.js"></script>
   <script>
+    // Chatbot Navbar Toggle Button Logic
+    const chatToggleBtn = document.getElementById('demo-chat-toggle-btn');
+    const chatToggleIcon = document.getElementById('demo-chat-toggle-icon');
+    const chatToggleText = document.getElementById('demo-chat-toggle-text');
+
+    function updateChatToggleUI(isOpen) {
+      if (!chatToggleBtn) return;
+      if (isOpen) {
+        chatToggleBtn.classList.add('active');
+        if (chatToggleIcon) chatToggleIcon.textContent = '✕';
+        if (chatToggleText) chatToggleText.textContent = 'Close Chat';
+        chatToggleBtn.setAttribute('title', 'Minimize RVCA AI Assistant');
+      } else {
+        chatToggleBtn.classList.remove('active');
+        if (chatToggleIcon) chatToggleIcon.textContent = '💬';
+        if (chatToggleText) chatToggleText.textContent = 'Chat Assistant';
+        chatToggleBtn.setAttribute('title', 'Toggle RVCA AI Assistant Chatbot');
+      }
+    }
+
+    if (chatToggleBtn) {
+      chatToggleBtn.addEventListener('click', () => {
+        if (window.RVCAChatbot && typeof window.RVCAChatbot.toggle === 'function') {
+          window.RVCAChatbot.toggle();
+        } else {
+          const fab = document.getElementById('rvca-fab');
+          if (fab) fab.click();
+        }
+      });
+    }
+
+    // Sync button state on any chatbot toggle event
+    window.addEventListener('rvca-chat-toggled', (e) => {
+      updateChatToggleUI(e.detail && e.detail.isOpen);
+    });
+
     // Bridge helper: smoothly open the chatbot and submit query
     function askChatbot(queryText) {
-      const fab = document.getElementById('rvca-fab');
-      const win = document.getElementById('rvca-window');
-      if (win && win.classList.contains('rvca-hidden')) {
-        if (fab) fab.click();
-      }
-      setTimeout(() => {
-        const input = document.getElementById('rvca-input');
-        const form = document.getElementById('rvca-form');
-        if (input && form) {
-          input.value = queryText;
-          form.dispatchEvent(new Event('submit', { cancelable: true }));
+      if (window.RVCAChatbot && typeof window.RVCAChatbot.ask === 'function') {
+        window.RVCAChatbot.ask(queryText);
+      } else {
+        const fab = document.getElementById('rvca-fab');
+        const win = document.getElementById('rvca-window');
+        if (win && win.classList.contains('rvca-hidden')) {
+          if (fab) fab.click();
         }
-      }, 350);
+        setTimeout(() => {
+          const input = document.getElementById('rvca-input');
+          const form = document.getElementById('rvca-form');
+          if (input && form) {
+            input.value = queryText;
+            form.dispatchEvent(new Event('submit', { cancelable: true }));
+          }
+        }, 350);
+      }
     }
 
     // Theme Toggle Sync

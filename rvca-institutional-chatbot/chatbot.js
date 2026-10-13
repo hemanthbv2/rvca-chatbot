@@ -7,26 +7,72 @@
 (function() {
   if (typeof window === 'undefined') return;
 
-  // Initialize Telemetry
-  const telemetry = new window.RVCATelemetry({
-    wpRestUrl: window.RVCA_WP_ENDPOINT || '/wp-json/rvca-chatbot/v1/telemetry',
-    vercelUrl: window.RVCA_VERCEL_ENDPOINT || '/api/dashboard/interactions',
-    leadUrl: '/send-lead'
-  });
+  function mountChatbot() {
+    if (document.getElementById('rvca-chatbot-root')) return;
 
-  const session = new window.RVCAEngine.ConversationSession();
+    if (!document.body) {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', mountChatbot);
+        return;
+      }
+      setTimeout(mountChatbot, 50);
+      return;
+    }
 
-  // Create Root Element
-  const root = document.createElement('div');
-  root.id = 'rvca-chatbot-root';
-  document.body.appendChild(root);
+    // Auto-inject chatbot.css if missing
+    if (!document.querySelector('link[href*="chatbot.css"]')) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = '/chatbot.css';
+      document.head.appendChild(link);
+    }
+
+    // Safe Telemetry fallback (ensures widget never fails if telemetry script fails or is delayed)
+    let telemetry;
+    try {
+      if (typeof window.RVCATelemetry === 'function') {
+        telemetry = new window.RVCATelemetry({
+          wpRestUrl: window.RVCA_WP_ENDPOINT || '/wp-json/rvca-chatbot/v1/telemetry',
+          vercelUrl: window.RVCA_VERCEL_ENDPOINT || '/api/dashboard/interactions',
+          leadUrl: '/send-lead'
+        });
+      }
+    } catch (e) {
+      console.warn('[RVCA Chatbot] Telemetry initialization note:', e);
+    }
+
+    if (!telemetry) {
+      telemetry = {
+        track: () => {},
+        trackMessageSent: () => {},
+        trackScrollDepth: () => {},
+        trackKeyStroke: () => {},
+        submitLead: async () => true
+      };
+    }
+
+    // Safe Session fallback
+    let session = null;
+    try {
+      if (window.RVCAEngine && typeof window.RVCAEngine.ConversationSession === 'function') {
+        session = new window.RVCAEngine.ConversationSession();
+      }
+    } catch (e) {}
+
+    // Create Root Element
+    const root = document.createElement('div');
+    root.id = 'rvca-chatbot-root';
+    document.body.appendChild(root);
 
   root.innerHTML = `
     <!-- Floating Action Button (FAB) -->
-    <button class="rvca-fab" id="rvca-fab" title="Chat with RVCA Institutional Assistant" aria-label="Open RVCA Chatbot">
-      <svg class="rvca-fab-icon" viewBox="0 0 24 24">
+    <button class="rvca-fab" id="rvca-fab" title="Toggle RVCA AI Assistant" aria-label="Toggle RVCA Chatbot">
+      <svg class="rvca-fab-icon rvca-fab-icon-chat" viewBox="0 0 24 24">
         <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
         <path d="M7 9h10v2H7zm0-3h10v2H7zm0 6h7v2H7z"/>
+      </svg>
+      <svg class="rvca-fab-icon rvca-fab-icon-close" viewBox="0 0 24 24">
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
       </svg>
       <span class="rvca-fab-badge">AI</span>
     </button>
@@ -54,6 +100,10 @@
         </div>
 
         <div class="rvca-header-actions">
+          <button class="rvca-header-btn" id="rvca-btn-theme" title="Switch to Light Theme" aria-label="Toggle Theme">
+            <svg class="rvca-icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.3 2a10 10 0 0 0-.19 20 10 10 0 0 0 8.35-4.5 1 1 0 0 0-.84-1.5 8 8 0 0 1-7.82-10.4 1 1 0 0 0-.5-1.1A1 1 0 0 0 12.3 2z"/></svg>
+            <svg class="rvca-icon-sun" style="display:none;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-5a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0V3a1 1 0 0 0-1-1zm0 18a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1zm10-9h-2a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2zM4 11H2a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2zm14.07-6.07a1 1 0 0 0-1.41 0l-1.42 1.42a1 1 0 1 0 1.42 1.41l1.41-1.41a1 1 0 0 0 0-1.42zM6.76 16.24a1 1 0 0 0-1.42 0l-1.41 1.41a1 1 0 1 0 1.41 1.42l1.42-1.42a1 1 0 0 0 0-1.41zm12.72 1.41-1.41-1.41a1 1 0 0 0-1.42 1.41l1.41 1.42a1 1 0 0 0 1.42-1.42zM6.76 7.76 5.34 6.34a1 1 0 0 0-1.41 1.42l1.41 1.41a1 1 0 0 0 1.42-1.41z"/></svg>
+          </button>
           <button class="rvca-header-btn" id="rvca-btn-lead" title="Request Admissions Callback">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           </button>
@@ -147,6 +197,9 @@
   const btnClose = document.getElementById('rvca-btn-close');
   const btnReset = document.getElementById('rvca-btn-reset');
   const btnLead = document.getElementById('rvca-btn-lead');
+  const btnTheme = document.getElementById('rvca-btn-theme');
+  const iconMoon = btnTheme.querySelector('.rvca-icon-moon');
+  const iconSun = btnTheme.querySelector('.rvca-icon-sun');
   const leadModal = document.getElementById('rvca-lead-modal');
   const leadClose = document.getElementById('rvca-lead-close');
   const leadForm = document.getElementById('rvca-lead-form');
@@ -155,6 +208,46 @@
   const messagesEl = document.getElementById('rvca-messages');
   const quickTray = document.getElementById('rvca-quick-tray');
 
+  // Theme Management (Light / Dark)
+  function applyTheme(theme) {
+    if (theme === 'light') {
+      root.classList.add('rvca-theme-light');
+      document.body.classList.add('rvca-theme-light');
+      if (iconMoon && iconSun) {
+        iconMoon.style.display = 'none';
+        iconSun.style.display = 'block';
+      }
+      btnTheme.title = 'Switch to Dark Theme';
+    } else {
+      root.classList.remove('rvca-theme-light');
+      document.body.classList.remove('rvca-theme-light');
+      if (iconMoon && iconSun) {
+        iconMoon.style.display = 'block';
+        iconSun.style.display = 'none';
+      }
+      btnTheme.title = 'Switch to Light Theme';
+    }
+    try {
+      localStorage.setItem('rvca_theme', theme);
+    } catch (e) {}
+  }
+
+  const initialTheme = (function() {
+    try {
+      return localStorage.getItem('rvca_theme') || 'dark';
+    } catch (e) {
+      return 'dark';
+    }
+  })();
+  applyTheme(initialTheme);
+
+  btnTheme.addEventListener('click', () => {
+    const isLight = root.classList.contains('rvca-theme-light');
+    const targetTheme = isLight ? 'dark' : 'light';
+    applyTheme(targetTheme);
+    telemetry.track('theme_toggled', { theme: targetTheme });
+  });
+
   let isOpen = false;
 
   // Toggle Window
@@ -162,6 +255,8 @@
     isOpen = (typeof open === 'boolean') ? open : !isOpen;
     if (isOpen) {
       windowEl.classList.remove('rvca-hidden');
+      fab.classList.add('rvca-fab-active');
+      fab.setAttribute('title', 'Minimize RVCA AI Assistant');
       telemetry.track('chatbot_opened');
       setTimeout(() => inputEl.focus(), 300);
       if (messagesEl.children.length === 0) {
@@ -169,12 +264,37 @@
       }
     } else {
       windowEl.classList.add('rvca-hidden');
+      fab.classList.remove('rvca-fab-active');
+      fab.setAttribute('title', 'Chat with RVCA Institutional Assistant');
       telemetry.track('chatbot_closed');
     }
+    // Broadcast event for custom toggle buttons and header widgets
+    window.dispatchEvent(new CustomEvent('rvca-chat-toggled', { detail: { isOpen } }));
   }
 
   fab.addEventListener('click', () => toggleChat());
   btnClose.addEventListener('click', () => toggleChat(false));
+
+  // ESC key closes chat
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isOpen) {
+      toggleChat(false);
+    }
+  });
+
+  // Expose Global Public API for external buttons & header navigation
+  window.RVCAChatbot = {
+    toggle: toggleChat,
+    open: () => toggleChat(true),
+    close: () => toggleChat(false),
+    isOpen: () => isOpen,
+    ask: (q) => {
+      toggleChat(true);
+      setTimeout(() => {
+        handleUserSubmit(q);
+      }, 350);
+    }
+  };
 
   btnLead.addEventListener('click', () => {
     leadModal.style.display = 'flex';
@@ -227,7 +347,16 @@
 
   // Greeting Message
   function sendGreeting() {
-    const greeting = window.RVCAEngine.classify('');
+    let greeting;
+    if (window.RVCAEngine && typeof window.RVCAEngine.classify === 'function') {
+      greeting = window.RVCAEngine.classify('');
+    } else {
+      greeting = {
+        response: "Greetings! Welcome to **RV College of Architecture (RVCA)**. How can I assist you with Admissions, Courses, or Campus Life today?",
+        chips: ['About RVCA', 'Courses', 'Admissions', 'Facilities', 'Contact Us'],
+        overflow: []
+      };
+    }
     appendBotMessage(greeting.response, greeting.chips, greeting.overflow);
   }
 
@@ -247,7 +376,18 @@
     setTimeout(() => {
       typingEl.remove();
 
-      const result = window.RVCAEngine.classify(query, session);
+      let result;
+      if (window.RVCAEngine && typeof window.RVCAEngine.classify === 'function') {
+        result = window.RVCAEngine.classify(query, session);
+      } else {
+        result = {
+          response: "Thank you for reaching out. Please contact the RVCA admissions desk directly at **080-68136600** or email **principal.rvca@rvei.edu.in**.",
+          chips: ['Admissions', 'Courses', 'Contact Us'],
+          intentId: 'fallback',
+          latencyMs: 1.0,
+          title: 'General Support'
+        };
+      }
 
       // Log interaction telemetry
       telemetry.track('message_query', {
@@ -320,6 +460,7 @@
 
     messagesEl.appendChild(msg);
     messagesEl.scrollTop = messagesEl.scrollHeight;
+    setTimeout(() => { messagesEl.scrollTop = messagesEl.scrollHeight; }, 60);
 
     // Delegate chips click (0ms Button Bypass)
     msg.querySelectorAll('.rvca-chip, .rvca-overflow-chip').forEach(btn => {
@@ -356,6 +497,7 @@
     `;
     messagesEl.appendChild(typing);
     messagesEl.scrollTop = messagesEl.scrollHeight;
+    setTimeout(() => { messagesEl.scrollTop = messagesEl.scrollHeight; }, 40);
     return typing;
   }
 
@@ -363,12 +505,16 @@
     if (!md) return '';
     let html = escapeHtml(md);
 
+    // Headers
+    html = html.replace(/^### (.*$)/gm, '<h4 style="margin:6px 0 2px;font-size:0.95rem;color:var(--rvca-accent);">$1</h4>');
+    html = html.replace(/^## (.*$)/gm, '<h3 style="margin:8px 0 4px;font-size:1rem;color:var(--rvca-accent);">$1</h3>');
+
     // Bold
     html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     // Italics
     html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
     // Links [Text](url)
-    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" style="color:var(--rvca-accent);text-decoration:underline;">$1</a>');
     // Bullet lists
     html = html.replace(/^[•\-\*]\s+(.*)$/gm, '<li>$1</li>');
     html = html.replace(/(<li>[\s\S]*?<\/li>)/g, '<ul>$1</ul>');
@@ -460,7 +606,15 @@
     animate();
   }
 
-  // Initialize canvas after DOM ready
-  setTimeout(initParticleCanvas, 100);
+    // Initialize canvas after DOM ready
+    setTimeout(initParticleCanvas, 100);
+  }
+
+  // Trigger mounting safely
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', mountChatbot);
+  } else {
+    mountChatbot();
+  }
 
 })();

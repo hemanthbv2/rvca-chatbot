@@ -7,26 +7,72 @@
 (function() {
   if (typeof window === 'undefined') return;
 
-  // Initialize Telemetry
-  const telemetry = new window.RVCATelemetry({
-    wpRestUrl: window.RVCA_WP_ENDPOINT || '/wp-json/rvca-chatbot/v1/telemetry',
-    vercelUrl: window.RVCA_VERCEL_ENDPOINT || '/api/dashboard/interactions',
-    leadUrl: '/send-lead'
-  });
+  function mountChatbot() {
+    if (document.getElementById('rvca-chatbot-root')) return;
 
-  const session = new window.RVCAEngine.ConversationSession();
+    if (!document.body) {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', mountChatbot);
+        return;
+      }
+      setTimeout(mountChatbot, 50);
+      return;
+    }
 
-  // Create Root Element
-  const root = document.createElement('div');
-  root.id = 'rvca-chatbot-root';
-  document.body.appendChild(root);
+    // Auto-inject chatbot.css if missing
+    if (!document.querySelector('link[href*="chatbot.css"]')) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = '/chatbot.css';
+      document.head.appendChild(link);
+    }
+
+    // Safe Telemetry fallback (ensures widget never fails if telemetry script fails or is delayed)
+    let telemetry;
+    try {
+      if (typeof window.RVCATelemetry === 'function') {
+        telemetry = new window.RVCATelemetry({
+          wpRestUrl: window.RVCA_WP_ENDPOINT || '/wp-json/rvca-chatbot/v1/telemetry',
+          vercelUrl: window.RVCA_VERCEL_ENDPOINT || '/api/dashboard/interactions',
+          leadUrl: '/send-lead'
+        });
+      }
+    } catch (e) {
+      console.warn('[RVCA Chatbot] Telemetry initialization note:', e);
+    }
+
+    if (!telemetry) {
+      telemetry = {
+        track: () => {},
+        trackMessageSent: () => {},
+        trackScrollDepth: () => {},
+        trackKeyStroke: () => {},
+        submitLead: async () => true
+      };
+    }
+
+    // Safe Session fallback
+    let session = null;
+    try {
+      if (window.RVCAEngine && typeof window.RVCAEngine.ConversationSession === 'function') {
+        session = new window.RVCAEngine.ConversationSession();
+      }
+    } catch (e) {}
+
+    // Create Root Element
+    const root = document.createElement('div');
+    root.id = 'rvca-chatbot-root';
+    document.body.appendChild(root);
 
   root.innerHTML = `
     <!-- Floating Action Button (FAB) -->
-    <button class="rvca-fab" id="rvca-fab" title="Chat with RVCA Institutional Assistant" aria-label="Open RVCA Chatbot">
-      <svg class="rvca-fab-icon" viewBox="0 0 24 24">
+    <button class="rvca-fab" id="rvca-fab" title="Toggle RVCA AI Assistant" aria-label="Toggle RVCA Chatbot">
+      <svg class="rvca-fab-icon rvca-fab-icon-chat" viewBox="0 0 24 24">
         <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
         <path d="M7 9h10v2H7zm0-3h10v2H7zm0 6h7v2H7z"/>
+      </svg>
+      <svg class="rvca-fab-icon rvca-fab-icon-close" viewBox="0 0 24 24">
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
       </svg>
       <span class="rvca-fab-badge">AI</span>
     </button>
@@ -209,6 +255,8 @@
     isOpen = (typeof open === 'boolean') ? open : !isOpen;
     if (isOpen) {
       windowEl.classList.remove('rvca-hidden');
+      fab.classList.add('rvca-fab-active');
+      fab.setAttribute('title', 'Minimize RVCA AI Assistant');
       telemetry.track('chatbot_opened');
       setTimeout(() => inputEl.focus(), 300);
       if (messagesEl.children.length === 0) {
@@ -216,12 +264,37 @@
       }
     } else {
       windowEl.classList.add('rvca-hidden');
+      fab.classList.remove('rvca-fab-active');
+      fab.setAttribute('title', 'Chat with RVCA Institutional Assistant');
       telemetry.track('chatbot_closed');
     }
+    // Broadcast event for custom toggle buttons and header widgets
+    window.dispatchEvent(new CustomEvent('rvca-chat-toggled', { detail: { isOpen } }));
   }
 
   fab.addEventListener('click', () => toggleChat());
   btnClose.addEventListener('click', () => toggleChat(false));
+
+  // ESC key closes chat
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isOpen) {
+      toggleChat(false);
+    }
+  });
+
+  // Expose Global Public API for external buttons & header navigation
+  window.RVCAChatbot = {
+    toggle: toggleChat,
+    open: () => toggleChat(true),
+    close: () => toggleChat(false),
+    isOpen: () => isOpen,
+    ask: (q) => {
+      toggleChat(true);
+      setTimeout(() => {
+        handleUserSubmit(q);
+      }, 350);
+    }
+  };
 
   btnLead.addEventListener('click', () => {
     leadModal.style.display = 'flex';
@@ -274,7 +347,16 @@
 
   // Greeting Message
   function sendGreeting() {
-    const greeting = window.RVCAEngine.classify('');
+    let greeting;
+    if (window.RVCAEngine && typeof window.RVCAEngine.classify === 'function') {
+      greeting = window.RVCAEngine.classify('');
+    } else {
+      greeting = {
+        response: "Greetings! Welcome to **RV College of Architecture (RVCA)**. How can I assist you with Admissions, Courses, or Campus Life today?",
+        chips: ['About RVCA', 'Courses', 'Admissions', 'Facilities', 'Contact Us'],
+        overflow: []
+      };
+    }
     appendBotMessage(greeting.response, greeting.chips, greeting.overflow);
   }
 
@@ -294,7 +376,18 @@
     setTimeout(() => {
       typingEl.remove();
 
-      const result = window.RVCAEngine.classify(query, session);
+      let result;
+      if (window.RVCAEngine && typeof window.RVCAEngine.classify === 'function') {
+        result = window.RVCAEngine.classify(query, session);
+      } else {
+        result = {
+          response: "Thank you for reaching out. Please contact the RVCA admissions desk directly at **080-68136600** or email **principal.rvca@rvei.edu.in**.",
+          chips: ['Admissions', 'Courses', 'Contact Us'],
+          intentId: 'fallback',
+          latencyMs: 1.0,
+          title: 'General Support'
+        };
+      }
 
       // Log interaction telemetry
       telemetry.track('message_query', {
@@ -513,7 +606,15 @@
     animate();
   }
 
-  // Initialize canvas after DOM ready
-  setTimeout(initParticleCanvas, 100);
+    // Initialize canvas after DOM ready
+    setTimeout(initParticleCanvas, 100);
+  }
+
+  // Trigger mounting safely
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', mountChatbot);
+  } else {
+    mountChatbot();
+  }
 
 })();
