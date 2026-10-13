@@ -1,0 +1,29 @@
+{
+  "institution": "RV College of Architecture (RVCA)",
+  "source": "https://rvca.edu.in — extracted from Elementor stylesheets post-22859.css (homepage), post-10.css (header), post-840.css (footer) and computed homepage styles",
+  "extractedAt": "2026-10-12",
+  "colors": {
+    "canvas": { "hex": "#192023", "name": "RVCA Charcoal Slate", "role": "Primary brand dark / canvas (header text, headings, dark sections)", "occurrences": 15 },
+    "canvasDeep": { "hex": "#0E1315", "name": "Deep Graphite", "role": "Derived: darkest panel background (canvas −40% L)" },
+    "accent": { "hex": "#A3AA37", "name": "RVCA Olive Chartreuse", "role": "Primary action accent ('Read More' pill buttons)", "occurrences": 19 },
+    "accentBright": { "hex": "#ADB61C", "name": "Electric Olive", "role": "Hover / highlight accent", "occurrences": 3 },
+    "accentDeep": { "hex": "#888F0E", "name": "Moss", "role": "Pressed / deep accent", "occurrences": 2 },
+    "secondary": { "hex": "#CB5C4A", "name": "Terracotta Brick", "role": "Secondary interactive (notification ticker, alerts)", "occurrences": 2 },
+    "light": { "hex": "#F5EEE7", "name": "Linen Cream", "role": "Light contrast surface (notifications band)", "occurrences": 7 },
+    "border": { "hex": "#C6C6C6", "name": "Drafting Grey", "role": "Hairline borders / dividers", "occurrences": 6 },
+    "black": { "hex": "#000000", "role": "Body text on light", "occurrences": 43 },
+    "white": { "hex": "#FFFFFF", "role": "Text on dark / cards", "occurrences": 73 }
+  },
+  "glass": {
+    "surface": "rgba(25, 32, 35, 0.62)",
+    "surfaceStrong": "rgba(14, 19, 21, 0.82)",
+    "border": "rgba(245, 238, 231, 0.12)",
+    "highlight": "rgba(163, 170, 55, 0.18)",
+    "blur": "20px"
+  },
+  "typography": {
+    "display": "Oswald (site uses Oswald-Bold / Oswald-Medium / Oswald-Light for headings & nav)",
+    "body": "Roboto (Elementor global primary/text font)",
+    "secondary": "Roboto Slab"
+  }
+}

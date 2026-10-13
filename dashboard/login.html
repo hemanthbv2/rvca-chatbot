@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RVCA Command Center — Institutional Authentication</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="icon" type="image/png" href="https://rvca.edu.in/wp-content/uploads/2024/05/cropped-favicon-32x32.png">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-card">
+      <div class="login-brand">
+        <div class="brand-badge" style="margin: 0 auto; width: 48px; height: 48px; font-size: 22px;">RV</div>
+        <h2>RVCA COMMAND CENTER</h2>
+        <p>Institutional Telemetry & AI Analytics Platform</p>
+      </div>
+
+      <div id="login-error" style="display: none; background: rgba(203, 92, 74, 0.2); border: 1px solid var(--secondary); color: #FFAAA0; padding: 10px; border-radius: 6px; font-size: 12px; margin-bottom: 16px;"></div>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label class="form-label">Administrator ID</label>
+          <input type="text" id="username" class="form-input" placeholder="admin" value="admin" required autofocus>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Access Token / Password</label>
+          <input type="password" id="password" class="form-input" placeholder="••••••••••••" value="rvca_admin_2026" required>
+        </div>
+
+        <button type="submit" class="btn-primary" id="login-btn">Authenticate & Enter</button>
+      </form>
+
+      <div style="margin-top: 24px; text-align: center; font-size: 11px; color: var(--text-dim);">
+        <p>Rashtreeya Sikshana Samithi Trust (RSST)</p>
+        <p>Default credentials: <code style="color: var(--accent-bright);">admin</code> / <code style="color: var(--accent-bright);">rvca_admin_2026</code></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('login-form');
+    const errBox = document.getElementById('login-error');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errBox.style.display = 'none';
+
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      try {
+        const res = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password })
+        });
+        const data = await res.json();
+
+        if (data.success && data.token) {
+          localStorage.setItem('rvca_admin_token', data.token);
+          window.location.href = 'index.html';
+        } else {
+          errBox.textContent = data.error || 'Authentication rejected.';
+          errBox.style.display = 'block';
+        }
+      } catch (err) {
+        errBox.textContent = 'Server connection error. Ensure node server is active.';
+        errBox.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>

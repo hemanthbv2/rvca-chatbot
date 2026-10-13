@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RV College of Architecture (RVCA) — Official Institutional Portal & AI Platform</title>
+  <meta name="description" content="Official Zero-Hallucination AI Assistant and Comprehensive Institutional Portal for RV College of Architecture (RVCA), Bengaluru. Approved by COA, Affiliated to VTU.">
+  <link rel="stylesheet" href="chatbot.css">
+  <link rel="icon" type="image/png" href="https://rvca.edu.in/wp-content/uploads/2024/05/cropped-favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0E1315;
+      --surface-dark: #141B1E;
+      --card-dark: rgba(25, 32, 35, 0.75);
+      --border-dark: rgba(245, 238, 231, 0.12);
+      --text-dark: #F5EEE7;
+      --text-muted-dark: #A8B2B7;
+      --accent: #A3AA37;
+      --accent-bright: #ADB61C;
+      --terracotta: #CB5C4A;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+      font-family: 'Roboto', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      scroll-behavior: smooth;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Navigation Header */
+    header.demo-header {
+      padding: 16px 36px;
+      background: var(--surface-dark);
+      border-bottom: 1px solid var(--border-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      backdrop-filter: blur(12px);
+    }
+
+    .demo-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .demo-logo-badge {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--accent), #888F0E);
+      color: #0E1315;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      box-shadow: 0 4px 14px rgba(163, 170, 55, 0.35);
+    }
+
+    .demo-logo-text h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 20px;
+      margin: 0;
+      letter-spacing: 0.5px;
+      color: #FFF;
+    }
+
+    .demo-logo-text p {
+      margin: 2px 0 0 0;
+      font-size: 11.5px;
+      color: var(--text-muted-dark);
+    }
+
+    .demo-nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .demo-nav-link {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .demo-nav-link:hover {
+      color: var(--accent-bright);
+    }
+
+    .demo-cta-btn {
+      color: #0E1315 !important;
+      background: linear-gradient(135deg, var(--accent), var(--accent-bright));
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      box-shadow: 0 2px 10px rgba(163, 170, 55, 0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .demo-cta-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(163, 170, 55, 0.5);
+    }
+
+    #demo-theme-btn {
+      background: rgba(245, 238, 231, 0.08);
+      border: 1px solid rgba(245, 238, 231, 0.2);
+      color: inherit;
+      padding: 8px 14px;
+      border-radius: 9999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-family: 'Oswald', sans-serif;
+      letter-spacing: 0.5px;
+      transition: all 0.2s;
+    }
+
+    #demo-theme-btn:hover {
+      border-color: var(--accent);
+    }
+
+    /* Container */
+    .content-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 64px 24px 40px;
+      text-align: center;
+    }
+
+    .hero-badge-wrap {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(163, 170, 55, 0.15);
+      border: 1px solid var(--accent);
+      color: var(--accent-bright);
+      font-family: 'Oswald', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.8px;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+    }
+
+    .hero-badge.rank {
+      background: rgba(203, 92, 74, 0.15);
+      border-color: var(--terracotta);
+      color: #E67A68;
+    }
+
+    .hero h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 46px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin: 0 0 18px 0;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-highlight {
+      background: linear-gradient(135deg, #FFF 30%, var(--accent-bright) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 16.5px;
+      line-height: 1.7;
+      color: var(--text-muted-dark);
+      max-width: 820px;
+      margin: 0 auto 34px auto;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #888F0E);
+      color: #0E1315;
+      border: none;
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 14px 30px;
+      border-radius: 9999px;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(163, 170, 55, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.2s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 26px rgba(163, 170, 55, 0.6);
+    }
+
+    .btn-secondary {
+      color: #FFF;
+      background: #212A2E;
+      border: 1px solid rgba(245, 238, 231, 0.2);
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 14px 26px;
+      border-radius: 9999px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: #2D393E;
+      border-color: var(--accent);
+    }
+
+    /* Stats Banner */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      background: rgba(20, 27, 30, 0.85);
+      border: 1px solid var(--border-dark);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 56px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .stat-item {
+      text-align: center;
+      border-right: 1px solid rgba(245, 238, 231, 0.08);
+      padding: 0 12px;
+    }
+
+    .stat-item:last-child {
+      border-right: none;
+    }
+
+    .stat-number {
+      font-family: 'Oswald', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--accent-bright);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Section Styling */
+    .section-block {
+      margin-bottom: 64px;
+    }
+
+    .section-header {
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    .section-tag {
+      font-family: 'Oswald', sans-serif;
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .section-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 30px;
+      font-weight: 600;
+      margin: 0 0 10px 0;
+      letter-spacing: 0.5px;
+    }
+
+    .section-desc {
+      color: var(--text-muted-dark);
+      font-size: 15px;
+      margin: 0;
+      max-width: 720px;
+      line-height: 1.6;
+    }
+
+    /* Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .info-card {
+      background: var(--card-dark);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--border-dark);
+      border-radius: 16px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .info-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 11px;
+      font-family: 'Oswald', sans-serif;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      background: rgba(163, 170, 55, 0.15);
+      border: 1px solid var(--accent);
+      color: var(--accent-bright);
+    }
+
+    .card-icon {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    .card-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      margin: 0 0 10px 0;
+      color: #FFF;
+      letter-spacing: 0.3px;
+    }
+
+    .card-text {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--text-muted-dark);
+      margin: 0 0 20px 0;
+      flex: 1;
+    }
+
+    .card-meta {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+      border-top: 1px dashed rgba(245, 238, 231, 0.1);
+      padding-top: 14px;
+    }
+
+    .card-meta li {
+      font-size: 13px;
+      color: var(--text-muted-dark);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-meta li strong {
+      color: #FFF;
+    }
+
+    .card-action-btn {
+      background: rgba(163, 170, 55, 0.12);
+      border: 1px solid rgba(163, 170, 55, 0.35);
+      color: var(--accent-bright);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s;
+      width: 100%;
+    }
+
+    .card-action-btn:hover {
+      background: var(--accent);
+      color: #0E1315;
+    }
+
+    /* Facilities Pill List */
+    .pill-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .facility-pill {
+      background: var(--surface-dark);
+      border: 1px solid var(--border-dark);
+      border-radius: 12px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .facility-pill:hover {
+      border-color: var(--accent);
+      background: rgba(25, 32, 35, 0.9);
+      transform: translateY(-2px);
+    }
+
+    .facility-pill-icon {
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .facility-pill-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: #FFF;
+      margin: 0 0 4px 0;
+    }
+
+    .facility-pill-desc {
+      font-size: 12.5px;
+      color: var(--text-muted-dark);
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    /* Quick Question Prompt Chips */
+    .interactive-prompts {
+      background: linear-gradient(135deg, rgba(20, 27, 30, 0.95), rgba(25, 32, 35, 0.95));
+      border: 1px solid rgba(163, 170, 55, 0.3);
+      border-radius: 18px;
+      padding: 32px;
+      margin-bottom: 64px;
+      text-align: center;
+    }
+
+    .interactive-prompts h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 24px;
+      margin: 0 0 10px 0;
+      color: #FFF;
+    }
+
+    .interactive-prompts p {
+      color: var(--text-muted-dark);
+      font-size: 14.5px;
+      margin: 0 0 24px 0;
+    }
+
+    .prompt-chips-wrap {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .prompt-chip {
+      background: rgba(163, 170, 55, 0.12);
+      border: 1px solid rgba(163, 170, 55, 0.35);
+      color: var(--text-dark);
+      font-size: 13px;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .prompt-chip:hover {
+      background: var(--accent);
+      color: #0E1315;
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    footer.demo-footer {
+      padding: 36px 40px;
+      background: var(--surface-dark);
+      border-top: 1px solid var(--border-dark);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 13px;
+      color: #7B878C;
+      margin-top: auto;
+    }
+
+    .footer-left h4 {
+      font-family: 'Oswald', sans-serif;
+      color: #FFF;
+      font-size: 16px;
+      margin: 0 0 6px 0;
+    }
+
+    .footer-left p {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .footer-links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-left: 16px;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #FFF;
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header.demo-header {
+        padding: 14px 20px;
+      }
+      .demo-nav-link {
+        display: none;
+      }
+      .hero h2 {
+        font-size: 32px;
+      }
+      .stats-bar {
+        grid-template-columns: 1fr 1fr;
+      }
+      .stat-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(245, 238, 231, 0.08);
+        padding-bottom: 12px;
+      }
+      .stat-item:last-child {
+        border-bottom: none;
+      }
+    }
+
+    /* Light Theme Overrides for index.html */
+    body.rvca-theme-light {
+      --bg-dark: #F7F9FA;
+      --surface-dark: #FFFFFF;
+      --card-dark: #FFFFFF;
+      --border-dark: rgba(25, 32, 35, 0.1);
+      --text-dark: #192023;
+      --text-muted-dark: #586368;
+    }
+    body.rvca-theme-light .demo-logo-text h1,
+    body.rvca-theme-light .hero h2,
+    body.rvca-theme-light .card-title,
+    body.rvca-theme-light .section-title,
+    body.rvca-theme-light .card-meta li strong,
+    body.rvca-theme-light .facility-pill-title,
+    body.rvca-theme-light .interactive-prompts h3,
+    body.rvca-theme-light .footer-left h4 {
+      color: #192023 !important;
+    }
+    body.rvca-theme-light .hero-highlight {
+      background: linear-gradient(135deg, #192023 30%, #5A6006 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    body.rvca-theme-light .stats-bar {
+      background: #FFFFFF;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+    body.rvca-theme-light .info-card {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+    }
+    body.rvca-theme-light .interactive-prompts {
+      background: #FFFFFF;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    }
+    body.rvca-theme-light .btn-secondary {
+      background: #E8ECEF;
+      color: #192023;
+      border-color: rgba(25, 32, 35, 0.15);
+    }
+
+    /* Official Institutional Links Directory (Footer Sitemap) */
+    .links-directory {
+      border-top: 1px solid var(--border-dark);
+      background: rgba(14, 19, 21, 0.95);
+      padding: 56px 24px 36px;
+      margin-top: 40px;
+    }
+    .directory-header {
+      margin-bottom: 32px;
+      text-align: left;
+    }
+    .directory-header h4 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 24px;
+      margin: 0 0 6px 0;
+      color: #FFF;
+      letter-spacing: 0.5px;
+    }
+    .directory-header p {
+      font-size: 14px;
+      color: var(--text-muted-dark);
+      margin: 0;
+    }
+    .directory-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 32px;
+    }
+    .directory-col h5 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 14px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: var(--accent-bright);
+      margin: 0 0 16px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid rgba(245, 238, 231, 0.08);
+      padding-bottom: 8px;
+    }
+    .directory-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .directory-list li {
+      margin-bottom: 11px;
+    }
+    .directory-list a {
+      color: var(--text-muted-dark);
+      text-decoration: none;
+      font-size: 13px;
+      line-height: 1.45;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .directory-list a:hover {
+      color: #FFF;
+      transform: translateX(3px);
+      text-decoration: underline;
+    }
+    .directory-list a.pdf-link::after {
+      content: 'PDF';
+      font-size: 9px;
+      font-family: 'Oswald', sans-serif;
+      background: rgba(203, 92, 74, 0.25);
+      border: 1px solid var(--terracotta);
+      color: #E67A68;
+      padding: 1px 5px;
+      border-radius: 3px;
+      margin-left: 4px;
+    }
+    .card-footer-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .card-ext-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 12.5px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s;
+    }
+    .card-ext-link:hover {
+      color: #FFF;
+      text-decoration: underline;
+    }
+
+    body.rvca-theme-light .links-directory {
+      background: #EDF1F4 !important;
+      border-top-color: rgba(25, 32, 35, 0.1) !important;
+    }
+    body.rvca-theme-light .directory-header h4 {
+      color: #192023 !important;
+    }
+    body.rvca-theme-light .directory-col h5 {
+      color: #5A6006 !important;
+      border-bottom-color: rgba(25, 32, 35, 0.1) !important;
+    }
+    body.rvca-theme-light .directory-list a {
+      color: #495459 !important;
+    }
+    body.rvca-theme-light .directory-list a:hover {
+      color: #192023 !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="demo-header">
+    <a href="index.html" class="demo-logo">
+      <div class="demo-logo-badge">RV</div>
+      <div class="demo-logo-text">
+        <h1>RV COLLEGE OF ARCHITECTURE</h1>
+        <p>Affiliated to VTU Belagavi • Approved by COA New Delhi • KEA Code E-244</p>
+      </div>
+    </a>
+    <nav class="demo-nav">
+      <a href="#programs" class="demo-nav-link">Programmes</a>
+      <a href="#admissions" class="demo-nav-link">Admissions</a>
+      <a href="#studios" class="demo-nav-link">Studios</a>
+      <a href="#campus" class="demo-nav-link">Campus Life</a>
+      <a href="#faculty" class="demo-nav-link">Faculty</a>
+      <button id="demo-theme-btn" title="Toggle Light / Dark Theme">
+        <span id="demo-theme-icon">🌙</span> <span id="demo-theme-label">Theme</span>
+      </button>
+      <a href="/dashboard/index.html" target="_blank" class="demo-nav-link" style="color:var(--accent);">Dashboard &rarr;</a>
+      <button class="demo-cta-btn" onclick="askChatbot('Admissions')">Apply Now</button>
+    </nav>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="content-container">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-badge-wrap">
+        <div class="hero-badge rank">🏆 #1 in Karnataka • 13th in India (MDRA India Today 2025)</div>
+        <div class="hero-badge">🏛️ 30+ Years of RSST Legacy (Est. 1992)</div>
+        <div class="hero-badge">🔒 Strict Zero-Broker Direct Admissions</div>
+      </div>
+      <h2>
+        Karnataka's Premier <span class="hero-highlight">School of Architecture</span>
+      </h2>
+      <p>
+        Explore the state-of-the-art autonomous campus of RV College of Architecture (RVCA), Bengaluru. Featuring daylit design studios, pottery kilns, digital fabrication labs, and our official zero-hallucination AI institutional assistant.
+      </p>
+
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="askChatbot('tell me everything')">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+          </svg>
+          Ask AI Assistant Anything
+        </button>
+        <button class="btn-secondary" onclick="document.getElementById('programs').scrollIntoView({behavior:'smooth'})">
+          Explore Degree Programs &darr;
+        </button>
+        <a href="/dashboard/index.html" target="_blank" class="btn-secondary">
+          Command Center Telemetry &rarr;
+        </a>
+      </div>
+
+      <!-- Institutional Quick Stats -->
+      <div class="stats-bar">
+        <div class="stat-item">
+          <div class="stat-number">#1</div>
+          <div class="stat-label">In Karnataka (India Today)</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Internship Practical Training</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">63</div>
+          <div class="stat-label">Eminent Faculty Mentors</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">E-244</div>
+          <div class="stat-label">KEA College Code</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">30+</div>
+          <div class="stat-label">Years of Excellence</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Search Chips Tray -->
+    <div class="interactive-prompts">
+      <h3>Ask the Official RVCA AI Assistant Directly</h3>
+      <p>Click any topic below to open the institutional chatbot with zero latency:</p>
+      <div class="prompt-chips-wrap">
+        <button class="prompt-chip" onclick="askChatbot('About RVCA')">🏛️ About RVCA</button>
+        <button class="prompt-chip" onclick="askChatbot('Courses')">🎓 Academic Courses</button>
+        <button class="prompt-chip" onclick="askChatbot('Admissions')">📋 Admission Guidelines</button>
+        <button class="prompt-chip" onclick="askChatbot('Facilities')">🏢 Campus Facilities</button>
+        <button class="prompt-chip" onclick="askChatbot('Fee Structure')">💳 Fee Structure</button>
+        <button class="prompt-chip" onclick="askChatbot('Hostel Facilities')">🏡 Hostel & Mess</button>
+        <button class="prompt-chip" onclick="askChatbot('tell me about study tours')">✈️ Study Tours</button>
+        <button class="prompt-chip" onclick="askChatbot('canteen')">☕ Canteen & Dining</button>
+        <button class="prompt-chip" onclick="askChatbot('sports')">🏀 Sports & Fitness</button>
+        <button class="prompt-chip" onclick="askChatbot('scholarships')">💰 Scholarships & Aid</button>
+        <button class="prompt-chip" onclick="askChatbot('why should i choose rvca')">🌟 Why Choose RVCA</button>
+        <button class="prompt-chip" onclick="askChatbot('Contact Us')">📞 Contact Directory</button>
+      </div>
+    </div>
+
+    <!-- Section 1: Academic Degree Programmes -->
+    <section class="section-block" id="programs">
+      <div class="section-header">
+        <span class="section-tag">COA & VTU Approved Curriculum</span>
+        <h3 class="section-title">Academic Degree Programmes</h3>
+        <p class="section-desc">RVCA provides accredited undergraduate, postgraduate, and doctoral degrees combining deep spatial design philosophy with hands-on studio technology.</p>
+      </div>
+
+      <div class="cards-grid">
+        <!-- B.Arch -->
+        <div class="info-card">
+          <span class="card-badge">Undergraduate</span>
+          <div class="card-icon">📐</div>
+          <h4 class="card-title">Bachelor of Architecture (B.Arch)</h4>
+          <p class="card-text">
+            5-Year (10 Semesters) flagship degree emphasizing architectural design studios, digital fabrication, building construction technologies, and a mandatory 1-semester professional internship in active architectural practice.
+          </p>
+          <ul class="card-meta">
+            <li><strong>Duration:</strong> 5 Years (10 Semesters), Full-Time</li>
+            <li><strong>Affiliation:</strong> VTU Belagavi & COA New Delhi</li>
+            <li><strong>Intake Routes:</strong> KEA KCET (Code E-244), COMEDK, Management Quota</li>
+            <li><strong>Eligibility:</strong> 10+2 PCM (min 45%) + NATA or JEE Main Paper II</li>
+          </ul>
+          <button class="card-action-btn" onclick="askChatbot('B.Arch Program')">
+            Ask AI about B.Arch &rarr;
+          </button>
+        </div>
+
+        <!-- M.Arch Urban Design -->
+        <div class="info-card">
+          <span class="card-badge">Postgraduate</span>
+          <div class="card-icon">🏙️</div>
+          <h4 class="card-title">M.Arch in Urban Design</h4>
+          <p class="card-text">
+            2-Year (4 Semesters) postgraduate specialization examining spatial morphology, inclusive Indian urban habitats, GIS analytics, and resilient ecological transformations.
+          </p>
+          <ul class="card-meta">
+            <li><strong>Duration:</strong> 2 Years (4 Semesters), Full-Time</li>
+            <li><strong>Total Seats:</strong> 20 Seats (16 PGCET + 4 Management)</li>
+            <li><strong>Eligibility:</strong> B.Arch degree with min 50% aggregate</li>
+            <li><strong>Coordinator:</strong> Prof. Prasanna Rao (Assoc. Dean PG)</li>
+          </ul>
+          <button class="card-action-btn" onclick="askChatbot('M.Arch Program')">
+            Ask AI about M.Arch &rarr;
+          </button>
+        </div>
+
+        <!-- Ph.D. -->
+        <div class="info-card">
+          <span class="card-badge">Doctoral Research</span>
+          <div class="card-icon">🔬</div>
+          <h4 class="card-title">Ph.D. in Architecture</h4>
+          <p class="card-text">
+            VTU Recognised Research Centre with dedicated faculty doctoral guides investigating sustainable architecture, climatic responsive design, and urban settlements.
+          </p>
+          <ul class="card-meta">
+            <li><strong>Centre:</strong> VTU Recognised Research Centre</li>
+            <li><strong>Supervisors:</strong> Dr. O.P. Bawane, Dr. Shikha Verma, Dr. Mahalakshmi</li>
+            <li><strong>Entrance:</strong> VTU-ETR followed by Research Proposal</li>
+          </ul>
+          <button class="card-action-btn" onclick="askChatbot('Ph.D Program')">
+            Ask AI about Ph.D &rarr;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Admissions & Quota Process -->
+    <section class="section-block" id="admissions">
+      <div class="section-header">
+        <span class="section-tag">Zero Broker Direct Applications</span>
+        <h3 class="section-title">Transparent Admissions & Seat Quotas</h3>
+        <p class="section-desc">Admissions at RV College of Architecture are strictly merit-driven across official government and institutional routes. RVCA operates with NO agents, brokers, or consultants.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="info-card">
+          <div class="card-icon">🏛️</div>
+          <h4 class="card-title">Karnataka Domicile (KEA KCET)</h4>
+          <p class="card-text">
+            Karnataka state merit counselling conducted online through the Karnataka Examinations Authority (KEA). Rank calculated 50% from 10+2 PCM + 50% from NATA score.
+          </p>
+          <ul class="card-meta">
+            <li><strong>KEA College Code:</strong> <strong>E-244</strong></li>
+            <li><strong>Entrance:</strong> NATA (COA) or JEE Main Paper II</li>
+            <li><strong>Official Portal:</strong> cetonline.karnataka.gov.in</li>
+          </ul>
+          <button class="card-action-btn" onclick="askChatbot('B.Arch Eligibility')">
+            Check KEA Eligibility &rarr;
+          </button>
+        </div>
+
+        <div class="info-card">
+          <div class="card-icon">🇮🇳</div>
+          <h4 class="card-title">All-India Merit (COMEDK UGET)</h4>
+          <p class="card-text">
+            Centralized online merit counselling for students nationwide based on 10+2 marks and normalized NATA score.
+          </p>
+          <ul class="card-meta">
+            <li><strong>Seat Type:</strong> All-India Open Merit</li>
+            <li><strong>Eligibility:</strong> Min 45% aggregate in 10+2 with PCM</li>
+            <li><strong>Official Portal:</strong> comedk.org</li>
+          </ul>
+          <button class="card-action-btn" onclick="askChatbot('Fee Structure')">
+            View Fee Notification &rarr;
+          </button>
+        </div>
+
+        <div class="info-card">
+          <div class="card-icon">🤝</div>
+          <h4 class="card-title">Direct Management Quota (RSST)</h4>
+          <p class="card-text">
+            Direct institutional merit applications processed by Rashtreeya Sikshana Samithi Trust. Candidates must email marksheets and NATA scorecards directly to 'The Hon. Secretary, RSST'.
+          </p>
+          <ul class="card-meta">
+            <li><strong>Criteria:</strong> Min 70% in 10th Math/Sci; min 65% in Class 11 PCM</li>
+            <li><strong>Official Email:</strong> rv@rvei.edu.in</li>
+            <li><strong>Policy:</strong> Strict Zero-Broker Policy</li>
+          </ul>
+          <button class="card-action-btn" onclick="askChatbot('Management Quota')">
+            Management Quota Details &rarr;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Experiential Studios & Skill Labs -->
+    <section class="section-block" id="studios">
+      <div class="section-header">
+        <span class="section-tag">Hands-On Prototyping</span>
+        <h3 class="section-title">Experiential Design Studios & Specialized Labs</h3>
+        <p class="section-desc">Architecture requires tactile exploration. Our purpose-built standalone campus houses advanced prototyping studios and digital fabrication technologies.</p>
+      </div>
+
+      <div class="pill-grid">
+        <div class="facility-pill" onclick="askChatbot('experiential studios')">
+          <span class="facility-pill-icon">📐</span>
+          <div>
+            <h5 class="facility-pill-title">Daylit Design Studios</h5>
+            <p class="facility-pill-desc">40-student studios with individual drafting tables, lockers, natural daylight, and jury pin-up boards.</p>
+          </div>
+        </div>
+
+        <div class="facility-pill" onclick="askChatbot('pottery')">
+          <span class="facility-pill-icon">🏺</span>
+          <div>
+            <h5 class="facility-pill-title">Clay & Pottery Studio</h5>
+            <p class="facility-pill-desc">Equipped with motorized pottery wheels and ceramic electric kilns for tactile 3D exploration.</p>
+          </div>
+        </div>
+
+        <div class="facility-pill" onclick="askChatbot('skill labs')">
+          <span class="facility-pill-icon">🪵</span>
+          <div>
+            <h5 class="facility-pill-title">Model Making Workshop</h5>
+            <p class="facility-pill-desc">Precision wood, acrylic, wire, foam, and paper craft modeling tools for architectural mockups.</p>
+          </div>
+        </div>
+
+        <div class="facility-pill" onclick="askChatbot('fabrication lab')">
+          <span class="facility-pill-icon">🖨️</span>
+          <div>
+            <h5 class="facility-pill-title">Digital Fabrication Lab</h5>
+            <p class="facility-pill-desc">Advanced 3D printers, laser prototyping, and full-scale mock-up fabrication.</p>
+          </div>
+        </div>
+
+        <div class="facility-pill" onclick="askChatbot('climate lab')">
+          <span class="facility-pill-icon">☀️</span>
+          <div>
+            <h5 class="facility-pill-title">Climate Responsive Lab</h5>
+            <p class="facility-pill-desc">Climatological simulation tools to test passive shading, acoustics, and daylight dynamics.</p>
+          </div>
+        </div>
+
+        <div class="facility-pill" onclick="askChatbot('gis lab')">
+          <span class="facility-pill-icon">🗺️</span>
+          <div>
+            <h5 class="facility-pill-title">GIS & Graphics Studio</h5>
+            <p class="facility-pill-desc">High-end workstations with AutoCAD, Revit BIM, SketchUp, Rhino, and ArcGIS mapping.</p>
+          </div>
+        </div>
+
+        <div class="facility-pill" onclick="askChatbot('library')">
+          <span class="facility-pill-icon">📚</span>
+          <div>
+            <h5 class="facility-pill-title">Comprehensive Library & JSTOR</h5>
+            <p class="facility-pill-desc">Over 81 print/e-journals, 2,065 JSTOR journals, Web-OPAC, and a 180 sq. m Material Museum.</p>
+          </div>
+        </div>
+
+        <div class="facility-pill" onclick="askChatbot('structural testing')">
+          <span class="facility-pill-icon">🏗️</span>
+          <div>
+            <h5 class="facility-pill-title">Structural Testing Lab</h5>
+            <p class="facility-pill-desc">Hands-on material testing for masonry, timber, concrete, and steel under structural loads.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Campus Life, Hostels & Amenities -->
+    <section class="section-block" id="campus">
+      <div class="section-header">
+        <span class="section-tag">Holistic Student Life</span>
+        <h3 class="section-title">Campus Life, Hostels & Student Amenities</h3>
+        <p class="section-desc">Experience a creative, close-knit architectural community with secure accommodations, wholesome dining, sports, and active student clubs.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="info-card">
+          <div class="card-icon">🏡</div>
+          <h4 class="card-title">Student Hostels & Pure-Veg Mess</h4>
+          <p class="card-text">
+            Separate Boys' and Girls' hostels featuring 43-bed capacity each on-campus, plus the satellite Venkatadri Hostel. Attached pure vegetarian dining hall serving 4 fresh meals daily.
+          </p>
+          <ul class="card-meta">
+            <li><strong>Boys Hostel Warden:</strong> Dr. M S Amarnath (080-35092402)</li>
+            <li><strong>Dining:</strong> Breakfast, Lunch, Evening Snacks & Dinner</li>
+            <li><strong>Security:</strong> 24/7 CCTV surveillance and residential wardens</li>
+          </ul>
+          <button class="card-action-btn" onclick="askChatbot('Hostel Facilities')">
+            Hostel Facilities & Fees &rarr;
+          </button>
+        </div>
+
+        <div class="info-card">
+          <div class="card-icon">✈️</div>
+          <h4 class="card-title">Study Tours & Site Exposure</h4>
+          <p class="card-text">
+            Every academic year features curated architectural study tours across heritage precincts in India and international design capitals, alongside live construction site visits in Bengaluru.
+          </p>
+          <ul class="card-meta">
+            <li><strong>National Destinations:</strong> Hampi, Rajasthan, Kerala, Chandigarh</li>
+            <li><strong>Documentation:</strong> Measured drawings, sketches & travelogues</li>
+            <li><strong>Publications:</strong> Featured in annual *KALPA* magazine</li>
+          </ul>
+          <button class="card-action-btn" onclick="askChatbot('tell me about study tours')">
+            Explore Study Tours &rarr;
+          </button>
+        </div>
+
+        <div class="info-card">
+          <div class="card-icon">🎨</div>
+          <h4 class="card-title">12 Vibrant Student Clubs & Sports</h4>
+          <p class="card-text">
+            Engage outside the studio with Art Club, Heritage Club, Drama Club, Dance/Music Ensembles, Sustainability Club (Solar Decathlon), gymnasium, basketball, and badminton courts.
+          </p>
+          <ul class="card-meta">
+            <li><strong>Sports Director:</strong> Mr. Puneeth Kempegowda (PE Director)</li>
+            <li><strong>Facilities:</strong> Gym, basketball court, indoor games</li>
+            <li><strong>Community:</strong> NSS & Rotaract outreach drives</li>
+          </ul>
+          <button class="card-action-btn" onclick="askChatbot('student clubs')">
+            Explore Clubs & Sports &rarr;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Placements, Internships & GlobEd -->
+    <section class="section-block" id="placements">
+      <div class="section-header">
+        <span class="section-tag">Career Pathways</span>
+        <h3 class="section-title">100% Practical Training, Recruiters & GlobEd</h3>
+        <p class="section-desc">Our graduates step seamlessly into leading architectural practices, urban governance bodies, and prestigious global universities.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="info-card">
+          <div class="card-icon">💼</div>
+          <h4 class="card-title">Mandatory Professional Internship</h4>
+          <p class="card-text">
+            The B.Arch curriculum dedicates a full semester to professional practice training in recognized architecture firms under the guidance of the Internship Assistance Cell.
+          </p>
+          <ul class="card-meta">
+            <li><strong>Lead Coordinators:</strong> Ar. Anupriya Saxena & Ar. Megala Gurumurthi</li>
+            <li><strong>Partner Studios:</strong> Total Environment, Mindspace, Studio Whitescape</li>
+            <li><strong>Desk Phone:</strong> 080-35094933</li>
+          </ul>
+          <button class="card-action-btn" onclick="askChatbot('internship cell')">
+            Internship Cell Guidelines &rarr;
+          </button>
+        </div>
+
+        <div class="info-card">
+          <div class="card-icon">🌍</div>
+          <h4 class="card-title">GlobEd — Study Abroad Cell</h4>
+          <p class="card-text">
+            Dedicated international higher education cell guiding students for Masters and Ph.D. admissions at leading architecture universities worldwide.
+          </p>
+          <ul class="card-meta">
+            <li><strong>Partner Sessions:</strong> USC, RMIT, KU Leuven, NUS, TU Delft</li>
+            <li><strong>Guidance:</strong> Portfolio curation, SOP review & scholarships</li>
+            <li><strong>Active Since:</strong> 2020</li>
+          </ul>
+          <button class="card-action-btn" onclick="askChatbot('globed')">
+            GlobEd Higher Studies &rarr;
+          </button>
+        </div>
+
+        <div class="info-card">
+          <div class="card-icon">🏆</div>
+          <h4 class="card-title">Student Accolades & National Awards</h4>
+          <p class="card-text">
+            RVCA students consistently win national laurels: COA National Thesis Awards (Rs. 1 Lakh cash prize), Solar Decathlon India, Transparence, and Asia Young Designer Awards (AYDA).
+          </p>
+          <ul class="card-meta">
+            <li><strong>Rankings:</strong> #1 in Karnataka (MDRA India Today 2025)</li>
+            <li><strong>COA Thesis Winners:</strong> Harsha S M, Dhruv Ravi Gowda, Namratha</li>
+            <li><strong>Solar Decathlon:</strong> National Winner & Runner-Up batches</li>
+          </ul>
+          <button class="card-action-btn" onclick="askChatbot('achievements')">
+            View Award Highlights &rarr;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Leadership & Contact -->
+    <section class="section-block" id="faculty">
+      <div class="section-header">
+        <span class="section-tag">Institutional Governance</span>
+        <h3 class="section-title">Leadership, Faculty Directory & Contact</h3>
+        <p class="section-desc">Guided by 63 distinguished academicians and practicing architects under the Rashtreeya Sikshana Samithi Trust (RSST).</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="info-card">
+          <div class="card-icon">👨‍🏫</div>
+          <h4 class="card-title">Institutional Leadership</h4>
+          <p class="card-text">
+            <strong>Dr. Rakesh K. S.</strong> — Principal<br>
+            B.Arch, M.Arch, Ph.D. [SAP Chennai]. Climatic design & sustainable architecture specialist.<br>
+            Email: principal.rvca@rvei.edu.in | Phone: 080-35095001<br><br>
+            <strong>Prof. Suresh K Murthy</strong> — Dean<br>
+            B.Arch [MSU Baroda], M.Tech [IIT Delhi]. Building science & climatology.
+          </p>
+          <button class="card-action-btn" onclick="askChatbot('principal')">
+            Read Principal & Leadership Bio &rarr;
+          </button>
+        </div>
+
+        <div class="info-card">
+          <div class="card-icon">👥</div>
+          <h4 class="card-title">63 Faculty Members Directory</h4>
+          <p class="card-text">
+            Our faculty members hold postgraduate and doctoral degrees from premier institutions including SAP Chennai, IIT Delhi, CEPT Ahmedabad, and NIT Bhopal.
+          </p>
+          <ul class="card-meta">
+            <li><strong>Professors:</strong> Dinesh Rao (Design Chair), Prasanna Rao, K Sreedhar</li>
+            <li><strong>Associate Professors:</strong> Dr. Shikha Verma, Dr. Amarnath, Dr. Manjunath</li>
+            <li><strong>Specializations:</strong> Sustainable design, urban planning, BIM, heritage</li>
+          </ul>
+          <button class="card-action-btn" onclick="askChatbot('faculty directory')">
+            Browse Full Faculty Directory &rarr;
+          </button>
+        </div>
+
+        <div class="info-card">
+          <div class="card-icon">📍</div>
+          <h4 class="card-title">Campus Location & Timings</h4>
+          <p class="card-text">
+            <strong>Address:</strong> CA Site No. 1, Banashankari 6th Stage, 4th Block, Chikegowadanapalya, Bengaluru - 560109.<br>
+            <strong>Nearest Metro:</strong> Vajarahalli / Silk Institute (Green Line).<br>
+            <strong>College Hours:</strong> 09:00 AM – 04:30 PM (Mon-Fri) | 09:00 AM – 01:30 PM (Sat).<br>
+            <strong>EPABX:</strong> 080-35095000 / 5001 / 5002
+          </p>
+          <button class="card-action-btn" onclick="askChatbot('Contact Us')">
+            Open Contact Desk in Chat &rarr;
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Official Institutional Page Links & Circulars Directory -->
+  <section class="links-directory">
+    <div class="content-container">
+      <div class="directory-header">
+        <h4>Official RVCA Institutional Pages & Downloads Directory</h4>
+        <p>Verified ground truth links to official degree portals, regulatory notifications, admission circulars, and research journals.</p>
+      </div>
+
+      <div class="directory-grid">
+        <!-- Col 1: Academic Degrees -->
+        <div class="directory-col">
+          <h5>🎓 Academic Programmes</h5>
+          <ul class="directory-list">
+            <li><a href="https://rvca.edu.in/ugprogramme/" target="_blank" rel="noopener">B.Arch Degree Overview ↗</a></li>
+            <li><a href="https://rvca.edu.in/programmes/ugprogramme/ug_2021_scheme__syllabus/" class="pdf-link" target="_blank" rel="noopener">VTU 2021 B.Arch Syllabus ↗</a></li>
+            <li><a href="https://rvca.edu.in/pgprogramme/" target="_blank" rel="noopener">M.Arch in Urban Design ↗</a></li>
+            <li><a href="https://rvca.edu.in/programmes/pgprogramme/pg-2022-2023-scheme-syllabus/" class="pdf-link" target="_blank" rel="noopener">M.Arch Scheme & Syllabus ↗</a></li>
+            <li><a href="https://rvca.edu.in/phdprogramme/" target="_blank" rel="noopener">Ph.D. Research Centre ↗</a></li>
+            <li><a href="https://rvca.edu.in/curriculum/" target="_blank" rel="noopener">Curriculum & Pedagogy ↗</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: Admissions & Circulars -->
+        <div class="directory-col">
+          <h5>📋 Admissions & Circulars</h5>
+          <ul class="directory-list">
+            <li><a href="https://rvca.edu.in/wp-content/uploads/2026/07/CET-KEA-1st-Year-B.Arch-Admission-Procedure-Balance-Fee-AY-2026-27.pdf" class="pdf-link" target="_blank" rel="noopener">KEA CET 1st Year B.Arch Fee ↗</a></li>
+            <li><a href="https://rvca.edu.in/wp-content/uploads/2026/08/COMEDK-1st-Year-B.Arch-Admission-Procedure-Balance-Fee-Details-AY-2026-27.pdf" class="pdf-link" target="_blank" rel="noopener">COMEDK 1st Year Fee Notice ↗</a></li>
+            <li><a href="https://rvca.edu.in/wp-content/uploads/2026/03/Management-Quota-Admission-Notification-AY-2026-27.pdf" class="pdf-link" target="_blank" rel="noopener">Management Quota Notice ↗</a></li>
+            <li><a href="https://rvca.edu.in/wp-content/uploads/2026/06/HOSTEL-FEE-NOTIFICATION-AY-2026-27.pdf" class="pdf-link" target="_blank" rel="noopener">Hostel Fee Notice AY 26-27 ↗</a></li>
+            <li><a href="https://rvca.edu.in/wp-content/uploads/2026/06/TRANSPORT-FEE-NOTIFICATION-AY-2026-27.pdf" class="pdf-link" target="_blank" rel="noopener">Transport Bus Fee Notice ↗</a></li>
+            <li><a href="https://rvca.edu.in/wp-content/uploads/2026/07/B.Arch-Sample-Admission-Application-form.pdf" class="pdf-link" target="_blank" rel="noopener">Sample Application Form ↗</a></li>
+            <li><a href="https://rvca.edu.in/wp-content/uploads/2026/09/PGCET-1st-Year-M.Arch-Documents-and-Balance-Fee-AY-2025-26.pdf" class="pdf-link" target="_blank" rel="noopener">PGCET M.Arch Balance Fee ↗</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Infrastructure -->
+        <div class="directory-col">
+          <h5>🏢 Studios & Infrastructure</h5>
+          <ul class="directory-list">
+            <li><a href="https://rvca.edu.in/infrastructure/experiential-learning-spaces/" target="_blank" rel="noopener">Experiential Studios ↗</a></li>
+            <li><a href="https://rvca.edu.in/infrastructure/library/" target="_blank" rel="noopener">Resource Centre & Library ↗</a></li>
+            <li><a href="https://rvca.edu.in/infrastructure/STUDY%20TOUR/" target="_blank" rel="noopener">Study Tours Documentation ↗</a></li>
+            <li><a href="https://rvca.edu.in/infrastructure/SITE%20VISITS/" target="_blank" rel="noopener">Live Site Visits ↗</a></li>
+            <li><a href="https://rvca.edu.in/infrastructure/canteen/" target="_blank" rel="noopener">Campus Canteen ↗</a></li>
+            <li><a href="https://rvca.edu.in/infrastructure/physical-education/" target="_blank" rel="noopener">Physical Education & Sports ↗</a></li>
+            <li><a href="https://rvca.edu.in/infrastructure/seminar-hall/" target="_blank" rel="noopener">Multipurpose Hall ↗</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Careers & GlobEd -->
+        <div class="directory-col">
+          <h5>💼 Careers & GlobEd</h5>
+          <ul class="directory-list">
+            <li><a href="https://rvca.edu.in/placements/" target="_blank" rel="noopener">Placement Assistance Cell ↗</a></li>
+            <li><a href="https://rvca.edu.in/pt_cell/" target="_blank" rel="noopener">Internship Assistance Cell ↗</a></li>
+            <li><a href="https://rvca.edu.in/globed/" target="_blank" rel="noopener">GlobEd Study Abroad Cell ↗</a></li>
+            <li><a href="https://rvca.edu.in/wp-content/uploads/2025/11/B_Brochure_Draft_30_09_25-final.pdf" class="pdf-link" target="_blank" rel="noopener">Internship Brochure 21-26 ↗</a></li>
+            <li><a href="https://rvca.edu.in/wp-content/uploads/2024/09/internship-Batch-Brochure-2020-2025.pdf" class="pdf-link" target="_blank" rel="noopener">Internship Brochure 20-25 ↗</a></li>
+            <li><a href="https://rvca.edu.in/alumni/" target="_blank" rel="noopener">Alumni Network ↗</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Statutory Committees -->
+        <div class="directory-col">
+          <h5>⚖️ Statutory Committees</h5>
+          <ul class="directory-list">
+            <li><a href="https://rvca.edu.in/wp-content/uploads/2024/09/RVCA_Details-of-Anti-Ragging-Commitee.pdf" class="pdf-link" target="_blank" rel="noopener">Anti-Ragging Committee ↗</a></li>
+            <li><a href="https://rvca.edu.in/wp-content/uploads/2024/10/Anti-ragging-poster_RVCA-1.pdf" class="pdf-link" target="_blank" rel="noopener">Anti-Ragging Poster ↗</a></li>
+            <li><a href="https://rvca.edu.in/wp-content/uploads/2024/07/Internal-Compliance-Committee.pdf" class="pdf-link" target="_blank" rel="noopener">ICC / POSH Committee ↗</a></li>
+            <li><a href="https://rvca.edu.in/wp-content/uploads/2024/07/Grievance-Redressal-Committee.pdf" class="pdf-link" target="_blank" rel="noopener">Grievance Redressal Cell ↗</a></li>
+            <li><a href="https://rvca.edu.in/wp-content/uploads/2024/07/Internal-Committee-for-Students-with-Disabilities.pdf" class="pdf-link" target="_blank" rel="noopener">Disabilities Welfare Cell ↗</a></li>
+            <li><a href="https://rvca.edu.in/wp-content/uploads/2024/07/Central-Mentoring-cum-Counselling-Committee.pdf" class="pdf-link" target="_blank" rel="noopener">Student Mentoring Cell ↗</a></li>
+            <li><a href="https://rvca.edu.in/wp-content/uploads/2024/07/SC-ST-OBC-Cell.pdf" class="pdf-link" target="_blank" rel="noopener">SC-ST-OBC Welfare Cell ↗</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 6: Publications & Governance -->
+        <div class="directory-col">
+          <h5>📖 Publications & Leadership</h5>
+          <ul class="directory-list">
+            <li><a href="https://rvca.edu.in/board_of_management/" target="_blank" rel="noopener">Board of Management ↗</a></li>
+            <li><a href="https://rvca.edu.in/faculty/dr_rakesh_k_s/" target="_blank" rel="noopener">Principal Dr. Rakesh K.S. ↗</a></li>
+            <li><a href="https://rvca.edu.in/faculty/suresh-k-murthy/" target="_blank" rel="noopener">Dean Prof. Suresh Murthy ↗</a></li>
+            <li><a href="https://rvca.edu.in/kalpa/" target="_blank" rel="noopener">KALPA Magazine Vol. 06 ↗</a></li>
+            <li><a href="https://rvca.edu.in/wp-content/uploads/2025/06/Kalpa-Vol-5_R1.pdf" class="pdf-link" target="_blank" rel="noopener">KALPA Magazine Vol. 05 ↗</a></li>
+            <li><a href="https://rvca.edu.in/wp-content/uploads/2025/09/00_Issue_2_2025.pdf" class="pdf-link" target="_blank" rel="noopener">sub:version Journal Issue 2 ↗</a></li>
+            <li><a href="https://rvca.edu.in/newsletter/" target="_blank" rel="noopener">Monthly Newsletters ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="demo-footer">
+    <div class="footer-left">
+      <h4>RV College of Architecture (RVCA)</h4>
+      <p>
+        Rashtreeya Sikshana Samithi Trust (RSST) • CA Site No. 1, Banashankari 6th Stage, 4th Block, Bengaluru - 560109<br>
+        KEA College Code: E-244 • Approved by Council of Architecture (COA) • Affiliated to VTU Belagavi
+      </p>
+    </div>
+    <div class="footer-links">
+      <a href="/dashboard/index.html" target="_blank">Command Center</a>
+      <a href="/dashboard/analytics.html" target="_blank">Deep Analytics</a>
+      <a href="https://rvca.edu.in" target="_blank" rel="noopener">Official Website</a>
+      <a href="javascript:void(0)" onclick="askChatbot('Contact Us')">Helpdesk</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="knowledge-base.js"></script>
+  <script src="faculty-data.js"></script>
+  <script src="engine.js"></script>
+  <script src="telemetry.js"></script>
+  <script src="chatbot.js"></script>
+  <script>
+    // Bridge helper: smoothly open the chatbot and submit query
+    function askChatbot(queryText) {
+      const fab = document.getElementById('rvca-fab');
+      const win = document.getElementById('rvca-window');
+      if (win && win.classList.contains('rvca-hidden')) {
+        if (fab) fab.click();
+      }
+      setTimeout(() => {
+        const input = document.getElementById('rvca-input');
+        const form = document.getElementById('rvca-form');
+        if (input && form) {
+          input.value = queryText;
+          form.dispatchEvent(new Event('submit', { cancelable: true }));
+        }
+      }, 350);
+    }
+
+    // Theme Toggle Sync
+    const demoBtn = document.getElementById('demo-theme-btn');
+    const demoIcon = document.getElementById('demo-theme-icon');
+    function updateDemoThemeButton() {
+      const isLight = document.body.classList.contains('rvca-theme-light');
+      if (demoIcon) demoIcon.textContent = isLight ? '☀️' : '🌙';
+    }
+    if (demoBtn) {
+      demoBtn.addEventListener('click', () => {
+        const chatThemeBtn = document.getElementById('rvca-btn-theme');
+        if (chatThemeBtn) chatThemeBtn.click();
+        updateDemoThemeButton();
+      });
+      setTimeout(updateDemoThemeButton, 60);
+    }
+  </script>
+</body>
+</html>

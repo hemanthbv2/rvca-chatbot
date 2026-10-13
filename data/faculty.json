@@ -1,0 +1,583 @@
+[
+  {
+    "name": "Dr. Rakesh K. S.",
+    "designation": "Principal",
+    "url": "https://rvca.edu.in/faculty/dr_rakesh_k_s/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B. Arch. [SAP, Chennai], M. Arch. [SAP, Chennai], Ph.D. [SAP, Chennai]",
+    "specialisation": "Climatic Design, Sustainable Architecture"
+  },
+  {
+    "name": "Dinesh Rao",
+    "designation": "Professor/ Design Chair",
+    "url": "https://rvca.edu.in/faculty/dinesh_rao/",
+    "categories": [
+      "b-arch"
+    ]
+  },
+  {
+    "name": "Suresh K Murthy",
+    "designation": "Dean/Professor",
+    "url": "https://rvca.edu.in/faculty/suresh-k-murthy/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B. Arch. [MSU, Baroda], M.Tech.[BS & CM] IIT-Delhi",
+    "specialisation": "Building Science & Construction Management, Climatology, environmental responsive Architecture, Spatial & Geographic information systems, Net zero and sustainability, managing the organisation's critical apps and communication systems, including email, instant messaging"
+  },
+  {
+    "name": "Phani Ram Pingali",
+    "designation": "Professor",
+    "url": "https://rvca.edu.in/faculty/phani-ram-pingali/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch.[JNTU, Andhra Pradesh], MS(Arch.)[Louisiana State University] P.G. Dip (Management) [AIMA, New Delhi] Present",
+    "specialisation": "Architecture"
+  },
+  {
+    "name": "Prasanna Rao",
+    "designation": "Professor/ Associate Dean",
+    "url": "https://rvca.edu.in/faculty/prasanna-rao/",
+    "categories": [
+      "m-arch"
+    ],
+    "qualification": "B.Arch.[Mysore University], M.Arch(Urban Design) , CEPT, Ahmedabad",
+    "specialisation": "Urban Design"
+  },
+  {
+    "name": "Dr M S Amarnath",
+    "designation": "Associate Professor",
+    "url": "https://rvca.edu.in/faculty/dr-m-s-amarnath/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.F.A (Bangalore University), MFA [MSU, Baroda], Ph.D. [Jain University]",
+    "specialisation": "Fine Arts"
+  },
+  {
+    "name": "Dr. H R Manjunath",
+    "designation": "Associate Professor",
+    "url": "https://rvca.edu.in/faculty/dr-h-r-manjunath/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.E. Civil [Karnataka University, Dharwada], M.E. Structures [Karnataka University, Dharwada]. Ph.D.[VTU]",
+    "specialisation": "Civil Engineering & Structural Engg."
+  },
+  {
+    "name": "Dr. Shikha Verma",
+    "designation": "Associate Professor",
+    "url": "https://rvca.edu.in/faculty/dr-shikha-verma/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch.[NIT BHOPAL], M.Tech.(Envi. Geotechnology)[MNNIT, Allahabad], Ph.D.(MNNIT, Allahabad)",
+    "specialisation": "Solid Waste Management"
+  },
+  {
+    "name": "Dr. Mahalakshmi Karnad",
+    "designation": "Associate Professor",
+    "url": "https://rvca.edu.in/faculty/dr-mahalakshmi-karnad/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch [Bangalore University] MLA [SPA, New Delhi] Ph.D. [SPA, New Delhi]",
+    "specialisation": "Landscape Architecture, Ecological Architecture & Design, Architectural Design Pedagogy"
+  },
+  {
+    "name": "Bikramjit Chakraborty",
+    "designation": "Associate Professor",
+    "url": "https://rvca.edu.in/faculty/bikramjit-chakraborty/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch.[Jadavpur University], M.Arch.(Arch. Conservation)[ SPA, New Delhi]",
+    "specialisation": "Architectural Conservation, Urban Transformation, Urban Regeneration, Indigenous Urbanism, Meaning in Built Environment"
+  },
+  {
+    "name": "Seema Maiya U",
+    "designation": "Associate Professor",
+    "url": "https://rvca.edu.in/faculty/seema-maiya-u/",
+    "categories": [
+      "m-arch"
+    ],
+    "qualification": "B.Arch.[Bangalore University], M.Arch(Urban Design) , University Of Glasgow",
+    "specialisation": "Urban Design"
+  },
+  {
+    "name": "Dr. Saisanath",
+    "designation": "Associate Professor",
+    "url": "https://rvca.edu.in/faculty/dr_saisanath/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B. Arch. from JNAFA University, Hyderabad; M. Tech. (Urban and Regional Planning) from Institute of Development Studies, University of Mysore; PhD from Department of Architecture, NIT Tiruchirappalli."
+  },
+  {
+    "name": "Anupriya Saxena",
+    "designation": "Associate Professor",
+    "url": "https://rvca.edu.in/faculty/anupriya-saxena/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch.[BIT, Mesra], M.BEM [SPA, New Delhi], PhD Research Scholar [NIT, Tiruchirappalli]",
+    "specialisation": "Building Engineering & Management, Climatic Design, Sustainable Architecture, Circularity in Built Environment"
+  },
+  {
+    "name": "Archana Vittal",
+    "designation": "Associate Professor",
+    "url": "https://rvca.edu.in/faculty/archana-vittal/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch.[VTU], M.Arch(Urban Design) [ CEPT, Ahmedabad]",
+    "specialisation": "Urban Design"
+  },
+  {
+    "name": "Nishant",
+    "designation": "Associate Professor",
+    "url": "https://rvca.edu.in/faculty/nishant/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch.[SPA, New Delhi], M.Arch.( Architectural Conservation)[SPA, New Delhi]",
+    "specialisation": "Heritage Conservation, Vernacular Architecture. Interested in Politics and Culture"
+  },
+  {
+    "name": "Hiranmayi Shankavaram",
+    "designation": "Associate Professor",
+    "url": "https://rvca.edu.in/faculty/hiranmayi-shankavaram/",
+    "categories": [
+      "m-arch"
+    ],
+    "qualification": "B.Arch.[VTU], M.Sc.[ Urb.Magnt. & Devpmnt.], Erasmus University, Rotterdam",
+    "specialisation": "Urban management & Development, Urban Planning and strategies, Urban Resilience, Urban Governance"
+  },
+  {
+    "name": "Dr. Chinnu S Kumar",
+    "designation": "Associate Professor",
+    "url": "https://rvca.edu.in/faculty/dr_chinnu_s_kumar/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch., TKM College of Engineering, Kollam"
+  },
+  {
+    "name": "Dharshini YG",
+    "designation": "Senior Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/dharshini-yg/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch.[VTU], M.Arch.(Urban Design)[VTU]",
+    "specialisation": "Urban Design"
+  },
+  {
+    "name": "Ramya Krishna",
+    "designation": "Senior Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/ramya-krishna/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch.[VTU], Master of Urban Design[University of Colorado, Denver, USA]",
+    "specialisation": "Urban Design, Community Development, Architecture, Urban Realm, Interior Design"
+  },
+  {
+    "name": "Pedaparthi Shweta",
+    "designation": "Senior Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/pedaparthi-shweta/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch. [VTU]"
+  },
+  {
+    "name": "Vidya V",
+    "designation": "Senior Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/vidya-v/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch. [VTU]",
+    "specialisation": "Architecture, Consultancy, Placements"
+  },
+  {
+    "name": "Mayank Singh",
+    "designation": "Senior Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/mayank-singh/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch.[BIT, Mesra], M.Tech.(Structural Engg. Design)[CEPT, Ahmedabad]",
+    "specialisation": "Structural Engineering Design, Construction, Engineering, Technology, Computational Design"
+  },
+  {
+    "name": "Megala Gurumurthi",
+    "designation": "Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/megala-gurumurthi/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch.[VTU]",
+    "specialisation": "Architecture and Identity Design"
+  },
+  {
+    "name": "Nitin Bhardwaj",
+    "designation": "Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/nitin_bhardwaj/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch. [Gateway College of Architecture, Sonipat], M.U.D. [SPA Delhi]"
+  },
+  {
+    "name": "Pappu Harcharan",
+    "designation": "Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/pappu-harcharan/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch.[SPA, Vijayawada], M.U.R.P[Mysore University]",
+    "specialisation": "Urban and Regional Planning"
+  },
+  {
+    "name": "Ajinkya Kanitkar",
+    "designation": "Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/ajinkya-kanitkar/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch.[VNIT, Nagpur], M.U.R.P[SPA, Bhopal]",
+    "specialisation": "Urban and Regional Planning, Climate Change and Built Environment, Mobility Studies, Community Resilience, Creative and Cultural Economy"
+  },
+  {
+    "name": "Ishani Gogoi",
+    "designation": "Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/ishani-gogoi/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch from AAyojan School of Architecture, Jaipur [Rajashthan Technological University], M.Arch.(Urban Design)[Rajashthan Technological University]",
+    "specialisation": "Urban Design"
+  },
+  {
+    "name": "Abhinandan K. S",
+    "designation": "Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/abhinandan-k-s/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "BE civil engineering ,SEA College of ENgineering VTU M.Tech STructural Engineering, DSCE, VTU"
+  },
+  {
+    "name": "Dr. Asmita Yadav",
+    "designation": "Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/dr_asmita_yadav/",
+    "categories": [
+      "b-arch"
+    ]
+  },
+  {
+    "name": "Deepthi V",
+    "designation": "Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/deepthi_v/",
+    "categories": [
+      "b-arch"
+    ]
+  },
+  {
+    "name": "Akanksha Singh",
+    "designation": "Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/akanksha-singh/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch.[RTMNU], M.Arch.(Landscape Architecture)[SPA, Bhopal], PhD (NIT, Calicut)- Pursuing",
+    "specialisation": "Landscape Architecture, Sustainability Studies, Architectural Pedagogy"
+  },
+  {
+    "name": "Ujjayant Bhattacharyya",
+    "designation": "Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/ujjayant-bhattacharyya/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch.[Piloo Mody College of Architecture, Biju Patnaik University, Odisha], M.Arch.(Architecture)[Chandigarh College of Architecture, Panjab University]",
+    "specialisation": "Public Architecture, Community Architecture, Drawing & Representation"
+  },
+  {
+    "name": "Lavanya",
+    "designation": "Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/lavanya/",
+    "categories": [
+      "b-arch"
+    ]
+  },
+  {
+    "name": "Akanksha Ruchi Horo",
+    "designation": "Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/akanksha_horo/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch [Birla Institute of Technology, Mesra, Ranchi]"
+  },
+  {
+    "name": "Abhirami A",
+    "designation": "Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/abhirami_a/",
+    "categories": [
+      "b-arch"
+    ]
+  },
+  {
+    "name": "Kiranjee",
+    "designation": "",
+    "url": "https://rvca.edu.in/faculty/kiranjee/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B. Arch: Visvesvaraya National Institute of Technology (VNIT), Nagpur – 2019"
+  },
+  {
+    "name": "Goutham K.B.",
+    "designation": "Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/goutham_k_b/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch (RV College of Architecture), M.Plan (SPA-Vijaywada), Msc. UMD (IHS, The Netherlands)"
+  },
+  {
+    "name": "Sunain Dalwani",
+    "designation": "Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/sunain-dalwani/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B.Arch. [VTU]"
+  },
+  {
+    "name": "Raghavendra Kuppusamy",
+    "designation": "Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/raghavendra_kuppusamy/",
+    "categories": [
+      "b-arch"
+    ],
+    "qualification": "B. Arch [SPA Vijayawada]; M. Arch. [IIT Roorkee]",
+    "specialisation": "Conceptual developments in Vāstuśāstra literature"
+  },
+  {
+    "name": "William George Kennedy",
+    "designation": "Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/william_george_kennedy/",
+    "categories": [
+      "b-arch"
+    ]
+  },
+  {
+    "name": "Puneeth H K",
+    "designation": "Asst. Director – Physical Education",
+    "url": "https://rvca.edu.in/faculty/puneeth_h_k/",
+    "categories": [
+      "b-arch"
+    ]
+  },
+  {
+    "name": "Srinivas A M",
+    "designation": "Assistant Chief Manager – HR & Administration",
+    "url": null,
+    "categories": [
+      "non-teaching-faculty"
+    ]
+  },
+  {
+    "name": "Prashantha K T",
+    "designation": "Senior Engineer",
+    "url": null,
+    "categories": [
+      "non-teaching-faculty"
+    ]
+  },
+  {
+    "name": "Girish Kumar P",
+    "designation": "Foreman",
+    "url": null,
+    "categories": [
+      "non-teaching-faculty"
+    ]
+  },
+  {
+    "name": "Vaishali Kulkarni",
+    "designation": "Deputy Manager",
+    "url": null,
+    "categories": [
+      "non-teaching-faculty"
+    ]
+  },
+  {
+    "name": "Raghavendra Prabhu",
+    "designation": "Senior Executive",
+    "url": null,
+    "categories": [
+      "non-teaching-faculty"
+    ]
+  },
+  {
+    "name": "Bhaskar K R",
+    "designation": "Senior Executive",
+    "url": null,
+    "categories": [
+      "non-teaching-faculty"
+    ]
+  },
+  {
+    "name": "Lokesha M",
+    "designation": "Senior Executive – Finance",
+    "url": null,
+    "categories": [
+      "non-teaching-faculty"
+    ]
+  },
+  {
+    "name": "Hanumanthaiah H R",
+    "designation": "Senior Electrician",
+    "url": null,
+    "categories": [
+      "non-teaching-faculty"
+    ]
+  },
+  {
+    "name": "Ramaprasad C",
+    "designation": "Senior Library Executive",
+    "url": null,
+    "categories": [
+      "non-teaching-faculty"
+    ]
+  },
+  {
+    "name": "Chetankumar Jain",
+    "designation": "Assistant Librarian",
+    "url": null,
+    "categories": [
+      "non-teaching-faculty"
+    ]
+  },
+  {
+    "name": "P Vivekananda",
+    "designation": "Assistant Instructor – Laboratory",
+    "url": null,
+    "categories": [
+      "non-teaching-faculty"
+    ]
+  },
+  {
+    "name": "Anand B P",
+    "designation": "Assistant Foreman",
+    "url": null,
+    "categories": [
+      "non-teaching-faculty"
+    ]
+  },
+  {
+    "name": "Soniya V",
+    "designation": "Residential Warden",
+    "url": null,
+    "categories": [
+      "non-teaching-faculty"
+    ]
+  },
+  {
+    "name": "Prashant Kumar",
+    "designation": "Office Assistant",
+    "url": null,
+    "categories": [
+      "non-teaching-faculty"
+    ]
+  },
+  {
+    "name": "Thimmaiah C M",
+    "designation": "Helper",
+    "url": null,
+    "categories": [
+      "non-teaching-faculty"
+    ]
+  },
+  {
+    "name": "Prakash Laxman Kini",
+    "designation": "Peon",
+    "url": null,
+    "categories": [
+      "non-teaching-faculty"
+    ]
+  },
+  {
+    "name": "Archita Bandyopadhyay",
+    "designation": "Assistant Professor [Tenure]",
+    "url": "https://rvca.edu.in/faculty/archita-bandyopadhyay/",
+    "categories": [
+      "b-arch"
+    ],
+    "note": "Profile page on rvca.edu.in (not shown in current directory grid)",
+    "qualification": "B.Arch.[Mumbai University], M.Arch.(H&T) [CEPT, Ahmedabad]",
+    "specialisation": "History, Theory & Criticism, Interdisciplinary, Critical Thinking, Culture and the Built Environment"
+  },
+  {
+    "name": "Deepika Varadarajan",
+    "designation": "Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/deepika-varadarajan/",
+    "categories": [
+      "b-arch"
+    ],
+    "note": "Profile page on rvca.edu.in (not shown in current directory grid)",
+    "qualification": "B.Arch (Major: Interior Design) [Anna University, Chennai], M.Sc. (Environmental Design) [University of Bath, UK]",
+    "specialisation": "Environmental Design"
+  },
+  {
+    "name": "Dr. Om Prakash Bawane",
+    "designation": "Principal",
+    "url": "https://rvca.edu.in/faculty/dr-om-prakash-bawane/",
+    "categories": [
+      "b-arch"
+    ],
+    "note": "Profile page on rvca.edu.in (not shown in current directory grid)",
+    "qualification": "B.Arch.[NIT, Bhopal], M.Arch.[IIT, Roorkee], M.sc.(Sust.development)[Sikkim Manipal University], Ph.D. [Vinayaka Missions University]",
+    "specialisation": "Sustainable Development, Building Services"
+  },
+  {
+    "name": "Girish Ramanathan",
+    "designation": "Associate Professor",
+    "url": "https://rvca.edu.in/faculty/girish-ramanathan/",
+    "categories": [
+      "b-arch"
+    ],
+    "note": "Profile page on rvca.edu.in (not shown in current directory grid)",
+    "qualification": "B.Arch.[University of Roorkee], M.U.P [SPA, New Delhi]",
+    "specialisation": "Urban Planning"
+  },
+  {
+    "name": "K Sreedhar",
+    "designation": "Professor, Social Welfare Officer",
+    "url": "https://rvca.edu.in/faculty/k-sreedhar/",
+    "categories": [
+      "b-arch"
+    ],
+    "note": "Profile page on rvca.edu.in (not shown in current directory grid)",
+    "qualification": "B.Arch.[JNTU, Andhra Pradesh], M. Design[IIT-Bombay]",
+    "specialisation": "Architecture & Product Design"
+  },
+  {
+    "name": "Prakruthi S Karadagi",
+    "designation": "Assistant Professor",
+    "url": "https://rvca.edu.in/faculty/prakruthi-s-karadagi/",
+    "categories": [
+      "b-arch"
+    ],
+    "note": "Profile page on rvca.edu.in (not shown in current directory grid)",
+    "qualification": "B.Arch.[VTU], M.Arch.(Urban Design)[VTU]",
+    "specialisation": "Urban Design"
+  }
+]

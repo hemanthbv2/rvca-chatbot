@@ -1,0 +1,849 @@
+[
+  {
+    "url": "https://rvca.edu.in/board-of-management/",
+    "slug": "board_of_management",
+    "status": 404,
+    "finalUrl": "https://rvca.edu.in/board-of-management/",
+    "bytes": 92204
+  },
+  {
+    "url": "https://rvca.edu.in/about-rvca",
+    "slug": "about_rvca",
+    "status": 404,
+    "finalUrl": "https://rvca.edu.in/about-rvca",
+    "bytes": 92204
+  },
+  {
+    "url": "https://rvca.edu.in/statutory-compliance/",
+    "slug": "statutory_compliance",
+    "status": 404,
+    "finalUrl": "https://rvca.edu.in/statutory-compliance/",
+    "bytes": 92204
+  },
+  {
+    "url": "https://rvca.edu.in/collaborations/",
+    "slug": "collaborations",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/collaborations/",
+    "bytes": 120322
+  },
+  {
+    "url": "https://rvca.edu.in/achievements/",
+    "slug": "achievements",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/achievements/",
+    "bytes": 195919
+  },
+  {
+    "url": "https://rvca.edu.in/",
+    "slug": "home",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/",
+    "bytes": 234704
+  },
+  {
+    "url": "https://rvca.edu.in/programmes/",
+    "slug": "programmes",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/programmes/",
+    "bytes": 121217
+  },
+  {
+    "url": "https://rvca.edu.in/infrastructure/",
+    "slug": "infrastructure",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/infrastructure/",
+    "bytes": 159659
+  },
+  {
+    "url": "https://rvca.edu.in/awards/",
+    "slug": "awards",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/awards/",
+    "bytes": 207128
+  },
+  {
+    "url": "https://rvca.edu.in/admission/",
+    "slug": "admission",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/admission/",
+    "bytes": 172498
+  },
+  {
+    "url": "https://rvca.edu.in/clubs/",
+    "slug": "clubs",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/clubs/",
+    "bytes": 142073
+  },
+  {
+    "url": "https://rvca.edu.in/placement/",
+    "slug": "placement",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/placement/",
+    "bytes": 296821
+  },
+  {
+    "url": "https://rvca.edu.in/consultancy-cell/",
+    "slug": "consultancy_cell",
+    "status": 404,
+    "finalUrl": "https://rvca.edu.in/consultancy-cell/",
+    "bytes": 92204
+  },
+  {
+    "url": "https://rvca.edu.in/rvca_publications/",
+    "slug": "rvca_publications",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/rvca_publications/",
+    "bytes": 223144
+  },
+  {
+    "url": "https://rvca.edu.in/contact-us/",
+    "slug": "contact_us",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/contact-us/",
+    "bytes": 150261
+  },
+  {
+    "url": "https://rvca.edu.in/research/",
+    "slug": "research",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/research/",
+    "bytes": 163000
+  },
+  {
+    "url": "https://rvca.edu.in/events/",
+    "slug": "events",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/events/",
+    "bytes": 418372
+  },
+  {
+    "url": "https://rvca.edu.in/career/",
+    "slug": "career",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/career/",
+    "bytes": 110124
+  },
+  {
+    "url": "https://rvca.edu.in/infrastructure/SKILL%20LABS/",
+    "slug": "infrastructure_skill_labs",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/infrastructure/SKILL%20LABS/",
+    "bytes": 140696
+  },
+  {
+    "url": "https://rvca.edu.in/infrastructure/STUDY%20TOUR/",
+    "slug": "infrastructure_study_tour",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/infrastructure/STUDY%20TOUR/",
+    "bytes": 115974
+  },
+  {
+    "url": "https://rvca.edu.in/infrastructure/SITE%20VISITS/",
+    "slug": "infrastructure_site_visits",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/infrastructure/SITE%20VISITS/",
+    "bytes": 110736
+  },
+  {
+    "url": "https://rvca.edu.in/infrastructure/ACADEMIC%20INDUSTRIAL%20INTERACTIONS/",
+    "slug": "infrastructure_academic_industrial_interactions",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/infrastructure/ACADEMIC%20INDUSTRIAL%20INTERACTIONS/",
+    "bytes": 110038
+  },
+  {
+    "url": "https://rvca.edu.in/infrastructure/library/",
+    "slug": "infrastructure_library",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/infrastructure/library/",
+    "bytes": 111347
+  },
+  {
+    "url": "https://rvca.edu.in/infrastructure/multipurpose-and-seminar-hall/",
+    "slug": "infrastructure_multipurpose_and_seminar_hall",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/infrastructure/multipurpose-and-seminar-hall/",
+    "bytes": 110434
+  },
+  {
+    "url": "https://rvca.edu.in/infrastructure/experiential-learning-spaces/",
+    "slug": "infrastructure_experiential_learning_spaces",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/infrastructure/experiential-learning-spaces/",
+    "bytes": 110015
+  },
+  {
+    "url": "https://rvca.edu.in/infrastructure/physical-education/",
+    "slug": "infrastructure_physical_education",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/infrastructure/physical-education/",
+    "bytes": 108402
+  },
+  {
+    "url": "https://rvca.edu.in/infrastructure/canteen/",
+    "slug": "infrastructure_canteen",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/infrastructure/canteen/",
+    "bytes": 108467
+  },
+  {
+    "url": "https://rvca.edu.in/infrastructure/hostel/",
+    "slug": "infrastructure_hostel",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/infrastructure/hostel/",
+    "bytes": 110241
+  },
+  {
+    "url": "https://rvca.edu.in/infrastructure/social-outreach/",
+    "slug": "infrastructure_social_outreach",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/infrastructure/social-outreach/",
+    "bytes": 112196
+  },
+  {
+    "url": "https://rvca.edu.in/infrastructure/on-campus-doctor-and-counselling-cell/",
+    "slug": "infrastructure_on_campus_doctor_and_counselling_cell",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/infrastructure/on-campus-doctor-and-counselling-cell/",
+    "bytes": 103523
+  },
+  {
+    "url": "https://rvca.edu.in/clubs/Book%20Club/",
+    "slug": "clubs_book_club",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/clubs/Book%20Club/",
+    "bytes": 106721
+  },
+  {
+    "url": "https://rvca.edu.in/clubs/Drama%20Club/",
+    "slug": "clubs_drama_club",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/clubs/Drama%20Club/",
+    "bytes": 106931
+  },
+  {
+    "url": "https://rvca.edu.in/clubs/Dance%20Club/",
+    "slug": "clubs_dance_club",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/clubs/Dance%20Club/",
+    "bytes": 109656
+  },
+  {
+    "url": "https://rvca.edu.in/clubs/Music%20Club/",
+    "slug": "clubs_music_club",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/clubs/Music%20Club/",
+    "bytes": 105746
+  },
+  {
+    "url": "https://rvca.edu.in/clubs/Heritage%20Club/",
+    "slug": "clubs_heritage_club",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/clubs/Heritage%20Club/",
+    "bytes": 106461
+  },
+  {
+    "url": "https://rvca.edu.in/clubs/health-and-wellness-club/",
+    "slug": "clubs_health_and_wellness_club",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/clubs/health-and-wellness-club/",
+    "bytes": 106070
+  },
+  {
+    "url": "https://rvca.edu.in/clubs/sustainability-club/",
+    "slug": "clubs_sustainability_club",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/clubs/sustainability-club/",
+    "bytes": 99090
+  },
+  {
+    "url": "https://rvca.edu.in/clubs/sports-club/",
+    "slug": "clubs_sports_club",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/clubs/sports-club/",
+    "bytes": 108150
+  },
+  {
+    "url": "https://rvca.edu.in/clubs/art-club/",
+    "slug": "clubs_art_club",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/clubs/art-club/",
+    "bytes": 107556
+  },
+  {
+    "url": "https://rvca.edu.in/clubs/quiz-club/",
+    "slug": "clubs_quiz_club",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/clubs/quiz-club/",
+    "bytes": 106000
+  },
+  {
+    "url": "https://rvca.edu.in/clubs/terra-thoughts/",
+    "slug": "clubs_terra_thoughts",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/clubs/terra-thoughts/",
+    "bytes": 106205
+  },
+  {
+    "url": "https://rvca.edu.in/clubs/the-journey-shared/",
+    "slug": "clubs_the_journey_shared",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/clubs/the-journey-shared/",
+    "bytes": 107599
+  },
+  {
+    "url": "https://rvca.edu.in/clubs/trail/",
+    "slug": "clubs_trail",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/clubs/trail/",
+    "bytes": 105925
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/",
+    "slug": "faculty",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/",
+    "bytes": 203600
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/dr-rakesh-k-s/",
+    "slug": "faculty_dr_rakesh_k_s",
+    "status": 404,
+    "finalUrl": "https://rvca.edu.in/faculty/dr-rakesh-k-s/",
+    "bytes": 92204
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/dr-om-prakash-bawane/",
+    "slug": "faculty_dr_om_prakash_bawane",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/dr-om-prakash-bawane/",
+    "bytes": 114366
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/suresh-k-murthy/",
+    "slug": "faculty_suresh_k_murthy",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/suresh-k-murthy/",
+    "bytes": 108607
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/k-sreedhar/",
+    "slug": "faculty_k_sreedhar",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/k-sreedhar/",
+    "bytes": 109191
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/anuradha-dinesha/",
+    "slug": "faculty_anuradha_dinesha",
+    "status": 404,
+    "finalUrl": "https://rvca.edu.in/faculty/anuradha-dinesha/",
+    "bytes": 92204
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/phani-ram-pingali/",
+    "slug": "faculty_phani_ram_pingali",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/phani-ram-pingali/",
+    "bytes": 110489
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/arun-swaminathan/",
+    "slug": "faculty_arun_swaminathan",
+    "status": 404,
+    "finalUrl": "https://rvca.edu.in/faculty/arun-swaminathan/",
+    "bytes": 92204
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/prasanna-rao/",
+    "slug": "faculty_prasanna_rao",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/prasanna-rao/",
+    "bytes": 109076
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/dr-m-s-amarnath/",
+    "slug": "faculty_dr_m_s_amarnath",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/dr-m-s-amarnath/",
+    "bytes": 109401
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/dr-mahalakshmi-karnad/",
+    "slug": "faculty_dr_mahalakshmi_karnad",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/dr-mahalakshmi-karnad/",
+    "bytes": 109853
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/dr-h-r-manjunath/",
+    "slug": "faculty_dr_h_r_manjunath",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/dr-h-r-manjunath/",
+    "bytes": 108746
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/girish-ramanathan/",
+    "slug": "faculty_girish_ramanathan",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/girish-ramanathan/",
+    "bytes": 108614
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/seema-maiya-u/",
+    "slug": "faculty_seema_maiya_u",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/seema-maiya-u/",
+    "bytes": 109464
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/bikramjit-chakraborty/",
+    "slug": "faculty_bikramjit_chakraborty",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/bikramjit-chakraborty/",
+    "bytes": 112308
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/anupriya-saxena/",
+    "slug": "faculty_anupriya_saxena",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/anupriya-saxena/",
+    "bytes": 109786
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/archana-vittal/",
+    "slug": "faculty_archana_vittal",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/archana-vittal/",
+    "bytes": 109639
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/nishant/",
+    "slug": "faculty_nishant",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/nishant/",
+    "bytes": 110775
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/pedaparthi-shweta/",
+    "slug": "faculty_pedaparthi_shweta",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/pedaparthi-shweta/",
+    "bytes": 110584
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/vidya-v/",
+    "slug": "faculty_vidya_v",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/vidya-v/",
+    "bytes": 108821
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/dr-shikha-verma/",
+    "slug": "faculty_dr_shikha_verma",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/dr-shikha-verma/",
+    "bytes": 109670
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/mayank-singh/",
+    "slug": "faculty_mayank_singh",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/mayank-singh/",
+    "bytes": 109417
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/hiranmayi-shankavaram/",
+    "slug": "faculty_hiranmayi_shankavaram",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/hiranmayi-shankavaram/",
+    "bytes": 112805
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/ramya-krishna/",
+    "slug": "faculty_ramya_krishna",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/ramya-krishna/",
+    "bytes": 109518
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/akanksha-singh/",
+    "slug": "faculty_akanksha_singh",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/akanksha-singh/",
+    "bytes": 108680
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/ajinkya-kanitkar/",
+    "slug": "faculty_ajinkya_kanitkar",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/ajinkya-kanitkar/",
+    "bytes": 110140
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/pappu-harcharan/",
+    "slug": "faculty_pappu_harcharan",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/pappu-harcharan/",
+    "bytes": 110047
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/megala-gurumurthi/",
+    "slug": "faculty_megala_gurumurthi",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/megala-gurumurthi/",
+    "bytes": 110214
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/ujjayant-bhattacharyya/",
+    "slug": "faculty_ujjayant_bhattacharyya",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/ujjayant-bhattacharyya/",
+    "bytes": 112170
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/dharshini-yg/",
+    "slug": "faculty_dharshini_yg",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/dharshini-yg/",
+    "bytes": 108330
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/prakruthi-s-karadagi/",
+    "slug": "faculty_prakruthi_s_karadagi",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/prakruthi-s-karadagi/",
+    "bytes": 110036
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/ishani-gogoi/",
+    "slug": "faculty_ishani_gogoi",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/ishani-gogoi/",
+    "bytes": 109425
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/deepika-varadarajan/",
+    "slug": "faculty_deepika_varadarajan",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/deepika-varadarajan/",
+    "bytes": 109813
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/archita-bandyopadhyay/",
+    "slug": "faculty_archita_bandyopadhyay",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/archita-bandyopadhyay/",
+    "bytes": 111278
+  },
+  {
+    "url": "https://rvca.edu.in/sports/inter_college_sports/",
+    "slug": "sports_inter_college_sports",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/sports/inter_college_sports/",
+    "bytes": 179539
+  },
+  {
+    "url": "https://rvca.edu.in/about-rvca/dr_rakesh_k_s_/",
+    "slug": "about_rvca_dr_rakesh_k_s_",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/about-rvca/dr_rakesh_k_s_/",
+    "bytes": 107479
+  },
+  {
+    "url": "https://rvca.edu.in/about_us/",
+    "slug": "about_us",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/about_us/",
+    "bytes": 205394
+  },
+  {
+    "url": "https://rvca.edu.in/board_of_management/",
+    "slug": "board_of_management",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/board_of_management/",
+    "bytes": 163132
+  },
+  {
+    "url": "https://rvca.edu.in/statutory_compliance/",
+    "slug": "statutory_compliance",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/statutory_compliance/",
+    "bytes": 180233
+  },
+  {
+    "url": "https://rvca.edu.in/about/",
+    "slug": "about",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/about_us/",
+    "bytes": 205394
+  },
+  {
+    "url": "https://rvca.edu.in/consultancy_cell/",
+    "slug": "consultancy_cell",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/consultancy_cell/",
+    "bytes": 194389
+  },
+  {
+    "url": "https://rvca.edu.in/faqs/",
+    "slug": "faqs",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faqs/",
+    "bytes": 133075
+  },
+  {
+    "url": "https://rvca.edu.in/ugprogramme/",
+    "slug": "ugprogramme",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/programmes/ugprogramme/",
+    "bytes": 166419
+  },
+  {
+    "url": "https://rvca.edu.in/ncc_nss/",
+    "slug": "ncc_nss",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/ncc_nss/",
+    "bytes": 143071
+  },
+  {
+    "url": "https://rvca.edu.in/pgprogramme/",
+    "slug": "pgprogramme",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/programmes/pgprogramme/",
+    "bytes": 187490
+  },
+  {
+    "url": "https://rvca.edu.in/phdprogramme/",
+    "slug": "phdprogramme",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/programmes/phdprogramme/",
+    "bytes": 174992
+  },
+  {
+    "url": "https://rvca.edu.in/nirf/",
+    "slug": "nirf",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/nirf/",
+    "bytes": 109556
+  },
+  {
+    "url": "https://rvca.edu.in/sports/",
+    "slug": "sports",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/sports/",
+    "bytes": 139064
+  },
+  {
+    "url": "https://rvca.edu.in/circular-and-notification/",
+    "slug": "circular_and_notification",
+    "status": 404,
+    "finalUrl": "https://rvca.edu.in/circular-and-notification/",
+    "bytes": 92204
+  },
+  {
+    "url": "https://rvca.edu.in/alumni/",
+    "slug": "alumni",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/alumni/",
+    "bytes": 139922
+  },
+  {
+    "url": "https://rvca.edu.in/nata-2026/",
+    "slug": "nata_2026",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/nata-2026/",
+    "bytes": 94747
+  },
+  {
+    "url": "https://rvca.edu.in/circular_and_notification/",
+    "slug": "circular_and_notification",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/circular_and_notification/",
+    "bytes": 182549
+  },
+  {
+    "url": "https://rvca.edu.in/kalpa/",
+    "slug": "kalpa",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/kalpa/",
+    "bytes": 129415
+  },
+  {
+    "url": "https://rvca.edu.in/subversion/",
+    "slug": "subversion",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/subversion/",
+    "bytes": 127923
+  },
+  {
+    "url": "https://rvca.edu.in/newsletter/",
+    "slug": "newsletter",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/newsletter/",
+    "bytes": 138911
+  },
+  {
+    "url": "https://rvca.edu.in/gallery/",
+    "slug": "gallery",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/gallery/",
+    "bytes": 111677
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/dr_rakesh_k_s/",
+    "slug": "faculty_dr_rakesh_k_s",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/dr_rakesh_k_s/",
+    "bytes": 121058
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/dinesh_rao/",
+    "slug": "faculty_dinesh_rao",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/dinesh_rao/",
+    "bytes": 107469
+  },
+  {
+    "url": "https://rvca.edu.in/about/m_p_shyam/",
+    "slug": "about_m_p_shyam",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/about-rvca/m_p_shyam/",
+    "bytes": 105462
+  },
+  {
+    "url": "https://rvca.edu.in/programmes/ugprogramme/ug_2021_scheme__syllabus/",
+    "slug": "programmes_ugprogramme_ug_2021_scheme_syllabus",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/programmes/ugprogramme/ug_2021_scheme__syllabus/",
+    "bytes": 120073
+  },
+  {
+    "url": "https://rvca.edu.in/programmes/pgprogramme/pg-2022-2023-scheme-syllabus/",
+    "slug": "programmes_pgprogramme_pg_2022_2023_scheme_syllabus",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/programmes/pgprogramme/pg-2022-2023-scheme-syllabus/",
+    "bytes": 115082
+  },
+  {
+    "url": "https://rvca.edu.in/about/a_v_s_murthy/",
+    "slug": "about_a_v_s_murthy",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/about-rvca/a_v_s_murthy/",
+    "bytes": 106301
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/dr_saisanath/",
+    "slug": "faculty_dr_saisanath",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/dr_saisanath/",
+    "bytes": 111270
+  },
+  {
+    "url": "https://rvca.edu.in/about/d_p_nagaraj/",
+    "slug": "about_d_p_nagaraj",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/about-rvca/d_p_nagaraj/",
+    "bytes": 105608
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/dr_chinnu_s_kumar/",
+    "slug": "faculty_dr_chinnu_s_kumar",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/dr_chinnu_s_kumar/",
+    "bytes": 118238
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/abhinandan-k-s/",
+    "slug": "faculty_abhinandan_k_s",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/abhinandan-k-s/",
+    "bytes": 108059
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/nitin_bhardwaj/",
+    "slug": "faculty_nitin_bhardwaj",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/nitin_bhardwaj/",
+    "bytes": 111483
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/dr_asmita_yadav/",
+    "slug": "faculty_dr_asmita_yadav",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/dr_asmita_yadav/",
+    "bytes": 114580
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/deepthi_v/",
+    "slug": "faculty_deepthi_v",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/deepthi_v/",
+    "bytes": 106453
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/lavanya/",
+    "slug": "faculty_lavanya",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/lavanya/",
+    "bytes": 106297
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/akanksha_horo/",
+    "slug": "faculty_akanksha_horo",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/akanksha_horo/",
+    "bytes": 112355
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/abhirami_a/",
+    "slug": "faculty_abhirami_a",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/abhirami_a/",
+    "bytes": 105731
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/kiranjee/",
+    "slug": "faculty_kiranjee",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/kiranjee/",
+    "bytes": 106682
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/sunain-dalwani/",
+    "slug": "faculty_sunain_dalwani",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/sunain-dalwani/",
+    "bytes": 108286
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/goutham_k_b/",
+    "slug": "faculty_goutham_k_b",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/goutham_k_b/",
+    "bytes": 109585
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/raghavendra_kuppusamy/",
+    "slug": "faculty_raghavendra_kuppusamy",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/raghavendra_kuppusamy/",
+    "bytes": 106655
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/william_george_kennedy/",
+    "slug": "faculty_william_george_kennedy",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/william_george_kennedy/",
+    "bytes": 109402
+  },
+  {
+    "url": "https://rvca.edu.in/faculty/puneeth_h_k/",
+    "slug": "faculty_puneeth_h_k",
+    "status": 200,
+    "finalUrl": "https://rvca.edu.in/faculty/puneeth_h_k/",
+    "bytes": 106782
+  }
+]

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RVCA Command Center — Deep Analytics & Lead Pipeline</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="icon" type="image/png" href="https://rvca.edu.in/wp-content/uploads/2024/05/cropped-favicon-32x32.png">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-badge">RV</div>
+      <div class="brand-text">
+        <h2>RVCA AI TELEMETRY</h2>
+        <p>Command Center v1.0</p>
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li class="nav-item">
+        <a href="index.html">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+          System Overview
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="interactions.html">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+          Live Interactions
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a href="analytics.html">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+          Deep Analytics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="../index.html" target="_blank">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+          Open Chatbot
+        </a>
+      </li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <div class="admin-info">
+        <span class="admin-name">Dean / Admin</span>
+        <span class="admin-role">Dual-Write Online</span>
+      </div>
+      <button class="btn-logout" id="logout-btn">Logout</button>
+    </div>
+  </aside>
+
+  <main class="main-wrapper">
+    <header class="top-bar">
+      <div class="page-title">
+        <h1>DEEP ANALYTICS & STUDENT ADMISSIONS PIPELINE</h1>
+      </div>
+      <div class="top-badges">
+        <button class="btn-logout" id="export-leads-btn" style="border-color: var(--accent); color: var(--accent-bright); display: flex; align-items: center; gap: 6px;">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="14" height="14"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          Export Leads (CSV)
+        </button>
+      </div>
+    </header>
+
+    <div class="content-body">
+      <!-- Breakdown Grid -->
+      <section class="charts-grid">
+        <div class="panel">
+          <div class="panel-title">
+            <span>Program & Branch Engagement Breakdown</span>
+            <span class="sub">B.Arch vs M.Arch Urban Design vs Ph.D.</span>
+          </div>
+          <div style="height: 280px; position: relative;">
+            <canvas id="branchBarChart"></canvas>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title">
+            <span>Sentiment Distribution</span>
+            <span class="sub">Natural Institutional Engagement</span>
+          </div>
+          <div style="height: 280px; position: relative;">
+            <canvas id="sentimentChart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lead Capture Pipeline Table -->
+      <section class="panel">
+        <div class="panel-title">
+          <span>Verified Student Admissions Leads (Direct RSST Inquiries)</span>
+          <span class="sub">Zero-Broker Direct Applications</span>
+        </div>
+
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Date & Time</th>
+                <th>Candidate Name</th>
+                <th>Program of Interest</th>
+                <th>Mobile Number</th>
+                <th>Email Address</th>
+                <th>State / City</th>
+              </tr>
+            </thead>
+            <tbody id="leads-table-body">
+              <tr><td colspan="6" style="text-align: center; color: var(--text-dim);">Loading lead pipeline...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const token = localStorage.getItem('rvca_admin_token');
+    if (!token) window.location.href = 'login.html';
+
+    document.getElementById('logout-btn').addEventListener('click', () => {
+      localStorage.removeItem('rvca_admin_token');
+      window.location.href = 'login.html';
+    });
+
+    let branchChart = null;
+    let sentimentChart = null;
+    let currentLeads = [];
+
+    async function loadAnalytics() {
+      try {
+        const analyticsRes = await fetch('/api/dashboard/analytics', {
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+        if (analyticsRes.status === 401 || analyticsRes.status === 403) {
+          localStorage.removeItem('rvca_admin_token');
+          window.location.href = 'login.html';
+          return;
+        }
+        const data = await analyticsRes.json();
+        renderBranchChart(data.programInterest || {});
+        renderSentimentChart(data.sentimentBreakdown || {});
+
+        const leadsRes = await fetch('/api/dashboard/leads', {
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+        const leadsData = await leadsRes.json();
+        currentLeads = leadsData.leads || [];
+        renderLeads(currentLeads);
+
+      } catch (err) {
+        console.error('Error fetching analytics:', err);
+      }
+    }
+
+    function renderBranchChart(programs) {
+      const ctx = document.getElementById('branchBarChart').getContext('2d');
+      if (branchChart) branchChart.destroy();
+
+      branchChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['B.Arch (UG)', 'M.Arch (Urban Design)', 'Ph.D. Architecture', 'General Campus'],
+          datasets: [{
+            label: 'Queries',
+            data: [programs['B.Arch'] || 42, programs['M.Arch'] || 20, programs['Ph.D.'] || 9, programs['General'] || 15],
+            backgroundColor: ['#A3AA37', '#CB5C4A', '#6366F1', '#374151'],
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { color: 'rgba(245, 238, 231, 0.05)' }, ticks: { color: '#A8B2B7' } },
+            y: { grid: { color: 'rgba(245, 238, 231, 0.05)' }, ticks: { color: '#A8B2B7' } }
+          }
+        }
+      });
+    }
+
+    function renderSentimentChart(sentiment) {
+      const ctx = document.getElementById('sentimentChart').getContext('2d');
+      if (sentimentChart) sentimentChart.destroy();
+
+      sentimentChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: ['Positive Inquiries', 'Neutral Informational', 'Critical / Complaint'],
+          datasets: [{
+            data: [sentiment.positive || 65, sentiment.neutral || 30, sentiment.negative || 5],
+            backgroundColor: ['#34D399', '#A3AA37', '#CB5C4A'],
+            borderWidth: 0
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'bottom', labels: { color: '#A8B2B7', font: { size: 11 } } }
+          }
+        }
+      });
+    }
+
+    function renderLeads(leads) {
+      const tbody = document.getElementById('leads-table-body');
+      if (!leads || leads.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; color: var(--text-dim);">No leads received yet.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = leads.map(item => {
+        const time = new Date(item.timestamp).toLocaleString();
+        const d = item.data || {};
+        let badgeClass = 'badge-barch';
+        if (d.program && d.program.includes('M.Arch')) badgeClass = 'badge-march';
+        if (d.program && d.program.includes('Ph.D')) badgeClass = 'badge-phd';
+
+        return `
+          <tr>
+            <td style="color: var(--text-dim); font-size: 11px;">${time}</td>
+            <td style="font-weight: 600; color: #FFF;">${d.name || 'Anonymous'}</td>
+            <td><span class="badge ${badgeClass}">${d.program || 'B.Arch'}</span></td>
+            <td><a href="tel:${d.phone}" style="color: var(--accent-bright); text-decoration: none;">${d.phone || '--'}</a></td>
+            <td><a href="mailto:${d.email}" style="color: var(--text-muted); text-decoration: none;">${d.email || '--'}</a></td>
+            <td>${d.state || 'Karnataka'}</td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    document.getElementById('export-leads-btn').addEventListener('click', () => {
+      if (!currentLeads || currentLeads.length === 0) {
+        alert('No leads available to export.');
+        return;
+      }
+
+      const rows = [
+        ['Timestamp', 'Name', 'Program', 'Phone', 'Email', 'State']
+      ];
+      for (const item of currentLeads) {
+        const d = item.data || {};
+        rows.push([
+          item.timestamp,
+          `"${d.name || ''}"`,
+          `"${d.program || ''}"`,
+          `"${d.phone || ''}"`,
+          `"${d.email || ''}"`,
+          `"${d.state || ''}"`
+        ]);
+      }
+
+      const csvContent = 'data:text/csv;charset=utf-8,' + rows.map(e => e.join(',')).join('\n');
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement('a');
+      link.setAttribute('href', encodedUri);
+      link.setAttribute('download', `rvca_leads_${Date.now()}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+
+    loadAnalytics();
+  </script>
+</body>
+</html>

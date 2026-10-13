@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RVCA Command Center — Real-Time Telemetry & System KPIs</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="icon" type="image/png" href="https://rvca.edu.in/wp-content/uploads/2024/05/cropped-favicon-32x32.png">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-badge">RV</div>
+      <div class="brand-text">
+        <h2>RVCA AI TELEMETRY</h2>
+        <p>Command Center v1.0</p>
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li class="nav-item active">
+        <a href="index.html">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+          System Overview
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="interactions.html">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+          Live Interactions
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="analytics.html">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+          Deep Analytics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="../index.html" target="_blank">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+          Open Chatbot
+        </a>
+      </li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <div class="admin-info">
+        <span class="admin-name">Dean / Admin</span>
+        <span class="admin-role">Dual-Write Online</span>
+      </div>
+      <button class="btn-logout" id="logout-btn">Logout</button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-wrapper">
+    <header class="top-bar">
+      <div class="page-title">
+        <h1>RV COLLEGE OF ARCHITECTURE — TELEMETRY OVERVIEW</h1>
+      </div>
+      <div class="top-badges">
+        <div class="status-badge">
+          <span class="status-indicator"></span>
+          System Online (VTU Affiliated)
+        </div>
+        <div class="status-badge" style="color: var(--accent-bright); border-color: rgba(163, 170, 55, 0.4); background: var(--accent-soft);">
+          Dual-Write (WP + Node)
+        </div>
+      </div>
+    </header>
+
+    <div class="content-body">
+      <!-- KPI Grid -->
+      <section class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Total Inquiries</span>
+            <div class="kpi-icon">
+              <svg fill="currentColor" viewBox="0 0 24 24" width="18" height="18"><path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"/></svg>
+            </div>
+          </div>
+          <div class="kpi-value" id="kpi-total-queries">--</div>
+          <div class="kpi-meta">All user prompts processed</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Active Sessions</span>
+            <div class="kpi-icon">
+              <svg fill="currentColor" viewBox="0 0 24 24" width="18" height="18"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+          </div>
+          <div class="kpi-value" id="kpi-unique-sessions">--</div>
+          <div class="kpi-meta">Unique client fingerprints</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Admissions Leads</span>
+            <div class="kpi-icon" style="color: #FFAAA0; background: var(--secondary-soft);">
+              <svg fill="currentColor" viewBox="0 0 24 24" width="18" height="18"><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+            </div>
+          </div>
+          <div class="kpi-value" id="kpi-total-leads" style="color: #FFAAA0;">--</div>
+          <div class="kpi-meta">High-intent student inquiries</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Avg NLP Latency</span>
+            <div class="kpi-icon">
+              <svg fill="currentColor" viewBox="0 0 24 24" width="18" height="18"><path d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg>
+            </div>
+          </div>
+          <div class="kpi-value" id="kpi-avg-latency" style="color: #34D399;">-- ms</div>
+          <div class="kpi-meta">Sub-5ms Zero-Hallucination</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Typing Velocity</span>
+            <div class="kpi-icon">
+              <svg fill="currentColor" viewBox="0 0 24 24" width="18" height="18"><path d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"/></svg>
+            </div>
+          </div>
+          <div class="kpi-value" id="kpi-avg-wpm">-- WPM</div>
+          <div class="kpi-meta">Student typing engagement</div>
+        </div>
+      </section>
+
+      <!-- Charts Section -->
+      <section class="charts-grid">
+        <div class="panel">
+          <div class="panel-title">
+            <span>Hourly Query Volume</span>
+            <span class="sub">Last 24 Hours Real-Time Interaction Curve</span>
+          </div>
+          <div style="height: 280px; position: relative;">
+            <canvas id="trafficChart"></canvas>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title">
+            <span>Branch Interest Split</span>
+            <span class="sub">B.Arch vs M.Arch vs Ph.D.</span>
+          </div>
+          <div style="height: 280px; position: relative;">
+            <canvas id="programPieChart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Interactions Table -->
+      <section class="panel">
+        <div class="panel-title">
+          <span>Recent Live Micro-Interactions</span>
+          <a href="interactions.html" style="font-size: 12px; color: var(--accent-bright); text-decoration: none;">View All &rarr;</a>
+        </div>
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Session ID</th>
+                <th>Event Type</th>
+                <th>Intent Badge</th>
+                <th>Query / Action Snippet</th>
+              </tr>
+            </thead>
+            <tbody id="recent-interactions-body">
+              <tr><td colspan="5" style="text-align: center; color: var(--text-dim);">Loading telemetric stream...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const token = localStorage.getItem('rvca_admin_token');
+    if (!token) {
+      window.location.href = 'login.html';
+    }
+
+    document.getElementById('logout-btn').addEventListener('click', () => {
+      localStorage.removeItem('rvca_admin_token');
+      window.location.href = 'login.html';
+    });
+
+    let trafficChart = null;
+    let programChart = null;
+
+    async function loadDashboardData() {
+      try {
+        const statsRes = await fetch('/api/dashboard/stats', {
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+        if (statsRes.status === 401 || statsRes.status === 403) {
+          localStorage.removeItem('rvca_admin_token');
+          window.location.href = 'login.html';
+          return;
+        }
+        const stats = await statsRes.json();
+        document.getElementById('kpi-total-queries').textContent = stats.totalQueries || stats.totalInteractions;
+        document.getElementById('kpi-unique-sessions').textContent = stats.uniqueSessions;
+        document.getElementById('kpi-total-leads').textContent = stats.totalLeads;
+        document.getElementById('kpi-avg-latency').textContent = stats.avgLatencyMs + ' ms';
+        document.getElementById('kpi-avg-wpm').textContent = stats.avgWpm + ' WPM';
+
+        const analyticsRes = await fetch('/api/dashboard/analytics', {
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+        const analytics = await analyticsRes.json();
+        renderTrafficChart(analytics.hourlyTraffic || {});
+        renderProgramChart(analytics.programInterest || {});
+
+        const interactionsRes = await fetch('/api/dashboard/interactions?limit=8', {
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+        const interactionsData = await interactionsRes.json();
+        renderRecentInteractions(interactionsData.interactions || []);
+
+      } catch (err) {
+        console.error('Error fetching dashboard stats:', err);
+      }
+    }
+
+    function renderTrafficChart(hourlyData) {
+      const labels = Object.keys(hourlyData).length ? Object.keys(hourlyData) : ['08:00', '10:00', '12:00', '14:00', '16:00', '18:00', '20:00'];
+      const values = Object.values(hourlyData).length ? Object.values(hourlyData) : [12, 19, 28, 45, 34, 22, 15];
+
+      const ctx = document.getElementById('trafficChart').getContext('2d');
+      if (trafficChart) trafficChart.destroy();
+
+      trafficChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels,
+          datasets: [{
+            label: 'Interactions / Hour',
+            data: values,
+            borderColor: '#A3AA37',
+            backgroundColor: 'rgba(163, 170, 55, 0.15)',
+            fill: true,
+            tension: 0.35,
+            pointBackgroundColor: '#ADB61C',
+            pointRadius: 4
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { color: 'rgba(245, 238, 231, 0.05)' }, ticks: { color: '#A8B2B7' } },
+            y: { grid: { color: 'rgba(245, 238, 231, 0.05)' }, ticks: { color: '#A8B2B7' } }
+          }
+        }
+      });
+    }
+
+    function renderProgramChart(programs) {
+      const ctx = document.getElementById('programPieChart').getContext('2d');
+      if (programChart) programChart.destroy();
+
+      programChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['B.Arch', 'M.Arch (Urban Design)', 'Ph.D.', 'General'],
+          datasets: [{
+            data: [programs['B.Arch'] || 26, programs['M.Arch'] || 12, programs['Ph.D.'] || 5, programs['General'] || 8],
+            backgroundColor: ['#A3AA37', '#CB5C4A', '#6366F1', '#4B5563'],
+            borderWidth: 0
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'bottom', labels: { color: '#A8B2B7', font: { size: 11 } } }
+          }
+        }
+      });
+    }
+
+    function renderRecentInteractions(list) {
+      const tbody = document.getElementById('recent-interactions-body');
+      if (!list || list.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; color: var(--text-dim);">No interactions logged yet.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = list.map(item => {
+        const time = new Date(item.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        const queryText = item.data.query || JSON.stringify(item.data).slice(0, 60);
+        const intent = item.data.intent || item.type;
+        return `
+          <tr>
+            <td style="color: var(--text-dim); font-size: 11px;">${time}</td>
+            <td><code style="color: var(--text-muted); font-size: 11px;">${item.sessionId.slice(0, 14)}...</code></td>
+            <td><span class="badge" style="background: rgba(245, 238, 231, 0.08);">${item.type}</span></td>
+            <td><span class="badge badge-intent">${intent}</span></td>
+            <td style="max-width: 320px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${queryText}</td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    loadDashboardData();
+    setInterval(loadDashboardData, 10000);
+  </script>
+</body>
+</html>

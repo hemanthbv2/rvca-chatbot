@@ -1,0 +1,27 @@
+{
+  "name": "rvca-institutional-chatbot",
+  "version": "1.0.0",
+  "description": "Production-grade Zero-Hallucination Institutional AI Chatbot & Telemetry Platform for RV College of Architecture (RVCA)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node scripts/benchmark_test.js",
+    "audit": "node scripts/audit_links.js"
+  },
+  "keywords": [
+    "rvca",
+    "institutional-chatbot",
+    "architecture",
+    "nlp-engine",
+    "telemetry",
+    "dual-write"
+  ],
+  "author": "Antigravity Engineering",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
