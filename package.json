@@ -4,6 +4,7 @@
   "description": "Production-grade Zero-Hallucination Institutional AI Chatbot & Telemetry Platform for RV College of Architecture (RVCA)",
   "main": "server.js",
   "scripts": {
+    "build": "node scripts/build_public.js",
     "start": "node server.js",
     "dev": "node server.js",
     "test": "node scripts/benchmark_test.js",
