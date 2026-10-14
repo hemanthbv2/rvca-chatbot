@@ -491,7 +491,48 @@
     committees:            { label: 'Statutory Committees', url: 'https://rvca.edu.in/statutory-compliance/' },
     contact_directory:     { label: 'Official Contact Desk', url: 'https://rvca.edu.in/contact-us/' },
     how_to_reach_location: { label: 'Location & Campus Map', url: 'https://rvca.edu.in/contact-us/' },
-    timings_and_schedule:  { label: 'College Timings & Office', url: 'https://rvca.edu.in/contact-us/' }
+    timings_and_schedule:  { label: 'College Timings & Office', url: 'https://rvca.edu.in/contact-us/' },
+
+    // Student Clubs & NASA India
+    club_art:              { label: 'Art Club — RVCA', url: 'https://rvca.edu.in/clubs/' },
+    club_book:             { label: 'Book Club — RVCA', url: 'https://rvca.edu.in/clubs/' },
+    club_dance:            { label: 'Originals Dance Club — RVCA', url: 'https://rvca.edu.in/clubs/' },
+    club_drama:            { label: 'Frameworks Drama Club — RVCA', url: 'https://rvca.edu.in/clubs/' },
+    club_health:           { label: 'Health & Wellness Club — RVCA', url: 'https://rvca.edu.in/clubs/' },
+    club_heritage:         { label: 'Heritage Club — RVCA', url: 'https://rvca.edu.in/clubs/' },
+    club_music:            { label: 'Decibels Music Club — RVCA', url: 'https://rvca.edu.in/clubs/' },
+    club_quiz:             { label: 'Quiz Club — RVCA', url: 'https://rvca.edu.in/clubs/' },
+    club_sports:           { label: 'Sports Club & Activities — RVCA', url: 'https://rvca.edu.in/infrastructure/physical-education/' },
+    club_sustainability:   { label: 'Sustainability & Nature Club — RVCA', url: 'https://rvca.edu.in/clubs/' },
+    club_terra:            { label: 'Terra Thoughts Pottery Club — RVCA', url: 'https://rvca.edu.in/clubs/' },
+    club_cinema:           { label: 'The Journey Shared Cinema Club — RVCA', url: 'https://rvca.edu.in/clubs/' },
+    club_trail:            { label: 'Trail Travel & Photography Club — RVCA', url: 'https://rvca.edu.in/clubs/' },
+    nasa_india:            { label: 'NASA India Student Chapter — RVCA', url: 'https://rvca.edu.in/achievements/' },
+
+    // Staff & Roles
+    hostel_warden:         { label: 'Hostel Administration & Wardens', url: 'https://rvca.edu.in/infrastructure/hostel/' },
+    faculty_club_incharges:{ label: 'Faculty In-Charges of Clubs', url: 'https://rvca.edu.in/clubs/' },
+    faculty_non_teaching:  { label: 'Non-Teaching & Administrative Staff', url: 'https://rvca.edu.in/faculty/' },
+    faculty_incharges_committees: { label: 'Institutional Cells & Committee Heads', url: 'https://rvca.edu.in/statutory-compliance/' },
+
+    // Publications & Papers
+    kalpa_magazine:        { label: 'KALPA Architectural Research Magazine', url: 'https://rvca.edu.in/kalpa/' },
+    subversion_journal:    { label: 'sub:version Academic Journal', url: 'https://rvca.edu.in/subversion/' },
+    faculty_publications_papers: { label: 'Faculty Research Papers & Publications', url: 'https://rvca.edu.in/research/' },
+
+    // Research, Consultancy & Skill Labs
+    research_udrcc:        { label: 'Urban Design Research & Consultancy Cell', url: 'https://rvca.edu.in/research/' },
+    research_collaborations:{ label: 'Global Research Collaborations (Bochum, Florida, KRVIA)', url: 'https://rvca.edu.in/research/' },
+    lab_climate:           { label: 'Climate Simulation & Heliodon Lab', url: 'https://rvca.edu.in/infrastructure/SKILL%20LABS/' },
+    lab_pottery:           { label: 'Ceramic Clay & Pottery Studio', url: 'https://rvca.edu.in/infrastructure/SKILL%20LABS/' },
+    lab_fab:               { label: '3D Fabrication Lab & Model Workshop', url: 'https://rvca.edu.in/infrastructure/SKILL%20LABS/' },
+    lab_gis:               { label: 'Spatial Analytics & GIS Lab', url: 'https://rvca.edu.in/infrastructure/SKILL%20LABS/' },
+
+    // Academic Departments
+    department_barch:      { label: 'Department of Architecture (UG B.Arch)', url: 'https://rvca.edu.in/ugprogramme/' },
+    department_march:      { label: 'Department of Urban Design (PG M.Arch)', url: 'https://rvca.edu.in/pgprogramme/' },
+    department_phd:        { label: 'VTU Research Centre (Doctoral Ph.D.)', url: 'https://rvca.edu.in/phdprogramme/' },
+    departments_all:       { label: 'Academic Departments Directory', url: 'https://rvca.edu.in/programmes/' }
   };
 
   function getSourceLink(result) {

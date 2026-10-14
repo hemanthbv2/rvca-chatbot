@@ -526,6 +526,274 @@
       title: "Admission Cutoffs & Qualifying Score Benchmarks",
       response: `**RVCA Admission Cutoffs & Score Benchmarks**\n\nAdmissions to RVCA are among the most sought-after in South India:\n\n• **KEA KCET (Karnataka Quota — Code E-244)**:\n  - Combined merit rank calculated using 50% 10+2 (PCM) marks + 50% NATA score.\n  - Typically closes within the top competitive ranks for architecture colleges in Karnataka.\n• **COMEDK UGET (All-India Merit Quota)**:\n  - Open to students nationwide; evaluated on 10+2 marks + NATA normalized scores.\n• **Direct Management Quota Minimum Eligibility Benchmarks**:\n  - 10th Standard: Minimum 70% in Science & Mathematics.\n  - Class 11: Minimum 65% in Mathematics & Physics individually.\n  - Class 12: Minimum 60% in Physics, Chemistry & Mathematics individually.\n  - Valid qualified NATA or JEE Main Paper II scorecard.`,
       chips: ["B.Arch Eligibility", "Management Quota", "Admissions Overview"]
+    },
+
+    // ==========================================
+    // 13 INDIVIDUAL STUDENT CLUBS & NASA INDIA
+    // ==========================================
+    {
+      id: "club_art",
+      priority: 0.82,
+      keywords: ["art club", "painting club", "mural club", "installation art", "who heads art club", "art club in charge", "dharshini yg art", "art workshops"],
+      title: "Art Club — Colourful Hub For Creativity",
+      response: `**Art Club at RVCA — Colourful Hub For Creativity**\n\n🎨 **Overview & Philosophy**:\n  The Art Club at RVCA is a vibrant canvas of creativity, igniting the imaginations of students through hands-on workshops. Fueled by a passion for artistic expression, the club provides a nurturing space for students to explore diverse mediums and techniques.\n\n🖌️ **Key Activities & Mediums**:\n  • Acrylic and oil canvas painting, freehand charcoal sketching, and watercolor rendering.\n  • Campus wall murals, large-scale sculptural installations, and architectural model styling.\n  • **"Waste at its Best"**: Upcycling industrial, packaging, and construction scrap into evocative public art installations.\n  • Interactive weekend masterclasses fostering a community of inspired visual storytellers.\n\n👩‍🏫 **Faculty In-Charge**:\n  **Ar. Dharshini Y G** (Senior Assistant Professor, Department of Architecture)\n\n🌐 **Official Portal**: [Explore RVCA Art Club (rvca.edu.in/clubs/art-club/)](https://rvca.edu.in/clubs/art-club/)`,
+      chips: ["Student Clubs", "Club Coordinators", "Pottery Club", "Campus Life"]
+    },
+    {
+      id: "club_book",
+      priority: 0.82,
+      keywords: ["book club", "literary club", "reading club", "literature club", "reading circle", "who heads book club", "deepika v book", "book reviews"],
+      title: "Book Club / Literary Club — Analytical & Critical Inquiries",
+      response: `**Book Club / Literary Club at RVCA**\n\n📚 **Overview & Objectives**:\n  The Reading & Literary Club provides a stimulating platform for students to read, discuss, and reflect upon architectural theory, philosophy, urban sociology, and world literature.\n\n📖 **Key Activities**:\n  • Simultaneous group readings of seminal urban and architectural texts (e.g. Jane Jacobs, Charles Correa, Juhani Pallasmaa, Rem Koolhaas).\n  • Regular student-led book reviews, critical thesis dialogues, and open-floor debates.\n  • Curated thematic reading lists bridging spatial practice, literature, and social justice.\n  • Regular book swaps in partnership with the RVCA Resource Centre & Library.\n\n👩‍🏫 **Faculty In-Charge**:\n  **Ar. Deepika V** (Assistant Professor, Department of Architecture)\n\n🌐 **Official Portal**: [Explore RVCA Book Club (rvca.edu.in/clubs/Book%20Club/)](https://rvca.edu.in/clubs/Book%20Club/)`,
+      chips: ["Library", "Student Clubs", "Club Coordinators", "KALPA Magazine"]
+    },
+    {
+      id: "club_dance",
+      priority: 0.82,
+      keywords: ["dance club", "originals dance", "originals club", "who heads dance club", "shweta pedapathi dance", "dance sessions", "dance fest"],
+      title: "Originals — Dance Club (De-Stress & Recharge)",
+      response: `**Originals — Dance Club at RVCA**\n\n💃 **Overview & Rhythm**:\n  "Originals" is RVCA's lively dance community encouraging self-expression, rhythm, and body awareness through choreography. The club harnesses the rejuvenating power of energetic dance sessions designed to de-stress and recharge architecture students during intensive studio submission periods.\n\n🩰 **Styles & Activities**:\n  • Classical Indian forms (Bharatanatyam, Kathak), contemporary lyrical, western hip-hop, and freestyle.\n  • Energetic weekly dance workouts and movement meditation for studio wellbeing.\n  • Choreography for annual cultural fests, inter-collegiate dance battles, and intra-college showcases.\n  • Collaborative performances with the Decibels Music Club.\n\n👩‍🏫 **Faculty In-Charge**:\n  **Ar. Shweta Pedapathi** (Senior Assistant Professor, Department of Architecture)\n\n🌐 **Official Portal**: [Explore Originals Dance Club (rvca.edu.in/clubs/Dance%20Club/)](https://rvca.edu.in/clubs/Dance%20Club/)`,
+      chips: ["Frameworks Drama", "Decibels Music", "Student Clubs", "Club Coordinators"]
+    },
+    {
+      id: "club_drama",
+      priority: 0.82,
+      keywords: ["drama club", "frameworks drama", "frameworks club", "theatre club", "theater club", "acting club", "who heads drama club", "shweta pedapathi drama", "nukkad natak"],
+      title: "Frameworks — Drama & Theatrical Arts Club",
+      response: `**Frameworks — Drama Club at RVCA**\n\n🎭 **Overview & Vision**:\n  Frameworks provides a supportive and inclusive creative environment where students unlock their inner performer, hone creative storytelling, step outside comfort zones, and explore theatrical arts.\n\n🎬 **Key Activities**:\n  • **Street Plays (Nukkad Natak)**: High-impact social theater staged across campus addressing contemporary urban, environmental, and civic themes.\n  • **Proscenium Plays & Stage Acting**: Classical and contemporary drama productions for inter-collegiate cultural festivals.\n  • **Improvisational Theatre & Voice Modulation**: Workshops building confidence, body language, and spatial presence.\n  • Scriptwriting and set design conceptualization utilizing architectural modeling skills.\n\n👩‍🏫 **Faculty In-Charge**:\n  **Ar. Shweta Pedapathi** (Senior Assistant Professor, Department of Architecture)\n\n🌐 **Official Portal**: [Explore Frameworks Drama Club (rvca.edu.in/clubs/Drama%20Club/)](https://rvca.edu.in/clubs/Drama%20Club/)`,
+      chips: ["Originals Dance", "The Journey Shared", "Student Clubs", "Club Coordinators"]
+    },
+    {
+      id: "club_health",
+      priority: 0.82,
+      keywords: ["health and wellness club", "wellness club", "health club", "yoga club", "mental health club", "who heads health club", "archana vittal health", "student wellbeing"],
+      title: "Health & Wellness Club — Physical & Mental Wellbeing",
+      response: `**Health & Wellness Club at RVCA**\n\n🧘 **Holistic Wellbeing Focus**:\n  The RVCA Health & Wellness Club is dedicated to the overall physical and mental health of architecture scholars through structured wellbeing programs, healing practices, and expert counseling sessions.\n\n🌿 **Key Initiatives**:\n  • **Studio Ergonomics & Posture Guidance**: Preventing musculoskeletal strain during drafting, model-making, and digital rendering.\n  • **Mindfulness & Stress Management**: Guided meditation and breathing sessions before studio juries and exams.\n  • **Time Management & Balance**: Workshops addressing project prioritization and healthy work-life harmony.\n  • Yoga sessions, mental health awareness drives, and confidential peer-support frameworks.\n\n👩‍🏫 **Faculty In-Charge**:\n  **Ar. Archana Vittal** (Associate Professor, Department of Architecture)\n\n🌐 **Official Portal**: [Explore Health & Wellness Club (rvca.edu.in/clubs/health-and-wellness-club/)](https://rvca.edu.in/clubs/health-and-wellness-club/)`,
+      chips: ["Sports & Fitness", "Central Mentoring", "Hostels", "Student Clubs"]
+    },
+    {
+      id: "club_heritage",
+      priority: 0.82,
+      keywords: ["heritage club", "cultural heritage club", "heritage walks", "who heads heritage club", "nishant heritage", "temple architecture walks", "vernacular documentation"],
+      title: "Heritage Club — Fostering Appreciation for Cultural Legacy",
+      response: `**Heritage Club at RVCA**\n\n🏛️ **Mission & Cultural Preservation**:\n  The Heritage Club strives to foster deep appreciation for India's architectural, cultural, and historical richness. It promotes the documentation and conservation of traditional built heritage while engaging in dialogues on heritage within contemporary urban planning.\n\n🚶‍♂️ **Key Initiatives & Activities**:\n  • **Heritage Walks & Urban Trails**: Guided explorations across Bengaluru's historic petes, British Cantonment landmarks, and Karnataka temple precincts.\n  • **Measured Vernacular Drawings**: On-site documentation of indigenous building methods, crafts, and spatial typologies.\n  • **Exhibitions & Symposiums**: Showcasing photographic and analytical studies of living heritage.\n  • Documentaries and video presentations on sacred and vernacular architecture.\n\n👨‍🏫 **Faculty In-Charge**:\n  **Ar. Nishant** (Associate Professor, Department of Architecture)\n\n🌐 **Official Portal**: [Explore RVCA Heritage Club (rvca.edu.in/clubs/Heritage%20Club/)](https://rvca.edu.in/clubs/Heritage%20Club/)`,
+      chips: ["Study Tours", "Trail Club", "Student Clubs", "Club Coordinators"]
+    },
+    {
+      id: "club_music",
+      priority: 0.82,
+      keywords: ["music club", "decibels music", "decibels club", "jamming club", "band club", "who heads music club", "acoustic club", "rvca musicians"],
+      title: "Decibels — Music Club (Harmonious Fusion)",
+      response: `**Decibels — Music Club at RVCA**\n\n🎵 **Acoustic & Musical Hub**:\n  Decibels is a vibrant haven for music enthusiasts of all proficiencies — vocalists, instrumentalists, composers, and lyricists. The club creates a harmonious fusion between music and spatial rhythm.\n\n🎸 **Key Activities**:\n  • Open jam sessions and acoustic unplugged evenings in the campus amphitheater and courtyard.\n  • Ensembles spanning Indian classical, Carnatic vocals, western rock, indie pop, and electronic synthesis.\n  • Soundscape design and acoustic architecture experimentation exploring sound resonance across materials.\n  • Performances at college celebrations, annual fests, and inter-collegiate music competitions.\n\n🌐 **Official Portal**: [Explore Decibels Music Club (rvca.edu.in/clubs/Music%20Club/)](https://rvca.edu.in/clubs/Music%20Club/)`,
+      chips: ["Originals Dance", "Student Clubs", "Campus Life", "Frameworks Drama"]
+    },
+    {
+      id: "club_quiz",
+      priority: 0.82,
+      keywords: ["quiz club", "trivia club", "architectural quiz", "who heads quiz club", "ramya k quiz", "quiz competitions", "trivia league"],
+      title: "Quiz Club — Inspiring Curiosity & Knowledge",
+      response: `**Quiz Club at RVCA**\n\n🧠 **Intellectual Inquiry**:\n  The Quiz Club motivates, inspires, and rewards students in their quest for intellectual discovery. It provides an engaging, friendly competitive arena celebrating multidisciplinary knowledge.\n\n🏆 **Key Focus Areas & Competitions**:\n  • Architectural History, World Urbanism, and Pritzker Laureates trivia.\n  • General Knowledge, Science & Technology, Pop Culture, Geography, and Current Affairs.\n  • Intra-college trivia leagues, inter-batch buzzer showdowns, and rapid-fire quiz bowls.\n  • Training teams to represent RVCA in prestigious state and national quiz tournaments.\n\n👩‍🏫 **Faculty In-Charge**:\n  **Ar. Ramya K** (Assistant Professor, Department of Architecture)\n\n🌐 **Official Portal**: [Explore RVCA Quiz Club (rvca.edu.in/clubs/quiz-club/)](https://rvca.edu.in/clubs/quiz-club/)`,
+      chips: ["Book Club", "Student Clubs", "Achievements", "Club Coordinators"]
+    },
+    {
+      id: "club_sports",
+      priority: 0.82,
+      keywords: ["sports club", "sports fest", "rvca sports", "interbatch sports", "cricket tournament", "football tournament", "puneeth sports", "rvcasports", "rvca sports fest"],
+      title: "Sports Club & Annual RVCA Sports Fest",
+      response: `**Sports Club & Annual Sports Fest at RVCA**\n\n⚽ **Community & Athletic Excellence**:\n  The Sports Club unites the RVCA student body across batches, building enduring camaraderie and sportsmanship through competitive and recreational athletics.\n\n🏅 **Inter-Batch & Outdoor Sports**:\n  • **Annual Tournaments**: Cricket, Football, Basketball, Throwball, Badminton, Table Tennis, Carrom, and Chess.\n  • **Annual RVCA Sports Fest**: Signature multi-day sporting carnival featuring batch teams competing for the overall institutional rolling championship.\n  • Dedicated basketball court, badminton facilities, table tennis arena, and campus gymnasium.\n\n👨‍🏫 **Faculty In-Charge & PE Director**:\n  **Mr. Puneeth H K** (Assistant Director of Physical Education & Sports | Email: [puneethhk.rvca@rvei.edu.in](mailto:puneethhk.rvca@rvei.edu.in))\n\n🌐 **Official Sports Portals**:\n  • [RVCA Sports Club (rvca.edu.in/clubs/sports-club/)](https://rvca.edu.in/clubs/sports-club/)\n  • [RVCA Sports Fest Portal (rvcasports.club)](https://www.rvcasports.club/)`,
+      chips: ["Sports & Fitness", "Campus Facilities", "Student Clubs", "Club Coordinators"]
+    },
+    {
+      id: "club_sustainability",
+      priority: 0.82,
+      keywords: ["sustainability club", "nature club", "eco club", "green club", "who heads sustainability club", "shikha verma sustainability", "prakruthi sustainability", "zero waste campus", "solar decathlon"],
+      title: "Sustainability Club / Nature Club — Eco-Conscious Living",
+      response: `**Sustainability Club / Nature Club at RVCA**\n\n🌱 **Environmental Stewardship**:\n  The Sustainability / Nature Club nurtures environmental responsibility and champions eco-conscious habits across the RVCA campus and broader Bengaluru community. Its mission extends from understanding regional ecosystems to leading zero-waste design initiatives.\n\n♻️ **Key Initiatives**:\n  • **C&D Waste Recycling & Composting**: Researching circular construction waste cycles and organic compost systems.\n  • **Campus Green Space Preservation**: Native flora tagging, micro-climate tree planting, and urban biodiversity surveys.\n  • **Net-Zero Energy & Climate Actions**: Student support for Solar Decathlon India teams (Solastra & Green Collars).\n  • Workshops on embodied energy, rainwater harvesting systems, and mud thermal insulation.\n\n👩‍🏫 **Faculty In-Charges**:\n  • **Dr. Shikha Verma** (Associate Professor, Ph.D. MNNIT Allahabad)\n  • **Ar. Prakruthi S Karadagi** (Assistant Professor, M.Arch Urban Design)\n\n🌐 **Official Portal**: [Explore Sustainability Club (rvca.edu.in/clubs/sustainability-club/)](https://rvca.edu.in/clubs/sustainability-club/)`,
+      chips: ["Skill Labs", "Solar Decathlon", "Research Overview", "Club Coordinators"]
+    },
+    {
+      id: "club_terra",
+      priority: 0.82,
+      keywords: ["terra thoughts", "pottery club", "clay modelling club", "clay club", "ceramics club", "who heads pottery club", "gowtham terra thoughts", "pottery studio", "clay studio"],
+      title: "Terra Thoughts — Pottery & Clay Modelling Club",
+      response: `**Terra Thoughts — Pottery & Clay Modelling Club**\n\n🏺 **Tactile Ceramic Form Exploration**:\n  At Terra Thoughts, students transform raw earth into captivating architectural and sculptural forms. The club offers a hands-on environment where scholars of all skill levels learn and advance their ceramic artistry.\n\n🧱 **Studio Infrastructure & Activities**:\n  • Dedicated Clay Studio equipped with electric pottery wheels, clay wedging benches, and sculpting bays.\n  • **High-Temperature Ceramic Kilns**: Bisque firing and glaze firing for experimental building blocks, terracotta tiles, and tableware.\n  • Tactile form manipulation, texture studies, structural load experimentation on clay arches, and relief murals.\n  • Regular workshops conducted by master potters and ceramic artists.\n\n👨‍🏫 **Faculty In-Charge**:\n  **Ar. Gowtham K B** (Assistant Professor, Department of Architecture)\n\n🌐 **Official Portal**: [Explore Terra Thoughts (rvca.edu.in/clubs/terra-thoughts/)](https://rvca.edu.in/clubs/terra-thoughts/)`,
+      chips: ["Skill Labs", "Art Club", "Student Clubs", "Club Coordinators"]
+    },
+    {
+      id: "club_cinema",
+      priority: 0.82,
+      keywords: ["the journey shared", "movie club", "cinema club", "film club", "movie screening club", "who heads movie club", "mayank singh cinema", "alternative cinema"],
+      title: "The Journey Shared — Architecture & Alternative Cinema Club",
+      response: `**The Journey Shared — Architecture & Alternative Cinema Club**\n\n🎬 **Cinematic Spatial Discourse**:\n  "The Journey Shared" is RVCA's dedicated film screening society presenting films and documentaries exploring architecture, spatial justice, and alternative world cinema. It broadens students' understanding of urban human conditions through moving pictures.\n\n🍿 **Key Highlights**:\n  • Regular evening screenings of master architectural documentaries (e.g. Louis Kahn, Rem Koolhaas, Geoffrey Bawa, BV Doshi).\n  • Curated retrospectives on neo-realism, dystopian cities in sci-fi, and independent world cinema.\n  • Post-screening discursive analysis bridging film set geometry, cinematic pacing, and urban planning.\n  • Screenings in the acoustically designed audio-visual seminar hall.\n\n👨‍🏫 **Faculty In-Charge**:\n  **Ar. Mayank Singh** (Senior Assistant Professor, Department of Architecture)\n\n🌐 **Official Portal**: [Explore The Journey Shared (rvca.edu.in/clubs/the-journey-shared/)](https://rvca.edu.in/clubs/the-journey-shared/)`,
+      chips: ["Frameworks Drama", "Student Clubs", "Campus Facilities", "Club Coordinators"]
+    },
+    {
+      id: "club_trail",
+      priority: 0.82,
+      keywords: ["trail club", "trail travel", "photography club", "travel club", "photo club", "who heads trail club", "akanksha singh trail", "travel and photography"],
+      title: "Trail — Travel & Photography Club",
+      response: `**Trail — Travel & Photography Club at RVCA**\n\n📸 **Visual Storytelling & Expeditions**:\n  Trail is RVCA's travel and photography collective where scholars explore places, document landscapes, capture fleeting urban moments, and tell visual stories.\n\n🌄 **Key Activities**:\n  • Photowalks through historic alleys, vibrant bazaars, forest reserves, and architectural ruins.\n  • Composition techniques: Light, shadow, structural lines, perspective correction, and drone photography.\n  • Production of cinematic architectural reels, travelogues, and photo essays.\n  • Annual photography exhibitions during college fests highlighting student travel portfolios.\n\n👩‍🏫 **Faculty In-Charge**:\n  **Ar. Akanksha Singh** (Assistant Professor, Department of Architecture | Ph.D. Scholar NIT Calicut)\n\n🌐 **Official Portal**: [Explore Trail Club (rvca.edu.in/clubs/trail/)](https://rvca.edu.in/clubs/trail/)`,
+      chips: ["Study Tours", "Heritage Club", "Student Clubs", "Club Coordinators"]
+    },
+    {
+      id: "nasa_india",
+      priority: 0.82,
+      keywords: ["nasa", "nasa india", "annual nasa convention", "anc", "zonal nasa", "reubens trophy", "louis i kahn trophy", "unit secretary", "national association of students of architecture"],
+      title: "NASA India Unit — National Student Conventions & Trophies",
+      response: `**NASA India (National Association of Students of Architecture) Unit at RVCA**\n\n🏛️ **National Representation**:\n  RVCA has an active, highly decorated NASA India student chapter participating in national and zonal conventions across the country.\n\n🏆 **Key Competitions & Recognitions**:\n  • **Annual NASA Convention (ANC) & Zonal NASA**: Annual participation competing against 300+ architecture institutions nationwide.\n  • **Prestigious Design Trophies**: Reuben's Trophy (overall academic portfolio), Louis I Kahn Trophy (heritage documentation), HUDCO Trophy (sustainable housing), ANDC (Annual NASA Design Competition), and Laurie Baker Trophy.\n  • Hands-on design charrettes, international keynote workshops, and student networking.\n  • Guided by Unit Secretary (US), Unit Designee (UD), and faculty advisors.\n\n🌐 **Student Honors**: [Explore Accolades & Trophies (rvca.edu.in/achievements/)](https://rvca.edu.in/achievements/)`,
+      chips: ["Achievements", "Student Clubs", "Study Tours", "About RVCA"]
+    },
+
+    // ==========================================
+    // FACULTY ROLES, NON-TEACHING & COMMITTEES
+    // ==========================================
+    {
+      id: "hostel_warden",
+      priority: 0.8,
+      keywords: ["warden", "hostel warden", "boys hostel warden", "girls hostel warden", "who is the warden", "warden contact", "residential warden", "amarnath warden", "soniya warden"],
+      title: "Hostel Wardens & Hostel Administration Desk",
+      response: `**RVCA Hostel Wardens & Administration**\n\n🏢 **Boys' Hostel Warden**:\n  **Dr. M S Amarnath** (Associate Professor, Department of Architecture)\n  • Qualifications: B.F.A. [Bangalore Univ], M.F.A. [MSU, Baroda], Ph.D. [Jain University]\n  • Email: [amarnathms.rvca@rvei.edu.in](mailto:amarnathms.rvca@rvei.edu.in)\n  • Phone / Desk: **080-35092402** / 080-35095000\n\n🏠 **Residential Warden**:\n  **Soniya V** (Residential Hostel Administration Desk)\n  • Present on-campus 24/7 for girls' and boys' residential block welfare and emergency coordination.\n\n📋 **Hostel Details & Mess**:\n  • On-Campus Hostels: Separate 43-bed blocks each for Boys and Girls.\n  • Venkatadri Hostel: Satellite accommodation ~4 km from campus (30-bed capacity).\n  • Attached pure vegetarian mess serving 4 wholesome meals daily.\n\n📄 **Official Circular**: [Download Hostel Fee Notification AY 2026-27](https://rvca.edu.in/wp-content/uploads/2026/06/HOSTEL-FEE-NOTIFICATION-AY-2026-27.pdf)`,
+      chips: ["Hostel Facilities", "Hostel Fees", "Campus Facilities", "Contact Us"]
+    },
+    {
+      id: "faculty_club_incharges",
+      priority: 0.82,
+      keywords: ["club faculty", "club in charges", "faculty in charge of clubs", "who heads which club", "club coordinators", "club mentors", "faculty club mentors", "who leads the clubs"],
+      title: "Faculty In-Charges for All 13 Student Clubs",
+      response: `**RVCA Student Clubs — Complete Faculty In-Charge Directory**\n\nEvery student club at RVCA is formally mentored by experienced faculty members:\n\n1. 🎨 **Art Club**: **Ar. Dharshini Y G** (Senior Assistant Professor)\n2. 📚 **Book Club / Literary Society**: **Ar. Deepika V** (Assistant Professor)\n3. 💃 **Originals — Dance Club**: **Ar. Shweta Pedapathi** (Senior Assistant Professor)\n4. 🎭 **Frameworks — Drama Club**: **Ar. Shweta Pedapathi** (Senior Assistant Professor)\n5. 🧘 **Health & Wellness Club**: **Ar. Archana Vittal** (Associate Professor)\n6. 🏛️ **Heritage Club**: **Ar. Nishant** (Associate Professor)\n7. 🎵 **Decibels — Music Club**: Student Ensembles & Faculty Mentors\n8. 🧠 **Quiz Club**: **Ar. Ramya K** (Assistant Professor)\n9. ⚽ **Sports Club**: **Mr. Puneeth H K** (Assistant Director of Physical Education)\n10. 🌱 **Sustainability / Nature Club**: **Dr. Shikha Verma** (Assoc. Prof) & **Ar. Prakruthi S Karadagi** (Asst. Prof)\n11. 🏺 **Terra Thoughts — Pottery Club**: **Ar. Gowtham K B** (Assistant Professor)\n12. 🎬 **The Journey Shared — Cinema Club**: **Ar. Mayank Singh** (Senior Assistant Professor)\n13. 📸 **Trail — Travel & Photography Club**: **Ar. Akanksha Singh** (Assistant Professor)\n\n*(Tip: Ask about any club specifically, e.g., "tell me about pottery club" or "who heads art club"!)*`,
+      chips: ["Student Clubs", "Faculty Directory", "Campus Life"]
+    },
+    {
+      id: "faculty_non_teaching",
+      priority: 0.82,
+      keywords: ["non teaching staff", "admin staff", "administrative staff", "technical staff", "who is hr", "hr head", "librarian", "foreman", "office staff", "accounts officer", "results in charge", "exam in charge"],
+      title: "Non-Teaching, Technical & Administrative Staff (16 Members)",
+      response: `**RVCA Non-Teaching, Technical & Administrative Staff Directory**\n\nThe operations and student support systems at RVCA are powered by 16 dedicated staff members:\n\n👔 **Administration & HR**:\n  • **Srinivas A M** — Assistant Chief Manager (HR & Administration) | Email: [srinivas.rvca@rvei.edu.in](mailto:srinivas.rvca@rvei.edu.in) | Phone: 080-35095004\n  • **Vaishali Kulkarni** — Deputy Manager\n  • **Raghavendra Prabhu** — Senior Executive\n  • **Prashant Kumar** — Office Assistant\n\n📊 **Examination, Student Records & Finance**:\n  • **Bhaskar K R** — Senior Executive / Results In-Charge | Email: [bhaskarkr.rvca@rvei.edu.in](mailto:bhaskarkr.rvca@rvei.edu.in) | Phone: 080-35094945\n  • **Lokesha M** — Senior Executive (Finance) | Accounts: [accounts.rvca@rvei.edu.in](mailto:accounts.rvca@rvei.edu.in) | Phone: 080-35094942\n\n📚 **Library & Information Centre**:\n  • **Ramaprasad C** — Senior Library Executive\n  • **Chetankumar Jain** — Assistant Librarian\n\n🏗️ **Engineering, Laboratories & Workshops**:\n  • **Prashantha K T** — Senior Engineer (Campus Infrastructure)\n  • **Girish Kumar P** — Foreman (Workshops & Laboratories)\n  • **Anand B P** — Assistant Foreman (Model Making Workshop)\n  • **P Vivekananda** — Assistant Instructor (Laboratory)\n  • **Hanumanthaiah H R** — Senior Electrician (Maintenance)\n\n🏠 **Hostel Administration & Support**:\n  • **Soniya V** — Residential Warden (Hostel Administration Desk)\n  • **Thimmaiah C M** — Helper\n  • **Prakash Laxman Kini** — Peon\n\n🌐 **Official Faculty & Staff Portal**: [Explore Directory (rvca.edu.in/faculty/)](https://rvca.edu.in/faculty/)`,
+      chips: ["Faculty Directory", "Principal Bio", "Contact Directory"]
+    },
+    {
+      id: "faculty_incharges_committees",
+      priority: 0.82,
+      keywords: ["cell heads", "committee heads", "placement head", "internship coordinator", "who heads placement", "who heads internships", "vtu coordinator", "welfare officer", "faculty in charges"],
+      title: "Faculty Heads for Institutional Cells & Statutory Committees",
+      response: `**RVCA Institutional Cells & Committee Coordinators**\n\nKey academic operations, career cells, and regulatory bodies are directed by appointed faculty coordinators:\n\n💼 **Training & Placement Assistance Cell**:\n  • **Ar. Vidya V** (Senior Asst. Prof | 080-35094938 | [vidyav.rvca@rvei.edu.in](mailto:vidyav.rvca@rvei.edu.in))\n  • **Ar. Girish Ramanathan** (Associate Professor)\n\n📐 **Practical Training / Internship Assistance Cell**:\n  • **Ar. Anupriya Saxena** (Associate Professor | 080-35094933 | [ptcoordinator.rvca@rvei.edu.in](mailto:ptcoordinator.rvca@rvei.edu.in))\n  • **Ar. Megala Gurumurthi** (Assistant Professor | 080-35094933)\n  • **Ar. Goutham K B** (Assistant Professor)\n\n🌍 **GlobEd Cell (Higher Studies Abroad)**:\n  • **Prof. Prasanna Rao** (Associate Dean PG Studies)\n\n🤝 **Scholarships & Social Welfare**:\n  • **Prof. K Sreedhar** (Social Welfare Officer)\n  • **Prof. Prasanna Rao** (Phone: 080-35094920 / 080-35094924)\n\n🏛️ **VTU Affairs & Examinations**:\n  • **Dr. H R Manjunath** (Associate Dean VTU Affairs | [assocdean-vtu.rvca@rvei.edu.in](mailto:assocdean-vtu.rvca@rvei.edu.in))\n\n🏠 **Hostel Warden (Boys)**:\n  • **Dr. M S Amarnath** (Associate Professor | 080-35092402)\n\n⚽ **Physical Education & Sports**:\n  • **Mr. Puneeth H K** (Assistant Director of Physical Education)\n\n🌐 **Statutory Compliance Portal**: [Explore Committees (rvca.edu.in/statutory-compliance/)](https://rvca.edu.in/statutory-compliance/)`,
+      chips: ["Placements", "Internships", "Statutory Committees", "Faculty Directory"]
+    },
+
+    // ==========================================
+    // PUBLICATIONS BREAKDOWN & RESEARCH PAPERS
+    // ==========================================
+    {
+      id: "kalpa_magazine",
+      priority: 0.82,
+      keywords: ["kalpa journal", "kalpa vol", "kalpa volume", "issn 2583-696x", "om prakash bawane kalpa", "kalpa editorial board", "kalpa archives", "kalpa articles", "kalpa magazine pdf"],
+      title: "KALPA — RVCA Annual Architectural Research Magazine (ISSN 2583-696X)",
+      response: `**KALPA — RVCA Annual Architectural Research Magazine**\n\n📖 **Institutional Research Inquiries (ISSN 2583-696X)**:\n  KALPA is RVCA's annual flagship publication fostering scholarly architectural and urban inquiry. Derived from the cyclical concept of creation, dissolution, and recreation, it inspires students to question nuances of contemporary built environments through real-time field data.\n\n👥 **Board of Editors**:\n  • **Editor-in-Chief**: **Dr. Om Prakash Bawane** (Senior Professor / Former Principal | [principal.rvca@rvei.edu.in](mailto:principal.rvca@rvei.edu.in))\n  • **Faculty Editors**: Prof. Alisha Sinha, Prof. Hiranmayi Shankavaram, Prof. Ramya Krishna\n\n📚 **Published Volumes & Themes**:\n  • **Vol. 06 (Current)**: Under active production.\n  • **Vol. 05 (2024-25)**: [Download Kalpa Vol 5 PDF](https://rvca.edu.in/wp-content/uploads/2025/06/Kalpa-Vol-5_R1.pdf)\n  • **Vol. 04 (2023-24)**: Theme: *Materia-Versa — Material transformations: skillful renditions of strength, form and texture* (Released Feb 24, 2024).\n    - *[GOD]Makers of Kumartuli* by Mr. Ujjayant Bhattacharyya (pp. 82-88)\n    - *Educating the Architect about Green Building Materials* by Prof. Phani Ram Pingali, Ms. Anupriya Saxena, & Ms. Ramya K\n    - *Sustainable System for Recycling C & D Waste* by Dr. Shikha Verma (pp. 82-88)\n    - *Thermal Performance of Mud in Composite Climate* by Ms. Jagrati Jain\n  • **Vol. 03 (2022)**: [Download Vol 3 PDF](https://rvca.edu.in/wp-content/uploads/2024/07/Kalpa-Volume-03-2022.pdf)\n  • **Vol. 02 (2021)**: [Download Vol 2 PDF](https://rvca.edu.in/wp-content/uploads/2024/07/Kalpa-Volume-02-2021.pdf)\n  • **Vol. 01 (2020)**: [Download Vol 1 PDF](https://rvca.edu.in/wp-content/uploads/2024/07/Kalpa-Volume-01-2020.pdf)\n\n🌐 **Official Portal**: [Explore KALPA Archives (rvca.edu.in/kalpa/)](https://rvca.edu.in/kalpa/)`,
+      chips: ["sub:version Journal", "Faculty Papers", "Publications", "Research Overview"]
+    },
+    {
+      id: "subversion_journal",
+      priority: 0.82,
+      keywords: ["sub:version journal", "issn 3139-4388", "aniket bhagwat subversion", "foreseeing the past", "subversion volume", "subversion cfp", "subversion issue 2", "subversion call for proposal"],
+      title: "sub:version — Biennial International Academic Journal (ISSN 3139-4388)",
+      response: `**sub:version — Biennial International Academic Journal**\n\n🌐 **Global Discourse (ISSN: 3139-4388 Online)**:\n  *sub:version* is an in-house peer-reviewed international online publication of RV College of Architecture exploring multidisciplinary spatial and urban theories, reaching global academic practitioners.\n\n👥 **Editorial Leadership**:\n  • **Editor-in-Chief**: **Dr. Rakesh K. S.** (Principal, RVCA | [principal@rvca.rvei.edu.in](mailto:principal@rvca.rvei.edu.in))\n  • **Guest Editor**: **Ar. Aniket Bhagwat** (Principal, M/s Prabhakar B. Bhagwat, Ahmedabad | CEPT / SPA)\n  • **In-House Editorial Team**: Archana Vittal (Assoc. Prof), Ajinkya Kanitkar (Asst. Prof), Megala Gurumurthi (Asst. Prof), Deepthi Varghese (Asst. Prof), Anuradha Dinesha (Retd. Prof)\n\n📑 **Volumes & Call for Proposals**:\n  • **Volume 03 (2026)**: Theme: *"Foreseeing the Past"* — Inviting critical explorations on histories, memories, traditions, and inherited knowledge informing contemporary spatial futures.\n    - [Download Call for Proposal PDF](https://rvca.edu.in/wp-content/uploads/2026/08/subversion_V3_CFP.pdf) (Submission deadline: 15 September 2026).\n  • **Volume 02 (September 2025)**: [View Issue 2 Archive](https://rvca.edu.in/rvca_publications/sub-version-issue-2/)\n  • **Volume 01 (August 2023)**: [Download Issue 1 PDF](https://rvca.edu.in/wp-content/uploads/2025/03/RVCA_Acdemic-journal_subversion_Issue01.pdf)\n\n🌐 **Official Journal Portal**: [sub:version Journal (rvca.edu.in/subversion/)](https://rvca.edu.in/subversion/)`,
+      chips: ["KALPA Magazine", "Faculty Papers", "Publications", "Research Overview"]
+    },
+    {
+      id: "faculty_publications_papers",
+      priority: 0.8,
+      keywords: ["faculty papers", "research papers", "faculty publications", "springer paper", "taylor and francis paper", "cities and health", "photovoice paper", "urban floods paper", "pandharpur paper", "scopus publications", "faculty citations", "papers published in springer", "papers published by faculty"],
+      title: "Faculty Research Papers, Books & Scopus Publications (2024)",
+      response: `**RVCA Faculty Research Papers & International Publications (2024)**\n\nRVCA faculty actively publish in prestigious Scopus-indexed journals and global academic publishing houses:\n\n1. 📖 **Routledge / Taylor & Francis (*Cities & Health* Journal)**:\n   • Paper: *"Physical Activity in Public Space: insights from a Global Community of Practice Applying Photovoice as a Tool for Digital Participatory Place Analysis"*\n   • Co-authored by **Ms. Hiranmayi S** in collaboration with **Ruhr-University Bochum, Germany** (Published Jan 13, 2024).\n   • DOI: [10.1080/23748834.2024.2307739](https://doi.org/10.1080/23748834.2024.2307739)\n\n2. 📚 **Taylor & Francis Book Chapter (*Future is Urban II*)**:\n   • Chapter: *"Exploring the Role of Public Spaces in Accommodating Economic Activities during Ashadh Wari in Pandharpur: Case of Chowk, Galli and Ghat"*\n   • Authored by **Hiranmayi Shankavaram** with Arunima Badrinath & Sphurti Purohit (M.Arch UD 2022-23) in *Future is Urban II: Urban Resilience, Capacity Building, Nature-Based Solutions* (London, ISBN: 978-1-032-78443-4).\n\n3. 🌊 **Springer Nature Book Chapter (Scopus Indexed)**:\n   • Chapter: *"Mobility as a Response to Urban Floods and its Implications for Risk Mitigation: A Local Area Level Case Study from Guwahati, Assam"*\n   • Co-authored by **Mr. Ajinkya Kanitkar** in *Climate Crisis, Social Responses and Sustainability* (Series: *Climate Change Management*, Springer Nature, pp. 487-520, May 29, 2024, ISBN: 978-3-031-58260-8).\n\n4. 🏛️ **8th International Network of Tropical Architecture (iNTA)**:\n   • *"Creating Heritage-led ESG Investment Process in India"* presented by **Ms. Shreya Sudesh** (KRVIA Mumbai, March 2024).\n\n5. 🏙️ **Poornima University & CoA-TRC Bhopal Conference (May 2024)**:\n   • *"A Review & Critique on Changing Dimensions of Social in NCR"* by **Ms. Ishani Gogoi**.\n   • *"An Analysis of Case Studies of Pedestrian Wayfinding Systems Across the World"* by **Ms. Archana Vittal**.\n\n📂 **Archived Research Compendiums**:\n  • [Download Faculty Research Presentations 2023 PDF](https://rvca.edu.in/wp-content/uploads/2024/07/Paper-Presentation_-Publication-by-the-faculty-during-2023.pdf)\n  • [Download Faculty Research Interests 2022 PDF](https://rvca.edu.in/wp-content/uploads/2024/07/Faculty-Research-Interests-2022.pdf)\n\n🌐 **Official Research Portal**: [RVCA Research (rvca.edu.in/research/)](https://rvca.edu.in/research/)`,
+      chips: ["KALPA Magazine", "sub:version Journal", "Research Overview", "Smart City (SAAR)"]
+    },
+
+    // ==========================================
+    // RESEARCH, CONSULTANCY & SPECIALIZED LABS
+    // ==========================================
+    {
+      id: "research_udrcc",
+      priority: 0.82,
+      keywords: ["udrcc", "urban design research consultancy cell", "urban consultancy", "municipal consultancy", "public sector consultancy", "urban design cell"],
+      title: "UDRCC — Urban Design Research & Consultancy Cell",
+      response: `**UDRCC — Urban Design Research & Consultancy Cell at RVCA**\n\n🏙️ **Bridging Academia & Municipal Governance**:\n  The Urban Design Research and Consultancy Cell (UDRCC) is a specialized institutional arm enabling live consultancy for governmental urban interventions and municipal master planning.\n\n🎯 **Key Mandates & Operations**:\n  • **Smart City Consultancy (SAAR 2.0)**: Collaborating directly with **Shivamogga Smart City Limited** and **Bengaluru Smart City Limited**.\n  • **M.Arch Scholar Immersion**: Master of Architecture (Urban Design) scholars work directly on live municipal sites, public plazas, transit mobility corridors, and informal settlement upgrades.\n  • **Studio-II Pandharpur Study**: Field research on public spaces during Ashadh Wari culminating in a published Routledge book chapter (*Future is Urban II*).\n  • Formulating evidence-based academic research to guide municipal policy, placemaking, and environmental resilience.\n\n🌐 **Official Research Portal**: [Explore UDRCC (rvca.edu.in/research/)](https://rvca.edu.in/research/)`,
+      chips: ["Smart City (SAAR)", "M.Arch Urban Design", "Research Overview", "Faculty Directory"]
+    },
+    {
+      id: "research_collaborations",
+      priority: 0.82,
+      keywords: ["bochum university", "university of florida", "krvia", "daida awards", "international collaborations", "photovoice bochum", "nayandahalli wastescapes", "global awards"],
+      title: "Global Research Collaborations & International Laurels",
+      response: `**RVCA International Research Collaborations & Awards**\n\nRV College of Architecture actively engages in high-impact global research dialogues:\n\n1. 🇩🇪 **Ruhr-University Bochum, Germany**:\n   • Transnational research partnership applying the **Photovoice** digital participatory place analysis tool.\n   • Published in Routledge's *Cities & Health* journal (Jan 2024, DOI: 10.1080/23748834.2024.2307739).\n\n2. 🇺🇸 **University of Florida, Gainesville (USA) & KRVIA**:\n   • Collaborative dialogue in coordination with the International Network of Tropical Architecture (iNTA).\n   • Research focused on *Climate Justice and Resilience: An Interdisciplinary Dialogue* (March 2024).\n\n3. 🏆 **DAIDA Global Awards Finalist (2023)**:\n   • Theme: *"CITIES FOR ALL: Addressing Minorities"*.\n   • Anuja Netalkar (M.Arch Urban Design Batch 2022-23) — Thesis titled *"Regeneration of wastescapes to create healthy work and living environment through closed loop system in the city: Case of waste-pickers, Nayandahalli, Bengaluru"* was **shortlisted among 8 global finalists**.\n\n🌐 **Official Portal**: [RVCA Research & Innovation (rvca.edu.in/research/)](https://rvca.edu.in/research/)`,
+      chips: ["Research Overview", "Smart City (SAAR)", "M.Arch Urban Design", "Publications"]
+    },
+    {
+      id: "lab_climate",
+      priority: 0.82,
+      keywords: ["climate lab", "climatology lab", "climate simulation", "environmental lab", "sun path heliodon", "thermal comfort lab", "climate simulation lab"],
+      title: "Climate Simulation & Environmental Responsive Lab",
+      response: `**Climate Simulation & Environmental Responsive Lab at RVCA**\n\n☀️ **High-Performance Built Environment Testing**:\n  The Climate Simulation Lab provides physical testing and computational simulation tools to design environmentally responsive, low-energy buildings.\n\n🔬 **Key Equipment & Software**:\n  • **Sun-Path Heliodon**: Physical solar simulation table to study shadow angles, solar insolation, and daylight penetration on architectural physical models.\n  • **Climatological Micro-Station**: Real-time ambient temperature, humidity, wind velocity, and solar radiation loggers.\n  • **Thermal Comfort & Airflow Modeling**: Computational Fluid Dynamics (CFD) simulation tools and energy modeling software.\n  • Acoustic sound-level analyzers and precision illuminance lux meters.\n\n🌐 **Official Skill Labs**: [Explore Labs (rvca.edu.in/infrastructure/SKILL%20LABS/)](https://rvca.edu.in/infrastructure/SKILL%20LABS/)`,
+      chips: ["Skill Labs", "Pottery Studio", "Fabrication Lab", "GIS Lab"]
+    },
+    {
+      id: "lab_pottery",
+      priority: 0.82,
+      keywords: ["pottery studio", "clay studio", "pottery kilns", "clay modelling studio", "ceramic studio", "kilns in rvca", "terracotta studio"],
+      title: "Terra Thoughts Pottery Studio & Ceramic Kilns",
+      response: `**Terra Thoughts Pottery Studio & Kilns at RVCA**\n\n🏺 **Hands-On Tactile Ceramic Prototyping**:\n  RVCA houses an independent pottery and clay modeling studio providing students with tactile understanding of natural materials, plastic limits, and thermal transformations.\n\n🔥 **Studio Features & Equipment**:\n  • Professional motorized electric potter's wheels and manual kick wheels.\n  • Clay wedging, slab-rolling, and pugging workstations.\n  • **High-Temperature Kilns**: In-house ceramic kilns supporting both bisque firing and ceramic glaze testing.\n  • Development of experimental terracotta facade tiles, passive evaporative cooling blocks, and sculptural vessels.\n\n👨‍🏫 **Studio Head**: **Ar. Gowtham K B** (Assistant Professor)\n\n🌐 **Official Portal**: [Terra Thoughts Pottery Studio (rvca.edu.in/clubs/terra-thoughts/)](https://rvca.edu.in/clubs/terra-thoughts/)`,
+      chips: ["Climate Lab", "Fabrication Lab", "Skill Labs", "Art Club"]
+    },
+    {
+      id: "lab_fab",
+      priority: 0.82,
+      keywords: ["fabrication lab", "model making workshop", "3d printing lab", "laser cutter", "cnc router", "model making lab", "digital fabrication"],
+      title: "3D Digital Fabrication & Model Making Workshop",
+      response: `**3D Digital Fabrication & Model Making Workshop at RVCA**\n\n📐 **Precision Physical Prototyping**:\n  The model-making and fabrication workshop enables students to transition seamlessly from parametric digital designs to physical architectural models at various scales.\n\n⚙️ **Tools & Infrastructure**:\n  • **Industrial Laser Cutters**: Precision acrylic, MDF, balsa wood, and cardboard contour slicing.\n  • **3D Printing Farm**: Rapid prototyping in PLA/ABS for complex spatial joinery and parametric modules.\n  • Hot wire foam cutters for rapid topographical contour site models.\n  • Full woodworking machinery, lathes, sanders, and metalwork tooling.\n  • Supervised by Foreman Girish Kumar P and Assistant Foreman Anand B P.\n\n🌐 **Official Infrastructure**: [Skill Labs (rvca.edu.in/infrastructure/SKILL%20LABS/)](https://rvca.edu.in/infrastructure/SKILL%20LABS/)`,
+      chips: ["GIS Lab", "Climate Lab", "Experiential Studios", "Skill Labs"]
+    },
+    {
+      id: "lab_gis",
+      priority: 0.82,
+      keywords: ["gis lab", "spatial analytics lab", "arcgis lab", "qgis lab", "spatial planning lab", "computer graphics studio"],
+      title: "GIS & Spatial Analytics Computer Lab",
+      response: `**GIS & Spatial Analytics Computer Lab at RVCA**\n\n🗺️ **Advanced Geospatial Computation**:\n  The GIS & Spatial Analytics Lab serves as the analytical core for urban design studios, regional master planning, and doctoral research.\n\n💻 **Software & Capabilities**:\n  • **Geospatial Mapping**: ESRI ArcGIS and QGIS for terrain modeling, land-use zoning, and demographic heat-mapping.\n  • **Architectural CAD & BIM**: Autodesk AutoCAD, Revit Architecture, and Trimble SketchUp.\n  • **Parametric & Visual Computation**: Rhino 3D with Grasshopper and Adobe Creative Cloud Suite.\n  • High-performance multi-core GPU workstations connected via high-speed intranet with remote off-campus access.\n\n🌐 **Official Infrastructure**: [Skill Labs (rvca.edu.in/infrastructure/SKILL%20LABS/)](https://rvca.edu.in/infrastructure/SKILL%20LABS/)`,
+      chips: ["Fabrication Lab", "M.Arch Urban Design", "Experiential Studios", "Skill Labs"]
+    },
+
+    // ==========================================
+    // DEPARTMENTS (UG, PG, PHD, ALL)
+    // ==========================================
+    {
+      id: "department_barch",
+      priority: 0.8,
+      keywords: ["barch department", "department of architecture", "undergraduate department", "b.arch department", "ug department"],
+      title: "Department of Architecture (B.Arch — Undergraduate)",
+      response: `**Department of Architecture (Undergraduate Studies — B.Arch)**\n\n🏛️ **Academic Identity & Accreditations**:\n  • **Degree Awarded**: Bachelor of Architecture (B.Arch — 5 Years / 10 Semesters)\n  • **Sanctioned Annual Intake**: 120 Students\n  • **Statutory Approvals**: Council of Architecture (CoA Code: KA-35) & VTU Belagavi (KEA Code: E-244)\n  • **Academic Leadership**: **Dr. Rakesh K. S.** (Principal & Senior Prof) and **Prof. Suresh K Murthy** (Dean & Prof)\n\n📐 **Curriculum & Studio Framework (VTU CBCS Scheme)**:\n  • Progressive Design Studios: Residential, Institutional, Health/Commercial, Urban Habitat, and Final Thesis.\n  • Construction Engineering: Materials & Methods in Building Construction (MMBC), Advanced Structures, and Climatology.\n  • **Mandatory Practical Training**: Full 1-semester professional internship in reputed architectural practice.\n  • Dedicated Labs: Experiential Studios, Model Workshop, Climate Simulation, Pottery Kilns, and GIS Lab.\n\n🌐 **Official Portal**: [Department of Architecture (rvca.edu.in/ugprogramme/)](https://rvca.edu.in/ugprogramme/)`,
+      chips: ["B.Arch Program", "B.Arch Eligibility", "Curriculum", "Faculty Directory"]
+    },
+    {
+      id: "department_march",
+      priority: 0.8,
+      keywords: ["march department", "department of urban design", "postgraduate department", "m.arch department", "pg department", "urban design department"],
+      title: "Department of Urban Design (M.Arch — Postgraduate)",
+      response: `**Department of Urban Design (Postgraduate Studies — M.Arch)**\n\n🌆 **Advanced Urban Practice & Research**:\n  • **Degree Awarded**: Master of Architecture in Urban Design (M.Arch — 2 Years / 4 Semesters)\n  • **Sanctioned Annual Intake**: 20 Seats (16 PGCET / KEA Quota + 4 Management Quota)\n  • **Statutory Approvals**: Council of Architecture (CoA) & VTU Belagavi\n  • **Program Head**: **Prof. Prasanna Rao** (Associate Dean PG Studies | [prasannarao.rvca@rvei.edu.in](mailto:prasannarao.rvca@rvei.edu.in))\n\n🏙️ **Studio Focus & Municipal Research**:\n  • Urban morphology, transit corridors, public place transformation, and smart city planning.\n  • **Live Municipal Integration**: Direct collaboration through UDRCC in MoHUA/NIUA SAAR 2.0 (Shivamogga & Bengaluru Smart Cities).\n  • **Global Accolades**: 2023 DAIDA Global Awards Finalist thesis on Nayandahalli wastescapes.\n  • **Annual Fees**: Rs. 77,310/- per year (PGCET) | Mgmt Quota: Rs. 77,310/- + Rs. 1.75 Lakhs development fee.\n\n🌐 **Official Portal**: [Department of Urban Design (rvca.edu.in/pgprogramme/)](https://rvca.edu.in/pgprogramme/)`,
+      chips: ["M.Arch Urban Design", "Smart City (SAAR)", "UDRCC", "Faculty Directory"]
+    },
+    {
+      id: "department_phd",
+      priority: 0.8,
+      keywords: ["phd department", "doctoral department", "research centre department", "ph.d department in architecture", "doctoral research centre"],
+      title: "Department of Doctoral Studies (Ph.D. Research Centre)",
+      response: `**Ph.D. Research Centre in Architecture at RVCA**\n\n🔬 **VTU Recognized Research Centre**:\n  RVCA functions as an autonomous doctoral research centre recognized by Visvesvaraya Technological University (VTU), Belagavi, supporting full-time and part-time doctoral scholars.\n\n👨‍🏫 **Approved Doctoral Supervisors / Research Guides**:\n  1. **Dr. Om Prakash Bawane** — Sustainable Development, Building Services, Pedagogy\n  2. **Dr. Shikha Verma** — Environmental Geotechnology, C&D Waste Recycling, Mud Thermal Performance\n  3. **Dr. Mahalakshmi Karnad** — Landscape Architecture, Vernacular Settlement Morphology\n  4. **Dr. Rakesh K. S.** (Principal) — Climatic Design, Energy Efficiency, Sustainable Architecture\n  5. **Dr. Chinnu S Kumar** — Urban Morphology, Spatial Modeling, Urban Resilience\n\n📝 **Admission Process**: Through VTU-ETR entrance examination followed by viva-voce presentation of research proposals.\n\n🌐 **Official Portal**: [Ph.D. Research Centre (rvca.edu.in/phdprogramme/)](https://rvca.edu.in/phdprogramme/)`,
+      chips: ["Research Guides", "Research Overview", "Publications", "Faculty Directory"]
+    },
+    {
+      id: "departments_all",
+      priority: 0.85,
+      keywords: ["departments", "all departments", "departments in rvca", "academic departments", "list of departments", "how many departments"],
+      title: "Academic Departments at RV College of Architecture",
+      response: `**Academic Departments at RV College of Architecture**\n\nRVCA operates 3 specialized academic departments encompassing undergraduate, postgraduate, and doctoral architectural education:\n\n1. 🏛️ **Department of Architecture (B.Arch — UG)**:\n   • Program: 5-Year Bachelor of Architecture (10 Semesters)\n   • Sanctioned Intake: **120 seats** | Code: KEA E-244 / CoA KA-35\n   • Head: Principal Dr. Rakesh K. S. & Dean Prof. Suresh K Murthy\n\n2. 🌆 **Department of Urban Design (M.Arch — PG)**:\n   • Program: 2-Year Master of Architecture in Urban Design (4 Semesters)\n   • Sanctioned Intake: **20 seats** (16 PGCET + 4 Management)\n   • Head: Prof. Prasanna Rao (Associate Dean PG Studies)\n\n3. 🔬 **Department of Doctoral Studies (Ph.D. Research Centre)**:\n   • Program: Doctor of Philosophy (Ph.D.) in Architecture under VTU Belagavi\n   • 5 Approved VTU Doctoral Guides with live MoHUA/NIUA SAAR research.\n\n🌐 **Official Programmes Portal**: [Explore Academic Programmes (rvca.edu.in/programmes/)](https://rvca.edu.in/programmes/)`,
+      chips: ["B.Arch Program", "M.Arch Urban Design", "Ph.D. Program", "Faculty Directory"]
     }
   ];
 
@@ -609,11 +877,11 @@
     "student clubs": "clubs",
     "clubs": "clubs",
     "publications": "publications_deep",
-    "publications (kalpa)": "publications_deep",
-    "kalpa": "publications_deep",
-    "kalpa magazine": "publications_deep",
-    "subversion": "publications_deep",
-    "sub:version": "publications_deep",
+    "publications (kalpa)": "kalpa_magazine",
+    "kalpa": "kalpa_magazine",
+    "kalpa magazine": "kalpa_magazine",
+    "subversion": "subversion_journal",
+    "sub:version": "subversion_journal",
     "achievements": "achievements",
     "faculty directory": "faculty_directory",
     "all faculty": "faculty_directory",
@@ -639,7 +907,55 @@
     "contact administration": "contact_directory",
     "management quota criteria": "management_quota",
     "management quota": "management_quota",
-    "application forms": "fees"
+    "application forms": "fees",
+
+    // New 0ms Button Bypasses
+    "art club": "club_art",
+    "book club": "club_book",
+    "dance club": "club_dance",
+    "drama club": "club_drama",
+    "health club": "club_health",
+    "wellness club": "club_health",
+    "health & wellness club": "club_health",
+    "heritage club": "club_heritage",
+    "music club": "club_music",
+    "decibels": "club_music",
+    "quiz club": "club_quiz",
+    "sports club": "club_sports",
+    "sustainability club": "club_sustainability",
+    "nature club": "club_sustainability",
+    "pottery club": "club_terra",
+    "terra thoughts": "club_terra",
+    "movie club": "club_cinema",
+    "cinema club": "club_cinema",
+    "the journey shared": "club_cinema",
+    "trail club": "club_trail",
+    "photography club": "club_trail",
+    "nasa": "nasa_india",
+    "nasa india": "nasa_india",
+    "warden": "hostel_warden",
+    "hostel warden": "hostel_warden",
+    "non-teaching staff": "faculty_non_teaching",
+    "admin staff": "faculty_non_teaching",
+    "administrative staff": "faculty_non_teaching",
+    "club coordinators": "faculty_club_incharges",
+    "club faculty": "faculty_club_incharges",
+    "committee heads": "faculty_incharges_committees",
+    "cell heads": "faculty_incharges_committees",
+    "faculty papers": "faculty_publications_papers",
+    "research papers": "faculty_publications_papers",
+    "kalpa magazine": "kalpa_magazine",
+    "subversion journal": "subversion_journal",
+    "udrcc": "research_udrcc",
+    "international research": "research_collaborations",
+    "climate simulation lab": "lab_climate",
+    "pottery studio": "lab_pottery",
+    "fabrication lab": "lab_fab",
+    "gis lab": "lab_gis",
+    "department of architecture": "department_barch",
+    "department of urban design": "department_march",
+    "ph.d research centre": "department_phd",
+    "academic departments": "departments_all"
   };
 
   // 7. DYNAMIC FACULTY DETECTIVE
@@ -679,15 +995,146 @@
     return null;
   }
 
+  // FACULTY SPECIAL METADATA & INSTITUTIONAL MENTORSHIPS
+  const FACULTY_EXTRAS = {
+    "dharshini y g": {
+      club: "Art Club (Faculty In-Charge)",
+      extra: "Mentors workshops in painting, murals, and installations. Profile: rvca.edu.in/clubs/art-club/"
+    },
+    "deepika v": {
+      club: "Book Club / Literary Society (Faculty In-Charge)",
+      extra: "Coordinates architectural reading circles and book reviews. Profile: rvca.edu.in/clubs/Book%20Club/"
+    },
+    "pedaparthi shweta": {
+      club: "Originals — Dance Club & Frameworks — Drama Club (Faculty In-Charge)",
+      extra: "Coordinates dance sessions, theatrical productions, and Rotaract Club activities."
+    },
+    "archana vittal": {
+      club: "Health & Wellness Club (Faculty In-Charge)",
+      publication: "Presented 'An Analysis of Case Studies of Pedestrian Wayfinding Systems Across the World' at Poornima Univ & CoA-TRC (May 2024); sub:version In-House Editorial Team.",
+      extra: "sub:version Editorial Team & Health/Wellness In-Charge."
+    },
+    "nishant": {
+      club: "Heritage Club (Faculty In-Charge)",
+      extra: "Leads architectural heritage walks, vernacular documentation, and temple architecture study across Karnataka."
+    },
+    "ramya k": {
+      club: "Quiz Club (Faculty In-Charge)",
+      publication: "Joint paper 'Educating the Architect about Green Building Materials' in KALPA Vol. 4 (2024).",
+      extra: "Coordinates general and architectural quiz competitions."
+    },
+    "puneeth h k": {
+      club: "Sports Club (Faculty In-Charge) & Assistant Director of Physical Education",
+      extra: "Organizes interbatch sports tournaments (cricket, football, badminton, chess) and annual RVCA Sports Fest (rvcasports.club)."
+    },
+    "dr. shikha verma": {
+      club: "Sustainability Club / Nature Club (Faculty In-Charge)",
+      doctoralGuide: "Approved VTU Ph.D. Research Supervisor (Environmental Geotechnology, C&D Waste Recycling Systems, Mud Thermal Performance)",
+      publication: "Published 'Sustainable System for Recycling C & D Waste — A Conceptual Framework' in KALPA Vol. 4 (2024)."
+    },
+    "prakruthi s karadagi": {
+      club: "Sustainability Club / Nature Club (Faculty In-Charge)",
+      extra: "Eco-conscious living initiatives, campus greening, and biodiversity studies."
+    },
+    "gowtham k b": {
+      club: "Terra Thoughts — Pottery & Clay Modelling Club (Faculty In-Charge)",
+      extra: "Runs the pottery studio, hands-on clay wheels, and high-temperature ceramic kilns."
+    },
+    "mayank singh": {
+      club: "The Journey Shared — Architecture & Alternative Cinema Club (Faculty In-Charge)",
+      extra: "Coordinates architectural cinema and international documentary screenings."
+    },
+    "akanksha singh": {
+      club: "Trail — Travel and Photography Club (Faculty In-Charge)",
+      extra: "Coordinates photo-walks, architectural reel making, and travel documentation; Ph.D. Scholar at NIT Calicut."
+    },
+    "hiranmayi shankavaram": {
+      publication: "Co-authored 'Physical Activity in Public Space: applying Photovoice' in Cities & Health (Routledge, DOI: 10.1080/23748834.2024.2307739) & 'Exploring Role of Public Spaces in Pandharpur' in Future is Urban II (Taylor & Francis, ISBN 978-1-032-78443-4).",
+      extra: "KALPA Faculty Editor & Urban Management Specialist (Erasmus Univ, Netherlands)."
+    },
+    "ajinkya kanitkar": {
+      publication: "Book chapter 'Mobility as a Response to Urban Floods in Guwahati, Assam' in Climate Crisis, Social Responses and Sustainability (Springer Nature, Scopus indexed, 2024); sub:version In-House Editorial Team.",
+      extra: "sub:version Editorial Team & M.Plan Urban & Regional Planning."
+    },
+    "dr. om prakash bawane": {
+      doctoralGuide: "Approved VTU Ph.D. Research Supervisor (Sustainable Development, Building Services, Quality in Construction, Pedagogy)",
+      extra: "Former Principal & Editor-in-Chief of KALPA Annual Architectural Research Magazine (ISSN 2583-696X)."
+    },
+    "dr. rakesh k. s.": {
+      doctoralGuide: "Approved VTU Ph.D. Research Supervisor (Climatic Design, Passive Solar Architecture, Energy Efficiency)",
+      extra: "Principal, RVCA & Editor-in-Chief of sub:version Biennial International Journal (ISSN 3139-4388)."
+    },
+    "dr. mahalakshmi karnad": {
+      doctoralGuide: "Approved VTU Ph.D. Research Supervisor (Landscape Architecture, Traditional Settlement Morphology, Heritage Conservation)",
+      extra: "Ph.D. & MLA from School of Planning and Architecture (SPA), New Delhi."
+    },
+    "dr. chinnu s kumar": {
+      doctoralGuide: "Approved VTU Ph.D. Research Supervisor (Urban Morphology, Spatial Modeling, Urban Resilience)",
+      extra: "Ph.D. from MNIT Jaipur & M.U.D. from SPA New Delhi."
+    },
+    "dr. m s amarnath": {
+      extra: "Boys' Hostel Warden | Phone: 080-35092402 | Email: amarnathms.rvca@rvei.edu.in"
+    },
+    "soniya v": {
+      extra: "Residential Warden | Hostel Administration Desk"
+    },
+    "vidya v": {
+      extra: "Training & Placement Assistance Cell Coordinator | Phone: 080-35094938 | Email: vidyav.rvca@rvei.edu.in"
+    },
+    "girish ramanathan": {
+      extra: "Training & Placement Assistance Cell Coordinator | Experiential Studio Faculty"
+    },
+    "anupriya saxena": {
+      publication: "Joint paper 'Educating the Architect about Green Building Materials' in KALPA Vol. 4 (2024).",
+      extra: "Practical Training / Internship Assistance Cell Coordinator | Phone: 080-35094933 | Ph.D. Scholar NIT Trichy"
+    },
+    "megala gurumurthi": {
+      extra: "Practical Training / Internship Assistance Cell Coordinator | sub:version Editorial Team"
+    },
+    "ujjayant bhattacharyya": {
+      publication: "Published '[GOD]Makers of Kumartuli' in KALPA Vol. 4 (pp. 82-88, 2024); sub:version Vol. 2 Editorial Team."
+    },
+    "ishani gogoi": {
+      publication: "Presented 'A Review & Critique on Changing Dimensions of Social in NCR' at Poornima Univ & CoA-TRC (May 2024)."
+    },
+    "shreya sudesh": {
+      publication: "Presented 'Creating Heritage-led ESG Investment Process in India' at 8th iNTA Conference (KRVIA & Univ of Florida, March 2024)."
+    },
+    "srinivas a m": {
+      extra: "Assistant Chief Manager — HR & Administration | Phone: 080-35095004 | Email: srinivas.rvca@rvei.edu.in"
+    },
+    "bhaskar k r": {
+      extra: "Senior Executive / Results In-Charge | Phone: 080-35094945 | Email: bhaskarkr.rvca@rvei.edu.in"
+    },
+    "ramaprasad c": {
+      extra: "Senior Library Executive | RVCA Resource Centre & Library"
+    },
+    "chetankumar jain": {
+      extra: "Assistant Librarian | RVCA Resource Centre & Library"
+    }
+  };
+
   function formatFacultyResponse(faculty) {
     let text = `**Faculty Profile — ${faculty.name}**\n\n`;
-    text += `• **Designation / Role**: ${faculty.role || faculty.designation || 'Faculty Member'}\n`;
-    text += `• **Department**: ${faculty.department || 'Department of Architecture'}\n`;
-    if (faculty.qualification) text += `• **Qualifications**: ${faculty.qualification}\n`;
-    if (faculty.specialisation) text += `• **Specialisation & Research**: ${faculty.specialisation}\n`;
-    if (faculty.email) text += `• **Official Email**: [${faculty.email}](mailto:${faculty.email})\n`;
-    if (faculty.phone) text += `• **Phone / Desk**: ${faculty.phone}\n`;
-    if (faculty.profileUrl) text += `• **Official Profile**: [View Bio on rvca.edu.in](${faculty.profileUrl})\n`;
+    text += `  • **Designation / Role**: ${faculty.role || faculty.designation || 'Faculty Member'}\n`;
+    text += `  • **Department**: ${faculty.department || 'Department of Architecture'}\n`;
+    if (faculty.qualification) text += `  • **Qualifications**: ${faculty.qualification}\n`;
+    if (faculty.specialisation) text += `  • **Specialisation & Research**: ${faculty.specialisation}\n`;
+
+    // Institutional Extras Enrichment
+    const lookupKey = faculty.name.toLowerCase().trim();
+    const cleanKey = lookupKey.replace(/^(dr|prof|ar|mr|ms|mrs)\.?\s+/gi, '').trim();
+    const extraInfo = FACULTY_EXTRAS[lookupKey] || FACULTY_EXTRAS[cleanKey];
+    if (extraInfo) {
+      if (extraInfo.club) text += `  • **Student Club Mentorship**: ${extraInfo.club}\n`;
+      if (extraInfo.doctoralGuide) text += `  • **Doctoral Research Guidance**: ${extraInfo.doctoralGuide}\n`;
+      if (extraInfo.publication) text += `  • **Featured Research / Publication**: ${extraInfo.publication}\n`;
+      if (extraInfo.extra) text += `  • **Institutional Role / Focus**: ${extraInfo.extra}\n`;
+    }
+
+    if (faculty.email) text += `  • **Official Email**: [${faculty.email}](mailto:${faculty.email})\n`;
+    if (faculty.phone) text += `  • **Phone / Desk**: ${faculty.phone}\n`;
+    if (faculty.profileUrl) text += `  • **Official Profile**: [View Bio on rvca.edu.in](${faculty.profileUrl})\n`;
     return text;
   }
 
@@ -695,11 +1142,54 @@
   function resolveCompositeIntent(cleanQuery, tokens = []) {
     const combined = (cleanQuery + ' ' + tokens.join(' ')).toLowerCase();
 
+    // Specific Student Club triggers & Faculty Coordinators
+    if (/\b(art club|mural club|painting club)\b/i.test(combined) || (/\b(art|mural)\b/i.test(combined) && /\b(club|head|coordinator|incharge|in charge)\b/i.test(combined))) return "club_art";
+    if (/\b(book club|reading club|literary club|literature club)\b/i.test(combined) || (/\b(book|reading)\b/i.test(combined) && /\b(club|head|coordinator|incharge|in charge)\b/i.test(combined))) return "club_book";
+    if (/\b(dance club|originals)\b/i.test(combined) || (/\b(dance)\b/i.test(combined) && /\b(club|head|coordinator|incharge|in charge)\b/i.test(combined))) return "club_dance";
+    if (/\b(drama club|frameworks|theatre club|theater club)\b/i.test(combined) || (/\b(drama|theatre|theater)\b/i.test(combined) && /\b(club|head|coordinator|incharge|in charge)\b/i.test(combined))) return "club_drama";
+    if (/\b(health and wellness|health club|wellness club)\b/i.test(combined) || (/\b(health|wellness)\b/i.test(combined) && /\b(club|head|coordinator|incharge|in charge)\b/i.test(combined))) return "club_health";
+    if (/\b(heritage club)\b/i.test(combined) || (/\b(heritage)\b/i.test(combined) && /\b(club|head|coordinator|incharge|in charge)\b/i.test(combined))) return "club_heritage";
+    if (/\b(music club|decibels)\b/i.test(combined) || (/\b(music|jamming|band)\b/i.test(combined) && /\b(club|head|coordinator|incharge|in charge)\b/i.test(combined))) return "club_music";
+    if (/\b(quiz club)\b/i.test(combined) || (/\b(quiz)\b/i.test(combined) && /\b(club|head|coordinator|incharge|in charge)\b/i.test(combined))) return "club_quiz";
+    if (/\b(sports club|sports fest|rvcasports|interbatch sports)\b/i.test(combined) || (/\b(sports)\b/i.test(combined) && /\b(club|fest|incharge|in charge|director)\b/i.test(combined))) return "club_sports";
+    if (/\b(sustainability club|nature club|eco club)\b/i.test(combined) || (/\b(sustainability|nature)\b/i.test(combined) && /\b(club|head|coordinator|incharge|in charge)\b/i.test(combined))) return "club_sustainability";
+    if (/\b(terra thoughts|pottery club|clay modelling club|clay club|ceramics club)\b/i.test(combined) || (/\b(pottery|clay modelling|clay modeling)\b/i.test(combined) && /\b(club|head|coordinator|incharge|in charge)\b/i.test(combined))) return "club_terra";
+    if (/\b(journey shared|cinema club|movie club|film club|alternative cinema)\b/i.test(combined) || (/\b(cinema|movie|film)\b/i.test(combined) && /\b(club|screening|head|coordinator|incharge|in charge)\b/i.test(combined))) return "club_cinema";
+    if (/\b(trail club|photography club|travel club|photo club)\b/i.test(combined) || (/\b(trail|photography|photo)\b/i.test(combined) && /\b(club|head|coordinator|incharge|in charge)\b/i.test(combined))) return "club_trail";
+    if (/\b(nasa|nasa india|annual nasa|zonal nasa|reubens trophy|louis i kahn trophy)\b/i.test(combined)) return "nasa_india";
+
+    // Placement Cell & Hostel Warden Contextual Overrides
+    if (/\b(training and placement|placement cell)\b/i.test(combined)) return "placements";
+    if (/\b(hostel|mess)\b/i.test(combined) && /\b(warden|contact|incharge)\b/i.test(combined)) return "hostels";
+
+    // Faculty In-Charges, Non-Teaching & Wardens
+    if (/\b(club in charges?|faculty in charge of clubs?|club mentors?|club coordinators?|who heads which club|who leads the clubs?)\b/i.test(combined)) return "faculty_club_incharges";
+    if (/\b(cell heads?|committee heads?|faculty in charges?|who heads placement|who heads internships)\b/i.test(combined)) return "faculty_incharges_committees";
+    if (/\b(non teaching|admin staff|administrative staff|technical staff|who is hr|hr head|librarian|foreman)\b/i.test(combined)) return "faculty_non_teaching";
+    if (/\b(hostel administration desk|residential warden|who is the warden|warden contact|warden desk)\b/i.test(combined)) return "hostel_warden";
+
+    // Academic Departments Triggers
+    if (/\b(barch department|department of architecture|ug department)\b/i.test(combined)) return "department_barch";
+    if (/\b(march department|department of urban design|pg department|urban design department)\b/i.test(combined)) return "department_march";
+    if (/\b(phd department|doctoral department|research centre department)\b/i.test(combined)) return "department_phd";
+    if (/\b(departments in rvca|all departments|academic departments|list of departments|how many departments)\b/i.test(combined)) return "departments_all";
+
+    // Research, Labs & Specialized Studios
+    if (/\bskill labs?\b/i.test(combined) || /\b(clay and pottery studio|pottery and clay studio)\b/i.test(combined)) return "skill_labs";
+    if (/\b(udrcc|urban design research and consultancy cell|urban consultancy|municipal consultancy)\b/i.test(combined)) return "research_udrcc";
+    if (/\b(bochum university|university of florida|krvia|daida awards|international collaborations|photovoice bochum|nayandahalli wastescapes)\b/i.test(combined)) return "research_collaborations";
+    if (/\b(climate simulation lab|climate lab|climatology lab|heliodon)\b/i.test(combined)) return "lab_climate";
+    if (/\b(pottery studio|clay studio|pottery kilns|ceramic kilns)\b/i.test(combined)) return "lab_pottery";
+    if (/\b(fabrication lab|model making workshop|3d printing|laser cutter|laser cutting|cnc router)\b/i.test(combined)) return "lab_fab";
+    if (/\b(gis lab|spatial analytics lab|arcgis lab|qgis lab)\b/i.test(combined)) return "lab_gis";
+    if (/\b(faculty papers|springer|taylor and francis paper|cities and health|photovoice paper|urban floods paper|pandharpur paper|scopus publications|faculty citations|papers published in springer)\b/i.test(combined)) return "faculty_publications_papers";
+
     // Specific Research & Publication triggers
-    if (/\b(smart city|saar|udrcc|shivamogga smart)\b/i.test(combined)) return "smart_city_research";
-    if (/\b(kalpa|sub:?version)\b/i.test(combined)) return "publications_deep";
+    if (/\b(smart city|saar|shivamogga smart)\b/i.test(combined)) return "smart_city_research";
+    if (/\b(kalpa)\b/i.test(combined)) return "kalpa_magazine";
+    if (/\b(sub:?version)\b/i.test(combined)) return "subversion_journal";
     if (/\b(research guides?|doctoral guides?|supervisors?)\b/i.test(combined)) return "research_guides";
-    if (/\b(publications?|research papers?|faculty papers?)\b/i.test(combined)) return "publications_deep";
+    if (/\b(publications?|academic journals?|college magazine)\b/i.test(combined)) return "publications_deep";
     if (/\b(research in rvca|research projects?|funded research|research work|research thrust)\b/i.test(combined)) return "research_overview";
 
     // Specific Faculty ranks & wings triggers

@@ -90,8 +90,8 @@ const TEST_CASES = [
   { query: "smart city projects", expectedIntent: "smart_city_research", category: "Research & Innovation" },
   { query: "tell me about saar initiative", expectedIntent: "smart_city_research", category: "Research & Innovation" },
   { query: "who are the research guides", expectedIntent: "research_guides", category: "Research & Innovation" },
-  { query: "kalpa magazine", expectedIntent: "publications_deep", category: "Research & Innovation" },
-  { query: "subversion journal", expectedIntent: "publications_deep", category: "Research & Innovation" },
+  { query: "kalpa magazine", expectedIntent: "kalpa_magazine", category: "Research & Innovation" },
+  { query: "subversion journal", expectedIntent: "subversion_journal", category: "Research & Innovation" },
   { query: "who are the professors", expectedIntent: "faculty_professors", category: "Faculty Architecture" },
   { query: "associate professors list", expectedIntent: "faculty_associate_professors", category: "Faculty Architecture" },
   { query: "assistant professors list", expectedIntent: "faculty_assistant_professors", category: "Faculty Architecture" },
@@ -124,7 +124,41 @@ const TEST_CASES = [
 
   // 14. Negation Shield & Multi-Intent Split
   { query: "tell me about admissions without hostel", expectedIntent: "barch_program", category: "Negation Shield" },
-  { query: "tell me about fees and hostels and placements", expectedIntent: "fees", hasOverflow: true, category: "Multi-Intent Split" }
+  { query: "tell me about fees and hostels and placements", expectedIntent: "fees", hasOverflow: true, category: "Multi-Intent Split" },
+
+  // 15. Student Clubs & NASA India
+  { query: "tell me about art club", expectedIntent: "club_art", category: "Student Clubs" },
+  { query: "originals dance club", expectedIntent: "club_dance", category: "Student Clubs" },
+  { query: "frameworks drama club", expectedIntent: "club_drama", category: "Student Clubs" },
+  { query: "terra thoughts pottery club", expectedIntent: "club_terra", category: "Student Clubs" },
+  { query: "nasa india trophies", expectedIntent: "nasa_india", category: "Student Clubs" },
+  { query: "who heads which club", expectedIntent: "faculty_club_incharges", category: "Student Clubs" },
+
+  // 16. Staff & Statutory Roles
+  { query: "tell me about non teaching staff", expectedIntent: "faculty_non_teaching", category: "Institutional Staff" },
+  { query: "residential warden contact", expectedIntent: "hostel_warden", category: "Institutional Staff" },
+  { query: "faculty committee heads", expectedIntent: "faculty_incharges_committees", category: "Institutional Staff" },
+
+  // 17. Deep Publications & Faculty Research Papers
+  { query: "kalpa research magazine issn 2583-696x", expectedIntent: "kalpa_magazine", category: "Publications Deep" },
+  { query: "subversion journal cfp", expectedIntent: "subversion_journal", category: "Publications Deep" },
+  { query: "papers published in springer", expectedIntent: "faculty_publications_papers", category: "Publications Deep" },
+  { query: "research papers in taylor and francis", expectedIntent: "faculty_publications_papers", category: "Publications Deep" },
+
+  // 18. Research, Consultancy & Skill Labs
+  { query: "urban design research and consultancy cell udrcc", expectedIntent: "research_udrcc", category: "Research & Labs" },
+  { query: "collaborations with bochum university", expectedIntent: "research_collaborations", category: "Research & Labs" },
+  { query: "climate simulation lab heliodon", expectedIntent: "lab_climate", category: "Research & Labs" },
+  { query: "ceramic clay and pottery kilns", expectedIntent: "lab_pottery", category: "Research & Labs" },
+  { query: "3d printing and laser cutting lab", expectedIntent: "lab_fab", category: "Research & Labs" },
+  { query: "spatial analytics and gis lab", expectedIntent: "lab_gis", category: "Research & Labs" },
+
+  // 19. Academic Departments
+  { query: "department of architecture ug", expectedIntent: "department_barch", category: "Departments" },
+  { query: "department of urban design pg", expectedIntent: "department_march", category: "Departments" },
+  { query: "doctoral department research centre", expectedIntent: "department_phd", category: "Departments" },
+  { query: "all academic departments in rvca", expectedIntent: "departments_all", category: "Departments" },
+  { query: "tell me about rvca publications", expectedIntent: "publications_deep", category: "Publications Deep" }
 ];
 
 async function runBenchmark() {
