@@ -131,9 +131,9 @@
 
       <!-- Quick Question Tray -->
       <div class="rvca-quick-tray" id="rvca-quick-tray">
+        <span class="rvca-tray-chip" data-query="Faculty Search">🔍 Faculty Search</span>
+        <span class="rvca-tray-chip" data-query="Research & Innovation">🔬 Research Hub</span>
         <span class="rvca-tray-chip" data-query="About RVCA">About RVCA</span>
-        <span class="rvca-tray-chip" data-query="Research & Innovation">Research</span>
-        <span class="rvca-tray-chip" data-query="Faculty Directory">Faculty</span>
         <span class="rvca-tray-chip" data-query="B.Arch Program">B.Arch</span>
         <span class="rvca-tray-chip" data-query="M.Arch Urban Design">M.Arch</span>
         <span class="rvca-tray-chip" data-query="Admissions">Admissions</span>
@@ -141,14 +141,16 @@
         <span class="rvca-tray-chip" data-query="Eligibility (NATA)">Eligibility</span>
         <span class="rvca-tray-chip" data-query="Hostel Facilities">Hostels</span>
         <span class="rvca-tray-chip" data-query="Placements">Placements</span>
-        <span class="rvca-tray-chip" data-query="Facilities">Facilities</span>
+        <span class="rvca-tray-chip" data-query="Student Clubs">Clubs</span>
+        <span class="rvca-tray-chip" data-query="Skill Labs">Skill Labs</span>
         <span class="rvca-tray-chip" data-query="Contact Us">Contact Us</span>
       </div>
 
-      <!-- Input Bar -->
+      <!-- Input Bar with Live Typeahead (RVCE Standard) -->
       <footer class="rvca-footer">
+        <div id="rvca-typeahead" class="rvca-typeahead hidden"></div>
         <form class="rvca-input-bar" id="rvca-form">
-          <input type="text" class="rvca-input" id="rvca-input" placeholder="Ask about B.Arch, fees, faculty, hostel..." autocomplete="off">
+          <input type="text" class="rvca-input" id="rvca-input" placeholder="Search faculty, research, B.Arch, fees..." autocomplete="off">
           <button type="submit" class="rvca-send-btn" id="rvca-send" title="Send Query">
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
@@ -214,6 +216,7 @@
   const leadForm = document.getElementById('rvca-lead-form');
   const formEl = document.getElementById('rvca-form');
   const inputEl = document.getElementById('rvca-input');
+  const typeaheadEl = document.getElementById('rvca-typeahead');
   const messagesEl = document.getElementById('rvca-messages');
   const quickTray = document.getElementById('rvca-quick-tray');
 
@@ -340,9 +343,206 @@
     telemetry.trackScrollDepth(messagesEl);
   });
 
-  // Track typing keystrokes
+  // Live Typeahead Dataset (Matches RVCE Benchmark: Faculty, Research Labs, Centres, Courses, Admissions)
+  const INSTITUTIONAL_TYPEAHEAD = [
+    // Core Research & Innovation
+    { label: 'Research & Innovation Hub', query: 'Research & Innovation', category: 'Research', icon: '🔬', badge: 'Centre' },
+    { label: 'Smart City SAAR 1.0 & 2.0 (MoHUA & NIUA Projects)', query: 'Smart City SAAR Research Projects', category: 'Research', icon: '🏙️', badge: 'MoHUA' },
+    { label: 'Urban Design Research & Consultancy Cell (UDRCC)', query: 'Urban Design Cell (UDRCC)', category: 'Research', icon: '🏛️', badge: 'Cell' },
+    { label: 'Ruhr-University Bochum (Germany) Global Research Studio', query: 'Global Research Collaborations', category: 'Research', icon: '🌐', badge: 'Global' },
+    { label: 'DAIDA Foundation Awards & Affordable Housing Research', query: 'DAIDA Foundation Awards', category: 'Research', icon: '🏆', badge: 'Awards' },
+    { label: 'VTU Ph.D. Research Centre & Doctoral Mentors', query: 'Doctoral Mentors (Ph.D.)', category: 'Research', icon: '🎓', badge: 'Ph.D.' },
+    { label: 'KALPA Architectural Research Magazine', query: 'KALPA Magazine', category: 'Publications', icon: '📖', badge: 'Pub' },
+    { label: 'sub:version Peer-Reviewed Academic Journal', query: 'sub:version Journal', category: 'Publications', icon: '📑', badge: 'Journal' },
+    { label: 'Faculty Research Papers & Publications', query: 'Faculty Research Publications', category: 'Publications', icon: '📄', badge: 'Papers' },
+    { label: 'Climate Simulation & Heliodon Lab', query: 'Climate Simulation Lab', category: 'Labs', icon: '☀️', badge: 'Lab' },
+    { label: 'Ceramic Clay & Pottery Studio', query: 'Ceramic Clay Pottery Lab', category: 'Labs', icon: '🏺', badge: 'Studio' },
+    { label: '3D Fabrication Lab & Laser Cutting', query: '3D Fabrication Lab', category: 'Labs', icon: '🖨️', badge: 'Lab' },
+    { label: 'Spatial Analytics & GIS Lab', query: 'GIS Spatial Analytics Lab', category: 'Labs', icon: '🗺️', badge: 'Lab' },
+
+    // Faculty & Academic Leadership
+    { label: 'Faculty Search & Directory Portal', query: 'Faculty Search', category: 'Faculty', icon: '🔍', badge: 'Search' },
+    { label: 'Senior Academic Council & Professors', query: 'Professors & Leadership', category: 'Faculty', icon: '👥', badge: 'Professors' },
+    { label: 'Associate Professors Directory', query: 'Associate Professors', category: 'Faculty', icon: '👥', badge: 'Assoc Prof' },
+    { label: 'Assistant Professors Directory', query: 'Assistant Professors', category: 'Faculty', icon: '👥', badge: 'Asst Prof' },
+    { label: 'Doctoral Mentors & Ph.D. Guides', query: 'Doctoral Mentors (Ph.D.)', category: 'Faculty', icon: '🎓', badge: 'Ph.D.' },
+    { label: 'Principal Dr. Rakesh K.S.', query: 'Principal', category: 'Leadership', icon: '👔', badge: 'Principal' },
+    { label: 'Dean Prof. Suresh K. Murthy', query: 'Dean', category: 'Leadership', icon: '👔', badge: 'Dean' },
+
+    // Academic Programs
+    { label: 'B.Arch Degree (Bachelor of Architecture - 5 Yrs)', query: 'B.Arch Program', category: 'Program', icon: '📐', badge: 'UG' },
+    { label: 'M.Arch in Urban Design (Master of Architecture - 2 Yrs)', query: 'M.Arch Urban Design', category: 'Program', icon: '🌆', badge: 'PG' },
+    { label: 'Ph.D. in Architecture & Built Environment', query: 'Ph.D. in Architecture', category: 'Program', icon: '🎓', badge: 'Doctoral' },
+    { label: 'VTU Scheme & Syllabus (2021 Curriculum)', query: 'Curriculum and Syllabus', category: 'Academics', icon: '📚', badge: 'VTU' },
+
+    // Admissions, Fees & Scholarships
+    { label: 'Admissions Guidelines & Process', query: 'Admissions', category: 'Admissions', icon: '📝', badge: 'Admissions' },
+    { label: 'KEA Code E-244 & KCET Admissions', query: 'Admissions', category: 'Admissions', icon: '🏛️', badge: 'KEA E-244' },
+    { label: 'Fee Structure & Direct Admission Guidelines', query: 'Fee Structure', category: 'Admissions', icon: '💳', badge: 'Fees' },
+    { label: 'NATA Eligibility & Score Requirements', query: 'Eligibility (NATA)', category: 'Admissions', icon: '🎯', badge: 'NATA' },
+    { label: 'Cutoffs & Rank Analysis (KEA / COMEDK)', query: 'Cutoffs and Scores', category: 'Admissions', icon: '📊', badge: 'Cutoffs' },
+    { label: 'Scholarships & Financial Aid Schemes', query: 'Scholarships & Aid', category: 'Admissions', icon: '💰', badge: 'Aid' },
+
+    // Campus Infrastructure & Student Life
+    { label: 'Hostel Facilities (Boys & Girls Blocks & Mess)', query: 'Hostel Facilities', category: 'Campus', icon: '🏢', badge: 'Hostel' },
+    { label: 'Campus Placements & Architectural Firms', query: 'Placements', category: 'Careers', icon: '💼', badge: 'Placements' },
+    { label: 'Practical Training & Internships', query: 'Internships', category: 'Careers', icon: '🛠️', badge: 'Training' },
+    { label: 'GlobEd International Studies & Career Cell', query: 'GlobEd Cell', category: 'Careers', icon: '✈️', badge: 'GlobEd' },
+    { label: 'NASA India Student Chapter & Accolades', query: 'NASA India Chapter', category: 'Clubs', icon: '🏆', badge: 'NASA' },
+    { label: 'Student Clubs & Cultural Life', query: 'Student Clubs', category: 'Campus', icon: '🎭', badge: 'Clubs' },
+    { label: 'Campus Infrastructure & Experiential Studios', query: 'Campus Facilities', category: 'Campus', icon: '🏛️', badge: 'Campus' },
+    { label: 'Architecture Resource Centre & Library', query: 'Resource Centre Library', category: 'Campus', icon: '📚', badge: 'Library' },
+    { label: 'Study Tours & Architectural Expeditions', query: 'Study Tours', category: 'Campus', icon: '🗺️', badge: 'Tours' },
+    { label: 'Live Site Visits & Practical Pedagogy', query: 'Site Visits', category: 'Campus', icon: '🏗️', badge: 'Site' },
+    { label: 'Campus Canteen & Dining Facilities', query: 'Canteen and Dining', category: 'Campus', icon: '☕', badge: 'Dining' },
+    { label: 'Sports, Gymnasium & Physical Education', query: 'Sports and Fitness', category: 'Campus', icon: '⚽', badge: 'Sports' },
+    { label: 'Anti-Ragging Committee & Student Safety', query: 'Anti-Ragging Committee', category: 'Support', icon: '🛡️', badge: 'Safety' },
+    { label: 'How to Reach RVCA & Campus Location', query: 'Location & How to Reach', category: 'Contact', icon: '📍', badge: 'Location' },
+    { label: 'Contact Directory & Helpline', query: 'Contact Us', category: 'Contact', icon: '📞', badge: 'Contact' }
+  ];
+
+  function getTypeaheadList() {
+    const list = [...INSTITUTIONAL_TYPEAHEAD];
+    const facultySource = (window.RVCA_FACULTY && Array.isArray(window.RVCA_FACULTY))
+      ? window.RVCA_FACULTY
+      : (typeof FACULTY !== 'undefined' && Array.isArray(FACULTY) ? FACULTY : []);
+
+    facultySource.forEach(f => {
+      if (!f || !f.name) return;
+      const roleBadge = f.role ? f.role.split('/')[0].trim() : 'Faculty';
+      list.push({
+        label: `${f.name} (${roleBadge})`,
+        query: f.name,
+        category: 'Faculty',
+        icon: '👤',
+        badge: roleBadge.length > 13 ? roleBadge.slice(0, 11) + '..' : roleBadge
+      });
+    });
+    return list;
+  }
+
+  let typeaheadActiveIndex = -1;
+
+  function hideTypeahead() {
+    if (typeaheadEl) {
+      typeaheadEl.classList.add('hidden');
+      typeaheadEl.innerHTML = '';
+      typeaheadActiveIndex = -1;
+    }
+  }
+
+  function renderTypeahead(items, query) {
+    if (!typeaheadEl) return;
+    if (!items || items.length === 0) {
+      hideTypeahead();
+      return;
+    }
+
+    const qLower = query.toLowerCase();
+    typeaheadEl.innerHTML = items.map((item, idx) => {
+      const labelText = item.label;
+      const idxMatch = labelText.toLowerCase().indexOf(qLower);
+      let highlighted = escapeHtml(labelText);
+      if (idxMatch >= 0) {
+        const before = escapeHtml(labelText.slice(0, idxMatch));
+        const matched = escapeHtml(labelText.slice(idxMatch, idxMatch + qLower.length));
+        const after = escapeHtml(labelText.slice(idxMatch + qLower.length));
+        highlighted = `${before}<span class="rvca-typeahead-highlight">${matched}</span>${after}`;
+      }
+
+      return `
+        <div class="rvca-typeahead-item" data-query="${escapeHtml(item.query)}" data-index="${idx}">
+          <span class="rvca-typeahead-icon">${item.icon || '🔍'}</span>
+          <span class="rvca-typeahead-label">${highlighted}</span>
+          <span class="rvca-typeahead-badge">${escapeHtml(item.badge || item.category)}</span>
+        </div>
+      `;
+    }).join('');
+
+    typeaheadEl.classList.remove('hidden');
+    typeaheadActiveIndex = -1;
+
+    typeaheadEl.querySelectorAll('.rvca-typeahead-item').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const selectedQuery = el.getAttribute('data-query');
+        hideTypeahead();
+        handleUserSubmit(selectedQuery);
+      });
+    });
+  }
+
+  // Track typing keystrokes & trigger live autocomplete
   inputEl.addEventListener('input', () => {
     telemetry.trackKeyStroke();
+    const val = inputEl.value.trim();
+    if (val.length < 2) {
+      hideTypeahead();
+      return;
+    }
+
+    const qLower = val.toLowerCase();
+    const all = getTypeaheadList();
+    const matched = [];
+    const seen = new Set();
+
+    for (const item of all) {
+      const matchLabel = item.label.toLowerCase().includes(qLower);
+      const matchQuery = item.query.toLowerCase().includes(qLower);
+      const matchCategory = item.category.toLowerCase().includes(qLower);
+
+      if ((matchLabel || matchQuery || matchCategory) && !seen.has(item.query.toLowerCase())) {
+        seen.add(item.query.toLowerCase());
+        matched.push(item);
+        if (matched.length >= 7) break;
+      }
+    }
+
+    renderTypeahead(matched, val);
+  });
+
+  // Keyboard navigation inside input (Arrow Up/Down, Enter, Escape)
+  inputEl.addEventListener('keydown', (e) => {
+    if (!typeaheadEl || typeaheadEl.classList.contains('hidden')) return;
+    const items = typeaheadEl.querySelectorAll('.rvca-typeahead-item');
+    if (!items.length) return;
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      typeaheadActiveIndex = (typeaheadActiveIndex + 1) % items.length;
+      updateTypeaheadActiveItem(items);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      typeaheadActiveIndex = (typeaheadActiveIndex - 1 + items.length) % items.length;
+      updateTypeaheadActiveItem(items);
+    } else if (e.key === 'Enter' && typeaheadActiveIndex >= 0 && typeaheadActiveIndex < items.length) {
+      e.preventDefault();
+      const selectedQuery = items[typeaheadActiveIndex].getAttribute('data-query');
+      hideTypeahead();
+      handleUserSubmit(selectedQuery);
+    } else if (e.key === 'Escape') {
+      hideTypeahead();
+    }
+  });
+
+  function updateTypeaheadActiveItem(items) {
+    items.forEach((it, idx) => {
+      if (idx === typeaheadActiveIndex) {
+        it.style.background = 'rgba(217, 107, 79, 0.22)';
+        it.style.color = '#FFFFFF';
+        it.scrollIntoView({ block: 'nearest' });
+      } else {
+        it.style.background = '';
+        it.style.color = '';
+      }
+    });
+  }
+
+  // Close typeahead when clicking outside
+  document.addEventListener('click', (e) => {
+    if (typeaheadEl && !typeaheadEl.contains(e.target) && e.target !== inputEl) {
+      hideTypeahead();
+    }
   });
 
   // Quick tray delegation
@@ -384,6 +584,7 @@
 
   // Handle User Input Submission
   function handleUserSubmit(userText) {
+    hideTypeahead();
     const query = String(userText || '').trim();
     if (!query) return;
 
@@ -450,6 +651,7 @@
     board_of_management:   { label: 'Board of Management', url: 'https://rvca.edu.in/board_of_management/' },
     principal:             { label: 'Principal Dr. Rakesh K.S.', url: 'https://rvca.edu.in/faculty/dr_rakesh_k_s/' },
     dean:                  { label: 'Dean Prof. Suresh K. Murthy', url: 'https://rvca.edu.in/faculty/suresh-k-murthy/' },
+    fac_multi:             { label: 'Faculty Directory & Search', url: 'https://rvca.edu.in/faculty/' },
     faculty_directory:     { label: 'Official Faculty Directory', url: 'https://rvca.edu.in/faculty/' },
     courses_overview:      { label: 'Academic Programmes', url: 'https://rvca.edu.in/programmes/' },
     barch_program:         { label: 'B.Arch Degree Overview', url: 'https://rvca.edu.in/ugprogramme/' },

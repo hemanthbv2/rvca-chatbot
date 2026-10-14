@@ -250,10 +250,10 @@
     {
       id: "research_overview",
       priority: 0.98,
-      keywords: ["research", "research in rvca", "research activities", "research projects", "research work", "innovation at rvca", "research thrust areas", "research papers", "funded research", "academic research"],
-      title: "Research & Innovation at RVCA",
+      keywords: ["research", "research in rvca", "research activities", "research projects", "research work", "innovation at rvca", "research thrust areas", "research papers", "funded research", "academic research", "research hub"],
+      title: "Research, Innovation & Consultancy Hub",
       response: `**Research & Innovation at RV College of Architecture (RVCA)**\n\nRVCA fosters a vibrant research culture bridging architectural theory, urban informatics, and sustainable building technologies:\n\n🏛️ **VTU Recognized Research Centre**:\n• Official Ph.D. Research Centre affiliated to Visvesvaraya Technological University (VTU), Belagavi.\n• Doctoral research streams: Sustainable Architecture, Building Energy Simulation, Urban Resilience, C&D Waste Recycling, and Cultural Heritage.\n\n🏙️ **Smart City Projects — MoHUA & NIUA SAAR Initiative**:\n• RVCA is selected as **1 of only 15 Premier Institutes of Academic Excellence nationwide** by the Ministry of Housing and Urban Affairs (MoHUA) and National Institute of Urban Affairs (NIUA).\n• **SAAR 1.0**: Documented landmark smart city initiatives across Bengaluru, Davanagere, and Belagavi.\n• **SAAR 2.0**: Ongoing smart city projects collaborating with Shivamogga & Bengaluru Smart City Limited.\n\n📐 **Urban Design Research & Consultancy Cell (UDRCC)**:\n• Hands-on municipal consultancy cell engaging Master of Architecture (M.Arch) scholars directly with public sector urban transformation projects.\n\n🌍 **Global Research Collaborations**:\n• **Bochum University, Germany**: Joint digital participatory place analysis using the "Photovoice" methodology (published in *Cities & Health*, Routledge).\n• **University of Florida, Gainesville (USA) & KRVIA**: International dialogues on climate justice and tropical architecture resilience.\n\n🏆 **DAIDA Global Awards Finalist (2023)**:\n• "Cities for All" — M.Arch thesis on closed-loop wastescape regeneration in Nayandahalli, Bengaluru shortlisted among 8 international finalists.\n\n📚 **Peer-Reviewed Publications**:\n• **KALPA** Annual Magazine (ISSN 2583-696X) and **sub:version** International Journal.\n• High-impact faculty publications indexed in Scopus, Springer Nature, and Taylor & Francis.\n\n🌐 **Official Research Portal**: [RVCA Research & Innovation (rvca.edu.in/research/)](https://rvca.edu.in/research/)`,
-      chips: ["Smart City (SAAR)", "Research Guides", "Publications", "Ph.D. Program", "Faculty Directory"]
+      chips: ["Smart City (SAAR)", "Urban Design Cell", "Global Research", "Doctoral Mentors (Ph.D.)", "KALPA Magazine", "sub:version Journal", "Faculty Papers", "Skill Labs"]
     },
     {
       id: "smart_city_research",
@@ -261,7 +261,7 @@
       keywords: ["smart city", "smart city projects", "saar", "saar 1.0", "saar 2.0", "mohua", "niua", "udrcc", "smart cities", "urban consultancy", "shivamogga smart city", "bengaluru smart city", "davanagere smart city", "belagavi smart city"],
       title: "Smart City Research & SAAR Initiative",
       response: `**RVCA Smart City Projects & SAAR Initiative**\n\nRV College of Architecture is at the forefront of national urban development initiatives:\n\n🇮🇳 **MoHUA & NIUA SAAR Recognition**:\n• Selected among the **Top 15 Premier Institutes of Academic Excellence in India** by the Ministry of Housing and Urban Affairs (MoHUA) and National Institute of Urban Affairs (NIUA).\n• **SAAR 1.0 (Smart Cities and Academia Towards Action & Research)**: Documented field outcomes, live challenges, and learnings of landmark urban projects in **Bengaluru**, **Davanagere**, and **Belagavi** Smart Cities.\n• **SAAR 2.0**: Formulating academic research and ground evaluation with **Shivamogga Smart City Limited** and **Bengaluru Smart City Limited**.\n\n🏢 **UDRCC (Urban Design Research & Consultancy Cell)**:\n• Specialized institutional cell at RVCA providing live research and consultancy for public sector urban interventions.\n• Directly embeds Master of Architecture (M.Arch in Urban Design) students into real-world master planning, public place transformation, and resilience strategies.\n\n📖 **Published Research Outcome**:\n• "Exploring role of public spaces in accommodating economic activities during Ashadh Wari in Pandharpur: case of Chowk, Galli and Ghat" published in *Future is Urban* (Routledge / Taylor & Francis).\n\n🌐 **Official Research Portal**: [Explore Smart City Research (rvca.edu.in/research/)](https://rvca.edu.in/research/)`,
-      chips: ["Research Overview", "M.Arch Urban Design", "Research Guides", "Faculty Directory"]
+      chips: ["Urban Design Cell", "Global Research", "KALPA Magazine", "Research Overview"]
     },
     {
       id: "research_guides",
@@ -269,7 +269,7 @@
       keywords: ["research guides", "phd guides", "doctoral guides", "supervisors", "phd supervisors", "research supervisors", "who are the research guides", "doctoral mentors", "vtu research guides", "guide list"],
       title: "Ph.D. Research Guides & Doctoral Mentors",
       response: `**VTU Approved Ph.D. Research Guides at RVCA**\n\nScholars pursuing Ph.D. in Architecture at the VTU-recognized RVCA Research Centre are mentored by distinguished doctoral guides:\n\n1. **Dr. Om Prakash Bawane** (Senior Professor / Former Principal):\n   • Qualifications: B.Arch. [NIT Bhopal], M.Arch. [IIT Roorkee], M.Sc. [SMU], Ph.D. [VMU]\n   • Research Thrust: Sustainable Development, Building Services, Architectural Pedagogy\n\n2. **Dr. Shikha Verma** (Associate Professor):\n   • Qualifications: B.Arch. [NIT Bhopal], M.Tech. & Ph.D. [MNNIT Allahabad]\n   • Research Thrust: Environmental Geotechnology, C&D Waste Recycling Systems, Mud Thermal Performance\n\n3. **Dr. Mahalakshmi Karnad** (Associate Professor):\n   • Qualifications: B.Arch. [Bangalore Univ], MLA [SPA New Delhi], Ph.D. [SPA New Delhi]\n   • Research Thrust: Landscape Architecture, Heritage Conservation, Traditional Settlements\n\n4. **Dr. Rakesh K. S.** (Principal):\n   • Qualifications: B.Arch., M.Arch., Ph.D. [SAP, Anna University Chennai]\n   • Research Thrust: Climatic & Passive Solar Design, Energy Efficiency, Sustainable Architecture\n\n5. **Dr. Chinnu S Kumar** (Associate Professor):\n   • Qualifications: B.Arch. [TKM Kollam], M.U.D. [SPA New Delhi], Ph.D. [MNIT Jaipur]\n   • Research Thrust: Urban Morphology, Spatial Modeling, Urban Resilience\n\n📝 **Admission Process**: Through VTU-ETR entrance examination followed by research proposal defense.\n\n🌐 **Official Portal**: [Ph.D. Research Centre Details (rvca.edu.in/programmes/phdprogramme/)](https://rvca.edu.in/programmes/phdprogramme/)`,
-      chips: ["Ph.D. Program", "Research Overview", "Publications", "Faculty Directory"]
+      chips: ["Dr. Shikha Verma", "Dr. Om Prakash Bawane", "Dr. Rakesh K. S.", "Ph.D. Program", "Research Overview"]
     },
     {
       id: "publications_deep",
@@ -434,10 +434,10 @@
     {
       id: "faculty_directory",
       priority: 1.0,
-      keywords: ["faculty", "teachers", "staff", "who teaches", "faculty list", "faculty members", "all faculty", "mentors"],
-      title: "Complete Faculty Directory (63 Members)",
-      response: `**RVCA Faculty & Mentors Directory (63 Distinguished Members)**\n\nRVCA boasts 63 highly experienced faculty members across B.Arch, M.Arch (Urban Design), and Administration:\n\n• **Principal**: Dr. Rakesh K. S. (Ph.D. SAP Chennai)\n• **Dean**: Prof. Suresh K Murthy (M.Tech IIT Delhi, MSU Baroda)\n• **Design Chair**: Prof. Dinesh Rao (36+ yrs practice, Monsoon Design)\n• **Professors**: Prof. Phani Ram Pingali, Prof. Prasanna Rao (Assoc. Dean PG), Dr. Om Prakash Bawane, Prof. K Sreedhar\n• **Associate Professors (14 Members)**: Dr. M S Amarnath, Dr. H R Manjunath, Dr. Shikha Verma, Dr. Mahalakshmi Karnad, Dr. Saisanath, Dr. Chinnu S Kumar, Bikramjit Chakraborty, Seema Maiya U, Anupriya Saxena, Archana Vittal, Nishant, Hiranmayi Shankavaram, Girish Ramanathan.\n• **Senior Asst. Professors**: Dharshini YG, Ramya Krishna, Pedaparthi Shweta, Vidya V, Mayank Singh.\n• **Assistant Professors (21 Members)**: Megala Gurumurthi, Nitin Bhardwaj, Pappu Harcharan, Ajinkya Kanitkar, Ishani Gogoi, Abhinandan K S, Dr. Asmita Yadav, Deepthi V, Akanksha Singh, Ujjayant Bhattacharyya, Lavanya Anbazhagan, Akanksha Ruchi Horo, Abhirami A, Kiranjee, Goutham K B, Sunain Dalwani, Raghavendra Kuppusamy, William George Kennedy, Archita Bandyopadhyay, Deepika Varadarajan, Prakruthi S Karadagi.\n\n🌐 **Official Faculty Portal**: [Explore Full Faculty Bios (rvca.edu.in/faculty/)](https://rvca.edu.in/faculty/)`,
-      chips: ["Professors", "Associate Professors", "Doctoral Mentors", "B.Arch Faculty", "M.Arch Faculty"]
+      keywords: ["faculty", "teachers", "staff", "who teaches", "faculty list", "faculty members", "all faculty", "mentors", "faculty search", "search faculty", "find faculty", "search professor", "faculty directory"],
+      title: "Faculty Directory & Smart Search (63 Members)",
+      response: `**RVCA Faculty Directory & Smart Search (63 Distinguished Members)**\n\nRV College of Architecture features a renowned faculty body of **63 leading architects, researchers, and educators** across undergraduate, postgraduate, and doctoral programmes:\n\n• **Leadership**: Principal Dr. Rakesh K. S. & Dean Prof. Suresh K. Murthy\n• **Senior Professors & Design Chair**: Prof. Dinesh Rao, Prof. Phani Ram Pingali, Prof. Prasanna Rao, Dr. Om Prakash Bawane, Prof. K Sreedhar\n• **Associate Professors (14 Members)**: Dr. M S Amarnath, Dr. H R Manjunath, Dr. Shikha Verma, Dr. Mahalakshmi Karnad, Dr. Saisanath, Dr. Chinnu S Kumar, Bikramjit Chakraborty, Seema Maiya U, Anupriya Saxena, Archana Vittal, Nishant, Hiranmayi Shankavaram, Girish Ramanathan\n• **Assistant Professors (26 Members)**: Ar. Vidya V, Dharshini YG, Pedaparthi Shweta, Mayank Singh, Megala Gurumurthi, Ajinkya Kanitkar, Ishani Gogoi, Archita Bandyopadhyay, etc.\n• **16 Non-Teaching & Administrative Staff**: HR & Admin, Accounts, Examination, Library, Workshops, and Hostels\n\n🔍 **Interactive Search Tip**: Type any professor's name (e.g., *"Dr. Shikha Verma"*, *"Prof. Dinesh Rao"*, *"Ar. Vidya V"*, *"Dr. M S Amarnath"*) to view their complete dossier.\n\n📂 **Select an Academic Category Below to Explore**:`,
+      chips: ["Professors & Leadership", "Associate Professors", "Assistant Professors", "Doctoral Mentors (Ph.D.)", "M.Arch Faculty", "B.Arch Faculty", "Cell Coordinators", "Non-Teaching Staff"]
     },
     {
       id: "faculty_professors",
@@ -954,45 +954,78 @@
     "gis lab": "lab_gis",
     "department of architecture": "department_barch",
     "department of urban design": "department_march",
-    "ph.d research centre": "department_phd",
-    "academic departments": "departments_all"
+    "academic departments": "departments_all",
+    "faculty search": "faculty_directory",
+    "search faculty": "faculty_directory",
+    "find faculty": "faculty_directory",
+    "professors & leadership": "faculty_professors",
+    "doctoral mentors (ph.d.)": "faculty_phd_holders",
+    "doctoral mentors": "faculty_phd_holders",
+    "research hub": "research_overview",
+    "global research": "research_collaborations",
+    "global collaborations": "research_collaborations",
+    "urban design cell (udrcc)": "research_udrcc",
+    "urban design cell": "research_udrcc",
+    "smart city (saar)": "smart_city_research",
+    "smart city projects": "smart_city_research",
+    "cell coordinators": "faculty_incharges_committees",
+    "non-teaching staff": "faculty_non_teaching"
   };
 
-  // 7. DYNAMIC FACULTY DETECTIVE
-  function findFacultyMember(queryText) {
-    if (!FACULTY || !Array.isArray(FACULTY)) return null;
+  // 7. DYNAMIC FACULTY DETECTIVE & MULTI-MATCH (Matching RVCE standard)
+  function findFacultyMatches(queryText) {
+    if (!FACULTY || !Array.isArray(FACULTY)) return [];
     const clean = queryText.toLowerCase().replace(/^(dr|prof|ar|mr|ms|mrs)\.?\s+/gi, '').trim();
+    if (!clean) return [];
+
+    // Bypass generic non-personal lookup terms & institutional topics
+    if (/^(faculty|faculty directory|faculty list|all faculty|faculty members|who teaches|teachers|staff|faculty search|search faculty|find faculty)$/i.test(clean)) {
+      return [];
+    }
+    if (/\b(fees|fee|tuition|cost|hostel|hostels|mess|placement|placements|admission|admissions|apply|eligibility|cutoff|cutoffs|syllabus|curriculum|antiragging|ragging)\b/i.test(clean)) {
+      return [];
+    }
 
     // PASS 1: Check full name matches first
+    const exactMatches = [];
     for (const member of FACULTY) {
       const memName = member.name.toLowerCase().replace(/^(dr|prof|ar|mr|ms|mrs)\.?\s+/gi, '').trim();
       if (clean === memName || clean.includes(memName) || memName.includes(clean)) {
-        return member;
-      }
-    }
-
-    // PASS 2: Check distinctive single tokens (length >= 4, ignoring general words and common surnames)
-    const ignoreWords = new Set([
-      'about', 'tell', 'who', 'the', 'is', 'dr', 'prof', 'mr', 'ms', 'mrs',
-      'faculty', 'professor', 'professors', 'teacher', 'teachers', 'warden',
-      'dean', 'principal', 'design', 'chair', 'associate', 'assistant',
-      'member', 'members', 'research', 'guide', 'guides', 'project', 'projects',
-      'phd', 'barch', 'march', 'college', 'architecture'
-    ]);
-    const queryTokens = clean.split(/[^a-z0-9]+/i).filter(w => w.length >= 4 && !ignoreWords.has(w));
-    const commonSurnames = new Set(['kumar', 'singh', 'rao', 'reddy', 'babu', 'sharma']);
-
-    for (const member of FACULTY) {
-      const memName = member.name.toLowerCase().replace(/^(dr|prof|ar|mr|ms|mrs)\.?\s+/gi, '').trim();
-      const parts = memName.split(/[^a-z0-9]+/i).filter(p => p.length >= 4 && !commonSurnames.has(p));
-
-      for (const token of queryTokens) {
-        if (parts.some(p => p === token)) {
-          return member;
+        if (!exactMatches.some(m => m.name === member.name)) {
+          exactMatches.push(member);
         }
       }
     }
-    return null;
+    if (exactMatches.length === 1) return exactMatches;
+
+    // PASS 2: Token-level / partial surname / first name matching
+    const ignoreWords = new Set([
+      'about', 'tell', 'who', 'the', 'is', 'dr', 'prof', 'mr', 'ms', 'mrs', 'ar',
+      'faculty', 'professor', 'professors', 'teacher', 'teachers', 'warden',
+      'dean', 'principal', 'design', 'chair', 'associate', 'assistant',
+      'member', 'members', 'research', 'guide', 'guides', 'project', 'projects',
+      'phd', 'barch', 'march', 'college', 'architecture', 'search', 'profile', 'bio',
+      'view', 'find', 'show', 'details', 'contact', 'qualification', 'phone', 'email',
+      'arch', 'degree', 'course', 'fees', 'fee', 'tuition', 'cost', 'admission', 'admissions',
+      'eligibility', 'syllabus', 'cutoff', 'cutoffs', 'hostel', 'hostels', 'placement', 'placements'
+    ]);
+    const queryTokens = clean.split(/[^a-z0-9]+/i).filter(w => w.length >= 3 && !ignoreWords.has(w));
+    if (queryTokens.length === 0) return exactMatches;
+
+    const tokenMatches = [...exactMatches];
+    for (const member of FACULTY) {
+      if (tokenMatches.some(m => m.name === member.name)) continue;
+      const memName = member.name.toLowerCase().replace(/^(dr|prof|ar|mr|ms|mrs)\.?\s+/gi, '').trim();
+      const parts = memName.split(/[^a-z0-9]+/i).filter(p => p.length >= 3);
+
+      for (const token of queryTokens) {
+        if (parts.some(p => p === token || (token.length >= 5 && p.startsWith(token)))) {
+          tokenMatches.push(member);
+          break;
+        }
+      }
+    }
+    return tokenMatches;
   }
 
   // FACULTY SPECIAL METADATA & INSTITUTIONAL MENTORSHIPS
@@ -1356,47 +1389,67 @@
     // 4. DOT-STRIPPING & ACRONYM SANITIZATION
     const sanitized = sanitizeAcronyms(raw);
 
-    // 7. DYNAMIC FACULTY DETECTIVE (Check before generic keyword stripping)
-    const facultyFound = findFacultyMember(raw);
-    if (facultyFound && !/\b(fees|hostel|placements|antiragging)\b/i.test(sanitized)) {
-      if (/rakesh/i.test(raw)) {
-        const pObj = INTENTS.find(i => i.id === 'principal');
-        if (pObj) {
-          session.update(pObj.id, raw);
-          return {
-            intentId: pObj.id,
-            title: pObj.title,
-            response: pObj.response,
-            chips: pObj.chips,
-            overflow: [],
-            latencyMs: parseFloat((performance.now() - startTime).toFixed(2))
-          };
+    // 7. DYNAMIC FACULTY DETECTIVE & MULTI-MATCH (Matching RVCE benchmark standard)
+    const facultyMatches = findFacultyMatches(raw);
+    if (facultyMatches.length > 0 && !/\b(fees|hostel|placements|antiragging)\b/i.test(sanitized)) {
+      if (facultyMatches.length === 1) {
+        const facultyFound = facultyMatches[0];
+        if (/rakesh/i.test(raw)) {
+          const pObj = INTENTS.find(i => i.id === 'principal');
+          if (pObj) {
+            session.update(pObj.id, raw);
+            return {
+              intentId: pObj.id,
+              title: pObj.title,
+              response: pObj.response,
+              chips: pObj.chips,
+              overflow: [],
+              latencyMs: parseFloat((performance.now() - startTime).toFixed(2))
+            };
+          }
         }
-      }
-      if (/suresh.*murthy/i.test(raw)) {
-        const dObj = INTENTS.find(i => i.id === 'dean');
-        if (dObj) {
-          session.update(dObj.id, raw);
-          return {
-            intentId: dObj.id,
-            title: dObj.title,
-            response: dObj.response,
-            chips: dObj.chips,
-            overflow: [],
-            latencyMs: parseFloat((performance.now() - startTime).toFixed(2))
-          };
+        if (/suresh.*murthy/i.test(raw)) {
+          const dObj = INTENTS.find(i => i.id === 'dean');
+          if (dObj) {
+            session.update(dObj.id, raw);
+            return {
+              intentId: dObj.id,
+              title: dObj.title,
+              response: dObj.response,
+              chips: dObj.chips,
+              overflow: [],
+              latencyMs: parseFloat((performance.now() - startTime).toFixed(2))
+            };
+          }
         }
+        session.update('faculty_profile', raw);
+        return {
+          intentId: 'faculty_profile',
+          title: facultyFound.name,
+          response: formatFacultyResponse(facultyFound),
+          chips: ["Faculty Directory", "Principal Bio", "Contact Directory"],
+          overflow: [],
+          sourceUrl: facultyFound.profileUrl || null,
+          latencyMs: parseFloat((performance.now() - startTime).toFixed(2))
+        };
+      } else {
+        // MULTI-MATCH DISAMBIGUATION (fac_multi like RVCE)
+        session.update('fac_multi', raw);
+        let text = `**RVCA Faculty Directory Search**\n\nI found **${facultyMatches.length}** faculty members matching your search:\n\n`;
+        facultyMatches.slice(0, 8).forEach((m, idx) => {
+          text += `${idx + 1}. **${m.name}** — *${m.role || m.designation || 'Faculty Member'}* (${m.department || 'Department of Architecture'})\n`;
+        });
+        text += `\nClick on any professor below to view their complete dossier:`;
+
+        return {
+          intentId: 'fac_multi',
+          title: `Faculty Matches (${facultyMatches.length})`,
+          response: text,
+          chips: facultyMatches.slice(0, 6).map(m => m.name).concat(["Faculty Directory"]),
+          overflow: [],
+          latencyMs: parseFloat((performance.now() - startTime).toFixed(2))
+        };
       }
-      session.update('faculty_profile', raw);
-      return {
-        intentId: 'faculty_profile',
-        title: facultyFound.name,
-        response: formatFacultyResponse(facultyFound),
-        chips: ["Faculty Directory", "Principal Bio", "Contact Directory"],
-        overflow: [],
-        sourceUrl: facultyFound.profileUrl || null,
-        latencyMs: parseFloat((performance.now() - startTime).toFixed(2))
-      };
     }
 
     // 2. GRAMMAR & STOP-WORDS REMOVAL
@@ -1630,6 +1683,10 @@
     levenshteinDistance,
     correctTypo,
     sanitizeAcronyms,
-    findFacultyMember
+    findFacultyMatches,
+    findFacultyMember: (q) => {
+      const m = findFacultyMatches(q);
+      return m.length > 0 ? m[0] : null;
+    }
   };
 });
