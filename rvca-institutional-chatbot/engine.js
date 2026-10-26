@@ -32,16 +32,26 @@
     privateProbes: /\b(salary|salaries|aadhaar|pan card|bank account|personal phone|private number|home address|personal mobile|whatsapp number|caste certificate)\b/i
   };
 
-  // 2. STOP-WORDS LIST
+  // 2. COMPREHENSIVE GRAMMAR & STOP-WORDS REMOVAL (RVCE Standard)
   const STOP_WORDS = new Set([
     'the', 'is', 'for', 'a', 'an', 'of', 'in', 'to', 'and', 'with', 'about', 'on', 'at',
+    'by', 'from', 'up', 'down', 'into', 'over', 'after', 'before', 'between', 'under',
     'please', 'can', 'could', 'you', 'tell', 'me', 'know', 'give', 'what', 'how', 'where',
-    'which', 'who', 'i', 'want', 'need', 'would', 'like', 'there', 'any', 'some', 'details',
-    'information', 'info', 'provide', 'show', 'get', 'explain', 'hi', 'hello', 'hey', 'good'
+    'which', 'who', 'whom', 'whose', 'why', 'i', 'want', 'need', 'would', 'like', 'there',
+    'any', 'some', 'details', 'information', 'info', 'provide', 'show', 'get', 'explain',
+    'hi', 'hello', 'hey', 'good', 'morning', 'afternoon', 'evening', 'do', 'does', 'did',
+    'are', 'was', 'were', 'be', 'being', 'been', 'have', 'has', 'had', 'having', 'will',
+    'shall', 'should', 'may', 'might', 'must', 'my', 'myself', 'we', 'our', 'ours',
+    'he', 'him', 'his', 'she', 'her', 'hers', 'it', 'its', 'they', 'them', 'their', 'theirs',
+    'this', 'that', 'these', 'those', 'am', 'just', 'now', 'kindly', 'help', 'share', 'brief',
+    'describe', 'regarding', 'pertaining', 'say', 'talk', 'question', 'queries', 'query',
+    'college', 'institution', 'campus', 'pls', 'plz', 'sir', 'madam', 'whats', 'looking',
+    'interested', 'available', 'check', 'find', 'see', 'let', 'ask', 'where', 'when', 'which',
+    'can you', 'tell me', 'i want to know', 'give me', 'show me'
   ]);
 
   // Protected tokens: bare conversational words that must NOT trigger department aliases
-  const PROTECTED_TOKENS = new Set(['me', 'is', 'it', 'us', 'as', 'to', 'in', 'at', 'an', 'be', 'or', 'do']);
+  const PROTECTED_TOKENS = new Set(['me', 'is', 'it', 'us', 'as', 'to', 'in', 'at', 'an', 'be', 'or', 'do', 'so', 'if', 'by', 'on', 'no']);
 
   // 3. LEVENSHTEIN DYNAMIC PROGRAMMING EDIT-DISTANCE MATRIX O(m x n)
   function levenshteinDistance(s1, s2) {
@@ -82,7 +92,24 @@
     'admsn': 'admissions',
     'eligiblty': 'eligibility',
     'princpal': 'principal',
-    'faclty': 'faculty'
+    'faclty': 'faculty',
+    'colaborations': 'collaborations',
+    'colaboration': 'collaborations',
+    'colab': 'collaborations',
+    'colabs': 'collaborations',
+    'partnrship': 'partnerships',
+    'partnrships': 'partnerships',
+    'consultansy': 'consultancy',
+    'reserach': 'research',
+    'reseach': 'research',
+    'potry': 'pottery',
+    'heritge': 'heritage',
+    'subversn': 'subversion',
+    'klpa': 'kalpa',
+    'workshp': 'workshops',
+    'wrkshop': 'workshops',
+    'evnt': 'events',
+    'evnts': 'events'
   };
 
   const CANONICAL_WORDS = [
@@ -90,7 +117,8 @@
     'library', 'admission', 'admissions', 'eligibility', 'principal', 'faculty',
     'architecture', 'fees', 'scholarship', 'scholarships', 'syllabus', 'curriculum',
     'governance', 'antiragging', 'transport', 'sports', 'canteen', 'clubs',
-    'comedk', 'kcet', 'pgcet', 'barch', 'march', 'phd', 'gate', 'nata', 'research'
+    'comedk', 'kcet', 'pgcet', 'barch', 'march', 'phd', 'gate', 'nata', 'research',
+    'collaborations', 'consultancy', 'workshops', 'events', 'heritage', 'pottery'
   ];
 
   function correctTypo(token) {
@@ -113,24 +141,35 @@
     return bestMatch;
   }
 
-  // 4. DOT-STRIPPING & ACRONYM SANITIZER
+  // 4. DOT-STRIPPING & COMPREHENSIVE ACRONYM SANITIZER
   function sanitizeAcronyms(text) {
-    return text
-      .toLowerCase()
-      .replace(/\b([a-z])\.([a-z])\.([a-z])\.([a-z])\b/gi, '$1$2$3$4')
-      .replace(/\b([a-z])\.([a-z])\.([a-z])\b/gi, '$1$2$3')
-      .replace(/\b([a-z])\.([a-z])\b/gi, '$1$2')
-      .replace(/b\.\s*arch/gi, 'barch')
-      .replace(/m\.\s*arch/gi, 'march')
-      .replace(/ph\.\s*d/gi, 'phd')
-      .replace(/c\.\s*o\.\s*a/gi, 'coa')
-      .replace(/v\.\s*t\.\s*u/gi, 'vtu')
-      .replace(/k\.\s*e\.\s*a/gi, 'kea')
-      .replace(/k\.\s*c\.\s*e\.\s*t/gi, 'kcet')
-      .replace(/c\.\s*o\.\s*m\.\s*e\.\s*d\.\s*k/gi, 'comedk')
-      .replace(/p\.\s*g\.\s*c\.\s*e\.\s*t/gi, 'pgcet')
-      .replace(/n\.\s*a\.\s*t\.\s*a/gi, 'nata')
-      .replace(/j\.\s*e\.\s*e/gi, 'jee');
+    if (!text) return '';
+    let s = text.toLowerCase();
+
+    // Spaced forms first
+    s = s.replace(/\bb\.?\s*arch\b/gi, 'barch')
+         .replace(/\bm\.?\s*arch\b/gi, 'march')
+         .replace(/\bph\.?\s*d\.?\b/gi, 'phd')
+         .replace(/\bcomed\s*[- ]\s*k\b/gi, 'comedk');
+
+    // Strip all dots from acronyms: e.g. "m.o.u." -> "mou", "s.a.a.r." -> "saar", "p.g.c.e.t." -> "pgcet"
+    s = s.replace(/(?:^|[^a-z0-9])([a-z]\.(?:[a-z]\.)+[a-z]?)(?:$|[^a-z0-9])/gi, (match, acronym) => {
+      return match.replace(acronym, acronym.replace(/\./g, ''));
+    });
+
+    // Clean leftover dotted single letter sequences like "c.o.a" -> "coa"
+    s = s.replace(/\b([a-z])\.([a-z])\.([a-z])\.([a-z])\.([a-z])\b/gi, '$1$2$3$4$5')
+         .replace(/\b([a-z])\.([a-z])\.([a-z])\.([a-z])\b/gi, '$1$2$3$4')
+         .replace(/\b([a-z])\.([a-z])\.([a-z])\b/gi, '$1$2$3')
+         .replace(/\b([a-z])\.([a-z])\b/gi, '$1$2');
+
+    // Clean trailing dots after 2-6 letter acronyms at word boundaries
+    s = s.replace(/\b(mou|saar|udrcc|barch|march|phd|coa|vtu|kea|kcet|comedk|pgcet|nata|jee|rsst|rvei|rvca|rvce|nirf|naac|ugc|aicte|posh|icc|nss|ncc|nasa|gis|iia|unai|icomos|isro|iirs|uaa|acsa)\./gi, '$1');
+
+    // Common plural acronyms
+    s = s.replace(/\bmous\b/gi, 'mou');
+
+    return s;
   }
 
   // 11. NEGATION SHIELD
@@ -186,7 +225,7 @@
     {
       id: "about_rvca",
       priority: 1.0,
-      keywords: ["about rvca", "history", "established", "vision", "mission", "background", "institution"],
+      keywords: ["about rvca", "history", "established", "vision", "mission", "background", "institution", "coa", "council of architecture", "vtu", "nirf", "naac", "ranking", "rankings", "affiliation", "accreditation"],
       title: "About RV College of Architecture",
       response: `**Welcome to RV College of Architecture (RVCA)**\n\nEstablished in 1992 under the iconic **Rashtreeya Sikshana Samithi Trust (RSST)**, RV College of Architecture is Karnataka's premier school of architectural education:\n\n• **Institutional Legacy**: Started in 1992 as the Department of Architecture in RVCE, attained academic autonomy in 2009, and relocated in 2014 to its dedicated modern campus in Banashankari 6th Stage, Bengaluru.\n• **Accreditation & Affiliations**: Affiliated to Visvesvaraya Technological University (VTU), Belagavi, and approved by the Council of Architecture (COA), New Delhi.\n• **KEA College Code**: **E-244**\n• **Stellar Rankings**:\n  - **#1 in Karnataka & 13th in India** (MDRA India Today 2025)\n  - **2nd in Super Excellence Category in India** (GHRDC 2024)\n  - **14th Nationally** (THE WEEK 2025)\n• **Vision**: To be an architecture institute par excellence, nurturing academics, creative professional practice, and pioneering research for a sustainable contemporary society.\n\n🌐 **Official Website Link**: [Visit Official RVCA About Us Page (rvca.edu.in/about_us/)](https://rvca.edu.in/about_us/)`,
       chips: ["Courses", "Admissions", "Facilities", "Contact Us"]
@@ -353,8 +392,8 @@
     },
     {
       id: "campus_facilities",
-      priority: 1.0,
-      keywords: ["campus", "infrastructure", "facilities", "canteen", "transport", "bus", "doctor", "counselling", "sports"],
+      priority: 0.85,
+      keywords: ["campus", "infrastructure", "facilities", "canteen", "transport", "bus", "doctor", "counselling", "sports", "bus transport routes", "campus bus transport routes", "bus routes", "campus transport", "transport routes"],
       title: "Campus Facilities & Student Amenities",
       response: `**RVCA Campus Infrastructure & Amenities**\n\n• **Location**: CA Site No. 1, Banashankari 6th Stage, 4th Block, Chikegowadanapalya, Bengaluru - 560109.\n• **Campus Transport**: Extensive bus routes connecting key localities across Bengaluru. [Download Bus Routes PDF](https://rvca.edu.in/wp-content/uploads/2026/06/TRANSPORT-FEE-NOTIFICATION-AY-2026-27.pdf)\n• **Sports & Physical Education**: Indoor table tennis, sports fest, gym under Mr. Puneeth H K (Assistant Director PE).\n• **Healthcare & Counselling**: On-campus doctor and dedicated student counselling cell.\n• **Canteen**: Hygienic multi-cuisine cafeteria providing fresh meals and refreshments.\n• **Multipurpose Hall**: Acoustically treated hall for national symposiums, exhibitions, and guest lectures.`,
       chips: ["Hostel Facilities", "Library", "Skill Labs"]
@@ -514,7 +553,7 @@
     {
       id: "how_to_reach_location",
       priority: 0.85,
-      keywords: ["how to reach", "nearest metro", "metro connectivity", "bus connectivity", "location details", "directions to campus", "how to visit campus", "nearest metro station", "location of rvca"],
+      keywords: ["how to reach", "nearest metro", "metro connectivity", "bus connectivity", "location details", "directions to campus", "how to visit campus", "nearest metro station", "location of rvca", "where is the college located", "where is rvca", "where is the college", "located", "directions", "reach", "route"],
       title: "Location, Directions & Metro Transit Connectivity",
       response: `**How to Reach RV College of Architecture**\n\n• **Campus Address**:\n  CA Site No. 1, Banashankari 6th Stage, 4th Block, Chikegowadanapalya, Bengaluru - 560109, Karnataka, India.\n• **Google Maps Navigation**: [Open RVCA on Google Maps](https://maps.app.goo.gl/giLUPxmCUxKH9WdcA)\n\n🚇 **Nearest Metro Connectivity**:\n• **Namma Metro Green Line**: The nearest metro stations are **Vajarahalli Metro Station** and **Silk Institute Metro Station** on Kanakapura Road (~10-12 mins by auto/cab).\n\n🚌 **BMTC Bus & Institutional Transport**:\n• **BMTC Bus Stops**: Chikegowadanapalya / Banashankari 6th Stage bus stops connecting to Banashankari TTMC and Majestic.\n• **College Bus Fleet**: RVCA operates dedicated bus routes connecting major residential hubs across Bengaluru. [Download Bus Routes & Transport Notification](https://rvca.edu.in/wp-content/uploads/2026/06/TRANSPORT-FEE-NOTIFICATION-AY-2026-27.pdf)\n\n🚗 **Landmarks**: Located off Kanakapura Road near NICE Road junction, providing seamless ring-road connectivity across Bengaluru.`,
       chips: ["Campus Facilities", "Contact Us", "Hostel Facilities"]
@@ -794,6 +833,58 @@
       title: "Academic Departments at RV College of Architecture",
       response: `**Academic Departments at RV College of Architecture**\n\nRVCA operates 3 specialized academic departments encompassing undergraduate, postgraduate, and doctoral architectural education:\n\n1. 🏛️ **Department of Architecture (B.Arch — UG)**:\n   • Program: 5-Year Bachelor of Architecture (10 Semesters)\n   • Sanctioned Intake: **120 seats** | Code: KEA E-244 / CoA KA-35\n   • Head: Principal Dr. Rakesh K. S. & Dean Prof. Suresh K Murthy\n\n2. 🌆 **Department of Urban Design (M.Arch — PG)**:\n   • Program: 2-Year Master of Architecture in Urban Design (4 Semesters)\n   • Sanctioned Intake: **20 seats** (16 PGCET + 4 Management)\n   • Head: Prof. Prasanna Rao (Associate Dean PG Studies)\n\n3. 🔬 **Department of Doctoral Studies (Ph.D. Research Centre)**:\n   • Program: Doctor of Philosophy (Ph.D.) in Architecture under VTU Belagavi\n   • 5 Approved VTU Doctoral Guides with live MoHUA/NIUA SAAR research.\n\n🌐 **Official Programmes Portal**: [Explore Academic Programmes (rvca.edu.in/programmes/)](https://rvca.edu.in/programmes/)`,
       chips: ["B.Arch Program", "M.Arch Urban Design", "Ph.D. Program", "Faculty Directory"]
+    },
+
+    // ==========================================
+    // COLLABORATIONS & INSTITUTIONAL PARTNERSHIPS
+    // ==========================================
+    {
+      id: "collaborations_overview",
+      priority: 0.8,
+      keywords: ["collaborations", "collaboration", "partnerships", "partnership", "mou", "mous", "institutional agreements", "international partnerships", "industry tie ups", "collaborations overview"],
+      title: "Collaborations & Global Partnerships at RVCA",
+      response: `**Institutional Collaborations & Memorandums of Understanding (MoUs)**\n\nRV College of Architecture maintains formal collaborative partnerships across international universities, industry pioneers, and national bodies:\n\n🌍 **Academic Collaborations (Student & Faculty Exchange)**:\n• **Haute école d'ingénierie et d'architecture (HEIA)**, Fribourg, Switzerland\n• **Bern University of Applied Sciences** (Architecture, Wood & Civil Engg), Switzerland\n• **KU Leuven** (Katholieke Universiteit Leuven, Dept of Architecture), Belgium\n• **K.R. Mangalam University**, Sohna, Haryana, India\n• **Centre for Development Studies and Activities (CDSA)**, Pune, India\n\n🏭 **Industry MoUs & Technical Alliances**:\n• **Häfele India Pvt. Ltd.** — International architectural hardware and fittings technology.\n• **M/s. GESIX Solutions Pvt. Ltd.** — Geospatial analytics, LiDAR surveying & 3D point cloud mapping.\n• **M/s. Teekay Interior Solutions** — Instituted annual Award for Excellence in Architectural Design.\n• **M/s. Rathi Associates, Bengaluru** — Instituted the 'Best Thesis Award' in memory of Late Ar. B.H. Rathi.\n• **Rotaract Club, RVCA** (under Rotary Bangalore Orchards) & **Yuvaka Sangha NGO**.\n\n🏛️ **Institutional Memberships & Accreditations**:\n• **The Indian Institute of Architects (IIA)**\n• **United Nations Academic Impact (UNAI)** — Upholding UNAI's 10 global principles.\n• **ICOMOS (International Council on Monuments and Sites)** — Heritage conservation.\n• **IIRS-ISRO Dehradun Outreach Programme** — Recognized official Nodal Centre for remote sensing/GIS.\n• **Urban Affairs Association (UAA)** & **Association of Collegiate Schools of Architecture (ACSA)**, USA.\n\n🌐 **Official Portal**: [Explore Collaborations (rvca.edu.in/collaborations/)](https://rvca.edu.in/collaborations/)`,
+      chips: ["Academic Collaborations", "Industry Collaborations", "Institutional Memberships", "Research Overview"]
+    },
+    {
+      id: "academic_collaborations",
+      priority: 0.82,
+      keywords: ["academic collaborations", "foreign universities", "student exchange", "faculty exchange", "heia fribourg", "bern university", "ku leuven", "kr mangalam", "cdsa pune", "study abroad exchange"],
+      title: "Academic Collaborations & International Universities",
+      response: `**Academic Collaborations & Global Exchange at RVCA**\n\nRVCA has active bilateral Memorandums of Understanding (MoU) for student and faculty exchange, joint studio reviews, and pedagogical development:\n\n1. 🇨🇭 **HEIA Fribourg (Switzerland)**:\n   • *Haute école d'ingénierie et d'architecture de Fribourg* — Student semester exchanges and collaborative workshops on contemporary European structural typologies.\n\n2. 🇨🇭 **Bern University of Applied Sciences (Switzerland)**:\n   • Department of Architecture, Wood, and Civil Engineering — Active MoU focusing on sustainable timber construction, prefabrication, and sustainable design.\n\n3. 🇧🇪 **KU Leuven (Belgium)**:\n   • Katholieke Universiteit Leuven (Faculty of Architecture) — International studio critiques, faculty dialogue, and higher education articulation.\n\n4. 🇮🇳 **K.R. Mangalam University (Haryana, India)**:\n   • National academic exchange, inter-institutional design juries, and curriculum benchmarking.\n\n5. 🇮🇳 **Centre for Development Studies and Activities (CDSA, Pune)**:\n   • Research collaboration in regional planning, social housing, and participatory human settlement studies.\n\n🌐 **Official Portal**: [Academic Collaborations (rvca.edu.in/collaborations/)](https://rvca.edu.in/collaborations/)`,
+      chips: ["Collaborations", "GlobEd", "M.Arch Urban Design", "Research Overview"]
+    },
+    {
+      id: "industry_collaborations",
+      priority: 0.82,
+      keywords: ["industry collaborations", "hafele", "gesix", "teekay", "rathi associates", "best thesis award", "industry mou", "hardware fittings", "lidar surveying", "yuvaka sangha"],
+      title: "Industry Collaborations & Studio Awards",
+      response: `**Industry Collaborations & Technical Alliances at RVCA**\n\nRVCA partners directly with global manufacturers and design firms to provide students hands-on technical exposure and merit honors:\n\n1. 🇩🇪 **Häfele India Pvt. Ltd., Bengaluru**:\n   • Partnership with Germany's leading architectural hardware, lighting, and fittings manufacturer for live studio demonstrations and material specification workshops.\n\n2. 🛰️ **M/s. GESIX Solutions Pvt. Ltd.**:\n   • Advanced Geospatial, LiDAR-based topographic surveying, drone photogrammetry, and 3D point-cloud mapping integration for urban design studios.\n\n3. 🏆 **M/s. Rathi Associates, Bengaluru**:\n   • Instituted the prestigious **'Best Thesis Award'** with cash prize and citation in fond memory of Late Architect Shri B.H. Rathi.\n\n4. 🏅 **M/s. Teekay Interior Solutions**:\n   • Instituted the annual **Award for Excellence in Architectural Design** honoring exemplary graduating students.\n\n5. 🤝 **Community & Social Partnerships**:\n   • **Rotaract Club RVCA** (under Rotary Club Bangalore Orchards) and **Yuvaka Sangha** NGO for community-scale social outreach, blood donation drives, and rural surveys.\n\n🌐 **Official Portal**: [Industry Collaborations (rvca.edu.in/collaborations/)](https://rvca.edu.in/collaborations/)`,
+      chips: ["Collaborations", "Placements", "Internships", "Achievements"]
+    },
+    {
+      id: "institutional_memberships",
+      priority: 0.82,
+      keywords: ["institutional memberships", "iia", "unai", "icomos", "isro nodal centre", "iirs isro", "urban affairs association", "acsa", "memberships in rvca"],
+      title: "Institutional Memberships & Accreditations",
+      response: `**Institutional Memberships & Accreditations at RVCA**\n\nRVCA is officially affiliated with premier national and global architectural bodies:\n\n1. 🏛️ **The Indian Institute of Architects (IIA)**:\n   • Institutional member committed to upholding national professional standards, code of ethics, and architectural education in India.\n\n2. 🇺🇳 **United Nations Academic Impact (UNAI)**:\n   • Official member institution carrying out annual educational activities advancing UNAI's 10 core principles (human rights, sustainability, peace, and education for all).\n\n3. 🏰 **ICOMOS (International Council on Monuments and Sites)**:\n   • Active collaboration for historic monument preservation, measured heritage documentation, and international heritage conventions.\n\n4. 🚀 **IIRS-ISRO Dehradun Outreach Programme**:\n   • Formally recognized **Nodal Centre** conducting live online certification courses in Remote Sensing, Geographical Information Systems (GIS), and Global Navigation Satellite Systems (GNSS) for students and faculty.\n\n5. 🌎 **International Academic Memberships (USA)**:\n   • **Urban Affairs Association (UAA)** — Institutional member.\n   • **Association of Collegiate Schools of Architecture (ACSA)** — Institutional member.\n\n🌐 **Official Portal**: [Collaborations & Memberships (rvca.edu.in/collaborations/)](https://rvca.edu.in/collaborations/)`,
+      chips: ["Collaborations", "Research Overview", "Heritage Club", "Skill Labs"]
+    },
+    {
+      id: "consultancy_cell",
+      priority: 0.8,
+      keywords: ["consultancy cell", "consultancy", "consultancy services", "udrcc consultancy", "smart city consultancy", "shivamogga smart city", "bengaluru smart city limited", "municipal projects"],
+      title: "Urban Design Research & Consultancy Cell (UDRCC)",
+      response: `**Institutional Consultancy Cell (UDRCC) at RVCA**\n\n🏛️ **Overview & Purpose**:\n  The Urban Design Research and Consultancy Cell (UDRCC) serves as the institutional consulting practice of RVCA, bridging creative academia and live municipal governance.\n\n🌆 **Major Ongoing & Past Projects**:\n  • **Smart Cities (SAAR 2.0)**: Selected by MoHUA & NIUA as one of India's top 15 institutes to provide urban design consultancy for **Shivamogga Smart City Limited** and **Bengaluru Smart City Limited**.\n  • **SAAR 1.0 Documentation**: Field audits and documentation of landmark urban interventions in Bengaluru, Davanagere, and Belagavi.\n  • **Pandharpur Urban Transformation**: Studio-II field research on public spaces and informal economies during Ashadh Wari, published with Routledge.\n  • **Spatial Analytics & Master Planning**: LiDAR surveying, streetscape redesign, pedestrian wayfinding, and lake rejuvenation feasibility.\n\n👥 **Student Immersion**:\n  Master of Architecture (Urban Design) scholars and final-year B.Arch students actively work on real-world client deliverables alongside registered architects and urban design consultants.\n\n🌐 **Official Portal**: [RVCA Consultancy Cell (rvca.edu.in/consultancy_cell/)](https://rvca.edu.in/consultancy_cell/)`,
+      chips: ["Smart City (SAAR)", "M.Arch Urban Design", "Collaborations", "Research Overview"]
+    },
+    {
+      id: "events_and_workshops",
+      priority: 0.82,
+      keywords: ["events", "workshops", "seminars", "guest lectures", "symposiums", "globed 4.0", "globed season 3", "exhibitions", "annual exhibition", "dimensions exhibition"],
+      title: "Events, Workshops & Academic Symposia",
+      response: `**Events, Workshops & Exhibitions at RVCA**\n\nRVCA maintains a vibrant calendar of hands-on technical workshops, national symposiums, and cultural exhibitions:\n\n🛠️ **Signature Hands-On Workshops**:\n• **Tensile Structures Workshop**: Hands-on membrane physics and cable-stayed model crafting.\n• **Bamboo Construction Workshop**: Jointing, curing, and organic form prototyping.\n• **Masonry Vaults & Jack-Arch Roofs**: Timbrel vaulting and traditional load-bearing brickwork.\n• **Wooden Mural Assemblages & Mixed Media Installations**.\n• **Tin-Cure Silicone Rubber Molding & Resin Casting**.\n• **Charcoal Drawing & Plein-Air Sketching**.\n\n🌍 **Academic Symposia & Expert Talks**:\n• **Globed Season 3 & Globed 4.0**: Global higher education conferences with international university delegates.\n• **ICOMOS at RVCA**: Heritage preservation symposiums with international delegates.\n• **National Symposium on Open Space Matters**: Public parks, biodiversity, and urban commons.\n• **VISSIM & VISUM Traffic Simulation**: Advanced urban mobility and microsimulation training.\n• **Global Mapper & GIS Certification**: Spatial analytics training for smart settlements.\n• **Vedic Vastu Shastra**: Value-addition certificate course exploring ancient spatial geometries.\n\n🎨 **Annual Design Exhibitions**:\n• **Dimensions**: Annual architectural exhibition presenting premier studio projects to leading practitioners, alumni, and parents.\n\n🌐 **Official Events Portal**: [Explore RVCA Events (rvca.edu.in/events/)](https://rvca.edu.in/events/)`,
+      chips: ["Student Clubs", "Publications", "Campus Life", "About RVCA"]
     }
   ];
 
@@ -900,7 +991,7 @@
     "smart city projects": "smart_city_research",
     "smart city (saar)": "smart_city_research",
     "saar": "smart_city_research",
-    "udrcc": "smart_city_research",
+    "udrcc": "research_udrcc",
     "research guides": "research_guides",
     "phd guides": "research_guides",
     "contact authorities": "contact_directory",
@@ -965,11 +1056,226 @@
     "global research": "research_collaborations",
     "global collaborations": "research_collaborations",
     "urban design cell (udrcc)": "research_udrcc",
-    "urban design cell": "research_udrcc",
     "smart city (saar)": "smart_city_research",
     "smart city projects": "smart_city_research",
     "cell coordinators": "faculty_incharges_committees",
-    "non-teaching staff": "faculty_non_teaching"
+    "collaborations": "collaborations_overview",
+    "collaborations overview": "collaborations_overview",
+    "academic collaborations": "academic_collaborations",
+    "industry collaborations": "industry_collaborations",
+    "institutional memberships": "institutional_memberships",
+    "memberships": "institutional_memberships",
+    "consultancy": "consultancy_cell",
+    "consultancy cell": "consultancy_cell",
+    "events": "events_and_workshops",
+    "workshops": "events_and_workshops",
+    "events & workshops": "events_and_workshops",
+
+    // ==========================================
+    // COMPREHENSIVE SINGLE-WORD & ACRONYM LOOKUP (RVCE STANDARD)
+    // ==========================================
+    // Collaborations & Alliances
+    "mou": "collaborations_overview",
+    "mous": "collaborations_overview",
+    "collaboration": "collaborations_overview",
+    "partnerships": "collaborations_overview",
+    "partnership": "collaborations_overview",
+    "tieup": "collaborations_overview",
+    "tieups": "collaborations_overview",
+    "fribourg": "academic_collaborations",
+    "heia": "academic_collaborations",
+    "bern": "academic_collaborations",
+    "leuven": "academic_collaborations",
+    "kuleuven": "academic_collaborations",
+    "cdsa": "academic_collaborations",
+    "hafele": "industry_collaborations",
+    "gesix": "industry_collaborations",
+    "teekay": "industry_collaborations",
+    "rathi": "industry_collaborations",
+    "iia": "institutional_memberships",
+    "unai": "institutional_memberships",
+    "icomos": "institutional_memberships",
+    "isro": "institutional_memberships",
+    "iirs": "institutional_memberships",
+    "uaa": "institutional_memberships",
+    "acsa": "institutional_memberships",
+
+    // Consultancy & Smart Cities
+    "udrcc": "research_udrcc",
+    "saar": "smart_city_research",
+    "smartcity": "smart_city_research",
+    "shivamogga": "consultancy_cell",
+
+    // Research & Awards
+    "daida": "research_collaborations",
+    "bochum": "research_collaborations",
+    "photovoice": "research_collaborations",
+
+    // Publications
+    "kalpa": "kalpa_magazine",
+    "subversion": "subversion_journal",
+    "publication": "publications_deep",
+    "journal": "subversion_journal",
+    "journals": "publications_deep",
+    "magazine": "kalpa_magazine",
+    "magazines": "publications_deep",
+    "newsletter": "publications_deep",
+    "newsletters": "publications_deep",
+
+    // Student Clubs
+    "club": "clubs",
+    "art": "club_art",
+    "dance": "club_dance",
+    "originals": "club_dance",
+    "drama": "club_drama",
+    "frameworks": "club_drama",
+    "theatre": "club_drama",
+    "theater": "club_drama",
+    "music": "club_music",
+    "decibels": "club_music",
+    "band": "club_music",
+    "heritage": "club_heritage",
+    "sustainability": "club_sustainability",
+    "nature": "club_sustainability",
+    "quiz": "club_quiz",
+    "pottery": "lab_pottery",
+    "clay": "lab_pottery",
+    "terracotta": "club_terra",
+    "ceramics": "club_terra",
+    "cinema": "club_cinema",
+    "movie": "club_cinema",
+    "film": "club_cinema",
+    "trail": "club_trail",
+    "photography": "club_trail",
+    "photo": "club_trail",
+
+    // Events & Workshops
+    "event": "events_and_workshops",
+    "workshop": "events_and_workshops",
+    "seminar": "events_and_workshops",
+    "seminars": "events_and_workshops",
+    "symposium": "events_and_workshops",
+    "symposiums": "events_and_workshops",
+    "exhibition": "events_and_workshops",
+    "exhibitions": "events_and_workshops",
+    "dimensions": "events_and_workshops",
+
+    // Academic Programs & Degrees
+    "barch": "barch_program",
+    "march": "march_program",
+    "phd": "phd_program",
+    "degrees": "courses_overview",
+    "degree": "courses_overview",
+
+    // Admissions & Entrance Tests
+    "apply": "admissions_overview",
+    "criteria": "barch_eligibility",
+    "cutoff": "barch_eligibility",
+    "cutoffs": "barch_eligibility",
+    "nata": "barch_eligibility",
+    "kcet": "barch_program",
+    "cet": "barch_program",
+    "comedk": "barch_program",
+    "pgcet": "march_program",
+    "gate": "march_program",
+    "management": "management_quota",
+
+    // Fees, Placements & Careers
+    "fee": "fees",
+    "tuition": "fees",
+    "cost": "fees",
+    "jobs": "placements",
+    "recruiters": "placements",
+    "intern": "internships",
+    "scholarship": "scholarships_aid",
+
+    // Campus Infrastructure & Hostels
+    "hostel": "hostels",
+    "mess": "hostels",
+    "accommodation": "hostels",
+    "rooms": "hostels",
+    "room": "hostels",
+    "boarding": "hostels",
+    "books": "library",
+    "opac": "library",
+    "jstor": "library",
+    "studio": "experiential_studios",
+    "labs": "skill_labs",
+    "lab": "skill_labs",
+    "bus": "campus_facilities",
+    "buses": "campus_facilities",
+    "cafeteria": "canteen_and_dining",
+    "food": "canteen_and_dining",
+    "gym": "sports_and_fitness",
+    "gymnasium": "sports_and_fitness",
+
+    // Governance & Compliance
+    "ragging": "antiragging",
+    "committee": "committees",
+    "posh": "committees",
+    "icc": "committees",
+    "grievance": "committees",
+    "disability": "committees",
+    "nss": "committees",
+    "ncc": "committees",
+    "rotaract": "committees",
+    "trustee": "board_of_management",
+    "trustees": "board_of_management",
+    "rsst": "board_of_management",
+    "rvei": "board_of_management",
+    "governance": "board_of_management",
+    "founder": "board_of_management",
+
+    // Faculty & Staff
+    "teachers": "faculty_directory",
+    "teacher": "faculty_directory",
+    "staff": "faculty_directory",
+    "professor": "faculty_professors",
+
+    // General & Contact
+    "ranking": "about_rvca",
+    "rankings": "about_rvca",
+    "nirf": "about_rvca",
+    "naac": "about_rvca",
+    "awards": "achievements",
+    "award": "achievements",
+    "trophies": "achievements",
+    "trophy": "achievements",
+    "address": "contact_directory",
+    "phone": "contact_directory",
+    "email": "contact_directory",
+        "director": "dean",
+    "dean": "dean",
+    "principal": "principal",
+    "coa": "about_rvca",
+    "vtu": "about_rvca",
+    "nirf": "about_rvca",
+    "naac": "about_rvca",
+    "jee": "barch_eligibility",
+    "kea": "admissions_overview",
+    "admission": "admissions_overview",
+    "placement": "placements",
+    "ncc": "committees",
+    "nss": "committees",
+    "posh": "committees",
+    "icc": "committees",
+    "located": "how_to_reach_location",
+    "directions": "how_to_reach_location",
+    "reach": "how_to_reach_location",
+    "route": "how_to_reach_location",
+    "timings": "timings_and_schedule",
+    "timing": "timings_and_schedule",
+    "schedule": "timings_and_schedule",
+    "hours": "timings_and_schedule",
+    "tour": "study_tours",
+    "tours": "study_tours",
+    "visit": "site_visits",
+    "visits": "site_visits",
+    "pottery club": "club_terra",
+    "clay club": "club_terra",
+    "terra thoughts": "club_terra",
+    "location": "how_to_reach_location",
+    "map": "how_to_reach_location"
   };
 
   // 7. DYNAMIC FACULTY DETECTIVE & MULTI-MATCH (Matching RVCE standard)
@@ -982,7 +1288,7 @@
     if (/^(faculty|faculty directory|faculty list|all faculty|faculty members|who teaches|teachers|staff|faculty search|search faculty|find faculty)$/i.test(clean)) {
       return [];
     }
-    if (/\b(fees|fee|tuition|cost|hostel|hostels|mess|placement|placements|admission|admissions|apply|eligibility|cutoff|cutoffs|syllabus|curriculum|antiragging|ragging)\b/i.test(clean)) {
+    if (/\b(fees|fee|tuition|cost|hostel|hostels|mess|placement|placements|admission|admissions|apply|eligibility|cutoff|cutoffs|syllabus|curriculum|antiragging|ragging|jee|nata|kcet|comedk|pgcet|gate|mou|saar|udrcc|coa|vtu|barch|march|phd|nirf|naac|ncc|nss|posh|icc)\b/i.test(clean)) {
       return [];
     }
 
@@ -1217,6 +1523,18 @@
     if (/\b(gis lab|spatial analytics lab|arcgis lab|qgis lab)\b/i.test(combined)) return "lab_gis";
     if (/\b(faculty papers|springer|taylor and francis paper|cities and health|photovoice paper|urban floods paper|pandharpur paper|scopus publications|faculty citations|papers published in springer)\b/i.test(combined)) return "faculty_publications_papers";
 
+    // Collaborations & Partnerships
+    if (/\b(academic collaborations?|foreign universities|student exchange|faculty exchange|heia fribourg|bern university|ku leuven|kr mangalam|cdsa pune)\b/i.test(combined)) return "academic_collaborations";
+    if (/\b(industry collaborations?|hafele|gesix|teekay|rathi associates|best thesis award|industry mou|hardware fittings|lidar surveying)\b/i.test(combined)) return "industry_collaborations";
+    if (/\b(institutional memberships?|iia membership|unai|icomos|isro nodal|iirs isro|urban affairs association|acsa)\b/i.test(combined)) return "institutional_memberships";
+    if (/\b(collaborations?|partnerships?|mous?|mou agreements?)\b/i.test(combined)) return "collaborations_overview";
+
+    // Consultancy & Municipal Interventions
+    if (/\b(consultancy cell|consultancy services?|udrcc consultancy|smart city consultancy|shivamogga smart city|bengaluru smart city)\b/i.test(combined)) return "consultancy_cell";
+
+    // Events, Workshops & Symposia
+    if (/\b(events|workshops|seminars|guest lectures|symposiums?|exhibitions?|dimensions exhibition|globed 4\.0|globed season 3)\b/i.test(combined) && !/\b(sports)\b/i.test(combined)) return "events_and_workshops";
+
     // Specific Research & Publication triggers
     if (/\b(smart city|saar|shivamogga smart)\b/i.test(combined)) return "smart_city_research";
     if (/\b(kalpa)\b/i.test(combined)) return "kalpa_magazine";
@@ -1253,7 +1571,7 @@
 
     if (hasPhD && (hasEligibility || hasAdmissions)) return "phd_program";
 
-    if (/\b(hostel|mess)\b/i.test(combined) && hasFees) return "hostels";
+    if (/\b(hostel fees?|mess fees?|hostel charges?|mess charges?)\b/i.test(combined)) return "hostels";
     if (/\b(hostel|mess)\b/i.test(combined) && /\b(warden|contact|incharge)\b/i.test(combined)) return "hostels";
 
     return null;
@@ -1265,6 +1583,7 @@
       this.lastIntent = null;
       this.lastCategory = null;
       this.history = [];
+      this.pendingOverflows = [];
     }
 
     update(intentId, rawQuery) {
@@ -1389,6 +1708,83 @@
     // 4. DOT-STRIPPING & ACRONYM SANITIZATION
     const sanitized = sanitizeAcronyms(raw);
 
+    // 4.1 DIRECT SANITIZED ACRONYM BYPASS (0ms Zero Error)
+    const sanitizedKey = sanitized.trim();
+    if (INTENT_LABELS[sanitizedKey]) {
+      const intentObj = INTENTS.find(i => i.id === INTENT_LABELS[sanitizedKey]);
+      if (intentObj) {
+        session.update(intentObj.id, raw);
+        return {
+          intentId: intentObj.id,
+          title: intentObj.title,
+          response: intentObj.response,
+          chips: intentObj.chips,
+          overflow: [],
+          latencyMs: parseFloat((performance.now() - startTime).toFixed(2)),
+          isDirectBypass: true
+        };
+      }
+    }
+
+    // 8.1 MULTI-CLAUSE QUERY SPLITTER & OVERFLOW (RVCE Architecture Standard)
+    // Splits queries like "tell me about fees and hostel", "what is mou and what are research projects"
+    const sanitizedNoEntities = sanitized
+      .replace(/\btaylor\s+and\s+francis\b/gi, 'taylor_and_francis')
+      .replace(/\b(urban\s+design\s+)?research\s+and\s+consultancy\s+cell\b/gi, 'udrcc');
+    const hasConjunction = /\b(and|&|also|as well as|\+|along with)\b|,/i.test(sanitizedNoEntities);
+    if (hasConjunction) {
+      const clauses = sanitizedNoEntities.split(/\s+(?:and|&|also|as well as|\+|along with)\s+|,|\;|\?+/i).map(c => c.trim().replace(/taylor_and_francis/gi, 'taylor and francis')).filter(Boolean);
+      if (clauses.length > 1) {
+        const detectedClauseIntents = [];
+        for (const clause of clauses) {
+          if (!clause) continue;
+          const cTokens = clause.split(/[^a-z0-9_-]+/i).filter(t => !PROTECTED_TOKENS.has(t) && !STOP_WORDS.has(t)).map(correctTypo);
+          const cProcessed = cTokens.join(' ');
+          let clauseIntentId = INTENT_LABELS[clause] || INTENT_LABELS[cProcessed] || (cTokens.length === 1 ? INTENT_LABELS[cTokens[0]] : null);
+
+          if (!clauseIntentId) {
+            clauseIntentId = resolveCompositeIntent(clause, cTokens);
+          }
+          if (!clauseIntentId) {
+            for (const item of INTENTS) {
+              if (item.keywords.some(kw => clause.includes(kw) || cTokens.includes(kw))) {
+                clauseIntentId = item.id;
+                break;
+              }
+            }
+          }
+
+          if (clauseIntentId && !detectedClauseIntents.some(d => d.id === clauseIntentId)) {
+            const obj = INTENTS.find(i => i.id === clauseIntentId);
+            if (obj) detectedClauseIntents.push(obj);
+          }
+        }
+
+        if (detectedClauseIntents.length > 1) {
+          const primary = detectedClauseIntents[0];
+          const overflow = detectedClauseIntents.slice(1).map(i => ({
+            id: i.id,
+            label: i.title,
+            chipText: i.title
+          }));
+
+          session.update(primary.id, raw);
+          if (session.pendingOverflows) {
+            session.pendingOverflows = overflow.map(o => o.id);
+          }
+
+          return {
+            intentId: primary.id,
+            title: primary.title,
+            response: primary.response,
+            chips: primary.chips,
+            overflow: overflow,
+            latencyMs: parseFloat((performance.now() - startTime).toFixed(2))
+          };
+        }
+      }
+    }
+
     // 7. DYNAMIC FACULTY DETECTIVE & MULTI-MATCH (Matching RVCE benchmark standard)
     const facultyMatches = findFacultyMatches(raw);
     if (facultyMatches.length > 0 && !/\b(fees|hostel|placements|antiragging)\b/i.test(sanitized)) {
@@ -1463,6 +1859,39 @@
       }
     }
     const processedQuery = cleanedTokens.join(' ');
+
+    // 2.1 DIRECT POST-GRAMMAR SINGLE-WORD / PROCESSED QUERY BYPASS (Zero Error)
+    // Resolves queries like "can you please give me mou details" -> cleanedTokens: ['mou'] -> direct hit!
+    if (INTENT_LABELS[processedQuery]) {
+      const intentObj = INTENTS.find(i => i.id === INTENT_LABELS[processedQuery]);
+      if (intentObj) {
+        session.update(intentObj.id, raw);
+        return {
+          intentId: intentObj.id,
+          title: intentObj.title,
+          response: intentObj.response,
+          chips: intentObj.chips,
+          overflow: [],
+          latencyMs: parseFloat((performance.now() - startTime).toFixed(2)),
+          isDirectBypass: true
+        };
+      }
+    }
+    if (cleanedTokens.length === 1 && INTENT_LABELS[cleanedTokens[0]]) {
+      const intentObj = INTENTS.find(i => i.id === INTENT_LABELS[cleanedTokens[0]]);
+      if (intentObj) {
+        session.update(intentObj.id, raw);
+        return {
+          intentId: intentObj.id,
+          title: intentObj.title,
+          response: intentObj.response,
+          chips: intentObj.chips,
+          overflow: [],
+          latencyMs: parseFloat((performance.now() - startTime).toFixed(2)),
+          isDirectBypass: true
+        };
+      }
+    }
 
     // 6. COMPOSITE INTENT RESOLUTION MATRIX (Check explicit compound terms first)
     const compositeId = resolveCompositeIntent(sanitized, cleanedTokens);
@@ -1569,6 +1998,9 @@
       }));
 
       session.update(primary.id, raw);
+      if (session.pendingOverflows) {
+        session.pendingOverflows = overflow.map(o => o.id);
+      }
 
       return {
         intentId: primary.id,

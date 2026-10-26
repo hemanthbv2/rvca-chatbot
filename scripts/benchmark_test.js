@@ -158,7 +158,30 @@ const TEST_CASES = [
   { query: "department of urban design pg", expectedIntent: "department_march", category: "Departments" },
   { query: "doctoral department research centre", expectedIntent: "department_phd", category: "Departments" },
   { query: "all academic departments in rvca", expectedIntent: "departments_all", category: "Departments" },
-  { query: "tell me about rvca publications", expectedIntent: "publications_deep", category: "Publications Deep" }
+  { query: "tell me about rvca publications", expectedIntent: "publications_deep", category: "Publications Deep" },
+
+  // 20. Institutional Collaborations & Global MoUs
+  { query: "tell me about collaborations", expectedIntent: "collaborations_overview", category: "Collaborations" },
+  { query: "what partnerships does rvca have", expectedIntent: "collaborations_overview", category: "Collaborations" },
+  { query: "academic collaborations in rvca", expectedIntent: "academic_collaborations", category: "Collaborations" },
+  { query: "foreign university student exchange", expectedIntent: "academic_collaborations", category: "Collaborations" },
+  { query: "industry collaborations with hafele", expectedIntent: "industry_collaborations", category: "Collaborations" },
+  { query: "gesix solutions lidar surveying mou", expectedIntent: "industry_collaborations", category: "Collaborations" },
+  { query: "institutional memberships in iia and unai", expectedIntent: "institutional_memberships", category: "Collaborations" },
+  { query: "isro nodal centre courses", expectedIntent: "institutional_memberships", category: "Collaborations" },
+
+  // 21. Consultancy Cell & Events
+  { query: "tell me about consultancy cell", expectedIntent: "consultancy_cell", category: "Consultancy" },
+  { query: "smart city consultancy services", expectedIntent: "consultancy_cell", category: "Consultancy" },
+  { query: "workshops and events in rvca", expectedIntent: "events_and_workshops", category: "Events" },
+  { query: "tensile structures workshop", expectedIntent: "events_and_workshops", category: "Events" },
+  { query: "globed season 3 higher education", expectedIntent: "events_and_workshops", category: "Events" },
+
+  // 22. Additional Student Clubs
+  { query: "tell me about book club", expectedIntent: "club_book", category: "Student Clubs" },
+  { query: "heritage club vernacular documentation", expectedIntent: "club_heritage", category: "Student Clubs" },
+  { query: "quiz club trivia competitions", expectedIntent: "club_quiz", category: "Student Clubs" },
+  { query: "decibels music club jamming", expectedIntent: "club_music", category: "Student Clubs" }
 ];
 
 async function runBenchmark() {

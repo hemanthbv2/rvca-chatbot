@@ -416,44 +416,203 @@ const RVCA_KB = {
     }
   ],
 
+  researchAndInnovation: {
+    overview: "RVCA spearheads architectural, environmental, and urban design research through institutional cells, international academic partnerships, and national Smart City initiatives.",
+    smartCitiesSAAR: {
+      title: "Smart Cities and Academia Towards Action & Research (SAAR)",
+      mandate: "Joint initiative by Ministry of Housing and Urban Affairs (MoHUA) and National Institute of Urban Affairs (NIUA). RVCA is selected as one of the top 15 premier institutes of academic excellence in India.",
+      saar1: "Under SAAR 1.0, RVCA documented and evaluated landmark urban development projects across Bengaluru, Davanagere, and Belagavi smart cities.",
+      saar2: "Under SAAR 2.0, RVCA is actively engaged in live research and consultancy projects with Shivamogga Smart City Limited and Bengaluru Smart City Limited, providing M.Arch scholars direct immersion in urban governance."
+    },
+    udrcc: {
+      name: "Urban Design Research and Consultancy Cell (UDRCC)",
+      role: "Professional consultancy and municipal advisory arm for spatial analysis, GIS mapping, urban regeneration, transit corridors, and public space rejuvenation."
+    },
+    daidaGlobalAwards2023: {
+      theme: "CITIES FOR ALL: Addressing Minorities",
+      finalist: "Anuja Netalkar (Batch 2022-23 M.Arch Urban Design)",
+      thesisTitle: "Regeneration of wastescapes to create healthy work and living environment through closed loop system in the city: Case of waste-pickers, Nayandahalli, Bengaluru",
+      achievement: "Shortlisted among the top eight global finalists to present."
+    },
+    internationalCollaborations: [
+      {
+        institution: "Ruhr-University Bochum, Germany",
+        topic: "Application of Photovoice digital participatory place analysis tool in public spaces",
+        publication: "Journal: CITIES & HEALTH (Routledge Taylor & Francis, Jan 2024, DOI: 10.1080/23748834.2024.2307739)"
+      },
+      {
+        institution: "KRVIA Mumbai, University of Florida Gainesville USA & iNTA",
+        topic: "8th International Network of Tropical Architecture conference on Climate Justice and Resilience (March 2024)"
+      }
+    ],
+    facultyPublications2024: [
+      { author: "Ms. Hiranmayi S (Co-Author)", title: "Physical Activity in Public Space: insights from a Global Community of Practice Applying Photovoice as a Tool for Digital Participatory Place Analysis", journal: "CITIES & HEALTH (Routledge Taylor & Francis)", doi: "10.1080/23748834.2024.2307739", date: "January 13, 2024" },
+      { author: "Ms. Hiranmayi S (Co-Author with Arunima Badrinath & Sphurti Purohit)", title: "Exploring the Role of Public Spaces in Accommodating Economic Activities during Ashadh Wari in Pandharpur: Case of Chowk, Galli and Ghat", book: "Future is Urban II: Urban Resilience, Capacity Building, Nature-Based Solutions (Taylor & Francis London)", isbn: "978-1-032-78443-4", year: 2024 },
+      { author: "Mr. Ajinkya Kanitkar (Co-Author)", title: "Mobility as a Response to Urban Floods and its Implications for Risk Mitigation: A Local Area Level Case Study from Guwahati, Assam", book: "Climate Crisis, Social Responses and Sustainability (Climate Change Management Series, Springer Nature, pp 487-520)", isbn: "978-3-031-58260-8", date: "May 29, 2024", indexed: "Scopus" },
+      { author: "Mr. Ujjayant Bhattacharyya", title: "[GOD]Makers of Kumartuli", publication: "KALPA Annual Magazine Vol. 4 (Theme: Materia-Versa), ISSN 2583-696X, pp. 82-88", date: "February 24, 2024" },
+      { author: "Prof. Phani Ram Pingali, Ms. Anupriya Saxena, & Ms. Ramya Krishna", title: "Educating the Architect about Green Building Materials – A Case Study of Green Building Project in the Undergraduate Course", publication: "KALPA Annual Magazine Vol. 4, ISSN 2583-696X", date: "February 24, 2024" },
+      { author: "Dr. Shikha Verma", title: "Sustainable System for Recycling C & D Waste – A Conceptual Framework", publication: "KALPA Annual Magazine Vol. 4, ISSN 2583-696X, pp. 82-88", date: "February 24, 2024" },
+      { author: "Ms. Jagrati Jain", title: "Thermal Performance of Mud in Composite Climate: An Overview", publication: "KALPA Annual Magazine Vol. 4, ISSN 2583-696X", date: "February 24, 2024" },
+      { author: "Ms. Shreya Sudesh", title: "Creating Heritage-led ESG Investment Process in India", forum: "8th iNTA Conference, KRVIA Mumbai", date: "March 14-15, 2024" },
+      { author: "Ms. Ishani Gogoi", title: "A Review & Critique on the Changing Dimensions of Social in NCR Region", forum: "Int'l Conference on Inclusive, Resilient and Sustainable Human Settlement (Poornima University & CoA-TRC Bhopal)", date: "May 02-04, 2024" },
+      { author: "Ms. Archana Vittal", title: "An Analysis of Case Studies of Pedestrian Wayfinding Systems Across the World and Their Relevance in Indian Cities", forum: "Int'l Conference on Inclusive, Resilient and Sustainable Human Settlement (Poornima University & CoA-TRC Bhopal)", date: "May 02-04, 2024" }
+    ],
+    archivedCompendiums: [
+      { year: 2023, title: "Paper Presentation / Publication by Faculty during 2023", pdfUrl: "https://rvca.edu.in/wp-content/uploads/2024/07/Paper-Presentation_-Publication-by-the-faculty-during-2023.pdf" },
+      { year: 2022, title: "Faculty Research Interests 2022", pdfUrl: "https://rvca.edu.in/wp-content/uploads/2024/07/Faculty-Research-Interests-2022.pdf" }
+    ]
+  },
+
+  collaborations: {
+    academic: [
+      { university: "Haute école d'ingénierie et d'architecture (HEIA)", location: "Fribourg, Switzerland", type: "Exchange of students and faculty, joint studios" },
+      { university: "Bern University of Applied Sciences (Dept of Architecture, Wood and Civil Engg)", location: "Bern, Switzerland", type: "Active MoU for academic exchange and timber architecture" },
+      { university: "KU Leuven (Katholieke Universiteit Leuven, Dept of Architecture)", location: "Leuven, Belgium", type: "Bilateral agreement for student and faculty exchange" },
+      { university: "K.R. Mangalam University", location: "Sohna, Haryana, India", type: "National academic MoU and curriculum exchange" },
+      { university: "Centre for Development Studies and Activities (CDSA)", location: "Pune, Maharashtra, India", type: "Regional planning and development research MoU" }
+    ],
+    industry: [
+      { partner: "Häfele India Pvt. Ltd., Bengaluru", focus: "German architectural hardware and fittings technology; training workshops" },
+      { partner: "M/s. GESIX Solutions Pvt. Ltd.", focus: "Geospatial, LiDAR-based surveying, and point-cloud 3D mapping" },
+      { partner: "M/s. Teekay Interior Solutions", focus: "Instituted Award for Excellence in Architectural Design" },
+      { partner: "M/s. Rathi Associates, Bengaluru", focus: "Instituted the 'Best Thesis Award' in memory of Late Ar. B.H. Rathi" },
+      { partner: "Rotaract Club, RVCA", focus: "Youth leadership and community service under Rotary Bangalore Orchards" },
+      { partner: "Yuvaka Sangha", focus: "Registered NGO partnership for social service, eco-drives, and outreach" }
+    ],
+    institutionalMemberships: [
+      { body: "The Indian Institute of Architects (IIA)", details: "Institutional membership promoting professional architectural standards in India" },
+      { body: "United Nations Academic Impact (UNAI)", details: "Member institution committing to annual activities supporting UNAI's 10 global principles including peace, human rights, and sustainability" },
+      { body: "ICOMOS (International Council on Monuments and Sites)", details: "Institutional member engaged in monument conservation, heritage documentation, and heritage walks" },
+      { body: "IIRS-ISRO Dehradun Outreach Programme", details: "Recognized official Nodal Centre conducting online courses in Remote Sensing, GIS, and Geospatial Technologies" },
+      { body: "Urban Affairs Association (UAA), USA", details: "International Institutional Member" },
+      { body: "Association of Collegiate Schools of Architecture (ACSA), USA", details: "Institutional Member" }
+    ]
+  },
+
+  consultancyCell: {
+    name: "Urban Design Research and Consultancy Cell (UDRCC)",
+    portal: "https://rvca.edu.in/consultancy_cell/",
+    focus: "Bridging architectural academia and live urban practice through government-partnered municipal design",
+    clientsAndProjects: [
+      { client: "Bengaluru Smart City Limited", scope: "Urban public space audits, pedestrian street designs, transit-oriented development" },
+      { client: "Shivamogga Smart City Limited", scope: "SAAR 2.0 urban intervention and smart mobility master planning" },
+      { client: "Pandharpur Municipal Area", scope: "Public spaces and economic activity during Ashadh Wari pilgrimage (UD Studio-II)" }
+    ]
+  },
+
   studentClubs: [
-    { name: "Art Club", focus: "Visual arts, sketching, watercolor, murals, and installation design." },
-    { name: "Book Club", focus: "Literature reading circles, architectural theory discussions, and library book swaps." },
-    { name: "Dance Club", focus: "Contemporary, classical, and street choreography for cultural festivals." },
-    { name: "Drama Club", focus: "Theatrical plays, street theatre on social and urban issues, and scriptwriting." },
-    { name: "Music Club", focus: "Vocal and instrumental musical ensembles, jam sessions, and festive performances." },
-    { name: "Heritage Club", focus: "Documentation of vernacular structures, temple architecture study, and conservation walks." },
-    { name: "Health and Wellness Club", focus: "Yoga, mindfulness workshops, sports tournaments, and physical fitness." },
-    { name: "Sustainability Club", focus: "Net-zero concepts, Solar Decathlon participation, eco-conscious building techniques." },
-    { name: "Quiz Club", focus: "General and architectural quiz challenges, trivia leagues." },
-    { name: "Terra Thoughts", focus: "Thought-leadership essays, spatial philosophy, environmental critiques." },
-    { name: "The Journey Shared", focus: "Student experiences, travel memoirs, architectural travelogues." },
-    { name: "Trail Club", focus: "Trekking, nature study, site documentation, and heritage trails." }
+    {
+      name: "Art Club",
+      facultyInCharge: "Ar. Dharshini Y G (Senior Assistant Professor)",
+      focus: "Visual arts, sketching, watercolor plein-air, large-scale murals, and 3D installations.",
+      pageUrl: "https://rvca.edu.in/clubs/art-club/"
+    },
+    {
+      name: "Book Club / Literary Club",
+      facultyInCharge: "Ar. Deepika V (Assistant Professor)",
+      focus: "Reading circles, architectural essays, critical reviews, library book swaps, and creative writing.",
+      pageUrl: "https://rvca.edu.in/clubs/Book%20Club/"
+    },
+    {
+      name: "Originals — Dance Club",
+      facultyInCharge: "Ar. Shweta Pedapathi (Senior Assistant Professor)",
+      focus: "Contemporary, classical, and hip-hop dance styles, stage performances, annual fest choreography.",
+      pageUrl: "https://rvca.edu.in/clubs/Dance%20Club/"
+    },
+    {
+      name: "Frameworks — Drama Club",
+      facultyInCharge: "Ar. Shweta Pedapathi (Senior Assistant Professor)",
+      focus: "Street theatre on social issues, character study, scriptwriting, and annual theatrical plays.",
+      pageUrl: "https://rvca.edu.in/clubs/Drama%20Club/"
+    },
+    {
+      name: "Decibels — Music Club",
+      facultyInCharge: "Student Ensembles & Faculty Mentors",
+      focus: "Vocal and instrumental jams, acoustic gigs, college band, and festive musical recitals.",
+      pageUrl: "https://rvca.edu.in/clubs/Music%20Club/"
+    },
+    {
+      name: "Heritage Club",
+      facultyInCharge: "Ar. Nishant (Associate Professor)",
+      focus: "Historic preservation, Bengaluru heritage walks, temple architecture documentation, measured drawing camps in collaboration with ICOMOS.",
+      pageUrl: "https://rvca.edu.in/clubs/Heritage%20Club/"
+    },
+    {
+      name: "Health and Wellness Club",
+      facultyInCharge: "Ar. Archana Vittal (Associate Professor)",
+      focus: "Yoga, mindfulness workshops, mental wellness, and physical fitness initiatives.",
+      pageUrl: "https://rvca.edu.in/clubs/health-and-wellness-club/"
+    },
+    {
+      name: "Sustainability Club / Nature Club",
+      facultyInCharge: "Dr. Shikha Verma (Assoc. Prof) & Ar. Prakruthi S Karadagi (Asst. Prof)",
+      focus: "Net-zero concepts, Solar Decathlon India support, C&D waste recycling, composting, and native flora tagging.",
+      pageUrl: "https://rvca.edu.in/clubs/sustainability-club/"
+    },
+    {
+      name: "Quiz Club",
+      facultyInCharge: "Ar. Ramya K (Assistant Professor)",
+      focus: "Architecture history trivia, current affairs, inter-college quiz tournaments.",
+      pageUrl: "https://rvca.edu.in/clubs/quiz-club/"
+    },
+    {
+      name: "Terra Thoughts — Pottery & Clay Modelling Club",
+      facultyInCharge: "Ar. Gowtham K B (Assistant Professor)",
+      focus: "Electric pottery wheels, clay wedging, high-temperature bisque and glaze firing kilns, relief murals, and tactile form studies.",
+      pageUrl: "https://rvca.edu.in/clubs/terra-thoughts/"
+    },
+    {
+      name: "The Journey Shared — Movie & Film Screening Club",
+      facultyInCharge: "Ar. Mayank Singh (Senior Assistant Professor)",
+      focus: "Screenings of master architecture documentaries, independent world cinema, neo-realist classics, followed by spatial and urban discourse.",
+      pageUrl: "https://rvca.edu.in/clubs/the-journey-shared/"
+    },
+    {
+      name: "Trail — Travel and Photography Club",
+      facultyInCharge: "Ar. Akanksha Singh (Assistant Professor)",
+      focus: "Architectural photo expeditions, light/shadow perspective studies, drone photography, travelogues, and annual exhibitions.",
+      pageUrl: "https://rvca.edu.in/clubs/trail/"
+    },
+    {
+      name: "Sports Club",
+      facultyInCharge: "Mr. Puneeth H K (Assistant Director of Physical Education)",
+      focus: "Inter-batch tournaments (Cricket, Football, Basketball, Throwball, Badminton, Table Tennis, Chess) and the Annual RVCA Sports Fest.",
+      pageUrl: "https://rvca.edu.in/clubs/sports-club/"
+    }
   ],
 
   publications: [
     {
       title: "KALPA (Vol. 01 to Vol. 06)",
-      type: "College Annual Architecture Magazine / Research Journal",
-      description: "Showcases exemplary academic projects, student studio portfolios, essays, and critiques.",
-      recentIssues: [
-        { volume: "Kalpa Vol. 06", link: "https://rvca.edu.in/kalpa/" },
-        { volume: "Kalpa Vol. 05 (2025)", link: "https://rvca.edu.in/wp-content/uploads/2025/06/Kalpa-Vol-5_R1.pdf" }
+      type: "Annual Architectural Research Magazine (ISSN 2583-696X)",
+      editorInChief: "Dr. Om Prakash Bawane",
+      facultyEditors: "Prof. Alisha Sinha, Prof. Hiranmayi Shankavaram, Prof. Ramya Krishna",
+      description: "Flagship annual research magazine featuring peer-reviewed scholarly essays, studio portfolios, and material investigations.",
+      volumes: [
+        { volume: "Volume 06", status: "Current", link: "https://rvca.edu.in/kalpa/" },
+        { volume: "Volume 05 (2025)", link: "https://rvca.edu.in/wp-content/uploads/2025/06/Kalpa-Vol-5_R1.pdf" },
+        { volume: "Volume 04 (2024)", theme: "Materia-Versa — Material transformations: skillful renditions of strength, form and texture", link: "https://rvca.edu.in/kalpa/" },
+        { volume: "Volume 03 (2022)", link: "https://rvca.edu.in/wp-content/uploads/2024/07/Kalpa-Volume-03-2022.pdf" },
+        { volume: "Volume 02 (2021)", link: "https://rvca.edu.in/wp-content/uploads/2024/07/Kalpa-Volume-02-2021.pdf" },
+        { volume: "Volume 01 (2020)", link: "https://rvca.edu.in/wp-content/uploads/2024/07/Kalpa-Volume-01-2020.pdf" }
       ]
     },
     {
-      title: "sub:version (Issue 01 & 02)",
-      type: "Academic Journal of Architectural Critiques",
+      title: "sub:version (Issue 01, 02 & 03)",
+      type: "Biennial International Academic Journal (ISSN 3139-4388 Online)",
+      editorInChief: "Dr. Rakesh K. S.",
+      guestEditor: "Ar. Aniket Bhagwat (Prabhakar B. Bhagwat, Ahmedabad)",
       description: "Peer-reviewed platform for discursive analysis, essays, urbanism, and architectural theory.",
-      links: [
-        { issue: "sub:version Issue 02 (2025)", link: "https://rvca.edu.in/wp-content/uploads/2025/09/00_Issue_2_2025.pdf" },
-        { issue: "sub:version Issue 01", link: "https://rvca.edu.in/wp-content/uploads/2025/03/RVCA_Acdemic-journal_subversion_Issue01.pdf" }
+      issues: [
+        { issue: "Issue 03 (2026)", theme: "Foreseeing the Past", cfpLink: "https://rvca.edu.in/wp-content/uploads/2026/08/subversion_V3_CFP.pdf" },
+        { issue: "Issue 02 (September 2025)", link: "https://rvca.edu.in/rvca_publications/sub-version-issue-2/" },
+        { issue: "Issue 01 (August 2023)", link: "https://rvca.edu.in/wp-content/uploads/2025/03/RVCA_Acdemic-journal_subversion_Issue01.pdf" }
       ]
     },
     {
       title: "RVCA Monthly Newsletter",
       type: "Institutional Newsletter",
-      description: "Covers faculty research, guest lectures, awards, student exhibitions, and workshop reports.",
+      description: "Monthly documentation of academic conferences, faculty research, guest lectures, awards, student exhibitions, and workshop reports.",
       pageUrl: "https://rvca.edu.in/newsletter/"
     }
   ],

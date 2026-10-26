@@ -620,6 +620,27 @@
         title: result.title
       });
 
+      // Manage pending overflows queue (RVCE Architecture Standard)
+      if (session) {
+        if (!session.pendingOverflows) session.pendingOverflows = [];
+
+        // If current query satisfies an intent from pendingOverflows, remove it
+        if (result && result.intentId) {
+          const pIdx = session.pendingOverflows.findIndex(o => (typeof o === 'string' ? o : o.id) === result.intentId);
+          if (pIdx !== -1) {
+            session.pendingOverflows.splice(pIdx, 1);
+          }
+        }
+
+        // If new overflows detected, update pending queue
+        if (result && result.overflow && result.overflow.length > 0) {
+          session.pendingOverflows = [...result.overflow];
+        } else if (session.pendingOverflows.length > 0) {
+          // Carry over remaining pending overflows into result.overflow
+          result.overflow = [...session.pendingOverflows];
+        }
+      }
+
       appendBotMessage(result.response, result.chips, result.overflow, getSourceLink(result));
     }, 280);
   }
@@ -734,7 +755,15 @@
     department_barch:      { label: 'Department of Architecture (UG B.Arch)', url: 'https://rvca.edu.in/ugprogramme/' },
     department_march:      { label: 'Department of Urban Design (PG M.Arch)', url: 'https://rvca.edu.in/pgprogramme/' },
     department_phd:        { label: 'VTU Research Centre (Doctoral Ph.D.)', url: 'https://rvca.edu.in/phdprogramme/' },
-    departments_all:       { label: 'Academic Departments Directory', url: 'https://rvca.edu.in/programmes/' }
+    departments_all:       { label: 'Academic Departments Directory', url: 'https://rvca.edu.in/programmes/' },
+
+    // Collaborations, Consultancy & Events
+    collaborations_overview: { label: 'Collaborations & MoUs', url: 'https://rvca.edu.in/collaborations/' },
+    academic_collaborations: { label: 'Academic Collaborations', url: 'https://rvca.edu.in/collaborations/' },
+    industry_collaborations: { label: 'Industry Collaborations', url: 'https://rvca.edu.in/collaborations/' },
+    institutional_memberships: { label: 'Institutional Memberships', url: 'https://rvca.edu.in/collaborations/' },
+    consultancy_cell:        { label: 'Consultancy Cell & Services', url: 'https://rvca.edu.in/consultancy-cell/' },
+    events_and_workshops:    { label: 'Events & Workshops', url: 'https://rvca.edu.in/events-workshops/' }
   };
 
   function getSourceLink(result) {
